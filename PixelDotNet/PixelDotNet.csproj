@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SpriteDotNet.Startup</StartupObject>
+    <StartupObject>PixelDotNet.Startup</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LunarParser, Version=1.0.34.0, Culture=neutral, processorArchitecture=MSIL">
