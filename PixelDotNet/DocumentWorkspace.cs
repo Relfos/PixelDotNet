@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Data;
-using SpriteDotNet.Effects;
-using SpriteDotNet.HistoryFunctions;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
-using SpriteDotNet.Tools;
+using PixelDotNet.Data;
+using PixelDotNet.Effects;
+using PixelDotNet.HistoryFunctions;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
+using PixelDotNet.Tools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,7 +28,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Builds on DocumentView by adding application-specific elements.

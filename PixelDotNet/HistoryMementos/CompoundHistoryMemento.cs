@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryMementos
+namespace PixelDotNet.HistoryMementos
 {
     /// <summary>
     /// Lets you combine multiple HistoryMementos that can be undon/redone

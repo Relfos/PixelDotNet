@@ -13,7 +13,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class IconBox : 
         System.Windows.Forms.UserControl

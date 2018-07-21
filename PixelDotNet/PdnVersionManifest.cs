@@ -10,7 +10,7 @@
 using System;
 using System.Collections;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class PdnVersionManifest
     {

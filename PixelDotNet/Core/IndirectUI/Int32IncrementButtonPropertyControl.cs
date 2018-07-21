@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     [PropertyControlInfo(typeof(Int32Property), PropertyControlType.IncrementButton)]
     internal sealed class Int32IncrementButtonPropertyControl

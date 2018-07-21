@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal abstract class CanvasControl
         : SurfaceBoxGraphicsRenderer

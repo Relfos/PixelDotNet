@@ -13,7 +13,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class CloseWorkspaceAction
         : AppWorkspaceAction

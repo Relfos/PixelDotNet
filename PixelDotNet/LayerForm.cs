@@ -13,14 +13,14 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class LayerForm
         : FloatingToolForm
     {
-        private SpriteDotNet.LayerControl layerControl;
+        private PixelDotNet.LayerControl layerControl;
         private System.Windows.Forms.ImageList imageList;
-        private SpriteDotNet.SystemLayer.ToolStripEx toolStrip;
+        private PixelDotNet.SystemLayer.ToolStripEx toolStrip;
         private ToolStripButton addNewLayerButton;
         private ToolStripButton deleteLayerButton;
         private ToolStripButton duplicateLayerButton;

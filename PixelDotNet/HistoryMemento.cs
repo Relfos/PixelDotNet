@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// A HistoryMemento is generally used to save part of the state of the Document

@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace SpriteDotNet.PropertySystem
+namespace PixelDotNet.PropertySystem
 {
     public abstract class Property
         : ICloneable<Property>

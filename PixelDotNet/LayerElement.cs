@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -17,7 +17,7 @@ using System.Drawing.Imaging;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class LayerElement 
         : UserControl

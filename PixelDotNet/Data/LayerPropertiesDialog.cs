@@ -13,7 +13,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public class LayerPropertiesDialog 
         : PdnBaseForm
@@ -25,7 +25,7 @@ namespace SpriteDotNet
         protected System.Windows.Forms.Button okButton;
         private System.ComponentModel.Container components = null;
         private object originalProperties = null;
-        private SpriteDotNet.HeaderLabel generalHeader;        
+        private PixelDotNet.HeaderLabel generalHeader;        
 
         private Layer layer;
 
@@ -115,7 +115,7 @@ namespace SpriteDotNet
             this.nameLabel = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
-            this.generalHeader = new SpriteDotNet.HeaderLabel();
+            this.generalHeader = new PixelDotNet.HeaderLabel();
             this.SuspendLayout();
             // 
             // visibleCheckBox

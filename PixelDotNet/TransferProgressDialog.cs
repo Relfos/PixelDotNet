@@ -15,7 +15,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class TransferProgressDialog 
         : PdnBaseForm
@@ -137,7 +137,7 @@ namespace SpriteDotNet
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.cancelButton = new System.Windows.Forms.Button();
             this.itemText = new System.Windows.Forms.Label();
-            this.separator1 = new SpriteDotNet.HeaderLabel();
+            this.separator1 = new PixelDotNet.HeaderLabel();
             this.operationProgress = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 

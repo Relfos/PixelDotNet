@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections;
 using System.Drawing;
@@ -16,7 +16,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class MagicWandTool
         : FloodToolBase

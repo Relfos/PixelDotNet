@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet.PropertySystem
+namespace PixelDotNet.PropertySystem
 {
     public sealed class ImageProperty
         : Property<ImageResource>

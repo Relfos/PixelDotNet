@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Represents a collection of FileType instances.

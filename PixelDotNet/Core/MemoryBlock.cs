@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Drawing;
@@ -20,7 +20,7 @@ using System.Runtime.Serialization;
 using System.Security;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Manages an arbitrarily sized block of memory. You can also create child MemoryBlocks
@@ -803,7 +803,7 @@ namespace SpriteDotNet
             // chunkSize
             uint chunkSize = ReadUInt(input);
 
-            SpriteDotNet.Threading.ThreadPool threadPool = new SpriteDotNet.Threading.ThreadPool(Processor.LogicalCpuCount);
+            PixelDotNet.Threading.ThreadPool threadPool = new PixelDotNet.Threading.ThreadPool(Processor.LogicalCpuCount);
             ArrayList exceptions = new ArrayList(Processor.LogicalCpuCount);
             WaitCallback callback = new WaitCallback(DecompressChunk);
 
@@ -1039,7 +1039,7 @@ namespace SpriteDotNet
 
             uint chunkCount = (uint)((this.length + (long)serializationChunkSize - 1) / (long)serializationChunkSize);
 
-            SpriteDotNet.Threading.ThreadPool threadPool = new SpriteDotNet.Threading.ThreadPool(Processor.LogicalCpuCount);
+            PixelDotNet.Threading.ThreadPool threadPool = new PixelDotNet.Threading.ThreadPool(Processor.LogicalCpuCount);
             ArrayList exceptions = ArrayList.Synchronized(new ArrayList(Processor.LogicalCpuCount));
             WaitCallback callback = new WaitCallback(SerializeChunk);
 

@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +19,7 @@ using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Contains static methods related to the user interface.

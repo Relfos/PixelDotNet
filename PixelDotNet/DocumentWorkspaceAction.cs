@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Provides a way to do a tool-less action that operates on the DocumentWorkspace.

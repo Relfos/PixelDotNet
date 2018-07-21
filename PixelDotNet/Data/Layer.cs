@@ -19,7 +19,7 @@ using System.Runtime.Serialization;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// A layer's properties are immutable. That is, you can modify the surface

@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Contains strings that must be the same no matter what locale the UI is running with.

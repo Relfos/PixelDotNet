@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Methods for keeping track of time in a high precision manner.

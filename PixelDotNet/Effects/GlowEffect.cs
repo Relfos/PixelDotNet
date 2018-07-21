@@ -7,10 +7,10 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.Effects;
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.Effects;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -18,7 +18,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class GlowEffect
         : InternalPropertyBasedEffect

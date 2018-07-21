@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This class is treated differently than an Exception in that the Message property

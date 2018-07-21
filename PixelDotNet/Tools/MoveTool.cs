@@ -11,9 +11,9 @@
 // is used while interacting with the selection via the mouse, for better performance.
 //#define ALWAYSHIGHQUALITY
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.Threading;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.Threading;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class MoveTool
         : MoveToolBase

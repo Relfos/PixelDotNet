@@ -9,16 +9,16 @@
 
 // Original C++ implementation by Jason Waltman as part of "Filter Explorer," http://www.jasonwaltman.com/thesis/index.html
 
-using SpriteDotNet;
-using SpriteDotNet.Effects;
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.Effects;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class OilPaintingEffect
         : InternalPropertyBasedEffect

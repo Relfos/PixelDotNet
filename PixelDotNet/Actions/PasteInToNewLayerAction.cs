@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryFunctions;
+using PixelDotNet.HistoryFunctions;
 using System;
 using System.Collections.Generic;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class PasteInToNewLayerAction
     {

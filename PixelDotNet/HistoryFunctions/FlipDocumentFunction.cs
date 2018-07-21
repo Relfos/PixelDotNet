@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryFunctions
+namespace PixelDotNet.HistoryFunctions
 {
     internal abstract class FlipDocumentFunction
         : HistoryFunction

@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     internal sealed class VistaFileSaveDialog
           : VistaFileDialog,

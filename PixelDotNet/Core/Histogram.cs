@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Histogram is used to calculate a histogram for a surface (in a selection,

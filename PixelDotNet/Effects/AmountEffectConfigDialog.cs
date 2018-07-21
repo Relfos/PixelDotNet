@@ -13,7 +13,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class AmountEffectConfigDialog
         : AmountEffectConfigDialogBase
@@ -32,7 +32,7 @@ namespace SpriteDotNet.Effects
         private System.Windows.Forms.TrackBar amountTrackBar;
         private System.Windows.Forms.NumericUpDown amountUpDown;
         private System.ComponentModel.IContainer components = null;
-        private SpriteDotNet.HeaderLabel headerLabel;
+        private PixelDotNet.HeaderLabel headerLabel;
         public int sliderInitialValue = 2;
 
         internal AmountEffectConfigDialogBase()
@@ -142,7 +142,7 @@ namespace SpriteDotNet.Effects
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.headerLabel = new SpriteDotNet.HeaderLabel();
+            this.headerLabel = new PixelDotNet.HeaderLabel();
             ((System.ComponentModel.ISupportInitialize)(this.amountTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amountUpDown)).BeginInit();
             this.SuspendLayout();

@@ -10,7 +10,7 @@
 using System;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class CallbackOnDispose
         : IDisposable

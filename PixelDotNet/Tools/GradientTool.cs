@@ -7,9 +7,9 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -18,7 +18,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal sealed class GradientTool
         : Tool
@@ -256,11 +256,11 @@ namespace SpriteDotNet.Tools
                 }
                 else
                 {
-                    SpriteDotNet.Threading.ThreadPool.Global.QueueUserWorkItem(wc, BoxedConstants.GetInt32(i));
+                    PixelDotNet.Threading.ThreadPool.Global.QueueUserWorkItem(wc, BoxedConstants.GetInt32(i));
                 }
             }
 
-            SpriteDotNet.Threading.ThreadPool.Global.Drain();
+            PixelDotNet.Threading.ThreadPool.Global.Drain();
         }
 
         private void RenderGradient()

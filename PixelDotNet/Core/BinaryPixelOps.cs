@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Provides a set of standard BinaryPixelOps.

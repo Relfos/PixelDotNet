@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Provides a standard interface for allowing an object to draw itself on to a given Surface.

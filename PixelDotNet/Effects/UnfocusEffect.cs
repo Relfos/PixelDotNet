@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class UnfocusEffect
         : LocalHistogramEffect

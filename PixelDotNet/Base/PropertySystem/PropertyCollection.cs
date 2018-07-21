@@ -14,7 +14,7 @@ using System.ComponentModel;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace SpriteDotNet.PropertySystem
+namespace PixelDotNet.PropertySystem
 {
     public sealed class PropertyCollection
         : INotifyPropertyChanged,

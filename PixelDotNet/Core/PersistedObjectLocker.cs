@@ -11,7 +11,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Provides a Guid->WeakReference mapping for PersistedObject instances.

@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Data;
+using PixelDotNet.Data;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This is the default Paint.NET FileTypeFactory. It provides all the built-in FileTypes.

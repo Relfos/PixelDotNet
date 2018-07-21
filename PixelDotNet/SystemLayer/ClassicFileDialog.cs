@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     internal abstract class ClassicFileDialog
         : IFileDialog

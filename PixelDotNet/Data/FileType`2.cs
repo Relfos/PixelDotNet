@@ -10,7 +10,7 @@
 using System;
 using System.IO;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// A strongly typed version of FileType.

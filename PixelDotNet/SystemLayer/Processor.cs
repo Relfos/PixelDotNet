@@ -12,7 +12,7 @@ using System;
 using System.ComponentModel;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Provides static methods and properties related to the CPU.

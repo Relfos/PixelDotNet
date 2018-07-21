@@ -10,7 +10,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This class is used to hold references to many of the UI elements

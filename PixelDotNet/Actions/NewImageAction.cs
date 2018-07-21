@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class NewImageAction
         : AppWorkspaceAction

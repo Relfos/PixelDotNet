@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// The HistoryStack class for the History "concept".  

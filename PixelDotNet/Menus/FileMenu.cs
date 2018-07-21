@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.Actions;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +22,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class FileMenu
         : PdnMenuItem

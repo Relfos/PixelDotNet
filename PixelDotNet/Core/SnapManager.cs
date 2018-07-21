@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -16,7 +16,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class SnapManager
     {

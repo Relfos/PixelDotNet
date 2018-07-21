@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class RedEyeRemoveEffect
         : InternalPropertyBasedEffect

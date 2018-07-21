@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public class EventArgs<T>
         : EventArgs

@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public class StateMachine
     {

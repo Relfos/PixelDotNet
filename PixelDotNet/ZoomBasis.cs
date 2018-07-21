@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-namespace SpriteDotNet 
+namespace PixelDotNet 
 {
     internal enum ZoomBasis 
     {

@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Provides an interface for the methods that UnaryPixelOp and BinaryPixelOp share.

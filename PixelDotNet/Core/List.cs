@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// A very simple linked-list class, done functional style. Use null for

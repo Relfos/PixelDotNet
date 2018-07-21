@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     /// <summary>
     /// There are two ways to use this action:

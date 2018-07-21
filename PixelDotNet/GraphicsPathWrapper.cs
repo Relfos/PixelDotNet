@@ -12,7 +12,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.Serialization;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Encapsulates the data necessary to create a PdnGraphicsPath object

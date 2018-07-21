@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Drawing;
@@ -15,7 +15,7 @@ using System.Drawing.Drawing2D;
 using System.Runtime.Serialization;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Defines a surface that is irregularly shaped, defined by a Region.
@@ -65,7 +65,7 @@ namespace SpriteDotNet
         private PdnGraphicsPath shadowPath;
 
         [NonSerialized]
-        private static SpriteDotNet.Threading.ThreadPool threadPool = new SpriteDotNet.Threading.ThreadPool();
+        private static PixelDotNet.Threading.ThreadPool threadPool = new PixelDotNet.Threading.ThreadPool();
 
         /// <summary>
         /// Do not modify the surface. Treat it as immutable.
@@ -192,7 +192,7 @@ namespace SpriteDotNet
 
         public void OnDeserialization(object sender)
         {
-            threadPool = new SpriteDotNet.Threading.ThreadPool();
+            threadPool = new PixelDotNet.Threading.ThreadPool();
 
             if (this.path != null)
             {

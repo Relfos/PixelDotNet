@@ -9,9 +9,9 @@
 
 using System;
 using System.Drawing;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.HistoryMementos;
 
-namespace SpriteDotNet.HistoryFunctions
+namespace PixelDotNet.HistoryFunctions
 {
     internal sealed class MergeLayerDownFunction
         : HistoryFunction

@@ -7,10 +7,10 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
-using SpriteDotNet.Threading;
+using PixelDotNet;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
+using PixelDotNet.Threading;
 using System;
 using System.Collections;
 using System.Diagnostics;
@@ -20,7 +20,7 @@ using System.Drawing.Imaging;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     // TODO: split in to Action and Function
     internal sealed class ResizeAction 
@@ -112,7 +112,7 @@ namespace SpriteDotNet.Actions
             Surface surface = new Surface(width, height);
             surface.Clear(ColorBgra.FromBgra(255, 255, 255, 0));
 
-            SpriteDotNet.Threading.ThreadPool threadPool = new SpriteDotNet.Threading.ThreadPool();
+            PixelDotNet.Threading.ThreadPool threadPool = new PixelDotNet.Threading.ThreadPool();
             int rectCount;
             
             if (tileCount == 0)

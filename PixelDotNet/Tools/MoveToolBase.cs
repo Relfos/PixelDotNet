@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,7 +19,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal abstract class MoveToolBase
         : Tool

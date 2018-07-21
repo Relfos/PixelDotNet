@@ -10,7 +10,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     internal static class NativeStructs
     {

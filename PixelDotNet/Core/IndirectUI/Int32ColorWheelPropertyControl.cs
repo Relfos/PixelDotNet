@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -17,7 +17,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     // ColorBgra is essentially a 32-bit integer. This control lets you treat an Int32 as an RGB
     // color -- alpha is not supported in this version for simplicity's sake. Thus, you must

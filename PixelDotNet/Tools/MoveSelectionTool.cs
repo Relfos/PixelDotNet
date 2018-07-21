@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class MoveSelectionTool
         : MoveToolBase

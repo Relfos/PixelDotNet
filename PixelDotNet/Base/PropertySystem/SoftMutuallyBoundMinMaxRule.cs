@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.PropertySystem
+namespace PixelDotNet.PropertySystem
 {
     /// <summary>
     /// Defines a rule for two properties, A and B, such that A will always be less than or equal to B,

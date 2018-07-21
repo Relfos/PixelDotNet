@@ -7,10 +7,10 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.Effects;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.Actions;
+using PixelDotNet.Effects;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -21,7 +21,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal abstract class EffectMenuBase
         : PdnMenuItem
@@ -982,7 +982,7 @@ namespace SpriteDotNet.Menus
 
                             // perf bug #1445: save this data in a background thread
                             PdnRegion selectedRegionCopy = selectedRegion.Clone();
-                            SpriteDotNet.Threading.ThreadPool.Global.QueueUserWorkItem(
+                            PixelDotNet.Threading.ThreadPool.Global.QueueUserWorkItem(
                                 delegate(object context)
                                 {
                                     try

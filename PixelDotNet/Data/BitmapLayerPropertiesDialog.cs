@@ -13,7 +13,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class BitmapLayerPropertiesDialog 
         : LayerPropertiesDialog
@@ -23,7 +23,7 @@ namespace SpriteDotNet
         private System.Windows.Forms.ComboBox blendOpComboBox;
         private System.Windows.Forms.NumericUpDown opacityUpDown;
         private System.Windows.Forms.TrackBar opacityTrackBar;
-        private SpriteDotNet.HeaderLabel blendingHeader;
+        private PixelDotNet.HeaderLabel blendingHeader;
         private System.ComponentModel.IContainer components = null;
 
         public BitmapLayerPropertiesDialog()
@@ -106,7 +106,7 @@ namespace SpriteDotNet
             this.opacityUpDown = new System.Windows.Forms.NumericUpDown();
             this.opacityTrackBar = new System.Windows.Forms.TrackBar();
             this.opacityLabel = new System.Windows.Forms.Label();
-            this.blendingHeader = new SpriteDotNet.HeaderLabel();
+            this.blendingHeader = new PixelDotNet.HeaderLabel();
             ((System.ComponentModel.ISupportInitialize)(this.opacityUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.opacityTrackBar)).BeginInit();
             this.SuspendLayout();

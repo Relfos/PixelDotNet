@@ -13,14 +13,14 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class HistoryForm
         : FloatingToolForm
     {
-        private SpriteDotNet.HistoryControl historyControl;
+        private PixelDotNet.HistoryControl historyControl;
         private System.Windows.Forms.ImageList imageList;
-        private SpriteDotNet.SystemLayer.ToolStripEx toolStrip;
+        private PixelDotNet.SystemLayer.ToolStripEx toolStrip;
         private ToolStripButton rewindButton;
         private ToolStripButton undoButton;
         private ToolStripButton redoButton;
@@ -103,9 +103,9 @@ namespace SpriteDotNet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.historyControl = new SpriteDotNet.HistoryControl();
+            this.historyControl = new PixelDotNet.HistoryControl();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.toolStrip = new SpriteDotNet.SystemLayer.ToolStripEx();
+            this.toolStrip = new PixelDotNet.SystemLayer.ToolStripEx();
             this.rewindButton = new System.Windows.Forms.ToolStripButton();
             this.undoButton = new System.Windows.Forms.ToolStripButton();
             this.redoButton = new System.Windows.Forms.ToolStripButton();

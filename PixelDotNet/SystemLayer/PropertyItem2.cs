@@ -18,7 +18,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Re-implements System.Drawing.PropertyItem so that the data is serializable.

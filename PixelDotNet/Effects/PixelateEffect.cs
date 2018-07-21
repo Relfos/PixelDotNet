@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class PixelateEffect
         : InternalPropertyBasedEffect

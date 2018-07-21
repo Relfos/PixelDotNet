@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Drawing;
 using System.Collections;
@@ -15,7 +15,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class RotateZoomEffectConfigDialog 
         : EffectConfigDialog
@@ -24,13 +24,13 @@ namespace SpriteDotNet.Effects
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.CheckBox keepBackgroundCheckBox;
         private System.Windows.Forms.CheckBox tileSourceCheckBox;
-        private SpriteDotNet.Effects.RollControl rollControl;
-        private SpriteDotNet.HeaderLabel headerRoll;
-        private SpriteDotNet.HeaderLabel headerPan;
+        private PixelDotNet.Effects.RollControl rollControl;
+        private PixelDotNet.HeaderLabel headerRoll;
+        private PixelDotNet.HeaderLabel headerPan;
         private System.Windows.Forms.Panel panelPan;
         private System.Windows.Forms.TrackBar trackBarZoom;
-        private SpriteDotNet.Effects.PanControl panControl;
-        private SpriteDotNet.HeaderLabel headerZoom;
+        private PixelDotNet.Effects.PanControl panControl;
+        private PixelDotNet.HeaderLabel headerZoom;
         private System.Windows.Forms.Label zoomLabel;
         private System.Windows.Forms.Label panXLabel;
         private System.Windows.Forms.Label panYLabel;
@@ -46,8 +46,8 @@ namespace SpriteDotNet.Effects
         private System.Windows.Forms.NumericUpDown twistRadiusUpDown;
         private System.Windows.Forms.Button rollResetButton;
         private System.Windows.Forms.Button resetAllButton;
-        private SpriteDotNet.HeaderLabel fineTuningHeader;
-        private SpriteDotNet.HeaderLabel headerLabel1;
+        private PixelDotNet.HeaderLabel fineTuningHeader;
+        private PixelDotNet.HeaderLabel headerLabel1;
 
         /// <summary>
         /// Required designer variable.
@@ -156,12 +156,12 @@ namespace SpriteDotNet.Effects
             this.cancelButton = new System.Windows.Forms.Button();
             this.keepBackgroundCheckBox = new System.Windows.Forms.CheckBox();
             this.tileSourceCheckBox = new System.Windows.Forms.CheckBox();
-            this.rollControl = new SpriteDotNet.Effects.RollControl();
-            this.headerRoll = new SpriteDotNet.HeaderLabel();
-            this.headerPan = new SpriteDotNet.HeaderLabel();
+            this.rollControl = new PixelDotNet.Effects.RollControl();
+            this.headerRoll = new PixelDotNet.HeaderLabel();
+            this.headerPan = new PixelDotNet.HeaderLabel();
             this.panelPan = new System.Windows.Forms.Panel();
-            this.panControl = new SpriteDotNet.Effects.PanControl();
-            this.headerZoom = new SpriteDotNet.HeaderLabel();
+            this.panControl = new PixelDotNet.Effects.PanControl();
+            this.headerZoom = new PixelDotNet.HeaderLabel();
             this.trackBarZoom = new System.Windows.Forms.TrackBar();
             this.zoomLabel = new System.Windows.Forms.Label();
             this.panXLabel = new System.Windows.Forms.Label();
@@ -178,8 +178,8 @@ namespace SpriteDotNet.Effects
             this.twistRadiusUpDown = new System.Windows.Forms.NumericUpDown();
             this.rollResetButton = new System.Windows.Forms.Button();
             this.resetAllButton = new System.Windows.Forms.Button();
-            this.fineTuningHeader = new SpriteDotNet.HeaderLabel();
-            this.headerLabel1 = new SpriteDotNet.HeaderLabel();
+            this.fineTuningHeader = new PixelDotNet.HeaderLabel();
+            this.headerLabel1 = new PixelDotNet.HeaderLabel();
             this.panelPan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarZoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panXUpDown)).BeginInit();

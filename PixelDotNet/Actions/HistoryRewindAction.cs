@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class HistoryRewindAction
         : DocumentWorkspaceAction

@@ -30,14 +30,14 @@
 // THE SOFTWARE. 
 //
 
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.ComponentModel;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public abstract class WarpEffectBase
         : InternalPropertyBasedEffect

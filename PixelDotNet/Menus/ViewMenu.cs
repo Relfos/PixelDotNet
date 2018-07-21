@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
+using PixelDotNet.Actions;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class ViewMenu
         : PdnMenuItem

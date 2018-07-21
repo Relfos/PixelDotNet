@@ -14,7 +14,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class CurvesEffectConfigDialog 
         : EffectConfigDialog
@@ -24,7 +24,7 @@ namespace SpriteDotNet.Effects
         private CurveControl curveControl;
         private Dictionary<ColorTransferMode, CurveControl> curveControls;
         private System.ComponentModel.IContainer components = null;
-        private SpriteDotNet.HeaderLabel transferHeader;
+        private PixelDotNet.HeaderLabel transferHeader;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.ComboBox modeComboBox;
         private System.EventHandler curveControlValueChangedDelegate;
@@ -126,7 +126,7 @@ namespace SpriteDotNet.Effects
         {
             this.cancelButton = new System.Windows.Forms.Button();
             this.okButton = new System.Windows.Forms.Button();
-            this.transferHeader = new SpriteDotNet.HeaderLabel();
+            this.transferHeader = new PixelDotNet.HeaderLabel();
             this.resetButton = new System.Windows.Forms.Button();
             this.modeComboBox = new System.Windows.Forms.ComboBox();
             this.labelCoordinates = new Label();

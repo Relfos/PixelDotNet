@@ -10,7 +10,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This class will set the cursor of a control to the requested one,

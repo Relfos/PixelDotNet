@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -16,7 +16,7 @@ using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     [EffectCategory(EffectCategory.DoNotDisplay)] // we have a menu item that manually places this in the Layers menu
     public sealed class RotateZoomEffect
@@ -217,7 +217,7 @@ namespace SpriteDotNet.Effects
                                     }
                                     else
                                     {
-                                        *dstPtr = SpriteDotNet.UserBlendOps.NormalBlendOp.ApplyStatic(*srcPtr, c);
+                                        *dstPtr = PixelDotNet.UserBlendOps.NormalBlendOp.ApplyStatic(*srcPtr, c);
                                     }
                                 }
                             }

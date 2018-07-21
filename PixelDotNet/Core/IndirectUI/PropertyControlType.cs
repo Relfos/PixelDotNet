@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     public enum PropertyControlType
         : int

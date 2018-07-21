@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class PropertyBasedEffectConfigToken
         : EffectConfigToken

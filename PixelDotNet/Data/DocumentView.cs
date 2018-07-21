@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ using System.Drawing.Imaging;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Encapsulates rendering the document by itself, including rulers and
@@ -857,10 +857,10 @@ namespace SpriteDotNet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.topRuler = new SpriteDotNet.Ruler();
-            this.leftRuler = new SpriteDotNet.Ruler();
-            this.panel = new SpriteDotNet.PanelEx();
-            this.surfaceBox = new SpriteDotNet.SurfaceBox();
+            this.topRuler = new PixelDotNet.Ruler();
+            this.leftRuler = new PixelDotNet.Ruler();
+            this.panel = new PixelDotNet.PanelEx();
+            this.surfaceBox = new PixelDotNet.SurfaceBox();
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -907,7 +907,7 @@ namespace SpriteDotNet
             this.surfaceBox.Name = "surfaceBox";
             this.surfaceBox.Surface = null;
             this.surfaceBox.TabIndex = 0;
-            this.surfaceBox.PrePaint += new SpriteDotNet.PaintEventHandler2(this.SurfaceBox_PrePaint);
+            this.surfaceBox.PrePaint += new PixelDotNet.PaintEventHandler2(this.SurfaceBox_PrePaint);
             // 
             // DocumentView
             // 

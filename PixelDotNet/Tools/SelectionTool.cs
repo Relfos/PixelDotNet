@@ -7,9 +7,9 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.HistoryFunctions;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.HistoryFunctions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class SelectionTool
         : Tool

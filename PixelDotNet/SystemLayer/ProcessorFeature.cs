@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     [Flags]
     public enum ProcessorFeature

@@ -9,13 +9,13 @@
 
 // Based on: http://msdn.microsoft.com/library/default.asp?url=/library/en-us/dnaspp/html/colorquant.asp
 
-using SpriteDotNet;
+using PixelDotNet;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.Data.Quantize
+namespace PixelDotNet.Data.Quantize
 {
     internal unsafe abstract class Quantizer
     {

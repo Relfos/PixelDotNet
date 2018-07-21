@@ -11,7 +11,7 @@ using System;
 using System.Diagnostics;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class SurfaceBoxBaseRenderer
         : SurfaceBoxRenderer

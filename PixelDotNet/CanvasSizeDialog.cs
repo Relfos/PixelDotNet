@@ -13,7 +13,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class CanvasSizeDialog 
         : ResizeDialog
@@ -21,7 +21,7 @@ namespace SpriteDotNet
         private EnumLocalizer anchorEdgeNames = EnumLocalizer.Create(typeof(AnchorEdge));
         private AnchorChooserControl anchorChooserControl;
         private System.Windows.Forms.Label newSpaceLabel;
-        private SpriteDotNet.HeaderLabel anchorHeader;
+        private PixelDotNet.HeaderLabel anchorHeader;
         private System.Windows.Forms.ComboBox anchorEdgeCB;
         private System.ComponentModel.IContainer components = null;
 
@@ -88,9 +88,9 @@ namespace SpriteDotNet
         /// </summary>
         private void InitializeComponent()
         {
-            this.anchorChooserControl = new SpriteDotNet.AnchorChooserControl();
+            this.anchorChooserControl = new PixelDotNet.AnchorChooserControl();
             this.newSpaceLabel = new System.Windows.Forms.Label();
-            this.anchorHeader = new SpriteDotNet.HeaderLabel();
+            this.anchorHeader = new PixelDotNet.HeaderLabel();
             this.anchorEdgeCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.percentUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resolutionUpDown)).BeginInit();

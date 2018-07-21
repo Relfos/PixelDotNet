@@ -10,7 +10,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class HistoryFastForwardAction
         : DocumentWorkspaceAction

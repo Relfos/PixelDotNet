@@ -17,7 +17,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Carries information about the Font details that we support.

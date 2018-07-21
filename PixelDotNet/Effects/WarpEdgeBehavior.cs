@@ -30,7 +30,7 @@
 // THE SOFTWARE. 
 //
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public enum WarpEdgeBehavior
     {

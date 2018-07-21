@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.PropertySystem;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     internal class PropertyControlPropertyAttribute

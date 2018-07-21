@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Collections.Specialized;
 
-namespace SpriteDotNet.HistoryMementos
+namespace PixelDotNet.HistoryMementos
 {
     internal class LayerPropertyHistoryMemento
         : HistoryMemento

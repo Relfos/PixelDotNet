@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public class EffectEnvironmentParameters
         : IDisposable

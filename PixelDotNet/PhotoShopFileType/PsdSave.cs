@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 
 using PhotoshopFile;
 
-namespace SpriteDotNet.Data.PhotoshopFileType
+namespace PixelDotNet.Data.PhotoshopFileType
 {
   public static class PsdSave
   {

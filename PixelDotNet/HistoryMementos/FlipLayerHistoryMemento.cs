@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryMementos
+namespace PixelDotNet.HistoryMementos
 {
     internal class FlipLayerHistoryMemento
         : HistoryMemento

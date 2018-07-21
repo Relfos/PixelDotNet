@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Effects;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.Effects;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public abstract class LocalHistogramEffect
         : InternalPropertyBasedEffect

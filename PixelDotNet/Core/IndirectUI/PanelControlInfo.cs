@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     public sealed class PanelControlInfo
         : ControlInfo

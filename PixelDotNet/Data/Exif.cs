@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing.Imaging;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class Exif
     {

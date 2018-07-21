@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ using System.Drawing;
 using System.Threading;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     using ThumbnailReadyArgs = EventArgs<Pair<IThumbnailProvider, Surface>>;
     using ThumbnailReadyHandler = EventHandler<EventArgs<Pair<IThumbnailProvider, Surface>>>;

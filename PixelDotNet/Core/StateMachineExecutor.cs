@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.ComponentModel;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class StateMachineExecutor
         : IDisposable

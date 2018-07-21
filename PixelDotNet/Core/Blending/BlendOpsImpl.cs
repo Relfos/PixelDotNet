@@ -310,7 +310,7 @@ using System;
 
 
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     partial class UserBlendOps
     {

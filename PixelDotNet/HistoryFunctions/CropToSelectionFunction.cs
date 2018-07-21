@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.Actions;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.Actions;
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryFunctions
+namespace PixelDotNet.HistoryFunctions
 {
     /// <summary>
     /// Crops the image to the currently selected region.

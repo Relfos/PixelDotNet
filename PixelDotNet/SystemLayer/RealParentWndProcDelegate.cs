@@ -10,7 +10,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     public delegate void RealParentWndProcDelegate(ref Message m);
 }

@@ -15,7 +15,7 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// A few utility functions specific to PaintDotNet.exe
@@ -49,7 +49,7 @@ namespace SpriteDotNet
         {
             get
             {
-                string myDocsPath = SystemLayer.Shell.GetVirtualPath(SpriteDotNet.SystemLayer.VirtualFolderName.UserDocuments, true);
+                string myDocsPath = SystemLayer.Shell.GetVirtualPath(PixelDotNet.SystemLayer.VirtualFolderName.UserDocuments, true);
                 string userDataDirName = PdnResources.GetString("SystemLayer.UserDataDirName");
                 string userDataPath = Path.Combine(myDocsPath, userDataDirName);
                 return userDataPath;

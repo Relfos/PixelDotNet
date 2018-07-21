@@ -10,7 +10,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class Win32Window
         : IWin32Window

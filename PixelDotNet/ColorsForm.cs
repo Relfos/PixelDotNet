@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -17,7 +17,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     // TODO: rewrite this ... the code is out of control here as it has grown organically,
     //       and it's impossible to maintain. post-3.0
@@ -88,14 +88,14 @@ namespace SpriteDotNet
         private System.Windows.Forms.Label hexLabel;
         private System.Windows.Forms.TextBox hexBox;
         private uint ignore = 0;
-        private SpriteDotNet.HeaderLabel rgbHeader;
-        private SpriteDotNet.HeaderLabel hsvHeader;
+        private PixelDotNet.HeaderLabel rgbHeader;
+        private PixelDotNet.HeaderLabel hsvHeader;
         private HeaderLabel swatchHeader;
         private SwatchControl swatchControl;
         private ColorDisplayWidget colorDisplayWidget;
         private ToolStripEx toolStrip;
         private ToolStripButton colorAddButton;
-        private SpriteDotNet.HeaderLabel alphaHeader;
+        private PixelDotNet.HeaderLabel alphaHeader;
 
         private Image colorAddOverlay;
         private ToolStripSplitButton colorPalettesButton;
@@ -624,8 +624,8 @@ namespace SpriteDotNet
         /// </summary>
         private void InitializeComponent()
         {
-            this.valueGradientControl = new SpriteDotNet.ColorGradientControl();
-            this.colorWheel = new SpriteDotNet.ColorWheel();
+            this.valueGradientControl = new PixelDotNet.ColorGradientControl();
+            this.colorWheel = new PixelDotNet.ColorWheel();
             this.redUpDown = new System.Windows.Forms.NumericUpDown();
             this.greenUpDown = new System.Windows.Forms.NumericUpDown();
             this.blueUpDown = new System.Windows.Forms.NumericUpDown();
@@ -647,21 +647,21 @@ namespace SpriteDotNet
             this.moreModeButtonSentinel = new System.Windows.Forms.Control();
             this.lessModeHeaderSentinel = new System.Windows.Forms.Control();
             this.moreModeHeaderSentinel = new System.Windows.Forms.Control();
-            this.rgbHeader = new SpriteDotNet.HeaderLabel();
-            this.hsvHeader = new SpriteDotNet.HeaderLabel();
-            this.alphaHeader = new SpriteDotNet.HeaderLabel();
-            this.swatchHeader = new SpriteDotNet.HeaderLabel();
-            this.swatchControl = new SpriteDotNet.SwatchControl();
-            this.colorDisplayWidget = new SpriteDotNet.ColorDisplayWidget();
-            this.toolStrip = new SpriteDotNet.SystemLayer.ToolStripEx();
+            this.rgbHeader = new PixelDotNet.HeaderLabel();
+            this.hsvHeader = new PixelDotNet.HeaderLabel();
+            this.alphaHeader = new PixelDotNet.HeaderLabel();
+            this.swatchHeader = new PixelDotNet.HeaderLabel();
+            this.swatchControl = new PixelDotNet.SwatchControl();
+            this.colorDisplayWidget = new PixelDotNet.ColorDisplayWidget();
+            this.toolStrip = new PixelDotNet.SystemLayer.ToolStripEx();
             this.colorAddButton = new System.Windows.Forms.ToolStripButton();
             this.colorPalettesButton = new System.Windows.Forms.ToolStripSplitButton();
-            this.hueGradientControl = new SpriteDotNet.ColorGradientControl();
-            this.saturationGradientControl = new SpriteDotNet.ColorGradientControl();
-            this.alphaGradientControl = new SpriteDotNet.ColorGradientControl();
-            this.redGradientControl = new SpriteDotNet.ColorGradientControl();
-            this.greenGradientControl = new SpriteDotNet.ColorGradientControl();
-            this.blueGradientControl = new SpriteDotNet.ColorGradientControl();
+            this.hueGradientControl = new PixelDotNet.ColorGradientControl();
+            this.saturationGradientControl = new PixelDotNet.ColorGradientControl();
+            this.alphaGradientControl = new PixelDotNet.ColorGradientControl();
+            this.redGradientControl = new PixelDotNet.ColorGradientControl();
+            this.greenGradientControl = new PixelDotNet.ColorGradientControl();
+            this.blueGradientControl = new PixelDotNet.ColorGradientControl();
             ((System.ComponentModel.ISupportInitialize)(this.redUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.blueUpDown)).BeginInit();
@@ -687,7 +687,7 @@ namespace SpriteDotNet
             this.valueGradientControl.TabIndex = 2;
             this.valueGradientControl.TabStop = false;
             this.valueGradientControl.Value = 0;
-            this.valueGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.HsvGradientControl_ValueChanged);
+            this.valueGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.HsvGradientControl_ValueChanged);
             // 
             // colorWheel
             // 
@@ -981,7 +981,7 @@ namespace SpriteDotNet
             // swatchControl
             // 
             this.swatchControl.BlinkHighlight = false;
-            this.swatchControl.Colors = new SpriteDotNet.ColorBgra[0];
+            this.swatchControl.Colors = new PixelDotNet.ColorBgra[0];
             this.swatchControl.Location = new System.Drawing.Point(8, 189);
             this.swatchControl.Name = "swatchControl";
             this.swatchControl.Size = new System.Drawing.Size(192, 74);
@@ -1048,7 +1048,7 @@ namespace SpriteDotNet
             this.hueGradientControl.TabIndex = 34;
             this.hueGradientControl.TabStop = false;
             this.hueGradientControl.Value = 0;
-            this.hueGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.HsvGradientControl_ValueChanged);
+            this.hueGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.HsvGradientControl_ValueChanged);
             // 
             // saturationGradientControl
             // 
@@ -1065,7 +1065,7 @@ namespace SpriteDotNet
             this.saturationGradientControl.TabIndex = 35;
             this.saturationGradientControl.TabStop = false;
             this.saturationGradientControl.Value = 0;
-            this.saturationGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.HsvGradientControl_ValueChanged);
+            this.saturationGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.HsvGradientControl_ValueChanged);
             // 
             // alphaGradientControl
             // 
@@ -1082,7 +1082,7 @@ namespace SpriteDotNet
             this.alphaGradientControl.TabIndex = 36;
             this.alphaGradientControl.TabStop = false;
             this.alphaGradientControl.Value = 0;
-            this.alphaGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.UpDown_ValueChanged);
+            this.alphaGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.UpDown_ValueChanged);
             // 
             // redGradientControl
             // 
@@ -1099,7 +1099,7 @@ namespace SpriteDotNet
             this.redGradientControl.TabIndex = 37;
             this.redGradientControl.TabStop = false;
             this.redGradientControl.Value = 0;
-            this.redGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.RgbGradientControl_ValueChanged);
+            this.redGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.RgbGradientControl_ValueChanged);
             // 
             // greenGradientControl
             // 
@@ -1116,7 +1116,7 @@ namespace SpriteDotNet
             this.greenGradientControl.TabIndex = 38;
             this.greenGradientControl.TabStop = false;
             this.greenGradientControl.Value = 0;
-            this.greenGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.RgbGradientControl_ValueChanged);
+            this.greenGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.RgbGradientControl_ValueChanged);
             // 
             // blueGradientControl
             // 
@@ -1133,7 +1133,7 @@ namespace SpriteDotNet
             this.blueGradientControl.TabIndex = 39;
             this.blueGradientControl.TabStop = false;
             this.blueGradientControl.Value = 0;
-            this.blueGradientControl.ValueChanged += new SpriteDotNet.IndexEventHandler(this.RgbGradientControl_ValueChanged);
+            this.blueGradientControl.ValueChanged += new PixelDotNet.IndexEventHandler(this.RgbGradientControl_ValueChanged);
             // 
             // ColorsForm
             // 

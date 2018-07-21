@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SpriteDotNet.PropertySystem
+namespace PixelDotNet.PropertySystem
 {
     /// <summary>
     /// Defines a rule that binds the ReadOnly flag of property A to the value of boolean property B.

@@ -15,7 +15,7 @@ using System.Drawing.Imaging;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// These methods are used because we found some bugs in GDI+ / WinForms. Some

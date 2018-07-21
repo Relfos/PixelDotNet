@@ -7,15 +7,15 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     public sealed class PropertyControlInfo
         : ControlInfo,

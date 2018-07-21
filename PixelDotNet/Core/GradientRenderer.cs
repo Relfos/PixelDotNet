@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public abstract class GradientRenderer
     {

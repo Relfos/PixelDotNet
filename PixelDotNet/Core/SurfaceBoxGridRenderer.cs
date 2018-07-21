@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class SurfaceBoxGridRenderer
         : SurfaceBoxRenderer

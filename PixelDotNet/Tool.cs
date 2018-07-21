@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryFunctions;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.HistoryFunctions;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Diagnostics;
@@ -16,7 +16,7 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Encapsulates the functionality for a tool that goes in the main window's toolbar

@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     internal abstract class PropertyControl<TValue, TProperty>
         : PropertyControl

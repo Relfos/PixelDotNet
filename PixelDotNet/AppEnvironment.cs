@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Drawing;
@@ -18,7 +18,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     // TODO: rename AppEnvironment -> ToolEnvironment or ToolConfigItems or something
     /// <summary>

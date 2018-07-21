@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     [Obsolete("This class is obsolete, and exists only for compatibility with some legacy plugins. Use GaussianBlurEffect instead.")]
     public sealed class BlurEffect

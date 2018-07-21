@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     [Serializable]
     public sealed class PropertyBasedSaveConfigToken

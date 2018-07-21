@@ -12,7 +12,7 @@ using System.Collections;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Encapsulates information and events about the current user session.

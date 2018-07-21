@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public static class TripleUtils
     {

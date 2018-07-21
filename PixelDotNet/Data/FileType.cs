@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Data.Quantize;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.Data.Quantize;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -19,7 +19,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Represents one type of file that PaintDotNet can load or save.

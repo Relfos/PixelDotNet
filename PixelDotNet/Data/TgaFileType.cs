@@ -46,9 +46,9 @@
 // 
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -56,7 +56,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.Data
+namespace PixelDotNet.Data
 {
     public sealed class TgaFileType
         : InternalFileType

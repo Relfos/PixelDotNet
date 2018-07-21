@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This class handles rendering something to a SurfaceBox via a Graphics context.

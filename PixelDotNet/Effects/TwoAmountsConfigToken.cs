@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public class TwoAmountsConfigToken
         : EffectConfigToken

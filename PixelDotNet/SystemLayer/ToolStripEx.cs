@@ -11,7 +11,7 @@ using System;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// This class adds on to the functionality provided in System.Windows.Forms.ToolStrip.

@@ -13,9 +13,9 @@
 
 using System;
 
-using SpriteDotNet;
+using PixelDotNet;
 
-namespace SpriteDotNet.Data.PhotoshopFileType
+namespace PixelDotNet.Data.PhotoshopFileType
 {
   [Serializable]
   public class PsdSaveConfigToken

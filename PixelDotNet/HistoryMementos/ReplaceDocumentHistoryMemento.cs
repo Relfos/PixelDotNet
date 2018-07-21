@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryMementos
+namespace PixelDotNet.HistoryMementos
 {
     /// <summary>
     /// This HistoryMemento can be used to save an entire Document for undo purposes

@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Specialized;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class BitVector2D
         : IBitVector2D,

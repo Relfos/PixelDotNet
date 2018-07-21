@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class ToolClickedEventArgs
         : System.EventArgs

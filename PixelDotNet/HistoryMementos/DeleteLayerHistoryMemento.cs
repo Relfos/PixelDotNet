@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryMementos
+namespace PixelDotNet.HistoryMementos
 {
     /// <summary>
     /// Provides the ability to undo deleting a layer.

@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ using System.Drawing.Imaging;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Renders a Surface to the screen.
@@ -30,7 +30,7 @@ namespace SpriteDotNet
 
         private int justPaintWhite = 0; // when this is non-zero, we just paint white (startup optimization)
         private ScaleFactor scaleFactor;
-        private SpriteDotNet.Threading.ThreadPool threadPool = new SpriteDotNet.Threading.ThreadPool();
+        private PixelDotNet.Threading.ThreadPool threadPool = new PixelDotNet.Threading.ThreadPool();
         private SurfaceBoxRendererList rendererList;
         private SurfaceBoxBaseRenderer baseRenderer;
         private Surface surface;

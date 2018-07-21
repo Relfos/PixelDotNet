@@ -11,7 +11,7 @@ using System;
 using System.Collections;
 using System.IO;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class DeferredFormatter
     {

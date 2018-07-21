@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class WindowMenu
         : PdnMenuItem

@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal delegate void ToolClickedEventHandler(object sender, ToolClickedEventArgs e);
 }

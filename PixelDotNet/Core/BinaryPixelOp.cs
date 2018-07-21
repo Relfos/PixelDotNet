@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Defines a way to operate on a pixel, or a region of pixels, in a binary fashion.

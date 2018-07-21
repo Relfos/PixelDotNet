@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +18,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     // TODO: for 4.0, refactor into smaller ToolConfigStrip "Sections"
     //       better yet, use IndirectUI
@@ -2372,7 +2372,7 @@ namespace SpriteDotNet
                     sf.FormatFlags &= ~StringFormatFlags.LineLimit;
                     sf.FormatFlags |= StringFormatFlags.NoWrap;
 
-                    bool isSymbol = SpriteDotNet.SystemLayer.Fonts.IsSymbolFont(myFont);
+                    bool isSymbol = PixelDotNet.SystemLayer.Fonts.IsSymbolFont(myFont);
                     bool isSelected = ((e.State & DrawItemState.Selected) != 0);
                     Brush fillBrush;
                     Brush textBrush;

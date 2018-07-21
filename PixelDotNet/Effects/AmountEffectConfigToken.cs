@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     /// <summary>
     /// Used for configuring effects that just need one variable,

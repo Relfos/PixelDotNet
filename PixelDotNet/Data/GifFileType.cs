@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.IndirectUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class GifFileType
         : InternalFileType

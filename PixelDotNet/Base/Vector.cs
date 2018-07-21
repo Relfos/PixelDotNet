@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class Vector<T>
     {

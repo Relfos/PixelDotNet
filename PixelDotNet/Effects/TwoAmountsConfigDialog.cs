@@ -13,7 +13,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class TwoAmountsConfigDialog
         : TwoAmountsConfigDialogBase
@@ -37,8 +37,8 @@ namespace SpriteDotNet.Effects
         private System.ComponentModel.IContainer components = null;
 
         private int amount1Default = 0;
-        private SpriteDotNet.HeaderLabel amount1Header;
-        private SpriteDotNet.HeaderLabel amount2Header;
+        private PixelDotNet.HeaderLabel amount1Header;
+        private PixelDotNet.HeaderLabel amount2Header;
         private int amount2Default = 0;
 
         public int Amount1Default
@@ -216,8 +216,8 @@ namespace SpriteDotNet.Effects
             this.amount2Reset = new System.Windows.Forms.Button();
             this.amount2UpDown = new System.Windows.Forms.NumericUpDown();
             this.amount2Slider = new System.Windows.Forms.TrackBar();
-            this.amount1Header = new SpriteDotNet.HeaderLabel();
-            this.amount2Header = new SpriteDotNet.HeaderLabel();
+            this.amount1Header = new PixelDotNet.HeaderLabel();
+            this.amount2Header = new PixelDotNet.HeaderLabel();
             ((System.ComponentModel.ISupportInitialize)(this.amount1Slider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount1UpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount2UpDown)).BeginInit();

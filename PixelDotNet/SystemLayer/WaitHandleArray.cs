@@ -10,7 +10,7 @@
 using System;
 using System.Threading;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Encapsulates an array of WaitHandles and methods for waiting on them.

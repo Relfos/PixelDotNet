@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -16,7 +16,7 @@ using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.Collections;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     /// <summary>
     /// Ctrl left-click to select an origin, left click to place it

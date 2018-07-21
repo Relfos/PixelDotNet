@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.Effects;
-using SpriteDotNet.Menus;
-using SpriteDotNet.SystemLayer;
-using SpriteDotNet.Tools;
+using PixelDotNet.Actions;
+using PixelDotNet.Effects;
+using PixelDotNet.Menus;
+using PixelDotNet.SystemLayer;
+using PixelDotNet.Tools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -33,7 +33,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal sealed class MainForm 
         : PdnBaseForm
@@ -577,7 +577,7 @@ namespace SpriteDotNet
         {
             this.components = new System.ComponentModel.Container();
             this.defaultButton = new System.Windows.Forms.Button();
-            this.appWorkspace = new SpriteDotNet.AppWorkspace();
+            this.appWorkspace = new PixelDotNet.AppWorkspace();
             this.floaterOpacityTimer = new System.Windows.Forms.Timer(this.components);
             this.deferredInitializationTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();

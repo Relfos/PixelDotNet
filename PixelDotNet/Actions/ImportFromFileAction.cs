@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryFunctions;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.HistoryFunctions;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     // TODO: split into Action and Function(s)
     internal sealed class ImportFromFileAction

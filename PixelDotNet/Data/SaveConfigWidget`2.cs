@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public abstract class SaveConfigWidget<TFileType, TToken>
         : SaveConfigWidget

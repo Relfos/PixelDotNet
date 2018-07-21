@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class ColorDisplayWidget 
         : System.Windows.Forms.UserControl
@@ -143,10 +143,10 @@ namespace SpriteDotNet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.primaryColorRectangle = new SpriteDotNet.ColorRectangleControl();
-            this.secondaryColorRectangle = new SpriteDotNet.ColorRectangleControl();
-            this.swapIconBox = new SpriteDotNet.IconBox();
-            this.blackAndWhiteIconBox = new SpriteDotNet.IconBox();
+            this.primaryColorRectangle = new PixelDotNet.ColorRectangleControl();
+            this.secondaryColorRectangle = new PixelDotNet.ColorRectangleControl();
+            this.swapIconBox = new PixelDotNet.IconBox();
+            this.blackAndWhiteIconBox = new PixelDotNet.IconBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 

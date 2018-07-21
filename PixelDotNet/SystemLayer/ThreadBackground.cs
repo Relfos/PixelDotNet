@@ -11,7 +11,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     // Current implementation deficiency: The interface is such that an implied push/pop of
     // flags is presented. However, once you 'push' a background mode, it is not 'popped'

@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -21,7 +21,7 @@ using System.Security;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This Form class is used to fix a few bugs in Windows Forms, and to add a few performance
@@ -589,7 +589,7 @@ namespace SpriteDotNet
             this.SuspendLayout();
             InitializeComponent();
 
-            this.formEx = new SpriteDotNet.SystemLayer.FormEx(this, new RealParentWndProcDelegate(this.RealWndProc));
+            this.formEx = new PixelDotNet.SystemLayer.FormEx(this, new RealParentWndProcDelegate(this.RealWndProc));
             this.Controls.Add(this.formEx);
             this.formEx.Visible = false;
             DecideOpacitySetting();

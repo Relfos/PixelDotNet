@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.HistoryFunctions
+namespace PixelDotNet.HistoryFunctions
 {
     internal sealed class FlipDocumentHorizontalFunction
         : FlipDocumentFunction

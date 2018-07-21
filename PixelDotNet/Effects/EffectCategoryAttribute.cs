@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     /// <summary>
     /// Allows you to categorize an Effect to place it in the appropriate menu

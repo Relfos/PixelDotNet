@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Menus;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.Menus;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,7 +17,7 @@ using System.Drawing.Drawing2D;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class PdnToolBar 
         : Control,
@@ -434,7 +434,7 @@ namespace SpriteDotNet
             //
             this.viewConfigStrip.Name = "viewConfigStrip";
             this.viewConfigStrip.AutoSize = false;
-            this.viewConfigStrip.ZoomBasis = SpriteDotNet.ZoomBasis.FitToWindow;
+            this.viewConfigStrip.ZoomBasis = PixelDotNet.ZoomBasis.FitToWindow;
             this.viewConfigStrip.TabStop = false;
             this.viewConfigStrip.DrawGrid = false;
             this.viewConfigStrip.TabIndex = 1;
@@ -454,7 +454,7 @@ namespace SpriteDotNet
             //
             this.toolConfigStrip.Name = "drawConfigStrip";
             this.toolConfigStrip.AutoSize = false;
-            this.toolConfigStrip.ShapeDrawType = SpriteDotNet.ShapeDrawType.Outline;
+            this.toolConfigStrip.ShapeDrawType = PixelDotNet.ShapeDrawType.Outline;
             this.toolConfigStrip.TabIndex = 3;
             this.toolConfigStrip.Dock = DockStyle.None;
             this.toolConfigStrip.GripStyle = toolStripsGripStyle;

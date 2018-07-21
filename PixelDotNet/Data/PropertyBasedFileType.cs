@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public abstract class PropertyBasedFileType
         : FileType<PropertyBasedSaveConfigToken, PropertyBasedSaveConfigWidget>

@@ -13,7 +13,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Core
+namespace PixelDotNet.Core
 {
     internal sealed class PanControl
         : UserControl

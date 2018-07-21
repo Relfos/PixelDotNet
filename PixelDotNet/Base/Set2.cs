@@ -12,7 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Represents an enumerable collection of items. Each item can only be present

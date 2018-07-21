@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class LevelsEffectConfigDialog 
         : EffectConfigDialog
@@ -80,8 +80,8 @@ namespace SpriteDotNet.Effects
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            SpriteDotNet.HistogramRgb histogramRgb1 = new SpriteDotNet.HistogramRgb();
-            SpriteDotNet.HistogramRgb histogramRgb2 = new SpriteDotNet.HistogramRgb();
+            PixelDotNet.HistogramRgb histogramRgb1 = new PixelDotNet.HistogramRgb();
+            PixelDotNet.HistogramRgb histogramRgb2 = new PixelDotNet.HistogramRgb();
             this.redMaskCheckBox = new System.Windows.Forms.CheckBox();
             this.greenMaskCheckBox = new System.Windows.Forms.CheckBox();
             this.blueMaskCheckBox = new System.Windows.Forms.CheckBox();
@@ -91,10 +91,10 @@ namespace SpriteDotNet.Effects
             this.resetButton = new System.Windows.Forms.Button();
             this.tooltipProvider = new System.Windows.Forms.ToolTip(this.components);
             this.tableMain = new System.Windows.Forms.TableLayoutPanel();
-            this.headerHistogramOutput = new SpriteDotNet.HeaderLabel();
-            this.headerControlsOutput = new SpriteDotNet.HeaderLabel();
-            this.headerControlsInput = new SpriteDotNet.HeaderLabel();
-            this.headerHistogramInput = new SpriteDotNet.HeaderLabel();
+            this.headerHistogramOutput = new PixelDotNet.HeaderLabel();
+            this.headerControlsOutput = new PixelDotNet.HeaderLabel();
+            this.headerControlsInput = new PixelDotNet.HeaderLabel();
+            this.headerHistogramInput = new PixelDotNet.HeaderLabel();
             this.swatchInLow = new System.Windows.Forms.Panel();
             this.inputHiUpDown = new System.Windows.Forms.NumericUpDown();
             this.swatchInHigh = new System.Windows.Forms.Panel();
@@ -103,12 +103,12 @@ namespace SpriteDotNet.Effects
             this.outputGammaUpDown = new System.Windows.Forms.NumericUpDown();
             this.swatchOutHigh = new System.Windows.Forms.Panel();
             this.outputHiUpDown = new System.Windows.Forms.NumericUpDown();
-            this.gradientInput = new SpriteDotNet.ColorGradientControl();
+            this.gradientInput = new PixelDotNet.ColorGradientControl();
             this.swatchOutMid = new System.Windows.Forms.Panel();
-            this.gradientOutput = new SpriteDotNet.ColorGradientControl();
+            this.gradientOutput = new PixelDotNet.ColorGradientControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.histogramInput = new SpriteDotNet.HistogramControl();
-            this.histogramOutput = new SpriteDotNet.HistogramControl();
+            this.histogramInput = new PixelDotNet.HistogramControl();
+            this.histogramOutput = new PixelDotNet.HistogramControl();
             this.outputLowUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inputHiUpDown)).BeginInit();
@@ -425,7 +425,7 @@ namespace SpriteDotNet.Effects
             this.gradientInput.Size = new System.Drawing.Size(34, 150);
             this.gradientInput.MaxColor = System.Drawing.Color.White;
             this.gradientInput.Value = 0;
-            this.gradientInput.ValueChanged += new SpriteDotNet.IndexEventHandler(this.gradientInput_ValueChanged);
+            this.gradientInput.ValueChanged += new PixelDotNet.IndexEventHandler(this.gradientInput_ValueChanged);
             this.gradientInput.TabStop = false;
             // 
             // swatchOutMid
@@ -449,7 +449,7 @@ namespace SpriteDotNet.Effects
             this.gradientOutput.Size = new System.Drawing.Size(34, 150);
             this.gradientOutput.MaxColor = System.Drawing.Color.White;
             this.gradientOutput.Value = 0;
-            this.gradientOutput.ValueChanged += new SpriteDotNet.IndexEventHandler(this.gradientOutput_ValueChanged);
+            this.gradientOutput.ValueChanged += new PixelDotNet.IndexEventHandler(this.gradientOutput_ValueChanged);
             this.gradientOutput.TabStop = false;
             // 
             // tableLayoutPanel2

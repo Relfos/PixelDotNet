@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Carries information about the subset of Brush configuration details that we support.

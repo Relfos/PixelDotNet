@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public delegate void ProgressEventHandler(object sender, ProgressEventArgs e);
 }

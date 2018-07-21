@@ -32,7 +32,7 @@
 
 using System;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     internal static class SrgbUtility
     {

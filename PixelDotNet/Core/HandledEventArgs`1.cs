@@ -10,7 +10,7 @@
 using System;
 using System.ComponentModel;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public class HandledEventArgs<T>
         : HandledEventArgs

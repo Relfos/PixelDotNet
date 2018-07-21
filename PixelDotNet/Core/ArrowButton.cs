@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -16,7 +16,7 @@ using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class ArrowButton
         : ButtonBase

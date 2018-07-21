@@ -13,7 +13,7 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class SaveProgressDialog
         : CallbackWithProgressDialog

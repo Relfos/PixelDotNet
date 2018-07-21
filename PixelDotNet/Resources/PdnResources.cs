@@ -8,7 +8,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 using LunarParser.XML;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +21,7 @@ using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public static class PdnResources
     {

@@ -10,7 +10,7 @@
 using System;
 using System.Collections;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     // TODO: reimplement to not use ArrayList, although we'll need to keep this class around
     //       for compatibility with .PDN's saved with older versions

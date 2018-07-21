@@ -12,10 +12,10 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public class PanelEx : 
-        SpriteDotNet.SystemLayer.ScrollPanel
+        PixelDotNet.SystemLayer.ScrollPanel
     {
         private bool hideHScroll = false;
 

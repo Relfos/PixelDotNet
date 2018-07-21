@@ -14,7 +14,7 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// This is an implementation of SerializationBinder that tries to find a match

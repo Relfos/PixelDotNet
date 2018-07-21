@@ -7,9 +7,9 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -20,7 +20,7 @@ using System.Diagnostics;
 using System.Collections;
 using System.ComponentModel;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class TextTool
         : Tool
@@ -53,7 +53,7 @@ namespace SpriteDotNet.Tools
         private System.DateTime startTime;
         private bool lastPulseCursorState;
         private Cursor textToolCursor;
-        private SpriteDotNet.Threading.ThreadPool threadPool;
+        private PixelDotNet.Threading.ThreadPool threadPool;
         private bool enableNub = true;
 
         private CompoundHistoryMemento currentHA;
@@ -186,7 +186,7 @@ namespace SpriteDotNet.Tools
             AppEnvironment.SecondaryColorChanged += new EventHandler(BackColorChangedHandler);
             AppEnvironment.AlphaBlendingChanged += new EventHandler(AlphaBlendingChangedHandler);
             
-            this.threadPool = new SpriteDotNet.Threading.ThreadPool();
+            this.threadPool = new PixelDotNet.Threading.ThreadPool();
 
             this.moveNub = new MoveNubRenderer(this.RendererList);
             this.moveNub.Shape = MoveNubShape.Compass;

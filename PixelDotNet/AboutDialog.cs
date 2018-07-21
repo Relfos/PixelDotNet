@@ -15,7 +15,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class AboutDialog 
         : PdnBaseForm
@@ -70,7 +70,7 @@ namespace SpriteDotNet
             this.creditsLabel = new System.Windows.Forms.Label();
             this.richCreditsBox = new System.Windows.Forms.RichTextBox();
             this.copyrightLabel = new System.Windows.Forms.TextBox();
-            this.pdnBanner = new SpriteDotNet.PdnBanner();
+            this.pdnBanner = new PixelDotNet.PdnBanner();
             this.versionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 

@@ -10,7 +10,7 @@
 using System;
 using System.IO;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class PdnFileType
         : FileType

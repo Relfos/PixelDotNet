@@ -11,7 +11,7 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
+using PixelDotNet;
 
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ using System.Text;
 
 using PhotoshopFile;
 
-namespace SpriteDotNet.Data.PhotoshopFileType
+namespace PixelDotNet.Data.PhotoshopFileType
 {
   public static class ImageDecoderPdn
   {

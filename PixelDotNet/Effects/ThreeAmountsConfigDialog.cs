@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class ThreeAmountsConfigDialog
         : ThreeAmountsConfigDialogBase
@@ -25,7 +25,7 @@ namespace SpriteDotNet.Effects
         private System.Windows.Forms.Button amount3Reset;
         private System.Windows.Forms.NumericUpDown amount3UpDown;
         private System.Windows.Forms.TrackBar amount3Slider;
-        private SpriteDotNet.HeaderLabel amount3Header;
+        private PixelDotNet.HeaderLabel amount3Header;
     
         private int amount3Default = 0;
 
@@ -109,7 +109,7 @@ namespace SpriteDotNet.Effects
             this.amount3Reset = new System.Windows.Forms.Button();
             this.amount3UpDown = new System.Windows.Forms.NumericUpDown();
             this.amount3Slider = new System.Windows.Forms.TrackBar();
-            this.amount3Header = new SpriteDotNet.HeaderLabel();
+            this.amount3Header = new PixelDotNet.HeaderLabel();
             ((System.ComponentModel.ISupportInitialize)(this.amount3UpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.amount3Slider)).BeginInit();
             this.SuspendLayout();

@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.IndirectUI;
+using PixelDotNet;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.IndirectUI;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class ReduceNoiseEffect
         : LocalHistogramEffect

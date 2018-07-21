@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     [Serializable]
     internal sealed class SelectionDrawModeInfo

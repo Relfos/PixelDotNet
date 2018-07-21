@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -16,7 +16,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This is our Surface type. We allocate our own blocks of memory for this,

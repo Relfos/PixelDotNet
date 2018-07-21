@@ -7,15 +7,15 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.Effects;
+using PixelDotNet;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.Effects;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class ReliefEffect
         : ColorDifferenceEffect

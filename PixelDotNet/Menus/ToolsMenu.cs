@@ -10,7 +10,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
 #if false
     internal sealed class ToolsMenu

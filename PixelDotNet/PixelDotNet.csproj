@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6A8A5D1C-5EE3-4117-A78C-D07970465554}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SpriteNet</RootNamespace>
-    <AssemblyName>SpriteNet</AssemblyName>
+    <RootNamespace>PixelDotNet</RootNamespace>
+    <AssemblyName>PixelNET</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

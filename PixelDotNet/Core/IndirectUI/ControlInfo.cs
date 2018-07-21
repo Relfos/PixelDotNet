@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     public abstract class ControlInfo
         : ICloneable<ControlInfo>

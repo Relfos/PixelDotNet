@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +15,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class UnsavedChangesDialog 
         : PdnBaseForm
@@ -183,12 +183,12 @@ namespace SpriteDotNet
         /// </summary>
         private void InitializeComponent()
         {
-            this.documentStrip = new SpriteDotNet.DocumentStrip();
-            this.documentListHeader = new SpriteDotNet.HeaderLabel();
+            this.documentStrip = new PixelDotNet.DocumentStrip();
+            this.documentListHeader = new PixelDotNet.HeaderLabel();
             this.hScrollBar = new System.Windows.Forms.HScrollBar();
-            this.saveButton = new SpriteDotNet.CommandButton();
-            this.dontSaveButton = new SpriteDotNet.CommandButton();
-            this.cancelButton = new SpriteDotNet.CommandButton();
+            this.saveButton = new PixelDotNet.CommandButton();
+            this.dontSaveButton = new PixelDotNet.CommandButton();
+            this.cancelButton = new PixelDotNet.CommandButton();
             this.infoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 

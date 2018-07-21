@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryFunctions;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryFunctions;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class EditMenu
         : PdnMenuItem

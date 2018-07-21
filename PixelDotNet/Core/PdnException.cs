@@ -10,7 +10,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// This is the base exception for all Paint.NET exceptions.

@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Core;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet.Core;
+using PixelDotNet.PropertySystem;
 using System;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     internal class PropertyControlInfoAttribute

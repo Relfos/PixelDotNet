@@ -10,7 +10,7 @@
 using System;
 using System.Drawing;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Gets around a limitation in System.Windows.Forms.PaintEventArgs in that it disposes

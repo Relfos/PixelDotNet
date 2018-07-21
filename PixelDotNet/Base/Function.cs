@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public delegate R Function<R>();
     public delegate R Function<R, T>(T t);

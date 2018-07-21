@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.PropertySystem
+namespace PixelDotNet.PropertySystem
 {
     public abstract class PropertyCollectionRule
         : ICloneable<PropertyCollectionRule>

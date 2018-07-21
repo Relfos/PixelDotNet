@@ -11,7 +11,7 @@ using System;
 using System.Collections;
 using System.Drawing;
 
-namespace SpriteDotNet.Data.Quantize
+namespace PixelDotNet.Data.Quantize
 {
     public sealed class PaletteTable
     {

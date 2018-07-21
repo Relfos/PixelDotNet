@@ -12,7 +12,7 @@ using System.Drawing;
 using System.Collections;   
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class SurfaceBoxRendererList
     {

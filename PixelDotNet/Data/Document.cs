@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Collections.Specialized;
@@ -27,7 +27,7 @@ using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     [Serializable]
     public sealed class Document
@@ -41,7 +41,7 @@ namespace SpriteDotNet
         private NameValueCollection userMetaData;
 
         [NonSerialized]
-        private SpriteDotNet.Threading.ThreadPool threadPool = new SpriteDotNet.Threading.ThreadPool();
+        private PixelDotNet.Threading.ThreadPool threadPool = new PixelDotNet.Threading.ThreadPool();
 
         [NonSerialized]
         private InvalidateEventHandler layerInvalidatedDelegate;
@@ -1220,7 +1220,7 @@ namespace SpriteDotNet
         {
             this.updateRegion = new Vector<Rectangle>();
             this.updateRegion.Add(this.Bounds);
-            this.threadPool = new SpriteDotNet.Threading.ThreadPool();
+            this.threadPool = new PixelDotNet.Threading.ThreadPool();
             SetupEvents();
             Dirty = true;
         }

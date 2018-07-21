@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     /// <summary>
     /// Flags that specify important information that an effect rendering host

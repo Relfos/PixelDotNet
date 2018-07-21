@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.SystemLayer.GpcWrapper
+namespace PixelDotNet.SystemLayer.GpcWrapper
 {
     internal static class NativeConstants
     {

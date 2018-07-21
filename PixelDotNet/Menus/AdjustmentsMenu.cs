@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Effects;
+using PixelDotNet.Effects;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class AdjustmentsMenu
         : EffectMenuBase

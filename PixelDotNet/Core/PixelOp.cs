@@ -11,7 +11,7 @@ using System;
 using System.Drawing;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     [Serializable]
     public unsafe abstract class PixelOp

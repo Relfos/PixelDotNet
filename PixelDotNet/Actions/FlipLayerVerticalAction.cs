@@ -7,10 +7,10 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryFunctions;
+using PixelDotNet.HistoryFunctions;
 using System;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal class FlipLayerVerticalFunction
         : FlipLayerFunction

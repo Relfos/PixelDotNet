@@ -10,7 +10,7 @@
 using Microsoft.Win32.SafeHandles;
 using System;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     internal static class NativeConstants
     {

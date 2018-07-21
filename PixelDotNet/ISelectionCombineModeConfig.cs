@@ -10,7 +10,7 @@
 using System;
 using System.Drawing.Drawing2D;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal interface ISelectionCombineModeConfig
     {

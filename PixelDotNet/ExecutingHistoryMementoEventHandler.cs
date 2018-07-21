@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal delegate void ExecutingHistoryMementoEventHandler(object sender, ExecutingHistoryMementoEventArgs e);
 }

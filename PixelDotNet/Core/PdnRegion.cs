@@ -16,7 +16,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Serialization;
 using System.Security;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Designed as a proxy to the GDI+ Region class, while allowing for a

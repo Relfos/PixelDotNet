@@ -7,13 +7,13 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace SpriteDotNet.HistoryFunctions
+namespace PixelDotNet.HistoryFunctions
 {
     internal sealed class RotateDocumentFunction
         : HistoryFunction

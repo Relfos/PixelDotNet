@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -16,7 +16,7 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class SaveConfigDialog 
         : PdnBaseDialog
@@ -239,11 +239,11 @@ namespace SpriteDotNet
         private Document document;
         private bool disposeDocument = false;
         private HeaderLabel previewHeader;
-        private SpriteDotNet.DocumentView documentView;
-        private SpriteDotNet.SaveConfigWidget saveConfigWidget;
+        private PixelDotNet.DocumentView documentView;
+        private PixelDotNet.SaveConfigWidget saveConfigWidget;
         private System.Windows.Forms.Panel saveConfigPanel;
 
-        private SpriteDotNet.HeaderLabel settingsHeader;
+        private PixelDotNet.HeaderLabel settingsHeader;
 
         private Surface scratchSurface;
         public Surface ScratchSurface
@@ -516,10 +516,10 @@ namespace SpriteDotNet
         {
             this.saveConfigPanel = new System.Windows.Forms.Panel();
             this.defaultsButton = new System.Windows.Forms.Button();
-            this.saveConfigWidget = new SpriteDotNet.SaveConfigWidget();
-            this.previewHeader = new SpriteDotNet.HeaderLabel();
-            this.documentView = new SpriteDotNet.DocumentView();
-            this.settingsHeader = new SpriteDotNet.HeaderLabel();
+            this.saveConfigWidget = new PixelDotNet.SaveConfigWidget();
+            this.previewHeader = new PixelDotNet.HeaderLabel();
+            this.documentView = new PixelDotNet.DocumentView();
+            this.settingsHeader = new PixelDotNet.HeaderLabel();
             this.SuspendLayout();
             // 
             // baseOkButton

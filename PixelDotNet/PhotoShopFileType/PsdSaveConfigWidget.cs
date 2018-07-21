@@ -20,15 +20,15 @@ using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-using SpriteDotNet;
+using PixelDotNet;
 
-namespace SpriteDotNet.Data.PhotoshopFileType
+namespace PixelDotNet.Data.PhotoshopFileType
 {
   /// <summary>
   /// Summary description for TgaSaveConfigWidget.
   /// </summary>
   public class PsdSaveConfigWidget 
-      : SpriteDotNet.SaveConfigWidget
+      : PixelDotNet.SaveConfigWidget
   {
     private System.Windows.Forms.CheckBox rleCompressCheckBox;
 

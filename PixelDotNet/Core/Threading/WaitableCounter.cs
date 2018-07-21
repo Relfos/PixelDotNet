@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Diagnostics;
 using System.Threading;
 
-namespace SpriteDotNet.Threading
+namespace PixelDotNet.Threading
 {
     /// <summary>
     /// Threading primitive that allows you to "count" and to wait on two conditions:

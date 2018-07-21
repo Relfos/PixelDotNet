@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class PluginSupportInfo
     {

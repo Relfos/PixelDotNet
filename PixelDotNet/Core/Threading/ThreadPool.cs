@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections;
 using System.Threading;
 
-namespace SpriteDotNet.Threading
+namespace PixelDotNet.Threading
 {
     /// <summary>
     /// Uses the .NET ThreadPool to do our own type of thread pool. The main difference

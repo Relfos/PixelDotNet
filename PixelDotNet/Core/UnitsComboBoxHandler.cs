@@ -13,7 +13,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class UnitsComboBoxHandler
         : IUnitsComboBox

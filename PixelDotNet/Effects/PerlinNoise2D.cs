@@ -38,7 +38,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     internal static class PerlinNoise2D
     {

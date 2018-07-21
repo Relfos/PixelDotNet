@@ -12,7 +12,7 @@ using System.Collections;
 using System.Drawing;
 using System.Runtime.Serialization;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Defines a surface that is irregularly shaped, defined by a Region.

@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryFunctions;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.HistoryFunctions;
+using PixelDotNet.HistoryMementos;
 using System;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class MoveActiveLayerUpAction
         : DocumentWorkspaceAction

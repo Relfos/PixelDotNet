@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     /// <summary>
     /// Defines the possible results when scanning.

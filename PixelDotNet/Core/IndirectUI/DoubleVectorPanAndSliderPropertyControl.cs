@@ -7,22 +7,22 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     [PropertyControlInfo(typeof(DoubleVectorProperty), PropertyControlType.PanAndSlider, IsDefault = true)]
     internal sealed class DoubleVectorPanAndSliderPropertyControl
          : PropertyControl<Pair<double, double>, VectorProperty<double>>
     {
         private HeaderLabel header;
-        private SpriteDotNet.Core.PanControl panControl;
+        private PixelDotNet.Core.PanControl panControl;
         private DoubleVectorSliderPropertyControl sliders;
         private Label textDescription;
 
@@ -300,7 +300,7 @@ namespace SpriteDotNet.IndirectUI
             this.header.RightMargin = 0;
             this.header.Text = this.DisplayName;
 
-            this.panControl = new SpriteDotNet.Core.PanControl();
+            this.panControl = new PixelDotNet.Core.PanControl();
             this.panControl.Name = "panControl";
             this.panControl.StaticImageUnderlay = (ImageResource)propInfo.ControlProperties[ControlInfoPropertyNames.StaticImageUnderlay].Value;
             this.panControl.PositionChanged += new EventHandler(PanControl_PositionChanged);

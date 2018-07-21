@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.SystemLayer.GpcWrapper
+namespace PixelDotNet.SystemLayer.GpcWrapper
 {
     internal static class NativeMethods
     {

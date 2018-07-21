@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.Effects;
+using PixelDotNet;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.Effects;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     /// <summary>
     /// ColorDifferenctEffect is a base class for my difference effects

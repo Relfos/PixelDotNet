@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Effects;
+using PixelDotNet.Effects;
 using System;
 using System.Collections.Generic;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class EffectsMenu
         : EffectMenuBase

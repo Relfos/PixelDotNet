@@ -13,7 +13,7 @@ using System.Collections;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class ToolsForm 
         : FloatingToolForm
@@ -72,7 +72,7 @@ namespace SpriteDotNet
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolsControl = new SpriteDotNet.ToolsControl();
+            this.toolsControl = new PixelDotNet.ToolsControl();
             this.SuspendLayout();
             // 
             // toolsControl

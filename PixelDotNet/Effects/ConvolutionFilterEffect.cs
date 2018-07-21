@@ -12,7 +12,7 @@ using System.Collections;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public abstract class ConvolutionFilterEffect
         : Effect

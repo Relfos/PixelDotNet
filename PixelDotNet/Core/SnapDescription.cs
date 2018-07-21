@@ -13,7 +13,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public sealed class SnapDescription
     {

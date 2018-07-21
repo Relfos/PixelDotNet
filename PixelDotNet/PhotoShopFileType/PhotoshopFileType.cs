@@ -11,8 +11,8 @@
 //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.Threading;
+using PixelDotNet;
+using PixelDotNet.Threading;
 
 using System;
 using System.Collections.Generic;
@@ -23,7 +23,7 @@ using System.Threading;
 
 using PhotoshopFile;
 
-namespace SpriteDotNet.Data.PhotoshopFileType
+namespace PixelDotNet.Data.PhotoshopFileType
 {
   public class PhotoshopFileTypes
       : IFileTypeFactory

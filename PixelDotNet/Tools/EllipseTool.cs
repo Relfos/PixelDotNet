@@ -17,7 +17,7 @@ using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class EllipseTool
         : ShapeTool 

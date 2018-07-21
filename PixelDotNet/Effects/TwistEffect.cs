@@ -7,15 +7,15 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.Effects;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.Effects;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace SpriteDotNet.Effects
+namespace PixelDotNet.Effects
 {
     public sealed class TwistEffect
         : InternalPropertyBasedEffect

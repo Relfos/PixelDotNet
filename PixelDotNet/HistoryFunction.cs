@@ -11,7 +11,7 @@ using System;
 using System.ComponentModel;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal abstract class HistoryFunction
     {

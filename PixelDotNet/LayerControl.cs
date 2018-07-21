@@ -15,7 +15,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class LayerControl 
         : UserControl

@@ -16,7 +16,7 @@ using System.Drawing.Imaging;
 using System.Runtime.Serialization;
 using System.Threading;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     [Serializable]
     public class BitmapLayer

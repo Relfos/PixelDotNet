@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.Effects;
-using SpriteDotNet.HistoryFunctions;
+using PixelDotNet.Actions;
+using PixelDotNet.Effects;
+using PixelDotNet.HistoryFunctions;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class LayersMenu
         : PdnMenuItem

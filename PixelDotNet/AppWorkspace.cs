@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.Effects;
-using SpriteDotNet.HistoryFunctions;
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.SystemLayer;
-using SpriteDotNet.Tools;
+using PixelDotNet.Actions;
+using PixelDotNet.Effects;
+using PixelDotNet.HistoryFunctions;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.SystemLayer;
+using PixelDotNet.Tools;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -30,7 +30,7 @@ using System.Security;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class AppWorkspace
         : UserControl,

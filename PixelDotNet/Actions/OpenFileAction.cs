@@ -11,7 +11,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class OpenFileAction
         : AppWorkspaceAction

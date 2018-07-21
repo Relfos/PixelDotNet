@@ -13,7 +13,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Runtime.InteropServices;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     public static class Network
     {

@@ -7,11 +7,11 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.PropertySystem;
 using System;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     [PropertyControlInfo(typeof(Int32Property), PropertyControlType.Slider, IsDefault = true)]
     internal sealed class Int32SliderPropertyControl

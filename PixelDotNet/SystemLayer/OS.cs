@@ -11,7 +11,7 @@ using Microsoft.Win32;
 using System;
 using System.Globalization;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     public static class OS
     {

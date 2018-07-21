@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Data;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.Data;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -18,7 +18,7 @@ using System.Reflection;
 using System.Resources;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Tools
+namespace PixelDotNet.Tools
 {
     internal class PencilTool
         : Tool 

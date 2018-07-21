@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
@@ -17,7 +17,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Diagnostics;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class ResizeDialog 
         : PdnBaseForm
@@ -381,10 +381,10 @@ namespace SpriteDotNet
         protected System.Windows.Forms.RadioButton percentRB;
         protected System.Windows.Forms.Label asteriskTextLabel;
         protected System.Windows.Forms.Label asteriskLabel;
-        protected SpriteDotNet.HeaderLabel resizedImageHeader;
+        protected PixelDotNet.HeaderLabel resizedImageHeader;
         protected System.Windows.Forms.Label resolutionLabel;
-        protected SpriteDotNet.UnitsComboBox unitsComboBox2;
-        protected SpriteDotNet.UnitsComboBox unitsComboBox1;
+        protected PixelDotNet.UnitsComboBox unitsComboBox2;
+        protected PixelDotNet.UnitsComboBox unitsComboBox1;
         protected System.Windows.Forms.NumericUpDown resolutionUpDown;
 
         private ResizeConstrainer constrainer;
@@ -399,8 +399,8 @@ namespace SpriteDotNet
         protected System.Windows.Forms.NumericUpDown pixelHeightUpDown;
         protected System.Windows.Forms.NumericUpDown printWidthUpDown;
         protected System.Windows.Forms.NumericUpDown printHeightUpDown;
-        protected SpriteDotNet.HeaderLabel pixelSizeHeader;
-        protected SpriteDotNet.HeaderLabel printSizeHeader;
+        protected PixelDotNet.HeaderLabel pixelSizeHeader;
+        protected PixelDotNet.HeaderLabel printSizeHeader;
         protected System.Windows.Forms.Label resamplingLabel;
         protected System.Windows.Forms.ComboBox resamplingAlgorithmComboBox;
 
@@ -743,7 +743,7 @@ namespace SpriteDotNet
             this.cancelButton = new System.Windows.Forms.Button();
             this.pixelWidthUpDown = new System.Windows.Forms.NumericUpDown();
             this.pixelHeightUpDown = new System.Windows.Forms.NumericUpDown();
-            this.resizedImageHeader = new SpriteDotNet.HeaderLabel();
+            this.resizedImageHeader = new PixelDotNet.HeaderLabel();
             this.asteriskLabel = new System.Windows.Forms.Label();
             this.asteriskTextLabel = new System.Windows.Forms.Label();
             this.absoluteRB = new System.Windows.Forms.RadioButton();
@@ -753,16 +753,16 @@ namespace SpriteDotNet
             this.percentSignLabel = new System.Windows.Forms.Label();
             this.resolutionLabel = new System.Windows.Forms.Label();
             this.resolutionUpDown = new System.Windows.Forms.NumericUpDown();
-            this.unitsComboBox2 = new SpriteDotNet.UnitsComboBox();
-            this.unitsComboBox1 = new SpriteDotNet.UnitsComboBox();
+            this.unitsComboBox2 = new PixelDotNet.UnitsComboBox();
+            this.unitsComboBox1 = new PixelDotNet.UnitsComboBox();
             this.printWidthUpDown = new System.Windows.Forms.NumericUpDown();
             this.printHeightUpDown = new System.Windows.Forms.NumericUpDown();
             this.newWidthLabel2 = new System.Windows.Forms.Label();
             this.newHeightLabel2 = new System.Windows.Forms.Label();
             this.pixelsLabel2 = new System.Windows.Forms.Label();
             this.unitsLabel1 = new System.Windows.Forms.Label();
-            this.pixelSizeHeader = new SpriteDotNet.HeaderLabel();
-            this.printSizeHeader = new SpriteDotNet.HeaderLabel();
+            this.pixelSizeHeader = new PixelDotNet.HeaderLabel();
+            this.printSizeHeader = new PixelDotNet.HeaderLabel();
             this.resamplingLabel = new System.Windows.Forms.Label();
             this.resamplingAlgorithmComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pixelWidthUpDown)).BeginInit();
@@ -999,8 +999,8 @@ namespace SpriteDotNet
             this.unitsComboBox2.PixelsAvailable = false;
             this.unitsComboBox2.Size = new System.Drawing.Size(88, 21);
             this.unitsComboBox2.TabIndex = 8;
-            this.unitsComboBox2.Units = SpriteDotNet.MeasurementUnit.Inch;
-            this.unitsComboBox2.UnitsDisplayType = SpriteDotNet.UnitsDisplayType.Ratio;
+            this.unitsComboBox2.Units = PixelDotNet.MeasurementUnit.Inch;
+            this.unitsComboBox2.UnitsDisplayType = PixelDotNet.UnitsDisplayType.Ratio;
             this.unitsComboBox2.UnitsChanged += new System.EventHandler(this.OnUnitsComboBox2UnitsChanged);
             // 
             // unitsComboBox1
@@ -1010,7 +1010,7 @@ namespace SpriteDotNet
             this.unitsComboBox1.PixelsAvailable = false;
             this.unitsComboBox1.Size = new System.Drawing.Size(88, 21);
             this.unitsComboBox1.TabIndex = 12;
-            this.unitsComboBox1.Units = SpriteDotNet.MeasurementUnit.Inch;
+            this.unitsComboBox1.Units = PixelDotNet.MeasurementUnit.Inch;
             this.unitsComboBox1.UnitsChanged += new System.EventHandler(this.OnUnitsComboBox1UnitsChanged);
             // 
             // printWidthUpDown

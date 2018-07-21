@@ -7,8 +7,8 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.HistoryMementos;
-using SpriteDotNet.Tools;
+using PixelDotNet.HistoryMementos;
+using PixelDotNet.Tools;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -17,7 +17,7 @@ using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Actions
+namespace PixelDotNet.Actions
 {
     internal sealed class PasteAction
     {

@@ -7,12 +7,12 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.HistoryMementos;
+using PixelDotNet.Actions;
+using PixelDotNet.HistoryMementos;
 using System;
 using System.Drawing.Drawing2D;
 
-namespace SpriteDotNet.HistoryFunctions
+namespace PixelDotNet.HistoryFunctions
 {
     internal sealed class InvertSelectionFunction
         : HistoryFunction

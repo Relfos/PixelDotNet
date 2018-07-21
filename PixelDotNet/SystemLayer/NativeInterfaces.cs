@@ -12,7 +12,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     // Most of this code is from the "Vista Bridge" samples: http://msdn2.microsoft.com/en-us/library/ms756482.aspx
 

@@ -7,9 +7,9 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.IndirectUI;
-using SpriteDotNet.PropertySystem;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.IndirectUI;
+using PixelDotNet.PropertySystem;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +19,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 { 
     public sealed class PngFileType
         : InternalFileType

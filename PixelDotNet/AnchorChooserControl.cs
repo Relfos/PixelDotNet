@@ -15,7 +15,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class AnchorChooserControl 
         : System.Windows.Forms.UserControl

@@ -12,7 +12,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Collections.Generic;
 
-namespace SpriteDotNet.SystemLayer.GpcWrapper
+namespace PixelDotNet.SystemLayer.GpcWrapper
 {
     internal sealed class VertexList
     {

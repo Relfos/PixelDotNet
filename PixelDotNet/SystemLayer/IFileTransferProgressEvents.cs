@@ -8,9 +8,9 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 using System;
-using SpriteDotNet;
+using PixelDotNet;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     public interface IFileTransferProgressEvents
         : IProgressEvents<string>

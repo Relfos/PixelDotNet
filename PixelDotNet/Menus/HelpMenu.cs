@@ -9,8 +9,8 @@
 
 //#define CRASH
 
-using SpriteDotNet.Actions;
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.Actions;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -19,7 +19,7 @@ using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet.Menus
+namespace PixelDotNet.Menus
 {
     internal sealed class HelpMenu
         : PdnMenuItem

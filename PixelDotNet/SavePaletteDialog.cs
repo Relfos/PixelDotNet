@@ -14,7 +14,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal class SavePaletteDialog 
         : PdnBaseForm

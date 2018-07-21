@@ -7,14 +7,14 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet;
-using SpriteDotNet.Core;
-using SpriteDotNet.PropertySystem;
+using PixelDotNet;
+using PixelDotNet.Core;
+using PixelDotNet.PropertySystem;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet.IndirectUI
+namespace PixelDotNet.IndirectUI
 {
     [PropertyControlInfo(typeof(DoubleProperty), PropertyControlType.Slider, IsDefault = true)]
     internal sealed class DoubleSliderPropertyControl

@@ -7,7 +7,7 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using SpriteDotNet.SystemLayer;
+using PixelDotNet.SystemLayer;
 using System;
 using System.Drawing;
 using System.IO;
@@ -15,7 +15,7 @@ using System.Runtime.Serialization;
 using System.Runtime.InteropServices;
 using System.Threading;
 
-namespace SpriteDotNet.HistoryMementos
+namespace PixelDotNet.HistoryMementos
 {
     internal class BitmapHistoryMemento
         : HistoryMemento

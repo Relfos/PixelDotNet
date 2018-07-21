@@ -11,7 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     public delegate void HandledEventHandler<T>(object sender, HandledEventArgs<T> e);
 }

@@ -12,7 +12,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     /// <summary>
     /// Encapsulates a surface ("what") along with a pixel offset ("where") which 

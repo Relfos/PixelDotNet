@@ -12,7 +12,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     internal abstract class CallbackWithProgressDialog
     {

@@ -10,7 +10,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace SpriteDotNet
+namespace PixelDotNet
 {
     [Serializable]
     public class ReadOnlyException

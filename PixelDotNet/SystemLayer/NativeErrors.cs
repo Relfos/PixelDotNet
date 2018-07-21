@@ -9,7 +9,7 @@
 
 using System;
 
-namespace SpriteDotNet.SystemLayer
+namespace PixelDotNet.SystemLayer
 {
     // Copied from System.IO.MonoIOError.cs, (C) 2002 Dan Lewis
 
