@@ -1,6 +1,6 @@
 ﻿<root>
   <data name="Application.ProductName.Bare">
-    <value>Sprite.NET</value>
+    <value>Pixel.NET</value>
   </data>
   <data name="Application.ProductName.Format">
     <value>{0} v{1}{2}</value>
@@ -71,7 +71,7 @@
     <value>Delete color from palette</value>
   </data>
   <data name="ColorPalette.SaveHeader">
-    <value>; Sprite.NET Palette File
+    <value>; Pixel.NET Palette File
 ; Lines that start with a semicolon are comments
 ; Colors are written as 8-digit hexadecimal numbers: aarrggbb
 ; For example, this would specify green: FF00FF00
@@ -81,7 +81,7 @@
     <comment>Yes, this should be translated. This is written to the beginning of palette files, which are stored in text files (*.txt). They are intended to be understandable by the user.</comment>
   </data>
   <data name="SystemLayer.UserDataDirName">
-    <value>Sprite.NET User Files</value>
+    <value>Pixel.NET User Files</value>
     <comment>This is a directory that will be created in the My Documents folder.</comment>
   </data>
   <data name="ColorPalettes.UserDataSubDirName">
@@ -665,7 +665,7 @@ Shortcut key: X</value>
   </data>
   <data name="PdnInfo.FullAppName.Format">
     <value>{0} ({1})</value>
-    <comment>{0} is the product name ("Sprite.NET"), {1} is the version string ("2.2.2000.3000")</comment>
+    <comment>{0} is the product name ("Pixel.NET"), {1} is the version string ("2.2.2000.3000")</comment>
   </data>
   <data name="PdnInfo.VersionString.Format">
     <value>{0} {1} build {2}</value>
@@ -891,7 +891,7 @@ Shortcut key: X</value>
     <value>Starting...</value>
   </data>
   <data name="Startup.UnhandledError.Format">
-    <value>There was an unhandled error, and Sprite.NET must be closed. Refer to the file '{0}', which has been placed on your desktop, for more information.</value>
+    <value>There was an unhandled error, and Pixel.NET must be closed. Refer to the file '{0}', which has been placed on your desktop, for more information.</value>
     <comment>{0} is a filename</comment>
   </data>
   <data name="ToolConfigStrip.ResamplingLabel.Text">
@@ -1083,7 +1083,7 @@ Shortcut key: X</value>
     <value>There was an error reading the file from the media.</value>
   </data>
   <data name="LoadImage.Error.SerializationException">
-    <value>The file is corrupt or was saved with a newer version of Sprite.NET.</value>
+    <value>The file is corrupt or was saved with a newer version of Pixel.NET.</value>
   </data>
   <data name="LoadImage.Error.OutOfMemoryException">
     <value>Not enough memory to load the image.</value>
@@ -1095,10 +1095,10 @@ Shortcut key: X</value>
     <value>Open Image</value>
   </data>
   <data name="SavedWithOlderVersion.Format">
-    <value>This image was saved with an older version of Sprite.NET. If you save it, it will not be readable by that older version.
+    <value>This image was saved with an older version of Pixel.NET. If you save it, it will not be readable by that older version.
 
-Saved with: Sprite.NET v{0}
-Current version: Sprite.NET v{1}</value>
+Saved with: Pixel.NET v{0}
+Current version: Pixel.NET v{1}</value>
     <comment>{0} and {1} are version numbers</comment>
   </data>
   <data name="FileDialog.PathTooLongException.Message">
@@ -1169,7 +1169,7 @@ Current version: Sprite.NET v{1}</value>
     <value>Plugin Load Errors</value>
   </data>
   <data name="Effects.PluginLoadErrorsDialog.Message.Text">
-    <value>The following plugins failed to load. They may have been written for an older or newer version of Sprite.NET. If you already have the most up-to-date version of Sprite.NET, then you should check to see if there is an updated version of any plugin causing an error.</value>
+    <value>The following plugins failed to load. They may have been written for an older or newer version of Pixel.NET. If you already have the most up-to-date version of Pixel.NET, then you should check to see if there is an updated version of any plugin causing an error.</value>
   </data>
   <data name="EffectErrorMessage.InfoNotSupplied">
     <value>(Not Supplied)</value>
@@ -1194,7 +1194,7 @@ Current version: Sprite.NET v{1}</value>
       Website: {5}
       Full error message: {6}
 </value>
-    <comment>{0} is a full path name, such as "C:\Program Files\Sprite.NET\Effects\EdHarvey.dll" (localization not necessary). {1} is a display name such as "Surface Blur" (localization is handled by plugin). {2} is the version of the plugin or DLL, such as "1.2.345.6789" (localization handled by the .NET Framework's Version.ToString() method). {3} is a name or company name (localization handled by plugin), {4} is copyright information (localization handled by plugin), {5} is a valid website URL starting with http:// or https:// (localization handled by plugin). {6} is an exception string and is provided and localized by the .NET Framework (it is meant for the plugin author, and not necessarily important for the user to understand).</comment>
+    <comment>{0} is a full path name, such as "C:\Program Files\Pixel.NET\Effects\EdHarvey.dll" (localization not necessary). {1} is a display name such as "Surface Blur" (localization is handled by plugin). {2} is the version of the plugin or DLL, such as "1.2.345.6789" (localization handled by the .NET Framework's Version.ToString() method). {3} is a name or company name (localization handled by plugin), {4} is copyright information (localization handled by plugin), {5} is a valid website URL starting with http:// or https:// (localization handled by plugin). {6} is an exception string and is provided and localized by the .NET Framework (it is meant for the plugin author, and not necessarily important for the user to understand).</comment>
   </data>
   <data name="Effects.Name.Format.Configurable">
     <value>{0}...</value>
@@ -1490,10 +1490,10 @@ Expand canvas to fit pasted image?</value>
     <value>&amp;Help Topics</value>
   </data>
   <data name="Menu.Help.PdnWebsite.Text">
-    <value>&amp;Sprite.NET Website</value>
+    <value>&amp;Pixel.NET Website</value>
   </data>
   <data name="Menu.Help.PdnSearch.Text">
-    <value>Sprite.NET &amp;Search...</value>
+    <value>Pixel.NET &amp;Search...</value>
   </data>
   <data name="Menu.Help.Donate.Text">
     <value>&amp;Donate...</value>
@@ -1699,7 +1699,7 @@ Expand canvas to fit pasted image?</value>
   </data>
   <data name="DentsEffect.Name">
     <value>Dents</value>
-    <comment>Note to translators: The term 'dents' is a bit ambiguous here, so I'll defer to Ed Harvey's description: "Think of reflections off a shiny metal surface with a series of shallow indentations on it; similar hammer-worked copper like a polished version of this surface: http://www.getSprite.NET/misc/HammeredCopper.jpg. Synonyms: (plural of) Dint, Indentation, Dimple, Pit."</comment>
+    <comment>Note to translators: The term 'dents' is a bit ambiguous here, so I'll defer to Ed Harvey's description: "Think of reflections off a shiny metal surface with a series of shallow indentations on it; similar hammer-worked copper like a polished version of this surface: http://www.getPixel.NET/misc/HammeredCopper.jpg. Synonyms: (plural of) Dint, Indentation, Dimple, Pit."</comment>
   </data>
   <data name="DentsEffect.ConfigDialog.ScaleLabel">
     <value>Scale</value>
@@ -2072,7 +2072,7 @@ Expand canvas to fit pasted image?</value>
     <value>pixels</value>
   </data>
   <data name="UpdatesDialog.Text">
-    <value>Sprite.NET Updates</value>
+    <value>Pixel.NET Updates</value>
   </data>
   <data name="UpdatesDialog.OptionsButton.Text">
     <value>&amp;Options...</value>
@@ -2087,31 +2087,31 @@ Expand canvas to fit pasted image?</value>
     <value>{0}%</value>        
   </data>
   <data name="UpdatesDialog.InfoText.Text.StartupState">
-    <value>The Sprite.NET Updates System is initializing.</value>
+    <value>The Pixel.NET Updates System is initializing.</value>
   </data>
   <data name="UpdatesDialog.ContinueButton.Text.StartupState">
     <value>Initializing</value>
   </data>
   <data name="UpdatesDialog.InfoText.Text.ReadyToCheckState">
-    <value>Sprite.NET is ready to check for updates.</value>
+    <value>Pixel.NET is ready to check for updates.</value>
   </data>
   <data name="UpdatesDialog.ContinueButton.Text.ReadyToCheckState">
     <value>Check Now</value>
   </data>
   <data name="UpdatesDialog.InfoText.Text.CheckingState">
-    <value>Sprite.NET is currently checking to see if there is a newer version available.</value>
+    <value>Pixel.NET is currently checking to see if there is a newer version available.</value>
   </data>
   <data name="UpdatesDialog.ContinueButton.Text.CheckingState">
     <value>Checking</value>
   </data>
   <data name="UpdatesDialog.InfoText.Text.UpdateAvailableState">
-    <value>A newer version of Sprite.NET is available. You may click the Install button below to download and install the update.</value>
+    <value>A newer version of Pixel.NET is available. You may click the Install button below to download and install the update.</value>
   </data>
   <data name="UpdatesDialog.ContinueButton.Text.UpdateAvailableState">
     <value>&amp;Install</value>
   </data>
   <data name="UpdatesDialog.InfoText.Text.DownloadingState">
-    <value>The update for Sprite.NET is being downloaded.</value>
+    <value>The update for Pixel.NET is being downloaded.</value>
   </data>
   <data name="UpdatesDialog.ContinueButton.Text.DownloadingState">
     <value>Downloading</value>
@@ -2123,7 +2123,7 @@ Expand canvas to fit pasted image?</value>
     <value>Extracting</value>
   </data>
   <data name="UpdatesDialog.InfoText.Text.ReadyToInstallState">
-    <value>Sprite.NET must close to install the update. After you click OK, you will be asked to save any changes if necessary.</value>
+    <value>Pixel.NET must close to install the update. After you click OK, you will be asked to save any changes if necessary.</value>
   </data>
   <data name="UpdatesDialog.ContinueButton.Text.ReadyToInstallState">
     <value>OK</value>
@@ -2155,7 +2155,7 @@ Expand canvas to fit pasted image?</value>
     <value></value>
   </data>
   <data name="UpdatesDialog.InfoLabel.Text">
-    <value>A newer version of Sprite.NET is available. You may click the Install button to download and install it, or you may click Close to be reminded again in several days.</value>
+    <value>A newer version of Pixel.NET is available. You may click the Install button to download and install it, or you may click Close to be reminded again in several days.</value>
   </data>
   <data name="UpdatesDialog.BetaWarningLabel.Text">
     <value>NOTE: This is a pre-release version (beta). It may not be stable.</value>
@@ -2176,13 +2176,13 @@ Expand canvas to fit pasted image?</value>
     <value>Install</value>
   </data>
   <data name="UpdatesOptionsDialog.Text">
-    <value>Sprite.NET Update Options</value>
+    <value>Pixel.NET Update Options</value>
   </data>
   <data name="UpdatesOptionsDialog.SaveButton.Text">
     <value>&amp;Save</value>
   </data>
   <data name="UpdatesOptionsDialog.AutoCheckBox.Text">
-    <value>Automatically check for newer versions of Sprite.NET</value>
+    <value>Automatically check for newer versions of Pixel.NET</value>
   </data>
   <data name="UpdatesOptionsDialog.BetaCheckBox.Text">
     <value>Also check for pre-release (beta) versions</value>
@@ -2191,12 +2191,12 @@ Expand canvas to fit pasted image?</value>
     <value>Note: These settings affect all users of this computer.</value>
   </data>
   <data name="ExpiredDialog.Message">
-    <value>This pre-release version of Sprite.NET has expired (30 days).
+    <value>This pre-release version of Pixel.NET has expired (30 days).
 
-Click OK to go to the Sprite.NET website where you may download a newer version.</value>
+Click OK to go to the Pixel.NET website where you may download a newer version.</value>
   </data>
   <data name="ExpiredTaskDialog.InfoText">
-    <value>This pre-release version of Sprite.NET has expired. To continue using Sprite.NET, you must update to the latest version.</value>
+    <value>This pre-release version of Pixel.NET has expired. To continue using Pixel.NET, you must update to the latest version.</value>
   </data>
   <data name="ExpiredTaskDialog.CheckForUpdatesTB.ActionText">
     <value>&amp;Check for an Update</value>
@@ -2205,7 +2205,7 @@ Click OK to go to the Sprite.NET website where you may download a newer version.
     <value>Check to see if an update is available, and then install it.</value>
   </data>
   <data name="ExpiredTaskDialog.GoToWebSiteTB.ActionText">
-    <value>&amp;Go to the Sprite.NET website</value>
+    <value>&amp;Go to the Pixel.NET website</value>
   </data>
   <data name="ExpiredTaskDialog.GoToWebSiteTB.ExplanationText">
     <value>If checking for updates does not work, you may try going to the website to manually find an update.</value>
@@ -2214,10 +2214,10 @@ Click OK to go to the Sprite.NET website where you may download a newer version.
     <value>E&amp;xit</value>
   </data>
   <data name="ExpiredTaskDialog.DoNotCheckForUpdatesTB.ExplanationText">
-    <value>Exit Sprite.NET without checking for updates.</value>
+    <value>Exit Pixel.NET without checking for updates.</value>
   </data>  
   <data name="DownloadAndUnzipUpdateDialog.Text">
-    <value>Sprite.NET Updates</value>
+    <value>Pixel.NET Updates</value>
   </data>
   <data name="DownloadAndUnzipUpdateDialog.Description.Downloading">
     <value>Downloading...</value>
@@ -2232,20 +2232,20 @@ Click OK to go to the Sprite.NET website where you may download a newer version.
     <value>Language Choice Confirmation</value>
   </data>
   <data name="ConfirmLanguageDialog.IntroText">
-    <value>Changing the language requires that Sprite.NET be restarted.</value>
+    <value>Changing the language requires that Pixel.NET be restarted.</value>
   </data>
   <data name="ConfirmLanguageDialog.RestartTB.ActionText">
-    <value>&amp;Restart Sprite.NET</value>
+    <value>&amp;Restart Pixel.NET</value>
   </data>
   <data name="ConfirmLanguageDialog.RestartTB.ExplanationText.Format">
-    <value>Closes Sprite.NET and then restarts it in {0}. You will be asked to save your changes if necessary.</value>
+    <value>Closes Pixel.NET and then restarts it in {0}. You will be asked to save your changes if necessary.</value>
     <comment>{0} is the name of the new language that has been chosen (ex, "English").</comment>
   </data>
   <data name="ConfirmLanguageDialog.CancelTB.ActionText">
     <value>Cancel</value>
   </data>
   <data name="ConfirmLanguageDialog.CancelTB.ExplanationText">
-    <value>Does not close Sprite.NET. Your language choice will be cancelled.</value>
+    <value>Does not close Pixel.NET. Your language choice will be cancelled.</value>
   </data>
   <data name="ReduceNoiseEffect.Name">
     <value>Reduce Noise</value>
@@ -2333,14 +2333,14 @@ Click OK to go to the Sprite.NET website where you may download a newer version.
   
   
   <data name="SetupWizard.MustCloseAppFirst.Text">
-    <value>Please ensure that Sprite.NET is closed, and then click Retry. Or, press Cancel to exit the setup wizard.</value>
+    <value>Please ensure that Pixel.NET is closed, and then click Retry. Or, press Cancel to exit the setup wizard.</value>
   </data>
   <data name="SetupWizard.HelpText">
-    <value>Sprite.NET Installer Help
+    <value>Pixel.NET Installer Help
 
 Command-line options:
 
-/skipConfig  -  Skips configuration of options and install directory. Uses MSI properties in the following order of precedence: 1. supplied on command-line, 2. read from HKLM\Software\Sprite.NET, 3. default values. NOTE: Use of this option infers acceptance of the License Agreement.
+/skipConfig  -  Skips configuration of options and install directory. Uses MSI properties in the following order of precedence: 1. supplied on command-line, 2. read from HKLM\Software\Pixel.NET, 3. default values. NOTE: Use of this option infers acceptance of the License Agreement.
 /auto  -  Automatic install. Infers /skipConfig. Does not show the final wizard page that details the result of installation.
 /createMsi  -  Creates MSI packages that may be used for deployment (AD/GPO) purposes. All properties specified on the command-line are merged into the MSI packages, so no further transforms are necessary.
 /verbose  -  Enables verbose Windows Installer MSI logging
@@ -2352,10 +2352,10 @@ Return code is 0 on success, or non-zero on failure.</value>
     <value>32-bit MSI may not be installed on 64-bit OS.</value>
   </data>
   <data name="Error.OSRequirement">
-    <value>Sprite.NET requires Windows XP SP2, Windows Vista, Windows Server 2003, or later.</value>
+    <value>Pixel.NET requires Windows XP SP2, Windows Vista, Windows Server 2003, or later.</value>
   </data>
   <data name="SetupWizard.Error.AdminRequired">
-    <value>Administrator privilege is required to install Sprite.NET.</value>
+    <value>Administrator privilege is required to install Pixel.NET.</value>
   </data>
   <data name="SetupWizard.CancelButton.Text">
     <value>Cancel</value>
@@ -2394,7 +2394,7 @@ Choose the installation method you prefer, and then click Next.</value>
     <value>Allows you to change the installation directory, and options related to file type associations and update checking.</value>
   </data>
   <data name="SetupWizard.IntroPage.ExpirationWarning.Format">
-    <value>NOTE: This is a pre-release version of Sprite.NET that will expire on {0}.</value>
+    <value>NOTE: This is a pre-release version of Pixel.NET that will expire on {0}.</value>
     <comment>{0} is a date.</comment>
   </data>
   <data name="SetupWizard.LicensePage.HeaderText">
@@ -2413,7 +2413,7 @@ Choose the installation method you prefer, and then click Next.</value>
     <value>Configure Options</value>
   </data>
   <data name="SetupWizard.OptionsPage.LaunchHandlingText.Text">
-    <value>Use these options to configure how Sprite.NET can be launched.</value>
+    <value>Use these options to configure how Pixel.NET can be launched.</value>
   </data>
   <data name="SetupWizard.OptionsPage.JpgPngBmpCheckBox.Text">
     <value>Use it as the default image editor for JPEG, PNG, and BMP images</value>
@@ -2425,7 +2425,7 @@ Choose the installation method you prefer, and then click Next.</value>
     <value>Create a shortcut on the Desktop</value>
   </data>
   <data name="SetupWizard.OptionsPage.UpdatesText.Text">
-    <value>Sprite.NET can periodically check to see if there is a new version available and then notify you. No information is transmitted from your computer during this process. Note: You will only be notified of new versions while Sprite.NET is running.</value>
+    <value>Pixel.NET can periodically check to see if there is a new version available and then notify you. No information is transmitted from your computer during this process. Note: You will only be notified of new versions while Pixel.NET is running.</value>
   </data>
   <data name="SetupWizard.OptionsPage.CheckForUpdatesCheckBox.Text">
     <value>Automatically check for updates</value>
@@ -2448,7 +2448,7 @@ To install in this folder, click "Next". To install to a different folder, enter
     <value>&amp;Browse...</value>
   </data>
   <data name="SetupWizard.InstallDirPage.DefaultTargetSubDir">
-    <value>Sprite.NET</value>
+    <value>Pixel.NET</value>
   </data>
   <data name="SetupWizard.InstallDirPage.BrowseForFolder.Description">
     <value>Choose an installation folder:</value>
@@ -2498,7 +2498,7 @@ Click "Next" to start the installation.</value>
     <value>There was an error while installing {0}.</value>
   </data>
   <data name="SetupWizard.InstallingPage.PdnDonateBannerImage.Text">
-    <value>Thanks for using Sprite.NET. You can show your appreciation and support future development by donating!</value>
+    <value>Thanks for using Pixel.NET. You can show your appreciation and support future development by donating!</value>
   </data>
   <data name="SetupWizard.CreateMsiPage.HeaderText">
     <value>Deployment Wizard</value>
@@ -2510,11 +2510,11 @@ Click "Next" to start the installation.</value>
     <value>The MSI packages have been placed into the following directory: '{0}'.</value>
   </data>
   <data name="SetupWizard.InstallingPage.WhileInstallingLabel.Text">
-    <value>Sprite.NET is provided FREE OF CHARGE. If you paid money for it (other than to &lt;a&gt;donate at the Sprite.NET website&lt;/a&gt;, of course) then we recommend that you get a refund!</value>
-    <comment>The area delimited with &lt;a&gt; and &lt;/a&gt; is treated as a link. The destination URL is the donation page at the Sprite.NET website.</comment>
+    <value>Pixel.NET is provided FREE OF CHARGE. If you paid money for it (other than to &lt;a&gt;donate at the Pixel.NET website&lt;/a&gt;, of course) then we recommend that you get a refund!</value>
+    <comment>The area delimited with &lt;a&gt; and &lt;/a&gt; is treated as a link. The destination URL is the donation page at the Pixel.NET website.</comment>
   </data>
   <data name="Setup.DesktopShortcut.LinkName">
-    <value>Sprite.NET</value>
+    <value>Pixel.NET</value>
   </data>
   <data name="Setup.DesktopShortcut.Description">
     <value>Create, edit, scan, and print images and photographs.</value>
@@ -2711,10 +2711,10 @@ Click "Next" to start the installation.</value>
     <value>RGB</value>
   </data>
   <data name="CrashLog.HeaderText.Format">
-    <value>This text file was created because Sprite.NET crashed.
+    <value>This text file was created because Pixel.NET crashed.
 Please e-mail this file to {0} so we can diagnose and fix the problem.
 </value>
-    <comment>{0} is an e-mail address, such as Sprite.NET@hotmail.com</comment>
+    <comment>{0} is an e-mail address, such as Pixel.NET@hotmail.com</comment>
   </data>
   <data name="SwapLayerFunction.Name">
     <value>Swap Layer</value>
@@ -2774,7 +2774,7 @@ Please e-mail this file to {0} so we can diagnose and fix the problem.
     <value>Cancel</value>
   </data>
   <data name="UnsavedChangesDialog.CancelButton.ExplanationText">
-    <value>Go back to Sprite.NET</value>
+    <value>Go back to Pixel.NET</value>
   </data>
   <data name="TaskButton.Cancel.ActionText">
     <value>Cancel</value>
@@ -2784,14 +2784,14 @@ Please e-mail this file to {0} so we can diagnose and fix the problem.
   </data>
   <data name="ControlShadow.BetaTag.Text.Format">
       <value>This is a pre-release version, and is recommended for testing purposes only. Expires on {1}. An update will be available before then.
-www.getSprite.NET</value>
-      <comment>{0} is the full application name, e.g. "Sprite.NET v3.0 (Beta 1 Release build 3.0.2460.34921). {1} is a date string.</comment>
+www.getPixel.NET</value>
+      <comment>{0} is the full application name, e.g. "Pixel.NET v3.0 (Beta 1 Release build 3.0.2460.34921). {1} is a date string.</comment>
   </data>
   <data name="ToolChooserStrip.ChooseToolDefaults.Text">
     <value>Choose &amp;defaults...</value>
   </data>
   <data name="ChooseToolDefaultsDialog.IntroText.Text">
-    <value>You may choose the tool that is active when starting Sprite.NET, and what the defaults should be for the toolbar items.</value>
+    <value>You may choose the tool that is active when starting Pixel.NET, and what the defaults should be for the toolbar items.</value>
   </data>
   <data name="ChooseToolDefaultsDialog.LoadFromToolBarButton.Text">
     <value>&amp;Load From Toolbar</value>
@@ -2848,7 +2848,7 @@ www.getSprite.NET</value>
     <value>Cancel</value>
   </data>
   <data name="CloseWorkspaceAction.CancelButton.ExplanationText">
-    <value>Go back to Sprite.NET.</value>
+    <value>Go back to Pixel.NET.</value>
   </data>
   <data name="CloseWorkspaceAction.IntroText.Format">
     <value>{0} has unsaved changes. What would you like to do?</value>
@@ -3044,7 +3044,7 @@ Shortcut key: /</value>
   <data name="HelpFile.Url.Format">
     <value>{0}/doc/latest/index.html</value>
     <comment>Note to translators: This string only needs to be changed if the UA (user assistance, aka help file, documentation) is also being translated.
-{0} is the base website address, such as http://www.getSprite.NET. This string is not required to have {0} in it. So if you want to distribute a language pack that hosts the help file elsewhere (that is to say, not on the official Sprite.NET website), you can do that by specifying the URL directly, e.g. "http://www.wherever.net/paintnethelp/fr/".</comment>
+{0} is the base website address, such as http://www.getPixel.NET. This string is not required to have {0} in it. So if you want to distribute a language pack that hosts the help file elsewhere (that is to say, not on the official Pixel.NET website), you can do that by specifying the URL directly, e.g. "http://www.wherever.net/paintnethelp/fr/".</comment>
   </data>
   <data name="DocumentWorkspace.ShowFileDialog.TransferProgress.Title">
     <value>Transferring ...</value>
@@ -3231,19 +3231,19 @@ Do you want to replace it?</value>
   <data name="Effect.PluginErrorDialog.IntroText">
     <value>This plugin has encountered an error, and must be closed.
 
-Because of the unpredictable nature of these types of errors, it is strongly recommended that you restart Sprite.NET before proceeding. Otherwise, there could be further stability problems or data corruption.</value>
+Because of the unpredictable nature of these types of errors, it is strongly recommended that you restart Pixel.NET before proceeding. Otherwise, there could be further stability problems or data corruption.</value>
   </data>
   <data name="Effect.PluginErrorDialog.RestartTB.ActionText">
-    <value>Restart Sprite.NET (recommended)</value>
+    <value>Restart Pixel.NET (recommended)</value>
   </data>
   <data name="Effect.PluginErrorDialog.RestartTB.ExplanationText">
-    <value>Closes the plugin, and then closes your opened images and restarts Sprite.NET. You will be asked to save changes if necessary.</value>
+    <value>Closes the plugin, and then closes your opened images and restarts Pixel.NET. You will be asked to save changes if necessary.</value>
   </data>
   <data name="Effect.PluginErrorDialog.DoNotRestartTB.ActionText">
-    <value>Do not restart Sprite.NET (not recommended)</value>
+    <value>Do not restart Pixel.NET (not recommended)</value>
   </data>
   <data name="Effect.PluginErrorDialog.DoNotRestartTB.ExplanationText">
-    <value>Closes the plugin, but does not close or restart Sprite.NET.</value>
+    <value>Closes the plugin, but does not close or restart Pixel.NET.</value>
   </data>
   <data name="Effect.PluginErrorDialog.AuxButton1.Text">
     <value>Error Details...</value>
@@ -3252,6 +3252,6 @@ Because of the unpredictable nature of these types of errors, it is strongly rec
     <value>This plugin is known to cause stability problems, and has been blocked from loading.</value>
   </data>
   <data name="BlockedPluginException.PluginIsNowBuiltIn">
-    <value>This plugin is now built-in to Sprite.NET.</value>
+    <value>This plugin is now built-in to Pixel.NET.</value>
   </data>
 </root>
