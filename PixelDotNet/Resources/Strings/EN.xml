@@ -1,0 +1,3257 @@
+﻿<root>
+  <data name="Application.ProductName.Bare">
+    <value>Sprite.NET</value>
+  </data>
+  <data name="Application.ProductName.Format">
+    <value>{0} v{1}{2}</value>
+    <comment>{0} is Application.ProductName.Bare. {1} is the version number (e.g., "2.6"). {2} is either an empty string, or a version tag constructed with Application.ProductNage.Format (e.g., "Beta 5")</comment>
+  </data>
+  <data name="Application.ProductName.Tag.Format">
+    <value> {0}</value>
+    <comment>{0} is the version tag, e.g. Beta 5</comment>
+  </data>
+  <data name="Application.Copyright.AllRightsReserved">
+    <value>All Rights Reserved.</value>
+  </data>
+  <data name="LayerForm.Text">
+    <value>Layers</value>
+  </data>
+  <data name="LayerForm.AddNewLayerButton.ToolTipText">
+    <value>Add New Layer</value>
+  </data>
+  <data name="LayerForm.DeleteLayerButton.ToolTipText">
+    <value>Delete Layer</value>
+  </data>
+  <data name="LayerForm.MergeLayerDownButton.ToolTipText">
+    <value>Merge Layer Down</value>
+  </data>
+  <data name="LayerForm.DuplicateLayerButton.ToolTipText">
+    <value>Duplicate Layer</value>
+  </data>
+  <data name="LayerForm.MoveLayerUpButton.ToolTipText">
+    <value>Move Layer Up</value>
+  </data>
+  <data name="LayerForm.MoveLayerDownButton.ToolTipText">
+    <value>Move Layer Down</value>
+  </data>
+  <data name="LayerForm.PropertiesButton.ToolTipText">
+    <value>Properties</value>
+  </data>
+  <data name="HistoryForm.Text">
+    <value>History</value>
+  </data>
+  <data name="HistoryForm.RewindButton.ToolTipText">
+    <value>Undo All (Rewind)</value>
+  </data>
+  <data name="HistoryForm.UndoButton.ToolTipText">
+    <value>Undo (Step Backward)</value>
+  </data>
+  <data name="HistoryForm.FastForwardButton.ToolTipText">
+    <value>Redo All (Fast Forward)</value>
+  </data>
+  <data name="HistoryForm.RedoButton.ToolTipText">
+    <value>Redo (Step Forward)</value>
+  </data>
+  <data name="SavePaletteDialog.TypeANameLabel.Text">
+    <value>Type a name for the palette:</value>
+  </data>
+  <data name="SavePaletteDialog.PalettesLabel.Text">
+    <value>Palettes that have already been saved:</value>
+  </data>
+  <data name="SavePaletteDialog.Text">
+    <value>Save Current Palette</value>
+  </data>
+  <data name="ColorsForm.Text">
+    <value>Colors</value>
+  </data>
+  <data name="ColorsForm.ColorAddButton.ToolTipText">
+    <value>Add color to palette</value>
+  </data>
+  <data name="ColorsForm.ColorDeleteButton.ToolTipText">
+    <value>Delete color from palette</value>
+  </data>
+  <data name="ColorPalette.SaveHeader">
+    <value>; Sprite.NET Palette File
+; Lines that start with a semicolon are comments
+; Colors are written as 8-digit hexadecimal numbers: aarrggbb
+; For example, this would specify green: FF00FF00
+; The alpha ('aa') value specifies how transparent a color is. FF is fully opaque, 00 is fully transparent.
+; A palette must consist of ninety six (96) colors. If there are less than this, the remaining color
+; slots will be set to white (FFFFFFFF). If there are more, then the remaining colors will be ignored.</value>
+    <comment>Yes, this should be translated. This is written to the beginning of palette files, which are stored in text files (*.txt). They are intended to be understandable by the user.</comment>
+  </data>
+  <data name="SystemLayer.UserDataDirName">
+    <value>Sprite.NET User Files</value>
+    <comment>This is a directory that will be created in the My Documents folder.</comment>
+  </data>
+  <data name="ColorPalettes.UserDataSubDirName">
+    <value>Palettes</value>
+    <comment>This is a directory that will be created in the directory that SystemLayer.UserDataDirName refers to.</comment>
+  </data>
+  <data name="ColorsForm.ColorPalettesButton.ToolTipText">
+    <value>Manage color palettes</value>
+  </data>
+  <data name="ColorsForm.ColorPalettesButton.SaveCurrentPaletteAs.Text">
+    <value>Save Current Palette &amp;As...</value>
+  </data>
+  <data name="ColorsForm.ColorPalettesButton.OpenPalettesFolder.Text">
+    <value>&amp;Open Palettes Folder...</value>
+  </data>
+  <data name="ColorsForm.ColorPalettesButton.ResetToDefaultPalette.Text">
+    <value>&amp;Reset to Default Palette</value>
+  </data>
+  <data name="ColorsForm.RedLabel.Text">
+    <value>R:</value>
+  </data>
+  <data name="ColorsForm.BlueLabel.Text">
+    <value>B:</value>
+  </data>
+  <data name="ColorsForm.GreenLabel.Text">
+    <value>G:</value>
+  </data>
+  <data name="ColorsForm.HexLabel.Text">
+    <value>Hex:</value>
+  </data>
+  <data name="ColorsForm.HueLabel.Text">
+    <value>H:</value>
+  </data>
+  <data name="ColorsForm.SaturationLabel.Text">
+    <value>S:</value>
+  </data>
+  <data name="ColorsForm.ValueLabel.Text">
+    <value>V:</value>
+  </data>
+  <data name="ColorsForm.RgbHeader.Text">
+    <value>RGB</value>
+  </data>
+  <data name="ColorsForm.HsvHeader.Text">
+    <value>HSV</value>
+  </data>
+  <data name="ColorsForm.AlphaHeader.Text">
+    <value>Transparency - Alpha</value>
+  </data>
+  <data name="ColorsForm.MoreLessButton.Text.Less">
+    <value>Less</value>
+  </data>
+  <data name="ColorsForm.MoreLessButton.Text.More">
+    <value>More</value>
+  </data>
+  <data name="WhichUserColor.Primary">
+    <value>Primary</value>
+  </data>
+  <data name="WhichUserColor.Secondary">
+    <value>Secondary</value>
+  </data>
+  <data name="MainToolBarForm.Text">
+    <value>Tools</value>
+  </data>
+  <data name="AboutDialog.Text.Format">
+    <value>About {0}</value>
+  </data>
+  <data name="Form.OkButton.Text">
+    <value>OK</value>
+  </data>
+  <data name="Form.CancelButton.Text">
+    <value>Cancel</value>
+  </data>
+  <data name="Form.SaveButton.Text">
+    <value>&amp;Save</value>
+  </data>
+  <data name="Form.ResetButton.Text">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="Form.CloseButton.Text">
+    <value>Close</value>
+  </data>
+  <data name="AboutDialog.CreditsLabel.Text">
+    <value>Credits:</value>
+  </data>
+  <data name="BrushConfigWidget.SolidBrush.Text">
+    <value>Solid Color</value>
+  </data>
+  <data name="HatchStyle.Horizontal">
+    <value>Horizontal</value>
+  </data>
+  <data name="HatchStyle.Min">
+    <value>Min</value>
+  </data>
+  <data name="HatchStyle.Vertical">
+    <value>Vertical</value>
+  </data>
+  <data name="HatchStyle.ForwardDiagonal">
+    <value>Forward Diagonal</value>
+  </data>
+  <data name="HatchStyle.BackwardDiagonal">
+    <value>Backward Diagonal</value>
+  </data>
+  <data name="HatchStyle.Cross">
+    <value>Cross</value>
+  </data>
+  <data name="HatchStyle.LargeGrid">
+    <value>Large Grid</value>
+  </data>
+  <data name="HatchStyle.Max">
+    <value>Max</value>
+  </data>
+  <data name="HatchStyle.DiagonalCross">
+    <value>Diagonal Cross</value>
+  </data>
+  <data name="HatchStyle.Percent05">
+    <value>Percent 05</value>
+  </data>
+  <data name="HatchStyle.Percent10">
+    <value>Percent 10</value>
+  </data>
+  <data name="HatchStyle.Percent20">
+    <value>Percent 20</value>
+  </data>
+  <data name="HatchStyle.Percent25">
+    <value>Percent 25</value>
+  </data>
+  <data name="HatchStyle.Percent30">
+    <value>Percent 30</value>
+  </data>
+  <data name="HatchStyle.Percent40">
+    <value>Percent 40</value>
+  </data>
+  <data name="HatchStyle.Percent50">
+    <value>Percent 50</value>
+  </data>
+  <data name="HatchStyle.Percent60">
+    <value>Percent 60</value>
+  </data>
+  <data name="HatchStyle.Percent70">
+    <value>Percent 70</value>
+  </data>
+  <data name="HatchStyle.Percent75">
+    <value>Percent 75</value>
+  </data>
+  <data name="HatchStyle.Percent80">
+    <value>Percent 80</value>
+  </data>
+  <data name="HatchStyle.Percent90">
+    <value>Percent 90</value>
+  </data>
+  <data name="HatchStyle.LightDownwardDiagonal">
+    <value>Light Downward Diagonal</value>
+  </data>
+  <data name="HatchStyle.LightUpwardDiagonal">
+    <value>Light Upward Diagonal</value>
+  </data>
+  <data name="HatchStyle.DarkDownwardDiagonal">
+    <value>Dark Downward Diagonal</value>
+  </data>
+  <data name="HatchStyle.DarkUpwardDiagonal">
+    <value>Dark Upward Diagonal</value>
+  </data>
+  <data name="HatchStyle.WideDownwardDiagonal">
+    <value>Wide Downward Diagonal</value>
+  </data>
+  <data name="HatchStyle.WideUpwardDiagonal">
+    <value>Wide Upward Diagonal</value>
+  </data>
+  <data name="HatchStyle.LightVertical">
+    <value>Light Vertical</value>
+  </data>
+  <data name="HatchStyle.LightHorizontal">
+    <value>Light Horizontal</value>
+  </data>
+  <data name="HatchStyle.NarrowVertical">
+    <value>Narrow Vertical</value>
+  </data>
+  <data name="HatchStyle.NarrowHorizontal">
+    <value>Narrow Horizontal</value>
+  </data>
+  <data name="HatchStyle.DarkVertical">
+    <value>Dark Vertical</value>
+  </data>
+  <data name="HatchStyle.DarkHorizontal">
+    <value>Dark Horizontal</value>
+  </data>
+  <data name="HatchStyle.DashedDownwardDiagonal">
+    <value>Dashed Downward Diagonal</value>
+  </data>
+  <data name="HatchStyle.DashedUpwardDiagonal">
+    <value>Dashed Upward Diagonal</value>
+  </data>
+  <data name="HatchStyle.DashedHorizontal">
+    <value>Dashed Horizontal</value>
+  </data>
+  <data name="HatchStyle.DashedVertical">
+    <value>Dashed Vertical</value>
+  </data>
+  <data name="HatchStyle.SmallConfetti">
+    <value>Small Confetti</value>
+  </data>
+  <data name="HatchStyle.LargeConfetti">
+    <value>Large Confetti</value>
+  </data>
+  <data name="HatchStyle.ZigZag">
+    <value>Zig Zag</value>
+  </data>
+  <data name="HatchStyle.Wave">
+    <value>Wave</value>
+  </data>
+  <data name="HatchStyle.DiagonalBrick">
+    <value>Diagonal Brick</value>
+  </data>
+  <data name="HatchStyle.HorizontalBrick">
+    <value>Horizontal Brick</value>
+  </data>
+  <data name="HatchStyle.Weave">
+    <value>Weave</value>
+  </data>
+  <data name="HatchStyle.Plaid">
+    <value>Plaid</value>
+  </data>
+  <data name="HatchStyle.Divot">
+    <value>Divot</value>
+  </data>
+  <data name="HatchStyle.DottedGrid">
+    <value>Dotted Grid</value>
+  </data>
+  <data name="HatchStyle.DottedDiamond">
+    <value>Dotted Diamond</value>
+  </data>
+  <data name="HatchStyle.Shingle">
+    <value>Shingle</value>
+  </data>
+  <data name="HatchStyle.Trellis">
+    <value>Trellis</value>
+  </data>
+  <data name="HatchStyle.Sphere">
+    <value>Sphere</value>
+  </data>
+  <data name="HatchStyle.SmallGrid">
+    <value>Small Grid</value>
+  </data>
+  <data name="HatchStyle.SmallCheckerBoard">
+    <value>Small Checker Board</value>
+  </data>
+  <data name="HatchStyle.LargeCheckerBoard">
+    <value>Large Checker Board</value>
+  </data>
+  <data name="HatchStyle.OutlinedDiamond">
+    <value>Outlined Diamond</value>
+  </data>
+  <data name="HatchStyle.SolidDiamond">
+    <value>Solid Diamond</value>
+  </data>
+  <data name="BrushConfigWidget.FillStyleLabel.Text">
+    <value>Fill:</value>
+  </data>
+  <data name="CanvasSizeAction.Name">
+    <value>Canvas Size</value>
+  </data>
+  <data name="CanvasSizeAction.ResizeDocument.OutOfMemory">
+    <value>Not enough memory to resize the canvas.</value>
+  </data>
+  <data name="AnchorEdge.TopLeft">
+    <value>Top Left</value>
+  </data>
+  <data name="AnchorEdge.Top">
+    <value>Top</value>
+  </data>
+  <data name="AnchorEdge.TopRight">
+    <value>Top Right</value>
+  </data>
+  <data name="AnchorEdge.Left">
+    <value>Left</value>
+  </data>
+  <data name="AnchorEdge.Middle">
+    <value>Middle</value>
+  </data>
+  <data name="AnchorEdge.Right">
+    <value>Right</value>
+  </data>
+  <data name="AnchorEdge.BottomLeft">
+    <value>Bottom Left</value>
+  </data>
+  <data name="AnchorEdge.Bottom">
+    <value>Bottom</value>
+  </data>
+  <data name="AnchorEdge.BottomRight">
+    <value>Bottom Right</value>
+  </data>
+  <data name="CanvasSizeDialog.Text">
+    <value>Canvas Size</value>
+  </data>
+  <data name="CanvasSizeDialog.AnchorHeader.Text">
+    <value>Anchor</value>
+  </data>
+  <data name="CanvasSizeDialog.NewSpaceLabel.Text">
+    <value>The new space will be filled with the secondary color.</value>
+  </data>
+  <data name="CloneStampTool.Name">
+    <value>Clone Stamp</value>
+  </data>
+  <data name="CloneStampTool.HelpText">
+    <value>Hold Ctrl and left click to select an origin. Afterwards, left click and draw to copy</value>
+  </data>
+  <data name="ColorDisplayWidget.SwapIconBox.ToolTipText">
+    <value>Swap colors
+Shortcut key: X</value>
+  </data>
+  <data name="ColorDisplayWidget.BlackAndWhiteIconBox.ToolTipText">
+    <value>Black and White</value>
+  </data>
+  <data name="ColorDisplayWidget.ForeColorRectangle.ToolTipText">
+    <value>Primary</value>
+  </data>
+  <data name="ColorDisplayWidget.BackColorRectangle.ToolTipText">
+    <value>Secondary</value>
+  </data>
+  <data name="ColorPickerTool.Name">
+    <value>Color Picker</value>
+  </data>
+  <data name="ColorPickerTool.HelpText">
+    <value>Left click to set primary color, right click to set secondary color</value>
+  </data>
+  <data name="CommonAction.New">
+    <value>New</value>
+  </data>
+  <data name="CommonAction.Open">
+    <value>Open</value>
+  </data>
+  <data name="CommonAction.Save">
+    <value>Save</value>
+  </data>
+  <data name="CommonAction.Print">
+    <value>Print</value>
+  </data>
+  <data name="CommonAction.Cut">
+    <value>Cut</value>
+  </data>
+  <data name="CommonAction.Copy">
+    <value>Copy</value>
+  </data>
+  <data name="CommonAction.Paste">
+    <value>Paste</value>
+  </data>
+  <data name="CommonAction.CropToSelection">
+    <value>Crop to Selection</value>
+  </data>
+  <data name="CommonAction.Deselect">
+    <value>Deselect</value>
+  </data>
+  <data name="CommonAction.Undo">
+    <value>Undo</value>
+  </data>
+  <data name="CommonAction.Redo">
+    <value>Redo</value>
+  </data>
+  <data name="CommonAction.ZoomIn">
+    <value>Zoom In</value>
+  </data>
+  <data name="CommonAction.ZoomOut">
+    <value>Zoom Out</value>
+  </data>
+  <data name="CropAction.Name">
+    <value>Crop to Selection</value>
+  </data>
+  <data name="DeselectAction.Name">
+    <value>Deselect</value>
+  </data>
+  <data name="ExecuteFunction.ProgressDialog.Description.Text">
+    <value>Please wait...</value>
+  </data>
+  <data name="LayerPropertyChanging.HistoryMementoNameFormat">
+    <value>Layer {0}</value>
+    <comment>{0} represents the layer index</comment>
+  </data>
+  <data name="DocumentWorkspace.InitializeEffects.DllLoadFailed.Format">
+    <value>There was an error loading {0}. It may be corrupt, or it may need to be recompiled.</value>
+    <comment>{0} is a file name</comment>
+  </data>
+  <data name="Generic.OutOfMemory">
+    <value>There was not enough memory to complete the operation.</value>
+  </data>
+  <data name="AddNewBlankLayer.HistoryMementoName">
+    <value>New Layer</value>
+  </data>
+  <data name="AddNewBlankLayer.LayerName.Format">
+    <value>Layer {0}</value>
+    <comment>{0} is the number of the new layer</comment>
+  </data>
+  <data name="DocumentWorkspace.DeleteLayerButtonClicked.MustHaveOneLayer">
+    <value>There must be at least one layer in an image.</value>
+  </data>
+  <data name="DocumentWorkspace.DeleteLayerButtonClicked.Confirmation">
+    <value>Delete layer?</value>
+  </data>
+  <data name="DeleteLayer.HistoryMementoName">
+    <value>Delete Layer</value>
+  </data>
+  <data name="DuplicateLayer.HistoryMementoName">
+    <value>Duplicate Layer</value>
+  </data>
+  <data name="MergeLayerDown.HistoryMementoName">
+    <value>Merge Layer Down</value>
+  </data>
+  <data name="MoveLayerUp.HistoryMementoName">
+    <value>Move Layer Up</value>
+  </data>
+  <data name="MoveLayerDown.HistoryMementoName">
+    <value>Move Layer Down</value>
+  </data>
+  <data name="ClearHistory.Confirmation">
+    <value>Clear history?</value>
+  </data>
+  <data name="ClearHistory.HistoryMementoName">
+    <value>Clear History</value>
+  </data>
+  <data name="EllipseSelectTool.Name">
+    <value>Ellipse Select</value>
+  </data>
+  <data name="EllipseSelectTool.HelpText">
+    <value>Click and drag to draw an elliptical selection. Hold shift to constrain to a circle.</value>
+  </data>
+  <data name="EllipseTool.Name">
+    <value>Ellipse</value>
+  </data>
+  <data name="EllipseTool.HelpText">
+    <value>Click and drag to draw an ellipse (right click for secondary color). Hold shift to constrain to a circle.</value>
+  </data>
+  <data name="EllipseTool.StatusText.Format">
+    <value>Size: {0}{1} x {2}{3}, Area: {4} {5}</value>
+  </data>
+  <data name="EraserTool.Name">
+    <value>Eraser</value>
+  </data>
+  <data name="EraserTool.HelpText">
+    <value>Click and drag to erase a portion of the image</value>
+  </data>
+  <data name="EraseSelectionAction.Name">
+    <value>Erase Selection</value>
+  </data>
+  <data name="FillSelectionAction.Name">
+    <value>Fill Selection</value>
+  </data>
+  <data name="FlattenFunction.Name">
+    <value>Flatten</value>
+  </data>
+  <data name="FlipDocumentHorizontalAction.Name">
+    <value>Flip Horizontal (all)</value>
+  </data>
+  <data name="FlipDocumentVerticalAction.Name">
+    <value>Flip Vertical (all)</value>
+  </data>
+  <data name="FlipLayerHorizontalAction.Name">
+    <value>Flip Horizontal</value>
+  </data>
+  <data name="FlipLayerVerticalAction.Name">
+    <value>Flip Vertical</value>
+  </data>
+  <data name="FreeformShapeTool.Name">
+    <value>Freeform Shape</value>
+  </data>
+  <data name="FreeformShapeTool.HelpText">
+    <value>Left click to draw a freeform shape with the primary color, right click to use the secondary color</value>
+  </data>
+  <data name="ImportFromFileAction.Name">
+    <value>Import From File</value>
+  </data>
+  <data name="ImportFromFileAction.AskForCanvasResize.OutOfMemory">
+    <value>Ran out of memory while trying to resize the image.</value>
+  </data>
+  <data name="ImportFromFileAction.ImportOneLayer.OutOfMemory">
+    <value>Ran out of memory while trying to resize the layer.</value>
+  </data>
+  <data name="ImportFromFileAction.ImportOneFile.NewLayer.Format">
+    <value>{0}: {1}</value>
+    <comment>{0} is the file being imported, {1} is the name of a layer within that file</comment>
+  </data>
+  <data name="InvertSelectionAction.Name">
+    <value>Invert Selection</value>
+  </data>
+  <data name="LassoSelectTool.Name">
+    <value>Lasso Select</value>
+  </data>
+  <data name="LassoSelectTool.HelpText">
+    <value>Click and drag to draw the outline for a selection area.</value>
+  </data>
+  <data name="GradientTool.Name">
+    <value>Gradient</value>
+  </data>
+  <data name="GradientTool.HelpText">
+    <value>Click and drag to start drawing. Holding shift constrains the angle. Right mouse button reverses colors.</value>
+  </data>
+  <data name="GradientTool.HelpText.WhileAdjusting.Format">
+    <value>Offset: {0}{1} x {2}{3}, Length: {4} {5}, Angle: {6}°. Holding other mouse button will move both nubs.</value>
+  </data>
+  <data name="GradientTool.HelpText.Adjustable">
+    <value>Drag a nub to adjust the gradient. Right click nub to swap colors. Press Enter to finish, or Esc to undo.</value>
+  </data>
+  <data name="LineTool.Name">
+    <value>Line / Curve</value>
+  </data>
+  <data name="LineTool.HelpText">
+    <value>Left click to draw with primary color, right click to use secondary color</value>
+  </data>
+  <data name="LineTool.StatusText.Format">
+    <value>Offset: {0}{1} x {2}{3}, Length: {4} {5}, Angle: {6}°</value>
+  </data>
+  <data name="LineTool.PreCurveHelpText">
+    <value>Drag nubs to curve line (right button for Bezier), or press Enter to finish line, or draw elsewhere for a new line.</value>
+  </data>
+  <data name="LineTool.CurvingHelpText">
+    <value>Press Enter to finish the curve, or draw elsewhere for a new line. Tap Ctrl to toggle nubs.</value>
+  </data>
+  <data name="MagicWandTool.Name">
+    <value>Magic Wand</value>
+  </data>
+  <data name="MagicWandTool.HelpText">
+    <value>Click to select an area of similar color.</value>
+  </data>
+  <data name="MoveTool.Name">
+    <value>Move Selected Pixels</value>
+  </data>
+  <data name="MoveTool.HelpText">
+    <value>Drag the selection to move. Drag the nubs to scale. Drag with right mouse button to rotate.</value>
+  </data>
+  <data name="MoveTool.HistoryMemento.Translate">
+    <value>Move Pixels</value>
+  </data>
+  <data name="MoveTool.HistoryMemento.Scale">
+    <value>Scale Pixels</value>
+  </data>
+  <data name="MoveTool.HistoryMemento.Rotate">
+    <value>Rotate Pixels</value>
+  </data>
+  <data name="MoveTool.HistoryMemento.DropPixels">
+    <value>Finish Pixels</value>
+  </data>
+  <data name="MoveSelectionTool.Name">
+    <value>Move Selection</value>
+  </data>
+  <data name="MoveSelectionTool.HelpText">
+    <value>Drag the selection to move. Drag the nubs to scale. Drag with right mouse button to rotate.</value>
+  </data>
+  <data name="MoveSelectionTool.HistoryMemento.Translate">
+    <value>Move Selection</value>
+  </data>
+  <data name="MoveSelectionTool.HistoryMemento.Scale">
+    <value>Scale Selection</value>
+  </data>
+  <data name="MoveSelectionTool.HistoryMemento.Rotate">
+    <value>Rotate Selection</value>
+  </data>
+  <data name="MoveSelectionTool.HistoryMemento.DropSelection">
+    <value>Finish Selection</value>
+  </data>
+  <data name="NewFileDialog.Text">
+    <value>New</value>
+  </data>
+  <data name="PaintBrushTool.Name">
+    <value>Paintbrush</value>
+  </data>
+  <data name="PaintBrushTool.HelpText">
+    <value>Left click to draw with primary color, right click to draw with secondary color</value>
+  </data>
+  <data name="PaintBucketTool.Name">
+    <value>Paint Bucket</value>
+  </data>
+  <data name="PaintBucketTool.HelpText">
+    <value>Left click to fill a region with the primary color, right click to fill with the secondary color</value>
+  </data>
+  <data name="PanTool.Name">
+    <value>Pan</value>
+  </data>
+  <data name="PanTool.HelpText">
+    <value>When zoomed in close, click and drag to navigate the image</value>
+  </data>
+  <data name="PdnInfo.AboutRedirectPage">
+    <value>pdnabout.html</value>
+  </data>
+  <data name="PdnInfo.FullAppName.Format">
+    <value>{0} ({1})</value>
+    <comment>{0} is the product name ("Sprite.NET"), {1} is the version string ("2.2.2000.3000")</comment>
+  </data>
+  <data name="PdnInfo.VersionString.Format">
+    <value>{0} {1} build {2}</value>
+    <comment>{0} is the friendly version name (configuration name), such as "Beta 2" or "Final". {1} is Debug or Release. {2} is the product version.</comment>
+  </data>
+  <data name="ProcessorArchitecture.X86">
+    <value>x86</value>
+  </data>
+  <data name="ProcessorArchitecture.X64">
+    <value>x64</value>
+  </data>
+  <data name="PdnInfo.FriendlyVersionString.ConfigWithSpace.Format">
+    <value> {0}</value>
+  </data>
+  <data name="PdnInfo.FriendlyVersionString.Format">
+    <value>version {0}{1}</value>
+    <comment>{0} is the version, such as "2.5". {1} is the configuration ("Beta 5") formatted via PdnInfo.FriendlyVersionString.ConfigWithSpace.Format, or it is an empty string if the configuration is "Final"</comment>
+  </data>
+  <data name="PencilTool.Name">
+    <value>Pencil</value>
+  </data>
+  <data name="PencilTool.HelpText">
+    <value>Left click to draw freeform, one-pixel wide lines with the primary color, right click to use the secondary color</value>
+  </data>
+  <data name="PenConfigWidget.BrushWidthLabel">
+    <value>Brush width:</value>
+  </data>
+  <data name="PenConfigWidget.Error.InvalidNumber">
+    <value>Invalid number</value>
+  </data>
+  <data name="PenConfigWidget.Error.TooSmall">
+    <value>Size is smaller than 1</value>
+  </data>
+  <data name="PenConfigWidget.Error.TooSmall.Format">
+    <value>Size is smaller than {0}</value>
+  </data>
+  <data name="PenConfigWidget.Error.TooLarge">
+    <value>Size is larger than 500</value>
+  </data>
+  <data name="PenConfigWidget.Error.TooLarge.Format">
+    <value>Size is larger than {0}</value>
+  </data>
+  <data name="ProgressDialog.PercentText.Text.Format">
+    <value>{0}%</value>
+    <comment>{0} is a number from 0 to 100</comment>
+  </data>
+  <data name="RecolorTool.Name">
+    <value>Recolor</value>
+  </data>
+  <data name="RecolorTool.HelpText">
+    <value>Left click to replace the secondary color with the primary color.</value>
+  </data>
+  <data name="SelectionTool.MoveSelection">
+    <value>Move Selection</value>
+  </data>
+  <data name="SelectionTool.RotateSelection">
+    <value>Rotate Selection</value>
+  </data>
+  <data name="SelectionTool.ScaleSelection">
+    <value>Scale Selection</value>
+  </data>
+  <data name="RectangleSelectTool.Name">
+    <value>Rectangle Select</value>
+  </data>
+  <data name="RectangleSelectTool.HelpText">
+    <value>Click and drag to draw a rectangular selection. Hold shift to constrain to a square.</value>
+  </data>
+  <data name="RectangleTool.Name">
+    <value>Rectangle</value>
+  </data>
+  <data name="RectangleTool.HelpText">
+    <value>Click and drag to draw a rectangle (right click for secondary color). Hold shift to constrain to a square.</value>
+  </data>
+  <data name="RectangleTool.StatusText.Format">
+    <value>Size: {0}{1} x {2}{3}, area: {4} {5}</value>
+  </data>
+  <data name="ResizeAction.Name">
+    <value>Resize</value>
+  </data>
+  <data name="ResizeAction.PerformAction.UnspecifiedError">
+    <value>There was an unspecified error while trying to resize the image.</value>
+  </data>
+  <data name="ResizeAction.PerformAction.OutOfMemory">
+    <value>Not enough memory to resize the image.</value>
+  </data>
+  <data name="ResizeDialog.ResizedImageHeader.Text.Format">
+    <value>New size: {0}</value>
+    <comment>{0} is a byte size, such as 3.8mb</comment>
+  </data>
+  <data name="ResizeDialog.ResampleMethod.NearestNeighbor">
+    <value>Nearest Neighbor</value>
+  </data>
+  <data name="ResizeDialog.ResampleMethod.Bicubic">
+    <value>Bicubic</value>
+  </data>
+  <data name="ResizeDialog.ResampleMethod.SuperSampling">
+    <value>Best Quality</value>
+  </data>
+  <data name="ResizeDialog.ResampleMethod.Bilinear">
+    <value>Bilinear</value>
+  </data>
+  <data name="ResizeDialog.Text">
+    <value>Resize</value>
+  </data>
+  <data name="ResizeDialog.AsteriskLabel.Text">
+    <value>*</value>
+  </data>
+  <data name="ResizeDialog.PercentSignLabel.Text">
+    <value>%</value>
+  </data>
+  <data name="ResizeDialog.PixelsLabel1.Text">
+    <value>pixels</value>
+  </data>
+  <data name="ResizeDialog.PixelsLabel2.Text">
+    <value>pixels</value>
+  </data>
+  <data name="ResizeDialog.PercentRB.Text">
+    <value>&amp;By percentage:</value>
+  </data>
+  <data name="ResizeDialog.AbsoluteRB.Text">
+    <value>&amp;By absolute size:</value>
+  </data>
+  <data name="ResizeDialog.PixelSizeHeader.Text">
+    <value>Pixel size</value>
+  </data>
+  <data name="ResizeDialog.PrintSizeHeader.Text">
+    <value>Print size</value>
+  </data>
+  <data name="ResizeDialog.CurrentImageSizeLabel.Text">
+    <value>Current image size:</value>
+  </data>
+  <data name="ResizeDialog.ResamplingLabel.Text">
+    <value>Resampling:</value>
+  </data>
+  <data name="ResizeDialog.NewWidthLabel1.Text">
+    <value>Width:</value>
+  </data>
+  <data name="ResizeDialog.NewHeightLabel1.Text">
+    <value>Height:</value>
+  </data>
+  <data name="ResizeDialog.NewWidthLabel2.Text">
+    <value>Width:</value>
+  </data>
+  <data name="ResizeDialog.NewHeightLabel2.Text">
+    <value>Height:</value>
+  </data>
+  <data name="ResizeDialog.ConstrainCheckBox.Text">
+    <value>&amp;Maintain aspect ratio</value>
+  </data>
+  <data name="ResizeDialog.AsteriskTextLabel.SuperSampling">
+    <value>* Super Sampling will be used</value>
+  </data>
+  <data name="ResizeDialog.AsteriskTextLabel.Bicubic">
+    <value>* Bicubic will be used</value>
+  </data>
+  <data name="RotateAction.180">
+    <value>180°</value>
+  </data>
+  <data name="RotateAction.90CW">
+    <value>90° CW</value>
+  </data>
+  <data name="RotateAction.90CCW">
+    <value>90° CCW</value>
+  </data>
+  <data name="RotateAction.HistoryMementoName.Format">
+    <value>{0} {1}</value>
+    <comment>{0} is the action name ("Rotate"), {1} is the angle (90 CW)</comment>
+  </data>
+  <data name="RotateAction.Name">
+    <value>Rotate</value>
+  </data>
+  <data name="RoundedRectangleTool.Name">
+    <value>Rounded Rectangle</value>
+  </data>
+  <data name="RoundedRectangleTool.HelpText">
+    <value>Click and drag to draw a rounded rectangle (right click for secondary color). Hold shift to constrain.</value>
+  </data>
+  <data name="RoundedRectangleTool.StatusText.Format">
+    <value>Bounding rectangle size: {0}{1} x {2}{3}, area: {4} {5}</value>
+  </data>
+  <data name="SaveConfigDialog.Text">
+    <value>Save Configuration</value>
+  </data>
+  <data name="SaveConfigDialog.SettingsHeader.Text">
+    <value>Settings</value>
+  </data>
+  <data name="SaveConfigDialog.DefaultsButton.Text">
+    <value>De&amp;faults</value>
+  </data>
+  <data name="SaveConfigDialog.PreviewHeader.Text.Format">
+    <value>Preview, file size: {0}</value>
+    <comment>{0} is a file size, or some text in parenthesis (such as SaveConfigDialog.FileSizeText.Text.Error)</comment>
+  </data>
+  <data name="SaveConfigDialog.FileSizeText.Text.Computing">
+    <value>(computing)</value>
+  </data>
+  <data name="SaveConfigDialog.FileSizeText.Text.Error">
+    <value>(error)</value>
+  </data>
+  <data name="SaveConfigDialog.FileSizeText.Text.Computing.Format">
+    <value>(computing: {0}%)</value>
+    <comment>{0} is a number between 0 and 100</comment>
+  </data>
+  <data name="SaveProgressDialog.Title">
+    <value>Saving</value>
+  </data>
+  <data name="SaveProgressDialog.Description">
+    <value>Saving:</value>
+  </data>
+  <data name="SelectAllAction.Name">
+    <value>Select All</value>
+  </data>
+  <data name="ShapeDrawTypeConfigWidget.OutlineButton.ToolTipText">
+    <value>Draw Shape Outline</value>
+  </data>
+  <data name="ShapeDrawTypeConfigWidget.InteriorButton.ToolTipText">
+    <value>Draw Filled Shape</value>
+  </data>
+  <data name="ShapeDrawTypeConfigWidget.BothButton.ToolTipText">
+    <value>Draw Filled Shape With Outline</value>
+  </data>
+  <data name="SplashForm.StatusLabel.Text">
+    <value>Starting...</value>
+  </data>
+  <data name="Startup.UnhandledError.Format">
+    <value>There was an unhandled error, and Sprite.NET must be closed. Refer to the file '{0}', which has been placed on your desktop, for more information.</value>
+    <comment>{0} is a filename</comment>
+  </data>
+  <data name="ToolConfigStrip.ResamplingLabel.Text">
+    <value>Quality:</value>
+  </data>
+  <data name="ResamplingAlgorithm.Bilinear">
+    <value>Smooth</value>
+  </data>
+  <data name="ResamplingAlgorithm.NearestNeighbor">
+    <value>Pixelated</value>
+  </data>
+  <data name="ResamplingAlgorithm.Bicubic">
+    <value>Bicubic</value>
+  </data>
+  <data name="ResamplingAlgorithm.SuperSampling">
+    <value>Super Sampling</value>
+  </data>
+  <data name="ToolConfigStrip.ColorPickerLabel.Text">
+    <value>After click:</value>
+  </data>
+  <data name="ColorPickerClickBehavior.NoToolSwitch">
+    <value>Do not switch tool</value>
+  </data>
+  <data name="ColorPickerClickBehavior.SwitchToLastTool">
+    <value>Switch to previous tool</value>
+  </data>
+  <data name="ColorPickerClickBehavior.SwitchToPencilTool">
+    <value>Switch to Pencil tool</value>
+  </data>
+  <data name="TextConfigWidget.Error.InvalidNumber">
+    <value>Invalid number</value>
+  </data>
+  <data name="TextConfigWidget.Error.TooSmall.Format">
+    <value>Size is smaller than {0}</value>
+    <comment>{0} is an integer</comment>
+  </data>
+  <data name="TextConfigWidget.Error.TooLarge.Format">
+    <value>Size is larger than {0}</value>
+    <comment>{0} is an integer</comment>
+  </data>
+  <data name="TextConfigWidget.FontLabel.Text">
+    <value>Font:</value>
+  </data>
+  <data name="TextConfigWidget.BoldButton.ToolTipText">
+    <value>Bold</value>
+  </data>
+  <data name="TextConfigWidget.ItalicButton.ToolTipText">
+    <value>Italics</value>
+  </data>
+  <data name="TextConfigWidget.UnderlineButton.ToolTipText">
+    <value>Underline</value>
+  </data>
+  <data name="TextConfigWidget.AlignLeftButton.ToolTipText">
+    <value>Align Left</value>
+  </data>
+  <data name="TextConfigWidget.AlignCenterButton.ToolTipText">
+    <value>Center Align</value>
+  </data>
+  <data name="TextConfigWidget.AlignRightButton.ToolTipText">
+    <value>Align Right</value>
+  </data>
+  <data name="TextTool.Name">
+    <value>Text</value>
+  </data>
+  <data name="TextTool.HelpText">
+    <value>Left click to place the text cursor, and then type to enter text. Text is drawn with the primary color.</value>
+  </data>
+  <data name="TextTool.StatusText.StartTyping">
+    <value>Drag the nub to move the text. Hold Ctrl to hide nub and cursor. Tap Ctrl to toggle nub.</value>
+  </data>
+  <data name="TextTool.StatusText.TextInfo.Format">
+    <value>Anchor point: {0}{1}, {2}{3}</value>
+  </data>
+  <data name="ToleranceSliderControl.Tolerance">
+    <value>Tolerance</value>
+  </data>
+  <data name="ToleranceSliderControl.Percentage.Format">
+    <value>{0}%</value>
+    <comment>{0} is an integer</comment>
+  </data>
+  <data name="WorkspaceOptionsConfigWidget.DrawGridToggleButton.ToolTipText">
+    <value>Display grid when zoomed in</value>
+  </data>
+  <data name="WorkspaceOptionsConfigWidget.RulersToggleButton.ToolTipText">
+    <value>Rulers</value>
+  </data>
+  <data name="ZoomTool.Name">
+    <value>Zoom</value>
+  </data>
+  <data name="ZoomTool.HelpText">
+    <value>Left click to zoom in, right click to zoom out, middle click to slide</value>
+  </data>
+  <data name="ZoomConfigWidget.ZoomInButton.ToolTipText">
+    <value>Zoom in</value>
+  </data>
+  <data name="ZoomConfigWidget.ZoomOutButton.ToolTipText">
+    <value>Zoom out</value>
+  </data>
+  <data name="ZoomBasis.FitToWindow">
+    <value>Window</value>
+  </data>
+  <data name="ZoomBasis.Selection">
+    <value>Selection</value>
+  </data>
+  <data name="ZoomBasis.ScaleFactor">
+    <value>Factor</value>
+  </data>
+  <data name="ZoomConfigWidget.Error.InvalidNumber">
+    <value>Invalid number</value>
+  </data>
+  <data name="ZoomConfigWidget.Error.TooSmall">
+    <value>Zoom has to be at least 1%</value>
+  </data>
+  <data name="ZoomConfigWidget.Error.TooLarge">
+    <value>Zoom cannot exceed 3200%</value>
+  </data>
+  <data name="ZoomConfigWidget.Percentage.Format">
+    <value>{0}%</value>
+    <comment>{0} is an integer</comment>
+  </data>
+  <data name="StatusBar.Context.Help.Text.Format">
+    <value>{0}: {1}</value>
+    <comment>{0} is the tool's name, {1} is its help text</comment>
+  </data>
+  <data name="AcquireImageAction.Name">
+    <value>Acquire Image</value>
+  </data>
+  <data name="PasteInToNewImageAction.Error.NoClipboardImage">
+    <value>There is no usable image in the clipboard.</value>
+  </data>
+  <data name="AcquireImageAction.Error.Clipboard.TransferError">
+    <value>There was an error transferring the image from the clipboard.</value>
+  </data>
+  <data name="AcquireImageAction.Error.Clipboard.OutOfMemory">
+    <value>There is not enough memory to copy the image from the clipboard.</value>
+  </data>
+  <data name="StatusBar.Size.Format">
+    <value>{0}{1} x {2}{3}</value>
+    <comment>{0} is width, {1} is units (e.g. cm or px), {2} is height, {3} is units</comment>
+  </data>
+  <data name="Untitled.FriendlyName">
+    <value>Untitled</value>
+  </data>
+  <data name="MainForm.Title.Format.Normal">
+    <value>{0} ({1}) - {2}</value>
+    <comment>{0} is friendly document name, {1} is zoom level, {2} is application name</comment>
+  </data>
+  <data name="MainForm.Title.Format.Minimized">
+    <value>{0} - {1}</value>
+    <comment>{0} is friendly document name, {1} is application name</comment>
+  </data>
+  <data name="NewImageAction.Error.OutOfMemory">
+    <value>Not enough memory to create new image.</value>
+  </data>
+  <data name="NewImageAction.Name">
+    <value>New Image</value>
+  </data>
+  <data name="LoadImage.Error.ImageTypeNotRecognized">
+    <value>The image type is not recognized, and cannot be opened.</value>
+  </data>
+  <data name="LoadImage.Error.InvalidFileName.Format">
+    <value>The file name is invalid.
+
+"{0}"</value>
+    <comment>{0} is a filename.</comment>
+  </data>
+  <data name="LoadImage.Error.BlankFileName">
+    <value>The filename is blank.</value>
+  </data>
+  <data name="LoadImage.Error.ArgumentException">
+    <value>There was an error opening the file.</value>
+  </data>
+  <data name="LoadImage.Error.UnauthorizedAccessException">
+    <value>Access was denied to the requested file (unauthorized access).</value>
+  </data>
+  <data name="LoadImage.Error.SecurityException">
+    <value>Access was denied to the requested file (security exception).</value>
+  </data>
+  <data name="LoadImage.Error.FileNotFoundException">
+    <value>The file could not be found.</value>
+  </data>
+  <data name="LoadImage.Error.DirectoryNotFoundException">
+    <value>The directory could not be found.</value>
+  </data>
+  <data name="LoadImage.Error.PathTooLongException">
+    <value>The file name is too long.</value>
+  </data>
+  <data name="LoadImage.Error.IOException">
+    <value>There was an error reading the file from the media.</value>
+  </data>
+  <data name="LoadImage.Error.SerializationException">
+    <value>The file is corrupt or was saved with a newer version of Sprite.NET.</value>
+  </data>
+  <data name="LoadImage.Error.OutOfMemoryException">
+    <value>Not enough memory to load the image.</value>
+  </data>
+  <data name="LoadImage.Error.Exception">
+    <value>There was an unspecified error while opening the file.</value>
+  </data>
+  <data name="OpenImageAction.Name">
+    <value>Open Image</value>
+  </data>
+  <data name="SavedWithOlderVersion.Format">
+    <value>This image was saved with an older version of Sprite.NET. If you save it, it will not be readable by that older version.
+
+Saved with: Sprite.NET v{0}
+Current version: Sprite.NET v{1}</value>
+    <comment>{0} and {1} are version numbers</comment>
+  </data>
+  <data name="FileDialog.PathTooLongException.Message">
+    <value>The file name is too long. Please try a shorter name.</value>
+  </data>
+  <data name="FileDialog.Types.AllImages">
+    <value>All image types</value>
+  </data>
+  <data name="SaveAsDialog.Title">
+    <value>Save As</value>
+  </data>
+  <data name="SaveImage.Error.UnauthorizedAccessException">
+    <value>Access is denied. Use File-&gt;Save As... to save under a different location or name.</value>
+  </data>
+  <data name="SaveImage.Error.SecurityException">
+    <value>Access is denied. Use File-&gt;Save As... to save under a different location or name.</value>
+  </data>
+  <data name="SaveImage.Error.DirectoryNotFoundException">
+    <value>The directory could not be found. Use File-&gt;Save As... to save to another location.</value>
+  </data>
+  <data name="SaveImage.Error.IOException">
+    <value>An I/O error occurred when writing to the file.</value>
+  </data>
+  <data name="SaveImage.Error.OutOfMemoryException">
+    <value>Not enough memory to save the image.</value>
+  </data>
+  <data name="SaveImage.Error.Exception">
+    <value>There was an unspecified error while saving the file.</value>
+  </data>
+  <data name="WarnAboutFlattening.Title">
+    <value>Save</value>
+  </data>
+  <data name="WarnAboutFlattening.IntroText">
+    <value>Saving in this file format requires that the image is first "flattened", which reduces it to a single layer.</value>
+  </data>
+  <data name="WarnAboutFlattening.FlattenTB.ActionText">
+    <value>&amp;Flatten</value>
+  </data>
+  <data name="WarnAboutFlattening.FlattenTB.ExplanationText">
+    <value>The image will be flattened, and then saved. You will be able to undo the flatten operation after saving is finished.</value>
+  </data>
+  <data name="WarnAboutFlattening.CancelTB.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="WarnAboutFlattening.CancelTB.ExplanationText">
+    <value>Cancels the save action.</value>
+  </data>
+  <data name="CopyAction.Error.TransferToClipboard">
+    <value>There was an error copying the image to the clipboard.</value>
+  </data>
+  <data name="CopyAction.Error.OutOfMemory">
+    <value>There was not enough memory to complete the clipboard operation.</value>
+  </data>
+  <data name="CopyAction.Error.Generic">
+    <value>There was an error copying to the clipboard.</value>
+  </data>
+  <data name="CutAction.Name">
+    <value>Cut</value>
+  </data>
+  <data name="Effects.ApplyingDialog.Description">
+    <value>Rendering...</value>
+  </data>
+  <data name="Effects.RepeatMenuItem.Format">
+    <value>Repeat {0}</value>
+    <comment>{0} is the effect name</comment>
+  </data>
+  <data name="Effects.PluginLoadErrorsDialog.Text">
+    <value>Plugin Load Errors</value>
+  </data>
+  <data name="Effects.PluginLoadErrorsDialog.Message.Text">
+    <value>The following plugins failed to load. They may have been written for an older or newer version of Sprite.NET. If you already have the most up-to-date version of Sprite.NET, then you should check to see if there is an updated version of any plugin causing an error.</value>
+  </data>
+  <data name="EffectErrorMessage.InfoNotSupplied">
+    <value>(Not Supplied)</value>
+  </data>
+  <data name="EffectErrorMessage.HeaderFormat">
+    <value>{0} of {1}
+--------------</value>
+    <comment>{0} and {1} are numbers, and {1} is always greater than or equal to {0}. For example: "3 of 5" to indicate the 3rd out of 5 errors.</comment>
+  </data>
+  <data name="EffectErrorMessage.ShortFormat">
+    <value>File: {0}
+      Effect Name: {1}
+      Full error message: {2}
+</value>
+  </data>
+  <data name="EffectErrorMessage.FullFormat">
+    <value>File: {0}
+      Name: {1}
+      Version: {2}
+      Author: {3}
+      Copyright: {4}
+      Website: {5}
+      Full error message: {6}
+</value>
+    <comment>{0} is a full path name, such as "C:\Program Files\Sprite.NET\Effects\EdHarvey.dll" (localization not necessary). {1} is a display name such as "Surface Blur" (localization is handled by plugin). {2} is the version of the plugin or DLL, such as "1.2.345.6789" (localization handled by the .NET Framework's Version.ToString() method). {3} is a name or company name (localization handled by plugin), {4} is copyright information (localization handled by plugin), {5} is a valid website URL starting with http:// or https:// (localization handled by plugin). {6} is an exception string and is provided and localized by the .NET Framework (it is meant for the plugin author, and not necessarily important for the user to understand).</comment>
+  </data>
+  <data name="Effects.Name.Format.Configurable">
+    <value>{0}...</value>
+    <comment>{0} is the effect name</comment>
+  </data>
+  <data name="PasteAction.Error.TransferFromClipboard">
+    <value>There was an error getting the image from the clipboard.</value>
+  </data>
+  <data name="PasteAction.Error.OutOfMemory">
+    <value>Not enough memory to paste from the clipboard.</value>
+  </data>
+  <data name="PasteAction.Error.NotRecognized">
+    <value>The image in the clipboard couldn't be recognized. Try re-copying it with the original application that was used to acquire it.</value>
+  </data>
+  <data name="PasteAction.Error.NoImage">
+    <value>The clipboard doesn't contain an image.</value>
+  </data>
+  <data name="PasteAction.Question.ExpandCanvas">
+    <value>The image being pasted is larger than the image canvas.
+Expand canvas to fit pasted image?</value>
+  </data>
+  <data name="NewLayerAction.Error.OutOfMemory">
+    <value>Not enough memory to create a new layer.</value>
+  </data>
+  <data name="FlattenAction.Question.DiscardHiddenLayers">
+    <value>Discard hidden layers?</value>
+  </data>
+  <data name="StatusBar.Progress.Percentage.Format">
+    <value>{0}%</value>
+    <comment>{0} is an integer</comment>
+  </data>
+  <data name="StatusBar.Context.SelectedArea.Text.Format">
+    <value>Selection top left: {0}{1}, {2}{3}. Bounding rectangle size: {4}{5} x {6}{7}. Area: {8} {9} square</value>
+    <comment>{0} is an X coordinate, {1} is units abbreviation, {2} is Y coordinate, {3} is units abbreviation, {4} is width, {5} is units abbreviation, {6} is height, {7} is units abbreviation, {8} is the area, {9} is plural units (pixels, inches)</comment>
+  </data>
+  <data name="StatusBar.Context.SelectedArea.Text.WithAngle.Format">
+    <value>Selection top left: {0}{1}, {2}{3}. Bounding rectangle size: {4}{5} x {6}{7}. Area: {8} {9} square. Angle: {10}°</value>
+    <comment>{0} is an X coordinate, {1} is units abbreviation, {2} is Y coordinate, {3} is units abbreviation, {4} is width, {5} is units abbreviation, {6} is height, {7} is units abbreviation, {8} is the area, {9} is plural units (pixels, inches), {10} is angle of rotation</comment>
+  </data>
+  <data name="WIA.Error.EnableMe">
+    <value>To use this feature you must enable the Windows Image Acquisition system service.</value>
+  </data>
+  <data name="WIA.Error.UnableToLoad">
+    <value>The Windows Image Acquisition (WIA) library, "wiaaut.dll" is unavailable. Please read the Help file (Help menu -&gt; Help Topics), in the Frequently Asked Questions topic, for troubleshooting information.</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.Title">
+    <value>Drag and Drop</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.InfoText">
+    <value>What would you like to do with the file(s)?</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.OpenButton.ActionText">
+    <value>&amp;Open</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.OpenButton.ExplanationText">
+    <value>Open the file(s) into tab(s).</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.ImportLayers.ActionText">
+    <value>&amp;Add into layer(s)</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.ImportLayers.ExplanationText">
+    <value>Load and then add into new layer(s) in the current image.</value>
+  </data>
+  <data name="DragDrop.OpenOrImport.ImportLayers.ExplanationText.NoImagesYet">
+    <value>Import into new layer(s) in a new image.</value>
+  </data>
+  <data name="Menu.File.OpenRecent.None">
+    <value>(none)</value>
+  </data>
+  <data name="Menu.File.OpenRecent.ClearThisList">
+    <value>&amp;Clear this list</value>
+  </data>
+  <data name="Menu.File.ViewPluginLoadErrors.Text">
+    <value>&amp;View Plugin Load Errors...</value>
+  </data>
+  <data name="Menu.File.Text">
+    <value>&amp;File</value>
+  </data>
+  <data name="Menu.File.New.Text">
+    <value>&amp;New...</value>
+  </data>
+  <data name="Menu.File.Open.Text">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="Menu.File.OpenRecent.Text">
+    <value>Open &amp;Recent</value>
+  </data>
+  <data name="Menu.File.Close.Text">
+    <value>&amp;Close</value>
+  </data>
+  <data name="Menu.File.Acquire.Text">
+    <value>Ac&amp;quire</value>
+  </data>
+  <data name="Menu.File.Acquire.FromScannerOrCamera.Text">
+    <value>From &amp;Scanner or Camera...</value>
+  </data>
+  <data name="Menu.File.Save.Text">
+    <value>&amp;Save</value>
+  </data>
+  <data name="Menu.File.SaveAs.Text">
+    <value>Save &amp;As...</value>
+  </data>
+  <data name="Menu.File.Print.Text">
+    <value>&amp;Print...</value>
+  </data>
+  <data name="Menu.File.Exit.Text">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="Menu.Edit.Text">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="Menu.Edit.Undo.Text">
+    <value>&amp;Undo</value>
+  </data>
+  <data name="Menu.Edit.Redo.Text">
+    <value>&amp;Redo</value>
+  </data>
+  <data name="Menu.Edit.Cut.Text">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="Menu.Edit.Copy.Text">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="Menu.Edit.Paste.Text">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="Menu.Edit.PasteInToNewLayer.Text">
+    <value>Paste in to New &amp;Layer</value>
+  </data>
+  <data name="Menu.Edit.PasteInToNewImage.Text">
+    <value>Paste in to New I&amp;mage</value>
+  </data>
+  <data name="Menu.Edit.EraseSelection.Text">
+    <value>&amp;Erase Selection</value>
+  </data>
+  <data name="Menu.Edit.FillSelection.Text">
+    <value>&amp;Fill Selection</value>
+  </data>
+  <data name="Menu.Edit.FillSelection.ShortcutKeysDisplayString">
+    <value>Backspace</value>
+  </data>
+  <data name="Menu.Edit.InvertSelection.Text">
+    <value>&amp;Invert Selection</value>
+  </data>
+  <data name="Menu.Edit.SelectAll.Text">
+    <value>Select &amp;All</value>
+  </data>
+  <data name="Menu.Edit.Deselect.Text">
+    <value>&amp;Deselect</value>
+  </data>
+  <data name="Menu.View.Text">
+    <value>&amp;View</value>
+  </data>
+  <data name="Menu.View.ZoomIn.Text">
+    <value>Zoom &amp;In</value>
+  </data>
+  <data name="Menu.View.ZoomIn.ShortcutKeyDisplayString">
+    <value>Ctrl++</value>
+  </data>
+  <data name="Menu.View.ZoomOut.Text">
+    <value>Zoom &amp;Out</value>
+  </data>
+  <data name="Menu.View.ZoomOut.ShortcutKeyDisplayString">
+    <value>Ctrl+-</value>
+  </data>
+  <data name="Menu.View.ZoomToWindow.Text">
+    <value>Zoom to &amp;Window</value>
+  </data>
+  <data name="Menu.View.ZoomToSelection.Text">
+    <value>Zoom to &amp;Selection</value>
+  </data>
+  <data name="Menu.View.ActualSize.Text">
+    <value>&amp;Actual Size</value>
+  </data>
+  <data name="Menu.View.Rulers.Text">
+    <value>&amp;Rulers</value>
+  </data>
+  <data name="Menu.View.Grid.Text">
+    <value>&amp;Grid</value>
+  </data>
+  <data name="Menu.Image.Text">
+    <value>&amp;Image</value>
+  </data>
+  <data name="Menu.Image.Crop.Text">
+    <value>Cro&amp;p to Selection</value>
+  </data>
+  <data name="Menu.Image.Resize.Text">
+    <value>&amp;Resize...</value>
+  </data>
+  <data name="Menu.Image.CanvasSize.Text">
+    <value>Canvas &amp;Size...</value>
+  </data>
+  <data name="Menu.Image.FlipHorizontal.Text">
+    <value>Flip &amp;Horizontal</value>
+  </data>
+  <data name="Menu.Image.FlipVertical.Text">
+    <value>Flip &amp;Vertical</value>
+  </data>
+  <data name="Menu.Image.Rotate.Text">
+    <value>Ro&amp;tate</value>
+  </data>
+  <data name="Menu.Image.Rotate90CW.Text">
+    <value>Rotate &amp;90° Clockwise</value>
+  </data>
+  <data name="Menu.Image.Rotate90CCW.Text">
+    <value>Rotate 90° Counter-Clockwise</value>
+  </data>
+  <data name="Menu.Image.Rotate180.Text">
+    <value>Rotate &amp;180°</value>
+  </data>
+  <data name="Menu.Image.Flatten.Text">
+    <value>&amp;Flatten</value>
+  </data>
+  <data name="Menu.Layers.Text">
+    <value>&amp;Layers</value>
+  </data>
+  <data name="Menu.Layers.AddNewLayer.Text">
+    <value>&amp;Add New Layer</value>
+  </data>
+  <data name="Menu.Layers.DeleteLayer.Text">
+    <value>De&amp;lete Layer</value>
+  </data>
+  <data name="Menu.Layers.DuplicateLayer.Text">
+    <value>&amp;Duplicate Layer</value>
+  </data>
+  <data name="Menu.Layers.MergeLayerDown.Text">
+    <value>&amp;Merge Layer Down</value>
+  </data>
+  <data name="Menu.Layers.ImportFromFile.Text">
+    <value>&amp;Import From File...</value>
+  </data>
+  <data name="Menu.Layers.Adjustments.Text">
+    <value>&amp;Adjustments</value>
+  </data>
+  <data name="Menu.Layers.FlipHorizontal.Text">
+    <value>Flip &amp;Horizontal</value>
+  </data>
+  <data name="Menu.Layers.FlipVertical.Text">
+    <value>Flip &amp;Vertical</value>
+  </data>
+  <data name="Menu.Layers.LayerProperties.Text">
+    <value>Layer &amp;Properties...</value>
+  </data>
+  <data name="Menu.Effects.Text">
+    <value>Effe&amp;cts</value>
+  </data>
+  <data name="Menu.Tools.Text">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="Menu.Tools.AntiAliasing.Text">
+    <value>&amp;Antialiasing</value>
+  </data>
+  <data name="Menu.Tools.AlphaBlending.Text">
+    <value>Alpha &amp;blending</value>
+  </data>
+  <data name="Menu.Window.Text">
+    <value>&amp;Window</value>
+  </data>
+  <data name="Menu.Window.ResetWindowLocations.Text">
+    <value>&amp;Reset Window Locations</value>
+  </data>
+  <data name="Menu.Window.Translucent.Text">
+    <value>Translucent</value>
+  </data>
+  <data name="Menu.Window.Tools.Text">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="Menu.Window.History.Text">
+    <value>&amp;History</value>
+  </data>
+  <data name="Menu.Window.Layers.Text">
+    <value>&amp;Layers</value>
+  </data>
+  <data name="Menu.Window.Colors.Text">
+    <value>&amp;Colors</value>
+  </data>
+  <data name="Menu.Window.OpenMdiList.Text">
+    <value>&amp;Show Image List</value>
+  </data>
+  <data name="Menu.Window.NextTab.Text">
+    <value>&amp;Next Tab</value>
+  </data>
+  <data name="Menu.Window.PreviousTab.Text">
+    <value>&amp;Previous Tab</value>
+  </data>
+  <data name="Menu.Help.Language.Text">
+    <value>Lan&amp;guage</value>
+  </data>
+  <data name="Menu.Help.Text">
+    <value>&amp;Help</value>
+  </data>
+  <data name="Menu.Help.HelpTopics.Text">
+    <value>&amp;Help Topics</value>
+  </data>
+  <data name="Menu.Help.PdnWebsite.Text">
+    <value>&amp;Sprite.NET Website</value>
+  </data>
+  <data name="Menu.Help.PdnSearch.Text">
+    <value>Sprite.NET &amp;Search...</value>
+  </data>
+  <data name="Menu.Help.Donate.Text">
+    <value>&amp;Donate...</value>
+  </data>
+  <data name="Menu.Help.Forum.Text">
+    <value>&amp;Forum</value>
+  </data>
+  <data name="Menu.Help.Tutorials.Text">
+    <value>&amp;Tutorials</value>
+  </data>
+  <data name="Menu.Help.Plugins.Text">
+    <value>&amp;Plugins</value>
+  </data>
+  <data name="Menu.Help.About.Text">
+    <value>&amp;About</value>
+  </data>
+  <data name="Menu.Help.Updates.Text">
+    <value>&amp;Updates</value>
+  </data>
+  <data name="Menu.Help.CheckForUpdates.Text">
+    <value>Check f&amp;or Updates...</value>
+  </data>
+  <data name="Menu.Help.SendFeedback.Text">
+    <value>Send feedback or bug report...</value>
+  </data>
+  <data name="SendFeedback.Email.Body">
+    <value>&lt;&lt; Enter your feedback or bug report here (English only). &gt;&gt;</value>
+  </data>
+  <data name="SendFeedback.Email.Subject.Format">
+    <value>Feedback for: {0}</value>
+  </data>
+  <data name="ScaleFactor.Percentage.Format">
+    <value>{0}%</value>
+    <comment>{0} is an integer</comment>
+  </data>
+  <data name="Utility.SizeStringFromBytes.GBFormat">
+    <value>{0} GB</value>
+  </data>
+  <data name="Utility.SizeStringFromBytes.MBFormat">
+    <value>{0} MB</value>
+  </data>
+  <data name="Utility.SizeStringFromBytes.KBFormat">
+    <value>{0} KB</value>
+  </data>
+  <data name="Utility.SizeStringFromBytes.BytesFormat">
+    <value>{0} bytes</value>
+  </data>
+  <data name="BitmapLayer.Properties.BlendOp.Name">
+    <value>Blend Mode</value>
+  </data>
+  <data name="BmpFileType.Name">
+    <value>Bitmap (BMP)</value>
+  </data>
+  <data name="FileTypeCollection.AllImageTypes">
+    <value>All image types</value>
+  </data>
+  <data name="JpegFileType.ConfigUI.Quality.DisplayName">
+    <value>Quality</value>
+  </data>
+  <data name="Layer.Properties.IsBackground.Name">
+    <value>Background Status</value>
+  </data>
+  <data name="Layer.Properties.Name.Name">
+    <value>Name</value>
+  </data>
+  <data name="Layer.Properties.Visible.Name">
+    <value>Visibility</value>
+  </data>
+  <data name="Layer.Properties.Opacity.Name">
+    <value>Opacity</value>
+  </data>
+  <data name="Layer.Background.Name">
+    <value>Background</value>
+  </data>
+  <data name="LayerPropertiesDialog.Text">
+    <value>Layer Properties</value>
+  </data>
+  <data name="LayerPropertiesDialog.VisibleCheckBox.Text">
+    <value>Visible</value>
+  </data>
+  <data name="LayerPropertiesDialog.NameLabel.Text">
+    <value>Name:</value>
+  </data>
+  <data name="LayerPropertiesDialog.GeneralHeader.Text">
+    <value>General</value>
+  </data>
+  <data name="BitmapLayerPropertiesDialog.BlendingHeader.Text">
+    <value>Blending</value>
+  </data>
+  <data name="BitmapLayerPropertiesDialog.BlendModeLabel.Text">
+    <value>Mode:</value>
+  </data>
+  <data name="BitmapLayerPropertiesDialog.OpacityLabel.Text">
+    <value>Opacity:</value>
+  </data>
+  <data name="UserBlendOps.NormalBlendOp.Name">
+    <value>Normal</value>
+  </data>
+  <data name="UserBlendOps.MultiplyBlendOp.Name">
+    <value>Multiply</value>
+  </data>
+  <data name="UserBlendOps.AdditiveBlendOp.Name">
+    <value>Additive</value>
+  </data>
+  <data name="UserBlendOps.ColorBurnBlendOp.Name">
+    <value>Color Burn</value>
+  </data>
+  <data name="UserBlendOps.ColorDodgeBlendOp.Name">
+    <value>Color Dodge</value>
+  </data>
+  <data name="UserBlendOps.ReflectBlendOp.Name">
+    <value>Reflect</value>
+  </data>
+  <data name="UserBlendOps.GlowBlendOp.Name">
+    <value>Glow</value>
+  </data>
+  <data name="UserBlendOps.OverlayBlendOp.Name">
+    <value>Overlay</value>
+  </data>
+  <data name="UserBlendOps.NegationBlendOp.Name">
+    <value>Negation</value>
+  </data>
+  <data name="UserBlendOps.DifferenceBlendOp.Name">
+    <value>Difference</value>
+  </data>
+  <data name="UserBlendOps.ScreenBlendOp.Name">
+    <value>Screen</value>
+  </data>
+  <data name="UserBlendOps.LightenBlendOp.Name">
+    <value>Lighten</value>
+  </data>
+  <data name="UserBlendOps.DarkenBlendOp.Name">
+    <value>Darken</value>
+  </data>
+  <data name="UserBlendOps.XorBlendOp.Name">
+    <value>Xor</value>
+  </data>
+  <data name="AngleChooserConfigDialog.AngleHeader.Text">
+    <value>Angle</value>
+  </data>
+  <data name="AutoLevel.Name">
+    <value>Auto-Level</value>
+  </data>
+  <data name="Effects.Blurring.Submenu.Name">
+    <value>Blurs</value>
+  </data>
+  <data name="PencilSketchEffect.Name">
+    <value>Pencil Sketch</value>
+  </data>
+  <data name="PencilSketchEffect.ConfigDialog.PencilTipSizeLabel">
+    <value>Pencil tip size</value>
+  </data>
+  <data name="PencilSketchEffect.ConfigDialog.RangeLabel">
+    <value>Range</value>
+  </data>
+  <data name="OutlineEffect.Name">
+    <value>Outline</value>
+  </data>
+  <data name="OutlineEffect.ConfigDialog.ThicknessLabel">
+    <value>Thickness</value>
+  </data>
+  <data name="OutlineEffect.ConfigDialog.IntensityLabel">
+    <value>Intensity</value>
+  </data>
+  <data name="MedianEffect.Name">
+    <value>Median</value>
+  </data>
+  <data name="MedianEffect.ConfigDialog.RadiusLabel">
+    <value>Radius</value>
+  </data>
+  <data name="MedianEffect.ConfigDialog.PercentileLabel">
+    <value>Percentile</value>
+  </data>
+  <data name="UnfocusEffect.Name">
+    <value>Unfocus</value>
+  </data>
+  <data name="UnfocusEffect.ConfigDialog.AmountLabel">
+    <value>Radius</value>
+  </data>
+  <data name="UnfocusEffect.ConfigDialog.UnitsLabel">
+    <value>pixels</value>
+  </data>
+  <data name="FragmentEffect.Name">
+    <value>Fragment</value>
+  </data>
+  <data name="FragmentEffect.ConfigDialog.Fragments.DisplayName">
+    <value>Fragment Count</value>
+  </data>
+  <data name="FragmentEffect.ConfigDialog.Rotation.DisplayName">
+    <value>Rotation</value>
+  </data>
+  <data name="FragmentEffect.ConfigDialog.Distance.DisplayName">
+    <value>Distance</value>
+  </data>
+  <data name="SurfaceBlurEffect.Name">
+    <value>Surface Blur</value>
+  </data>
+  <data name="SurfaceBlurEffect.ConfigDialog.RadiusLabel">
+    <value>Radius</value>
+  </data>
+  <data name="SurfaceBlurEffect.ConfigDialog.ThresholdLabel">
+    <value>Threshold</value>
+  </data>
+  <data name="DentsEffect.Name">
+    <value>Dents</value>
+    <comment>Note to translators: The term 'dents' is a bit ambiguous here, so I'll defer to Ed Harvey's description: "Think of reflections off a shiny metal surface with a series of shallow indentations on it; similar hammer-worked copper like a polished version of this surface: http://www.getSprite.NET/misc/HammeredCopper.jpg. Synonyms: (plural of) Dint, Indentation, Dimple, Pit."</comment>
+  </data>
+  <data name="DentsEffect.ConfigDialog.ScaleLabel">
+    <value>Scale</value>
+  </data>
+  <data name="DentsEffect.ConfigDialog.RefractionLabel">
+    <value>Refraction</value>
+  </data>
+  <data name="DentsEffect.ConfigDialog.RoughnessLabel">
+    <value>Roughness</value>
+  </data>
+  <data name="DentsEffect.ConfigDialog.TensionLabel">
+    <value>Tension</value>
+  </data>
+  <data name="DentsEffect.ConfigDialog.QualityLabel">
+    <value>Quality</value>
+  </data>
+  <data name="DentsEffect.ConfigDialog.SeedLabel">
+    <value>Random Noise</value>
+  </data>
+  <data name="DentsEffect.ConfigDialog.SeedButtonText">
+    <value>Reseed</value>
+  </data>
+  <data name="VignetteEffect.Name">
+    <value>Vignette</value>
+  </data>
+  <data name="VignetteEffect.ConfigDialog.CenterLabel">
+    <value>Center</value>
+  </data>
+  <data name="VignetteEffect.ConfigDialog.RadiusLabel">
+    <value>Radius</value>
+  </data>
+  <data name="VignetteEffect.ConfigDialog.DensityLabel">
+    <value>Density</value>
+  </data>
+  <data name="ZoomBlurEffect.Name">
+    <value>Zoom Blur</value>
+  </data>
+  <data name="ZoomBlurEffect.ConfigDialog.AmountLabel">
+    <value>Zoom Amount</value>
+  </data>
+  <data name="ZoomBlurEffect.ConfigDialog.Offset">
+    <value>Center</value>
+  </data>
+  <data name="BlurEffect.Name">
+    <value>Gaussian Blur</value>
+  </data>
+  <data name="GlowEffect.Name">
+    <value>Glow</value>
+  </data>
+  <data name="GlowEffect.Amount1.Name">
+    <value>Radius</value>
+  </data>
+  <data name="GlowEffect.Amount2.Name">
+    <value>Brightness</value>
+  </data>
+  <data name="GlowEffect.Amount3.Name">
+    <value>Contrast</value>
+  </data>
+  <data name="BulgeEffect.Name">
+    <value>Bulge</value>
+  </data>
+  <data name="DistortSubmenu.Name">
+    <value>Distort</value>
+  </data>
+  <data name="TileEffect.Name">
+    <value>Tile Reflection</value>
+  </data>
+  <data name="TwistEffect.Name">
+    <value>Twist</value>
+  </data>
+  <data name="BulgeEffect.BulgeAmount.Text">
+    <value>Bulge</value>
+  </data>
+  <data name="BulgeEffect.Offset.Text">
+    <value>Center</value>
+  </data>
+  <data name="TileEffect.Intensity.Text">
+    <value>Curvature</value>
+  </data>
+  <data name="TileEffect.Quality.Text">
+    <value>Quality</value>
+  </data>
+  <data name="TileEffect.Rotation.Text">
+    <value>Angle</value>
+  </data>
+  <data name="TileEffect.SquareSize.Text">
+    <value>Tile Size</value>
+  </data>
+  <data name="TwistEffect.Antialias.Text">
+    <value>Quality</value>
+  </data>
+  <data name="TwistEffect.Offset.Text">
+    <value>Center</value>
+  </data>
+  <data name="TwistEffect.TwistSize.Text">
+    <value>Size</value>
+  </data>
+  <data name="TwistEffect.TwistAmount.Text">
+    <value>Amount / Direction</value>
+  </data>
+  <data name="PolarInversion.Name">
+    <value>Polar Inversion</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.Amount.DisplayName">
+    <value>Amount</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.Offset.DisplayName">
+    <value>Offset</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.EdgeBehavior.DisplayName">
+    <value>Edge Behavior</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.EdgeBehavior.Clamp.DisplayName">
+    <value>Clamp</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.EdgeBehavior.Reflect.DisplayName">
+    <value>Reflect</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.EdgeBehavior.Wrap.DisplayName">
+    <value>Wrap</value>
+  </data>
+  <data name="PolarInversion.ConfigUI.Quality.DisplayName">
+    <value>Quality</value>
+  </data>
+  <data name="PosterizeAdjustment.Name">
+    <value>Posterize</value>
+  </data>
+  <data name="PosterizeAdjustment.ConfigDialog.RedLevels.DisplayName">
+    <value>Red</value>
+  </data>
+  <data name="PosterizeAdjustment.ConfigDialog.GreenLevels.DisplayName">
+    <value>Green</value>
+  </data>
+  <data name="PosterizeAdjustment.ConfigDialog.BlueLevels.DisplayName">
+    <value>Blue</value>
+  </data>
+  <data name="PosterizeAdjustment.ConfigDialog.LinkLevels.Description">
+    <value>Linked</value>
+  </data>
+  <data name="BrightnessAndContrastAdjustment.Name">
+    <value>Brightness / Contrast</value>
+  </data>
+  <data name="BrightnessAndContrastAdjustment.Brightness">
+    <value>Brightness</value>
+  </data>
+  <data name="BrightnessAndContrastAdjustmnet.Contrast">
+    <value>Contrast</value>
+  </data>
+  <data name="DesaturateEffect.Name">
+    <value>Black and White</value>
+  </data>
+  <data name="EdgeDetectEffect.Name">
+    <value>Edge Detect</value>
+  </data>
+  <data name="EmbossEffect.Name">
+    <value>Emboss</value>
+  </data>
+  <data name="FrostedGlassEffect.Name">
+    <value>Frosted Glass</value>
+  </data>
+  <data name="FrostedGlassEffect.ConfigDialog.MinScatterRadius.DisplayName">
+    <value>Minimum Scatter Radius</value>
+  </data>
+  <data name="FrostedGlassEffect.ConfigDialog.MaxScatterRadius.DisplayName">
+    <value>Maximum Scatter Radius</value>
+  </data>
+  <data name="FrostedGlassEffect.ConfigDialog.NumSamples.DisplayName">
+    <value>Smoothness</value>
+  </data>  
+  <data name="HueAndSaturationAdjustment.Name">
+    <value>Hue / Saturation</value>
+  </data>
+  <data name="HueAndSaturationAdjustment.Amount1Label">
+    <value>Hue</value>
+  </data>
+  <data name="HueAndSaturationAdjustment.Amount2Label">
+    <value>Saturation</value>
+  </data>
+  <data name="HueAndSaturationAdjustment.Amount3Label">
+    <value>Lightness</value>
+  </data>
+  <data name="InvertColorsEffect.Name">
+    <value>Invert Colors</value>
+  </data>
+  <data name="LevelsEffect.Name">
+    <value>Levels</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.OutputGroupBox.Text">
+    <value>Output</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.OutputGammaUpDown.ToolTipText">
+    <value>Output Gamma</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.SwatchOutHigh.ToolTipText">
+    <value>Output White Point (double click to choose)</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.SwatchOutLow.ToolTipText">
+    <value>Output Black Point (double click to choose)</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.OutputHistogramGroupBox.Text">
+    <value>Output Histogram</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.HistogramOutput.ToolTipText">
+    <value>This histogram shows a preview of the distribution of color in the resultant image</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.InputHistogramGroupBox.Text">
+    <value>Input Histogram</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.HistogramInput.ToolTipText">
+    <value>This histogram shows the distribution of color in the original image.</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.InputGroupBox.Text">
+    <value>Input</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.SwatchInHigh.ToolTipText">
+    <value>Input White Point (double click to choose)</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.SwatchInLow.ToolTipText">
+    <value>Input Black Point (double click to choose)</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.RedMaskCheckBox.Text">
+    <value>R</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.RedMaskCheckBox.ToolTipText">
+    <value>Toggle manipulation of the red channel</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.GreenMaskCheckBox.Text">
+    <value>G</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.GreenMaskCheckBox.ToolTipText">
+    <value>Toggle manipulation of the green channel</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.BlueMaskCheckBox.Text">
+    <value>B</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.BlueMaskCheckBox.ToolTipText">
+    <value>Toggle manipulation of the blue channel</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.AutoButton.Text">
+    <value>Auto</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.AutoButton.ToolTipText">
+    <value>Automatically adjusts the input white point, black point, and output gamma to equalize the image</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.ResetButton.Text">
+    <value>Reset</value>
+  </data>
+  <data name="LevelsEffectConfigDialog.Text">
+    <value>Levels Adjustment</value>
+  </data>
+  <data name="MotionBlurEffect.Name">
+    <value>Motion Blur</value>
+  </data>
+  <data name="MotionBlurEffectConfigDialog.Text">
+    <value>Motion Blur</value>
+  </data>
+  <data name="MotionBlurEffectConfigDialog.DegreeLabel.Text">
+    <value>°</value>
+  </data>
+  <data name="MotionBlurEffectConfigDialog.PixelsLabel.Text">
+    <value>pixels</value>
+  </data>
+  <data name="MotionBlurEffectConfigDialog.CenteredCheckBox.Text">
+    <value>Centered</value>
+  </data>
+  <data name="MotionBlurEffectConfigDialog.AngleHeader.Text">
+    <value>Angle</value>
+  </data>
+  <data name="MotionBlurEffectConfigDialog.DistanceHeader.Text">
+    <value>Distance</value>
+  </data>
+  <data name="OilPaintingEffect.Name">
+    <value>Oil Painting</value>
+  </data>
+  <data name="OilPaintingEffect.ConfigDialog.Amount1Label">
+    <value>Brush size</value>
+  </data>
+  <data name="OilPaintingEffect.ConfigDialog.Amount2Label">
+    <value>Coarseness</value>
+  </data>
+  <data name="PixelateEffect.Name">
+    <value>Pixelate</value>
+  </data>
+  <data name="PixelateEffect.ConfigDialog.SliderLabel">
+    <value>Cell size</value>
+  </data>
+  <data name="PixelateEffect.ConfigDialog.SliderUnitsName">
+    <value>pixels</value>
+  </data>
+  <data name="RedEyeRemoveEffect.Name">
+    <value>Red Eye Removal</value>
+  </data>
+  <data name="RedEyeRemoveEffect.ConfigDialog.Amount1Label">
+    <value>Tolerance</value>
+  </data>
+  <data name="RedEyeRemoveEffect.ConfigDialog.Amount2Label">
+    <value>Saturation percentage</value>
+  </data>
+  <data name="RedEyeRemoveEffectDialog.UsageHintLabel.Text">
+    <value>Hint: For best results, first use the selection tools to select each eye</value>
+  </data>
+  <data name="ReliefEffect.Name">
+    <value>Relief</value>
+  </data>
+  <data name="SharpenEffect.Name">
+    <value>Sharpen</value>
+  </data>
+  <data name="SharpenEffect.ConfigDialog.SliderLabel">
+    <value>Amount</value>
+  </data>
+  <data name="TwoAmountsConfigDialog.Reset.Text">
+    <value>Reset</value>
+  </data>
+  <data name="BlurEffect.ConfigDialog.SliderLabel">
+    <value>Radius</value>
+  </data>
+  <data name="BlurEffect.ConfigDialog.SliderUnitsName">
+    <value>pixels</value>
+  </data>
+  <data name="AngleChooserConfigDialog.DegreeLabel.Text">
+    <value>°</value>
+  </data>
+  <data name="WorkspaceOptionsConfigWidget.UnitsLabel.Text">
+    <value>Units:</value>
+  </data>
+  <data name="MeasurementUnit.Pixel">
+    <value>Pixel</value>
+  </data>
+  <data name="MeasurementUnit.Inch">
+    <value>Inch</value>
+  </data>
+  <data name="MeasurementUnit.Centimeter">
+    <value>Centimeter</value>
+  </data>
+  <data name="MeasurementUnit.Pixel.Plural">
+    <value>Pixels</value>
+  </data>
+  <data name="MeasurementUnit.Inch.Plural">
+    <value>Inches</value>
+  </data>
+  <data name="MeasurementUnit.Centimeter.Plural">
+    <value>Centimeters</value>
+  </data>
+  <data name="MeasurementUnit.Pixel.Abbreviation">
+    <value>px</value>
+  </data>
+  <data name="MeasurementUnit.Centimeter.Abbreviation">
+    <value>cm</value>
+  </data>
+  <data name="MeasurementUnit.Inch.Abbreviation">
+    <value>in</value>
+  </data>
+  <data name="StatusBar.CursorInfo.Format">
+    <value>{0}{1}, {2}{3}</value>
+    <comment>{0} is x offset, {1} is units, {2} is y offset, {3} is units</comment>
+  </data>
+  <data name="ResizeAction.ProgressDialog.Description">
+    <value>Resizing...</value>
+  </data>
+  <data name="ResizeDialog.ResolutionLabel.Text">
+    <value>Resolution:</value>
+  </data>
+  <data name="MeasurementUnit.Inch.Ratio">
+    <value>pixels/inch</value>
+  </data>
+  <data name="MeasurementUnit.Centimeter.Ratio">
+    <value>pixels/cm</value>
+  </data>
+  <data name="MeasurementUnit.Pixel.Ratio">
+    <value>pixels</value>
+  </data>
+  <data name="UpdatesDialog.Text">
+    <value>Sprite.NET Updates</value>
+  </data>
+  <data name="UpdatesDialog.OptionsButton.Text">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="UpdatesDialog.MoreInfoLink.Text">
+    <value>More Info...</value>
+  </data>
+  <data name="UpdatesDialog.NewVersionLabel.Text">
+    <value>New version:</value>
+  </data>
+  <data name="UpdatesDialog.ProgressLabel.Text.Format">
+    <value>{0}%</value>        
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.StartupState">
+    <value>The Sprite.NET Updates System is initializing.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.StartupState">
+    <value>Initializing</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.ReadyToCheckState">
+    <value>Sprite.NET is ready to check for updates.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.ReadyToCheckState">
+    <value>Check Now</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.CheckingState">
+    <value>Sprite.NET is currently checking to see if there is a newer version available.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.CheckingState">
+    <value>Checking</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.UpdateAvailableState">
+    <value>A newer version of Sprite.NET is available. You may click the Install button below to download and install the update.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.UpdateAvailableState">
+    <value>&amp;Install</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.DownloadingState">
+    <value>The update for Sprite.NET is being downloaded.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.DownloadingState">
+    <value>Downloading</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.ExtractingState">
+    <value>The update has been downloaded, and is currently being extracted and verified.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.ExtractingState">
+    <value>Extracting</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.ReadyToInstallState">
+    <value>Sprite.NET must close to install the update. After you click OK, you will be asked to save any changes if necessary.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.ReadyToInstallState">
+    <value>OK</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.InstallingState">
+    <value>Installing the update!</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.InstallingState">
+    <value>Installing</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.DoneState">
+    <value>No updates are currently available.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.DoneState">
+    <value>Done</value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.AbortedState">
+    <value>The updater was aborted.</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.AbortedState">
+    <value></value>
+  </data>
+  <data name="UpdatesDialog.InfoText.Text.ErrorState.Format">
+    <value>There was an error while checking for updates.
+
+{0}</value>
+  </data>
+  <data name="UpdatesDialog.ContinueButton.Text.ErrorState">
+    <value></value>
+  </data>
+  <data name="UpdatesDialog.InfoLabel.Text">
+    <value>A newer version of Sprite.NET is available. You may click the Install button to download and install it, or you may click Close to be reminded again in several days.</value>
+  </data>
+  <data name="UpdatesDialog.BetaWarningLabel.Text">
+    <value>NOTE: This is a pre-release version (beta). It may not be stable.</value>
+  </data>
+  <data name="UpdatesDialog.CloseButton.Text">
+    <value>Close</value>
+  </data>
+  <data name="UpdatesDialog.NewVersionZipLabel.Text">
+    <value>Download:</value>
+  </data>
+  <data name="UpdatesDialog.CurrentVersionHeader.Text">
+    <value>Currently Installed Version</value>
+  </data>
+  <data name="UpdatesDialog.NewVersionHeader.Text">
+    <value>New Version</value>
+  </data>
+  <data name="UpdatesDialog.InstallButton.Text">
+    <value>Install</value>
+  </data>
+  <data name="UpdatesOptionsDialog.Text">
+    <value>Sprite.NET Update Options</value>
+  </data>
+  <data name="UpdatesOptionsDialog.SaveButton.Text">
+    <value>&amp;Save</value>
+  </data>
+  <data name="UpdatesOptionsDialog.AutoCheckBox.Text">
+    <value>Automatically check for newer versions of Sprite.NET</value>
+  </data>
+  <data name="UpdatesOptionsDialog.BetaCheckBox.Text">
+    <value>Also check for pre-release (beta) versions</value>
+  </data>
+  <data name="UpdatesOptionsDialog.AllUsersNoticeLabel.Text">
+    <value>Note: These settings affect all users of this computer.</value>
+  </data>
+  <data name="ExpiredDialog.Message">
+    <value>This pre-release version of Sprite.NET has expired (30 days).
+
+Click OK to go to the Sprite.NET website where you may download a newer version.</value>
+  </data>
+  <data name="ExpiredTaskDialog.InfoText">
+    <value>This pre-release version of Sprite.NET has expired. To continue using Sprite.NET, you must update to the latest version.</value>
+  </data>
+  <data name="ExpiredTaskDialog.CheckForUpdatesTB.ActionText">
+    <value>&amp;Check for an Update</value>
+  </data>
+  <data name="ExpiredTaskDialog.CheckForUpdatesTB.ExplanationText">
+    <value>Check to see if an update is available, and then install it.</value>
+  </data>
+  <data name="ExpiredTaskDialog.GoToWebSiteTB.ActionText">
+    <value>&amp;Go to the Sprite.NET website</value>
+  </data>
+  <data name="ExpiredTaskDialog.GoToWebSiteTB.ExplanationText">
+    <value>If checking for updates does not work, you may try going to the website to manually find an update.</value>
+  </data>
+  <data name="ExpiredTaskDialog.DoNotCheckForUpdatesTB.ActionText">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="ExpiredTaskDialog.DoNotCheckForUpdatesTB.ExplanationText">
+    <value>Exit Sprite.NET without checking for updates.</value>
+  </data>  
+  <data name="DownloadAndUnzipUpdateDialog.Text">
+    <value>Sprite.NET Updates</value>
+  </data>
+  <data name="DownloadAndUnzipUpdateDialog.Description.Downloading">
+    <value>Downloading...</value>
+  </data>
+  <data name="DownloadAndUnzipUpdateDialog.Description.Extracting">
+    <value>Extracting...</value>
+  </data>
+  <data name="DownloadAndUnzipUpdateDialog.Error.Generic">
+    <value>There was an error downloading and installing the new version. Please try again later with the 'Help -&gt; Check for Updates ...' menu command.</value>
+  </data>
+  <data name="ConfirmLanguageDialog.Title">
+    <value>Language Choice Confirmation</value>
+  </data>
+  <data name="ConfirmLanguageDialog.IntroText">
+    <value>Changing the language requires that Sprite.NET be restarted.</value>
+  </data>
+  <data name="ConfirmLanguageDialog.RestartTB.ActionText">
+    <value>&amp;Restart Sprite.NET</value>
+  </data>
+  <data name="ConfirmLanguageDialog.RestartTB.ExplanationText.Format">
+    <value>Closes Sprite.NET and then restarts it in {0}. You will be asked to save your changes if necessary.</value>
+    <comment>{0} is the name of the new language that has been chosen (ex, "English").</comment>
+  </data>
+  <data name="ConfirmLanguageDialog.CancelTB.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="ConfirmLanguageDialog.CancelTB.ExplanationText">
+    <value>Does not close Sprite.NET. Your language choice will be cancelled.</value>
+  </data>
+  <data name="ReduceNoiseEffect.Name">
+    <value>Reduce Noise</value>
+  </data>
+  <data name="ReduceNoise.Radius.DisplayName">
+    <value>Radius</value>
+  </data>
+  <data name="ReduceNoise.Strength.DisplayName">
+    <value>Strength</value>
+  </data>
+  <data name="AddNoiseEffect.Amount1Label">
+    <value>Intensity</value>
+  </data>
+  <data name="AddNoiseEffect.Amount2Label">
+    <value>Color Saturation</value>
+  </data>
+  <data name="AddNoiseEffect.Coverage">
+    <value>Coverage</value>
+  </data>
+  <data name="AddNoiseEffect.Name">
+    <value>Add Noise</value>
+  </data>
+  <data name="ClearOpenRecentList.Dialog.Text">
+    <value>Are you sure you want to clear the Open Recent list?</value>
+  </data>
+  <data name="SepiaEffect.Name">
+    <value>Sepia</value>
+  </data>
+  <data name="NonAdminErrorBox.Message">
+    <value>You must be a system administrator to perform this action.</value>
+  </data>
+  <data name="BmpFileType.ConfigUI.BitDepth.DisplayName">
+    <value>Bit Depth</value>
+  </data>
+  <data name="BmpFileType.ConfigUI.BitDepth.AutoDetect.DisplayName">
+    <value>Auto-detect</value>
+  </data>
+  <data name="BmpFileType.ConfigUI.BitDepth.Bpp24.DisplayName">
+    <value>24-bit</value>
+  </data>
+  <data name="BmpFileType.ConfigUI.BitDepth.Bpp8.DisplayName">
+    <value>8-bit</value>
+  </data>
+  <data name="BmpFileType.ConfigUI.DitherLevel.DisplayName">
+    <value>Dithering level</value>
+  </data>
+  <data name="PngFileType.ConfigUI.BitDepth.DisplayName">
+    <value>Bit Depth</value>
+  </data>
+  <data name="PngFileType.ConfigUI.BitDepth.AutoDetect.DisplayName">
+    <value>Auto-detect</value>
+  </data>
+  <data name="PngFileType.ConfigUI.BitDepth.Bpp32.DisplayName">
+    <value>32-bit</value>
+  </data>
+  <data name="PngFileType.ConfigUI.BitDepth.Bpp24.DisplayName">
+    <value>24-bit</value>
+  </data>
+  <data name="PngFileType.ConfigUI.BitDepth.Bpp8.DisplayName">
+    <value>8-bit</value>
+  </data>
+  <data name="PngFileType.ConfigUI.DitherLevel.DisplayName">
+    <value>Dithering level</value>
+  </data>
+  <data name="PngFileType.ConfigUI.Threshold.DisplayName">
+    <value>Transparency threshold</value>
+  </data>
+  <data name="PngFileType.ConfigUI.Threshold.Description">
+    <value>Pixels with an alpha value less than the threshold will be fully transparent.</value>
+  </data>
+  
+  <data name="GifFileType.ConfigUI.Threshold.DisplayName">
+    <value>Transparency threshold</value>
+  </data>
+  <data name="GifFileType.ConfigUI.DitherLevel.DisplayName">
+    <value>Dithering level</value>
+  </data>
+  <data name="GifSaveConfigWidget.PreMultiplyAlphaCheckBox.Text">
+    <value>Multiply by alpha channel</value>
+  </data>
+  <data name="GifFileType.ConfigUI.Threshold.Description">
+    <value>Pixels with an alpha value less than the threshold will be fully transparent.</value>
+  </data>
+  
+  
+  
+  <data name="SetupWizard.MustCloseAppFirst.Text">
+    <value>Please ensure that Sprite.NET is closed, and then click Retry. Or, press Cancel to exit the setup wizard.</value>
+  </data>
+  <data name="SetupWizard.HelpText">
+    <value>Sprite.NET Installer Help
+
+Command-line options:
+
+/skipConfig  -  Skips configuration of options and install directory. Uses MSI properties in the following order of precedence: 1. supplied on command-line, 2. read from HKLM\Software\Sprite.NET, 3. default values. NOTE: Use of this option infers acceptance of the License Agreement.
+/auto  -  Automatic install. Infers /skipConfig. Does not show the final wizard page that details the result of installation.
+/createMsi  -  Creates MSI packages that may be used for deployment (AD/GPO) purposes. All properties specified on the command-line are merged into the MSI packages, so no further transforms are necessary.
+/verbose  -  Enables verbose Windows Installer MSI logging
+PROPERTY=VALUE  -  Sets an MSI property. See help file after installing for more information. You do not need to specify /saveMsi to specify properties.
+
+Return code is 0 on success, or non-zero on failure.</value>
+  </data>
+  <data name="SetupWizard.x86Msi.LaunchCondition.NotAllowedOn64bitOS">
+    <value>32-bit MSI may not be installed on 64-bit OS.</value>
+  </data>
+  <data name="Error.OSRequirement">
+    <value>Sprite.NET requires Windows XP SP2, Windows Vista, Windows Server 2003, or later.</value>
+  </data>
+  <data name="SetupWizard.Error.AdminRequired">
+    <value>Administrator privilege is required to install Sprite.NET.</value>
+  </data>
+  <data name="SetupWizard.CancelButton.Text">
+    <value>Cancel</value>
+  </data>
+  <data name="SetupWizard.BackButton.Text">
+    <value>&lt; &amp;Back</value>
+  </data>
+  <data name="SetupWizard.NextButton.Text">
+    <value>&amp;Next &gt;</value>
+  </data>
+  <data name="SetupWizard.NextButton.Text.Finished">
+    <value>Finish</value>
+  </data>
+  <data name="SetupWizard.CancelDialog.Message">
+    <value>The installation is not yet complete. Are you sure you want to exit?</value>
+  </data>
+  <data name="SetupWizard.IntroPage.HeaderText">
+    <value>Setup Wizard</value>
+  </data>
+  <data name="SetupWizard.IntroPage.IntroText.Text.Format">
+    <value>This installer will help you install {0}.
+
+Choose the installation method you prefer, and then click Next.</value>
+    <comment>{0} is the product name.</comment>
+  </data>
+  <data name="SetupWizard.IntroPage.QuickRB.Text">
+    <value>Quick</value>
+  </data>
+  <data name="SetupWizard.IntroPage.QuickDescription.Text">
+    <value>This is the recommended choice for most users. This installs using the default options, or the same options that were specified during a previous installation.</value>
+  </data>
+  <data name="SetupWizard.IntroPage.CustomRB.Text">
+    <value>Custom</value>
+  </data>
+  <data name="SetupWizard.IntroPage.CustomDescription.Text">
+    <value>Allows you to change the installation directory, and options related to file type associations and update checking.</value>
+  </data>
+  <data name="SetupWizard.IntroPage.ExpirationWarning.Format">
+    <value>NOTE: This is a pre-release version of Sprite.NET that will expire on {0}.</value>
+    <comment>{0} is a date.</comment>
+  </data>
+  <data name="SetupWizard.LicensePage.HeaderText">
+    <value>License Agreement</value>
+  </data>
+  <data name="SetupWizard.LicensePage.IntroText.Text">
+    <value>Please take a moment to read the license agreement now. If you accept the terms below, click "I Agree", then "Next". Otherwise click "Cancel".</value>
+  </data>
+  <data name="SetupWizard.LicensePage.DontAgreeButton.Text">
+    <value>I &amp;Do Not Agree</value>
+  </data>
+  <data name="SetupWizard.LicensePage.AgreeButton.Text">
+    <value>I &amp;Agree</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.HeaderText">
+    <value>Configure Options</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.LaunchHandlingText.Text">
+    <value>Use these options to configure how Sprite.NET can be launched.</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.JpgPngBmpCheckBox.Text">
+    <value>Use it as the default image editor for JPEG, PNG, and BMP images</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.TgaCheckBox.Text">
+    <value>Use it as the default image editor for TGA images</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.DesktopShortcutCheckBox.Text">
+    <value>Create a shortcut on the Desktop</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.UpdatesText.Text">
+    <value>Sprite.NET can periodically check to see if there is a new version available and then notify you. No information is transmitted from your computer during this process. Note: You will only be notified of new versions while Sprite.NET is running.</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.CheckForUpdatesCheckBox.Text">
+    <value>Automatically check for updates</value>
+  </data>
+  <data name="SetupWizard.OptionsPage.CheckForBetasCheckBox.Text">
+    <value>Also check for pre-release (beta) versions</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.HeaderText">
+    <value>Select Installation Folder</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.IntroText.Text.Format">
+    <value>The installer will install {0} to the following folder.
+
+To install in this folder, click "Next". To install to a different folder, enter it below or click "Browse".</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.FolderLabel.Text">
+    <value>Folder:</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.BrowseButton.Text">
+    <value>&amp;Browse...</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.DefaultTargetSubDir">
+    <value>Sprite.NET</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.BrowseForFolder.Description">
+    <value>Choose an installation folder:</value>
+  </data>
+  <data name="SetupWizard.InstallDirPage.BadDirError.Message">
+    <value>The specified folder could not be created. You will need to choose another folder to install to.</value>
+  </data>
+  <data name="SetupWizard.ReadyToInstallPage.HeaderText">
+    <value>Confirm Installation</value>
+  </data>
+  <data name="SetupWizard.ReadyToInstallPage.IntroText.Text.Format">
+    <value>The installer is ready to install {0} on your computer.
+
+Click "Next" to start the installation.</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.HeaderText.Installing">
+    <value>Installing</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.HeaderText.Success">
+    <value>Installation Succeeded</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.HeaderText.Failure">
+    <value>Error</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.OpenSRPoint">
+    <value>Creating system restore point...</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.CloseSRPoint">
+    <value>Closing system restore point...</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.Uninstalling">
+    <value>Removing previous version...</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.Installing.Format">
+    <value>{0} is being installed...</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.Optimizing">
+    <value>Optimizing performance for your system. This may take a minute.</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.Success.Format">
+    <value>{0} was installed successfully. Click "Finish" to close this installation wizard.</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.Success.RebootRequired.Format">
+    <value>{0} was installed successfully. A reboot may be required to use it properly. Click "Finish" to close this installation wizard.</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.InfoText.Text.Failure.Format">
+    <value>There was an error while installing {0}.</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.PdnDonateBannerImage.Text">
+    <value>Thanks for using Sprite.NET. You can show your appreciation and support future development by donating!</value>
+  </data>
+  <data name="SetupWizard.CreateMsiPage.HeaderText">
+    <value>Deployment Wizard</value>
+  </data>
+  <data name="SetupWizard.CreateMsiPage.IntroText.Text.Creating">
+    <value>Creating MSI packages...</value>
+  </data>
+  <data name="SetupWizard.CreateMsiPage.IntroText.Text.Finished">
+    <value>The MSI packages have been placed into the following directory: '{0}'.</value>
+  </data>
+  <data name="SetupWizard.InstallingPage.WhileInstallingLabel.Text">
+    <value>Sprite.NET is provided FREE OF CHARGE. If you paid money for it (other than to &lt;a&gt;donate at the Sprite.NET website&lt;/a&gt;, of course) then we recommend that you get a refund!</value>
+    <comment>The area delimited with &lt;a&gt; and &lt;/a&gt; is treated as a link. The destination URL is the donation page at the Sprite.NET website.</comment>
+  </data>
+  <data name="Setup.DesktopShortcut.LinkName">
+    <value>Sprite.NET</value>
+  </data>
+  <data name="Setup.DesktopShortcut.Description">
+    <value>Create, edit, scan, and print images and photographs.</value>
+  </data>
+  <data name="RotateZoomEffect.Name">
+    <value>Rotate / Zoom</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.FineTuningHeader.Text">
+    <value>Fine Tuning</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.KeepBackgroundCheckBox.Text">
+    <value>Preserve background</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.TileSourceCheckBox.Text">
+    <value>Tiling</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.HeaderRoll.Text">
+    <value>Roll / Rotate</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.AngleLabel.Text">
+    <value>Angle:</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.HeaderPan.Text">
+    <value>Pan</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.PanXLabel.Text">
+    <value>X Pan:</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.PanYLabel.Text">
+    <value>Y Pan:</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.PanResetButton.Text">
+    <value>Reset</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.ZoomResetButton.Text">
+    <value>Reset</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.TwistAngleLabel.Text">
+    <value>Twist Angle:</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.TwistRadiusLabel.Text">
+    <value>Twist Radius:</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.RollResetButton.Text">
+    <value>Reset</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.ResetAllButton.Text">
+    <value>&amp;Reset All</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.HeaderZoom.Text">
+    <value>Zoom</value>
+  </data>
+  <data name="RotateZoomEffectConfigDialog.ZoomLabel.Text.Format">
+    <value>{0}x</value>
+  </data>
+  <data name="TgaFileType.ConfigUI.BitDepth.DisplayName">
+    <value>Bit Depth</value>
+  </data>
+  <data name="TgaFileType.ConfigUI.RleCompress.Description">
+    <value>Compress (RLE)</value>
+  </data>
+  <data name="TgaFileType.ConfigUI.BitDepth.Bpp24.DisplayName">
+    <value>24-bit</value>
+  </data>
+  <data name="TgaFileType.ConfigUI.BitDepth.Bpp32.DisplayName">
+    <value>32-bit</value>
+  </data>
+  <data name="TgaFileType.ConfigUI.BitDepth.AutoDetect.DisplayName">
+    <value>Auto-detect</value>
+  </data>
+  <data name="LaunchLink.Error">
+    <value>There was an error launching the link.</value>
+  </data>
+  <data name="LaunchLink.Error.Format">
+    <value>There was an error launching the link: {0}</value>
+    <comment>{0} is a URL.</comment>
+  </data>
+  <data name="RadialBlurEffect.Name">
+    <value>Radial Blur</value>
+  </data>
+  <data name="RadialBlurEffect.ConfigDialog.RadialLabel">
+    <value>Angle</value>
+  </data>
+  <data name="RadialBlurEffect.ConfigDialog.QualityLabel">
+    <value>Quality</value>
+  </data>
+  <data name="RadialBlurEffect.ConfigDialog.QualityDescription">
+    <value>Low quality is useful for quick previews, small images, or small angle values. High quality is useful for final quality, large images, or large angle values.</value>
+  </data>
+  <data name="RadialBlurEffect.ConfigDialog.OffsetLabel">
+    <value>Center</value>
+  </data>
+  <data name="WebExceptionStatus.ConnectFailure">
+    <value>The remote service point could not be contacted at the transport level.</value>
+    <comment>All of the WebExceptionStatus.* strings are copied straight from MSDN's documentation (except where explicitely noted), http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpref/html/frlrfsystemnetwebexceptionstatusclasstopic.asp</comment>
+  </data>
+  <data name="WebExceptionStatus.ConnectionClosed">
+    <value>The connection was prematurely closed.</value>
+  </data>
+  <data name="WebExceptionStatus.KeepAliveFailure">
+    <value>The connection for a request that specifies the keep-alive header was closed unexpectedly.</value>
+  </data>
+  <data name="WebExceptionStatus.MessageLengthLimitExceeded">
+    <value>A message was received that exceeded the specified limit when sending a request or receiving a response from the server.</value>
+  </data>
+  <data name="WebExceptionStatus.NameResolutionFailure">
+    <value>The name resolver service could not resolve the host name.</value>
+  </data>
+  <data name="WebExceptionStatus.Pending">
+    <value>An internal asynchronous request is pending.</value>
+  </data>
+  <data name="WebExceptionStatus.PipelineFailure">
+    <value>There was an internal .NET error (WebExceptionStatus.PipelineFailure).</value>
+    <comment>This text is different than what is in the MSDN documentation.</comment>
+  </data>
+  <data name="WebExceptionStatus.ProtocolError">
+    <value>The response received from the server was complete but indicated a protocol-level error. For example, an HTTP protocol error such as 401 Access Denied would use this status.</value>
+  </data>
+  <data name="WebExceptionStatus.ProtocolError.Format">
+    <value>The server returned the following error code: HTTP {1} ({0})</value>
+    <comment>{0} is a string name from the System.Net.HttpStatusCode enumeration. {1} is an integer, such as 404</comment>
+  </data>
+  <data name="WebExceptionStatus.ProxyNameResolutionFailure">
+    <value>The name resolver service could not resolve the proxy host name.</value>
+  </data>
+  <data name="WebExceptionStatus.ReceiveFailure">
+    <value>A complete response was not received from the remote server.</value>
+  </data>
+  <data name="WebExceptionStatus.RequestCanceled">
+    <value>There was an internal error (WebExceptionStatus.RequestCanceled)</value>
+    <comment>This text is different than what is in the MSDN documentation.</comment>
+  </data>
+  <data name="WebExceptionStatus.SecureChannelFailure">
+    <value>An error occurred while establishing a connection using SSL.</value>
+  </data>
+  <data name="WebExceptionStatus.SendFailure">
+    <value>A complete request could not be sent to the remote server.</value>
+  </data>
+  <data name="WebExceptionStatus.ServerProtocolViolation">
+    <value>The server response was not a valid HTTP response.</value>
+  </data>
+  <data name="WebExceptionStatus.Success">
+    <value>No error was encountered.</value>
+  </data>
+  <data name="WebExceptionStatus.Timeout">
+    <value>No response was received during the time-out period for a request.</value>
+  </data>
+  <data name="WebExceptionStatus.TrustFailure">
+    <value>A server certificate could not be validated.</value>
+  </data>
+  <data name="WebExceptionStatus.UnknownError">
+    <value>An exception of unknown type has occurred.</value>
+  </data>
+  <data name="CurvesEffect.Name">
+    <value>Curves</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.Text">
+    <value>Curves</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.InputHeader.Text">
+    <value>Input Histogram</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.TransferHeader.Text">
+    <value>Transfer Map</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.OutputHeader.Text">
+    <value>Output Histogram</value>
+  </data>
+  <data name="CurveControlRgb.Red">
+    <value>Red</value>
+  </data>
+  <data name="CurveControlRgb.Green">
+    <value>Green</value>
+  </data>
+  <data name="CurveControlRgb.Blue">
+    <value>Blue</value>
+  </data>
+  <data name="CurveControlLuminosity.Luminosity">
+    <value>Luminosity</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.HelpText.Text">
+    <value>Tip: Right-click to remove control points.</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.Coordinates.Format">
+    <value>({0}, {1})</value>
+  </data>
+  <data name="CurvesEffectConfigDialog.ResetButton.Text">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="ColorTransferMode.Luminosity">
+    <value>Luminosity</value>
+  </data>
+  <data name="ColorTransferMode.Rgb">
+    <value>RGB</value>
+  </data>
+  <data name="CrashLog.HeaderText.Format">
+    <value>This text file was created because Sprite.NET crashed.
+Please e-mail this file to {0} so we can diagnose and fix the problem.
+</value>
+    <comment>{0} is an e-mail address, such as Sprite.NET@hotmail.com</comment>
+  </data>
+  <data name="SwapLayerFunction.Name">
+    <value>Swap Layer</value>
+  </data>
+  <data name="ExecuteFunction.GenericOutOfMemory">
+    <value>There was not enough memory to perform the action.</value>
+  </data>
+  <data name="ExecuteFunction.GenericError">
+    <value>There was an error performing the action.</value>   
+  </data>
+  <data name="FontSmoothing.None">
+    <value>None</value>
+  </data>
+  <data name="FontSmoothing.Sharp">
+    <value>Sharp</value>
+  </data>
+  <data name="FontSmoothing.Smooth">
+    <value>Smooth</value>
+  </data>
+  <data name="ToolStripChooser.ChooseToolButton.Text">
+    <value>&amp;Tool:</value>
+  </data>
+  <data name="ToleranceConfig.ToleranceLabel.Text">
+    <value>Tolerance:</value>
+  </data>
+  <data name="Updates.ExtractingState.GenericError">
+    <value>There was an error decompressing the download.</value>
+  </data>
+  <data name="Updates.DownloadingState.GenericError">
+    <value>There was an unspecified error while downloading the update.</value>
+  </data>
+  <data name="Updates.CheckingState.GenericError">
+    <value>There was an unspecified error while checking for updates.</value>
+  </data>
+  <data name="UnsavedChangesDialog.Text">
+    <value>Unsaved Changes</value>
+  </data>
+  <data name="UnsavedChangesDialog.InfoLabel.Text">
+    <value>The following images that are open have changes that have not been saved. You may click on a thumbnail to show the image in the main window.</value>
+  </data>
+  <data name="UnsavedChangesDialog.DocumentListHeader.Text">
+    <value>Images</value>
+  </data>
+  <data name="UnsavedChangesDialog.SaveButton.ActionText">
+    <value>&amp;Save</value>
+  </data>
+  <data name="UnsavedChangesDialog.SaveButton.ExplanationText">
+    <value>Save the images that are in the list above, and then exit.</value>
+  </data>
+  <data name="UnsavedChangesDialog.DontSaveButton.ActionText">
+    <value>Do&amp;n't Save</value>
+  </data>
+  <data name="UnsavedChangesDialog.DontSaveButton.ExplanationText">
+    <value>Discard all unsaved changes, and then exit.</value>
+  </data>
+  <data name="UnsavedChangesDialog.CancelButton.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="UnsavedChangesDialog.CancelButton.ExplanationText">
+    <value>Go back to Sprite.NET</value>
+  </data>
+  <data name="TaskButton.Cancel.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="TaskButton.Cancel.ExplanationText">
+    <value></value>
+  </data>
+  <data name="ControlShadow.BetaTag.Text.Format">
+      <value>This is a pre-release version, and is recommended for testing purposes only. Expires on {1}. An update will be available before then.
+www.getSprite.NET</value>
+      <comment>{0} is the full application name, e.g. "Sprite.NET v3.0 (Beta 1 Release build 3.0.2460.34921). {1} is a date string.</comment>
+  </data>
+  <data name="ToolChooserStrip.ChooseToolDefaults.Text">
+    <value>Choose &amp;defaults...</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.IntroText.Text">
+    <value>You may choose the tool that is active when starting Sprite.NET, and what the defaults should be for the toolbar items.</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.LoadFromToolBarButton.Text">
+    <value>&amp;Load From Toolbar</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ResetButton.Text">
+    <value>&amp;Reset</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.DefaultToolText.Text">
+    <value>Default tool:</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.Resampling.HeaderLabel.Text">
+    <value>Move Selected Pixels</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.BrushPenPenCapsShapeType.HeaderLabel.Text">
+    <value>Shape, Brush, Style, and Fill</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.Text.HeaderLabel.Text">
+    <value>Text</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.Gradient.HeaderLabel.Text">
+    <value>Gradient</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.ToleranceFloodMode.HeaderLabel.Text">
+    <value>Magic Wand, Paint Bucket, and Recolor</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.ColorPickerBehavior.HeaderLabel.Text">
+    <value>Color Picker</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.AlphaBlendingAntialiasing.HeaderLabel.Text">
+    <value>Rasterization</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.ToolConfigRow.SelectionCombineModeSelectionDrawMode.HeaderLabel.Text">
+    <value>Selection Tools</value>
+  </data>
+  <data name="ChooseToolDefaultsDialog.Text">
+    <value>Choose Defaults</value>
+  </data>
+  <data name="CloseWorkspaceAction.Title">
+    <value>Unsaved Changes</value>
+  </data>
+  <data name="CloseWorkspaceAction.SaveButton.ActionText">
+    <value>&amp;Save</value>
+  </data>
+  <data name="CloseWorkspaceAction.SaveButton.ExplanationText">
+    <value>Save the image, and then close it.</value>
+  </data>
+  <data name="CloseWorkspaceAction.DontSaveButton.ActionText">
+    <value>Do&amp;n't Save</value>
+  </data>
+  <data name="CloseWorkspaceAction.DontSaveButton.ExplanationText">
+    <value>Discard the unsaved changes.</value>
+  </data>
+  <data name="CloseWorkspaceAction.CancelButton.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="CloseWorkspaceAction.CancelButton.ExplanationText">
+    <value>Go back to Sprite.NET.</value>
+  </data>
+  <data name="CloseWorkspaceAction.IntroText.Format">
+    <value>{0} has unsaved changes. What would you like to do?</value>
+  </data>
+  <data name="GradientType.LinearClamped">
+    <value>Linear</value>
+  </data>
+  <data name="GradientType.LinearReflected">
+    <value>Linear (Reflected)</value>
+  </data>
+  <data name="GradientType.LinearDiamond">
+    <value>Diamond</value>
+  </data>
+  <data name="GradientType.Radial">
+    <value>Radial</value>
+  </data>
+  <data name="GradientType.Conical">
+    <value>Conical</value>
+  </data>
+  <data name="GradientChannels.AllColorChannels.Text">
+    <value>Color Mode</value>
+  </data>
+  <data name="GradientChannels.AlphaChannelOnly.Text">
+    <value>Transparency Mode</value>
+  </data>
+  <data name="AlphaBlendingSplitButton.BlendingEnabled.Text">
+    <value>Normal Blending</value>
+  </data>
+  <data name="AlphaBlendingSplitButton.BlendingOverwrite.Text">
+    <value>Overwrite</value>
+  </data>
+  <data name="AntiAliasingSplitButton.Enabled.Text">
+    <value>Antialiasing Enabled</value>
+  </data>
+  <data name="AntiAliasingSplitButton.Disabled.Text">
+    <value>Antialiasing Disabled</value>
+  </data>
+  <data name="ToolsControl.ToolToolTip.Format">
+    <value>{0}
+Shortcut key: {1}</value>
+    <comment>{0} is the tool's name (e.g. "Magic Wand"). {1} is a character that is the shortcut key (e.g. "C")</comment>
+  </data>
+  <data name="ToolConfigStrip.PenSizeIncButton.ToolTipText">
+    <value>Increase brush size
+Shortcut key: ] (hold Ctrl to increase by 5)</value>
+  </data>
+  <data name="ToolConfigStrip.PenSizeDecButton.ToolTipText">
+    <value>Decrease brush size
+Shortcut key: [ (hold Ctrl to decrease by 5)</value>
+  </data>
+  <data name="ToolConfigStrip.PenStartCapSplitButton.ToolTipText">
+    <value>Toggle start cap for line style
+Shortcut key: ,</value>
+  </data>
+  <data name="ToolConfigStrip.PenDashStyleSplitButton.ToolTipText">
+    <value>Toggle dash type for line style
+Shortcut key: .</value>
+  </data>
+  <data name="ToolConfigStrip.PenEndCapSplitButton.ToolTipText">
+    <value>Toggle end cap for line style
+Shortcut key: /</value>
+  </data>
+  <data name="ToolConfigStrip.PenStyleLabel.Text">
+    <value>Style:</value>
+  </data>
+  <data name="Effects.Render.Submenu.Name">
+    <value>Render</value>
+  </data>
+  <data name="Effects.Photo.Submenu.Name">
+    <value>Photo</value>
+  </data>
+  <data name="Effects.Noise.Submenu.Name">
+    <value>Noise</value>
+  </data>
+  <data name="Effects.Artistic.Submenu.Name">
+    <value>Artistic</value>
+  </data>
+  <data name="Effects.Stylize.Submenu.Name">
+    <value>Stylize</value>
+  </data>
+  <data name="MandelbrotFractalEffect.Name">
+    <value>Mandelbrot Fractal</value>
+  </data>
+  <data name="MandelbrotFractalEffect.ConfigDialog.Factor.DisplayName">
+    <value>Factor</value>
+  </data>
+  <data name="MandelbrotFractalEffect.ConfigDialog.Quality.DisplayName">
+    <value>Quality</value>
+  </data>
+  <data name="MandelbrotFractalEffect.ConfigDialog.Zoom.DisplayName">
+    <value>Zoom</value>
+  </data>
+  <data name="MandelbrotFractalEffect.ConfigDialog.Angle.DisplayName">
+    <value>Angle</value>
+  </data>
+  <data name="MandelbrotFractalEffect.ConfigDialog.Offset.DisplayName">
+    <value>Offset</value>
+  </data>
+  <data name="MandelbrotFractalEffect.ConfigDialog.InvertColors.Description">
+    <value>Invert Colors</value>
+  </data>
+  <data name="JuliaFractalEffect.Name">
+    <value>Julia Fractal</value>
+  </data>
+  <data name="JuliaFractalEffect.ConfigDialog.Factor.DisplayName">
+    <value>Factor</value>
+  </data>
+  <data name="JuliaFractalEffect.ConfigDialog.Angle.DisplayName">
+    <value>Angle</value>
+  </data>
+  <data name="JuliaFractalEffect.ConfigDialog.Quality.DisplayName">
+    <value>Quality</value>
+  </data>
+  <data name="JuliaFractalEffect.ConfigDialog.Zoom.DisplayName">
+    <value>Zoom</value>
+  </data>
+  <data name="CloudsEffect.Name">
+    <value>Clouds</value>
+  </data>
+  <data name="CloudsEffect.ConfigDialog.UsageLabel">
+    <value>To change the color that the clouds are drawn in, you can set the primary and secondary colors in the Colors window.</value>        
+  </data>
+  <data name="CloudsEffect.ConfigDialog.ScaleLabel">
+    <value>Scale</value>
+  </data>
+  <data name="CloudsEffect.ConfigDialog.RoughnessLabel">
+    <value>Roughness</value>
+  </data>
+  <data name="CloudsEffect.ConfigDialog.SeedHeader.Text">
+    <value>Random Noise</value>
+  </data>
+  <data name="CloudsEffect.ConfigDialog.BlendModeHeader.Text">
+    <value>Blend Mode</value>
+  </data>
+  <data name="CloudsEffect.ConfigDialog.ReseedButton.Text">
+    <value>&amp;Reseed</value>
+  </data>
+  <data name="ExpandCanvasQuestion.Title">
+    <value>Paste</value>
+  </data>
+  <data name="ExpandCanvasQuestion.IntroText">
+    <value>The image being pasted is larger than the canvas size. What do you want to do?</value>
+  </data>
+  <data name="ExpandCanvasQuestion.YesTB.ActionText">
+    <value>&amp;Expand canvas</value>
+  </data>
+  <data name="ExpandCanvasQuestion.YesTB.ExplanationText">
+    <value>Automatically expands the canvas to fit the image being pasted.</value>
+  </data>
+  <data name="ExpandCanvasQuestion.NoTB.ActionText">
+    <value>&amp;Keep canvas size</value>
+  </data>
+  <data name="ExpandCanvasQuestion.NoTB.ExplanationText">
+    <value>Does not expand the canvas. You will have to move the pasted image around to make sure that the part you want is within the canvas boundaries.</value>
+  </data>
+  <data name="ExpandCanvasQuestion.CancelTB.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="ExpandCanvasQuestion.CancelTB.ExplanationText">
+    <value>Cancels the paste action.</value>
+  </data>
+  <data name="LineCap2.Flat">
+    <value>Flat</value>
+  </data>
+  <data name="LineCap2.Arrow">
+    <value>Arrow</value>
+  </data>
+  <data name="LineCap2.ArrowFilled">
+    <value>Filled Arrow</value>
+  </data>
+  <data name="LineCap2.Rounded">
+    <value>Rounded</value>
+  </data>
+  <data name="DashStyle.Custom">
+    <value>Custom_NotUsed</value>
+    <comment>This string does not need to be translated. It is not used.</comment>
+  </data>
+  <data name="DashStyle.Solid">
+    <value>Solid</value>
+  </data>
+  <data name="DashStyle.Dash">
+    <value>Dashes</value>
+  </data>
+  <data name="DashStyle.Dot">
+    <value>Dotted</value>
+  </data>
+  <data name="DashStyle.DashDot">
+    <value>Dash, Dot</value>
+  </data>
+  <data name="DashStyle.DashDotDot">
+    <value>Dash, Dot, Dot</value>
+  </data>
+  <data name="HelpFile.Url.Format">
+    <value>{0}/doc/latest/index.html</value>
+    <comment>Note to translators: This string only needs to be changed if the UA (user assistance, aka help file, documentation) is also being translated.
+{0} is the base website address, such as http://www.getSprite.NET. This string is not required to have {0} in it. So if you want to distribute a language pack that hosts the help file elsewhere (that is to say, not on the official Sprite.NET website), you can do that by specifying the URL directly, e.g. "http://www.wherever.net/paintnethelp/fr/".</comment>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.TransferProgress.Title">
+    <value>Transferring ...</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.ItemText.Initializing">
+    <value>Initializing ...</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.ItemText.Canceling">
+    <value>Canceling ...</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.ProgressText.Format">
+    <value>{0} of {1}</value>
+    <comment>{0} is the number of the current item, {1} is the total number of items. Example: "5 of 7"</comment>
+  </data>  
+  <data name="DocumentWorkspace.ShowFileDialog.ItemFailureDialog.Title">
+    <value>Transfer Error</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.ItemFailureDialog.IntroText.Format">
+    <value>There was an error transferring the image:
+
+{0}</value>
+    <comment>{0} is an error message, which will be populated by the operation system in the language that it is configured for.</comment>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.RetryTB.ActionText">
+    <value>&amp;Retry</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.RetryTB.ExplanationText">
+    <value>Retries transferring the image.</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.SkipTB.ActionText">
+    <value>&amp;Skip</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.SkipTB.ExplanationText">
+    <value>Skips this image, and moves on to the next one.</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.CancelTB.ActionText">
+    <value>Cancel</value>
+  </data>
+  <data name="DocumentWorkspace.ShowFileDialog.CancelTB.ExplanationText">
+    <value>Cancels the transfer, and lets you reselect which images to open.</value>
+  </data>
+  <data name="SaveAs.OverwriteConfirmation.Title">
+    <value>Confirm Save As</value>
+  </data>
+  <data name="SaveAs.OverwriteConfirmation.Text.Format">
+    <value>{0} already exists.
+Do you want to replace it?</value>
+    <comment>{0} is a relative filename. e.g. "Untitled.png"</comment>
+  </data>
+  <data name="InkSketchEffect.Name">
+    <value>Ink Sketch</value>
+  </data>
+  <data name="InkSketchEffect.ConfigDialog.InkOutlineLabel">
+    <value>Ink Outline</value>
+  </data>
+  <data name="InkSketchEffect.ConfigDialog.ColoringLabel">
+    <value>Coloring</value>
+  </data>  
+  <data name="SoftenPortraitEffect.Name">
+    <value>Soften Portrait</value>
+  </data>
+  <data name="SoftenPortraitEffect.ConfigDialog.SoftnessLabel">
+    <value>Softness</value>
+  </data>
+  <data name="SoftenPortraitEffect.ConfigDialog.LightingLabel">
+    <value>Lighting</value>
+  </data>
+  <data name="SoftenPortraitEffect.ConfigDialog.WarmthLabel">
+    <value>Warmth</value>
+  </data>
+  <data name="DdsFileType.Name">
+    <value>DirectDraw Surface (DDS)</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.RangeFit.Text">
+    <value>Range fit (Fast/LQ)</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.ClusterFit.Text">
+    <value>Cluster fit (Slow/HQ)</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.IterativeFit.Text">
+    <value>Iterative fit (Slowest/HQ)</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.Uniform.Text">
+    <value>Uniform</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.Perceptual.Text">
+    <value>Perceptual</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.GenerateMipMaps.Text">
+    <value>Generate Mip Maps</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.WeightColourByAlpha">
+    <value>Weight Color By Alpha</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.DXT1">
+    <value>DXT1 (Opaque/1-bit Alpha)</value></data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.DXT3">
+    <value>DXT3 (Explicit Alpha)</value></data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.DXT5">
+    <value>DXT5 (Interpolated Alpha)</value></data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.A8R8G8B8">
+    <value>A8R8G8B8</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.X8R8G8B8">
+    <value>X8R8G8B8</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.A8B8G8R8">
+    <value>A8B8G8R8</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.X8B8G8R8">
+    <value>X8B8G8R8</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.A1R5G5B5">
+    <value>A1R5G5B5</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.A4R4G4B4">
+    <value>A4R4G4B4</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.R8G8B8">
+    <value>R8G8B8</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.FileFormatList.R5G6B5">
+    <value>R5G6B5</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.CompressorTypeLabel.Text">
+    <value>Compressor Type</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.ErrorMetricLabel.Text">
+    <value>Error Metric</value>
+  </data>
+  <data name="DdsFileType.SaveConfigWidget.AdditionalOptions.Text">
+    <value>Additional Options</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionCombineModeLabel.Text">
+    <value>Selection Mode:</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionCombineModeSplitButton.Replace.Text">
+    <value>Replace</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionCombineModeSplitButton.Union.Text">
+    <value>Add (union)</value>
+    <comment>This is the name for a 'boolean OR' combination of two selections. More information is available at: http://en.wikipedia.org/wiki/Union_%28set_theory%29</comment>
+  </data>
+  <data name="ToolConfigStrip.SelectionCombineModeSplitButton.Exclude.Text">
+    <value>Subtract</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionCombineModeSplitButton.Xor.Text">
+    <value>Invert (&quot;xor&quot;)</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionCombineModeSplitButton.Intersect.Text">
+    <value>Intersect</value>
+    <comment>This is the name for a 'boolean AND' combination of two selections. More information is available at: http://en.wikipedia.org/wiki/Intersection_%28set_theory%29</comment>
+  </data>
+  <data name="ToolConfigStrip.FloodModeLabel.Text">
+    <value>Flood Mode:</value>
+  </data>
+  <data name="ToolConfigStrip.FloodModeSplitButton.Local.Text">
+    <value>Contiguous</value>
+  </data>
+  <data name="ToolConfigStrip.FloodModeSplitButton.Global.Text">
+    <value>Global</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionDrawModeLabel.Text">
+    <value>Draw mode:</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionDrawModeWidthLabel.Text">
+    <value>Width:</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionDrawModeHeightLabel.Text">
+    <value>Height:</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionDrawModeSplitButton.Normal.Text">
+    <value>Normal</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionDrawModeSplitButton.FixedRatio.Text">
+    <value>Fixed Ratio</value>
+  </data>
+  <data name="ToolConfigStrip.SelectionDrawModeSplitButton.FixedSize.Text">
+    <value>Fixed Size</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.Title">
+    <value>Plugin Error</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.IntroText">
+    <value>This plugin has encountered an error, and must be closed.
+
+Because of the unpredictable nature of these types of errors, it is strongly recommended that you restart Sprite.NET before proceeding. Otherwise, there could be further stability problems or data corruption.</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.RestartTB.ActionText">
+    <value>Restart Sprite.NET (recommended)</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.RestartTB.ExplanationText">
+    <value>Closes the plugin, and then closes your opened images and restarts Sprite.NET. You will be asked to save changes if necessary.</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.DoNotRestartTB.ActionText">
+    <value>Do not restart Sprite.NET (not recommended)</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.DoNotRestartTB.ExplanationText">
+    <value>Closes the plugin, but does not close or restart Sprite.NET.</value>
+  </data>
+  <data name="Effect.PluginErrorDialog.AuxButton1.Text">
+    <value>Error Details...</value>
+  </data>
+  <data name="BlockedPluginException.UnstablePlugin">
+    <value>This plugin is known to cause stability problems, and has been blocked from loading.</value>
+  </data>
+  <data name="BlockedPluginException.PluginIsNowBuiltIn">
+    <value>This plugin is now built-in to Sprite.NET.</value>
+  </data>
+</root>

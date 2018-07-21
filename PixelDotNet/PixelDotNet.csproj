@@ -1,0 +1,1723 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6A8A5D1C-5EE3-4117-A78C-D07970465554}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SpriteNet</RootNamespace>
+    <AssemblyName>SpriteNet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SpriteDotNet.Startup</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LunarParser, Version=1.0.34.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LunarParser.1.0.34\lib\net461\LunarParser.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActionFlags.cs" />
+    <Compile Include="Actions\CanvasSizeAction.cs" />
+    <Compile Include="Actions\ClearHistoryAction.cs" />
+    <Compile Include="Actions\ClearMruListAction.cs" />
+    <Compile Include="Actions\CloseAllWorkspacesAction.cs" />
+    <Compile Include="Actions\CloseWorkspaceAction.cs" />
+    <Compile Include="Actions\CopyToClipboardAction.cs" />
+    <Compile Include="Actions\CutAction.cs" />
+    <Compile Include="Actions\FlipLayerHorizontalAction.cs" />
+    <Compile Include="Actions\FlipLayerVerticalAction.cs" />
+    <Compile Include="Actions\HistoryFastForwardAction.cs" />
+    <Compile Include="Actions\HistoryRedoAction.cs" />
+    <Compile Include="Actions\HistoryRewindAction.cs" />
+    <Compile Include="Actions\HistoryUndoAction.cs" />
+    <Compile Include="Actions\ImportFromFileAction.cs" />
+    <Compile Include="Actions\MoveActiveLayerDownAction.cs" />
+    <Compile Include="Actions\MoveActiveLayerUpAction.cs" />
+    <Compile Include="Actions\NewImageAction.cs" />
+    <Compile Include="Actions\OpenActiveLayerPropertiesAction.cs" />
+    <Compile Include="Actions\OpenFileAction.cs" />
+    <Compile Include="Actions\PasteAction.cs" />
+    <Compile Include="Actions\PasteInToNewImageAction.cs" />
+    <Compile Include="Actions\PasteInToNewLayerAction.cs" />
+    <Compile Include="Actions\ResizeAction.cs" />
+    <Compile Include="Actions\ZoomInAction.cs" />
+    <Compile Include="Actions\ZoomOutAction.cs" />
+    <Compile Include="Actions\ZoomToSelectionAction.cs" />
+    <Compile Include="Actions\ZoomToWindowAction.cs" />
+    <Compile Include="AnchorChooserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnchorEdge.cs" />
+    <Compile Include="AppEnvironment.cs" />
+    <Compile Include="AppWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AppWorkspaceAction.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Base\BoxedConstants.cs" />
+    <Compile Include="Base\CallbackOnDispose.cs" />
+    <Compile Include="Base\DeferredFormatter.cs" />
+    <Compile Include="Base\Do.cs" />
+    <Compile Include="Base\EventArgs.cs" />
+    <Compile Include="Base\Function.cs" />
+    <Compile Include="Base\ICancelable.cs" />
+    <Compile Include="Base\ICloneable.cs" />
+    <Compile Include="Base\IDeferredSerializable.cs" />
+    <Compile Include="Base\IDisposedEvent.cs" />
+    <Compile Include="Base\ImageResource.cs" />
+    <Compile Include="Base\IOEventArgs.cs" />
+    <Compile Include="Base\IOEventHandler.cs" />
+    <Compile Include="Base\IOOperationType.cs" />
+    <Compile Include="Base\IProgressEvents.cs" />
+    <Compile Include="Base\ISimpleCollection.cs" />
+    <Compile Include="Base\OperationResult.cs" />
+    <Compile Include="Base\Pair.cs" />
+    <Compile Include="Base\Procedure.cs" />
+    <Compile Include="Base\PropertySystem\BooleanProperty.cs" />
+    <Compile Include="Base\PropertySystem\DoubleProperty.cs" />
+    <Compile Include="Base\PropertySystem\DoubleVectorProperty.cs" />
+    <Compile Include="Base\PropertySystem\ImageProperty.cs" />
+    <Compile Include="Base\PropertySystem\Int32Property.cs" />
+    <Compile Include="Base\PropertySystem\IPropertyRef.cs" />
+    <Compile Include="Base\PropertySystem\LinkValuesBasedOnBooleanRule`2.cs" />
+    <Compile Include="Base\PropertySystem\Property.cs" />
+    <Compile Include="Base\PropertySystem\Property2.cs" />
+    <Compile Include="Base\PropertySystem\PropertyCollection.cs" />
+    <Compile Include="Base\PropertySystem\PropertyCollectionRule.cs" />
+    <Compile Include="Base\PropertySystem\ReadOnlyBoundToBooleanRule.cs" />
+    <Compile Include="Base\PropertySystem\ReadOnlyBoundToValueRule2.cs" />
+    <Compile Include="Base\PropertySystem\ScalarProperty.cs" />
+    <Compile Include="Base\PropertySystem\SoftMutuallyBoundMinMaxRule.cs" />
+    <Compile Include="Base\PropertySystem\StaticListChoiceProperty.cs" />
+    <Compile Include="Base\PropertySystem\StringProperty.cs" />
+    <Compile Include="Base\PropertySystem\ValueValidationFailureResult.cs" />
+    <Compile Include="Base\PropertySystem\VectorProperty.cs" />
+    <Compile Include="Base\Quadruple.cs" />
+    <Compile Include="Base\ReadOnlyException.cs" />
+    <Compile Include="Base\Resource.cs" />
+    <Compile Include="Base\Set.cs" />
+    <Compile Include="Base\Set2.cs" />
+    <Compile Include="Base\SiphonStream.cs" />
+    <Compile Include="Base\Triple.cs" />
+    <Compile Include="Base\Vector.cs" />
+    <Compile Include="Base\WeakReference.cs" />
+    <Compile Include="Base\Win32Window.cs" />
+    <Compile Include="Base\WorkItemFailureAction.cs" />
+    <Compile Include="Base\WorkItemResult.cs" />
+    <Compile Include="BrushInfo.cs" />
+    <Compile Include="BrushPreviewRenderer.cs" />
+    <Compile Include="BrushType.cs" />
+    <Compile Include="CallbackWithProgressDialog.cs" />
+    <Compile Include="CanvasControl.cs" />
+    <Compile Include="CanvasSizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseToolDefaultsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorDisplayWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorEventArgs.cs" />
+    <Compile Include="ColorEventHandler.cs" />
+    <Compile Include="ColorPickerClickBehavior.cs" />
+    <Compile Include="ColorRectangleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ColorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColorWheel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommonAction.cs" />
+    <Compile Include="CommonActionsStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\AngleChooserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\ArrowButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\AutoSizeStrategy.cs" />
+    <Compile Include="Core\BinaryPixelOp.cs" />
+    <Compile Include="Core\BinaryPixelOps.cs" />
+    <Compile Include="Core\BitVector2D.cs" />
+    <Compile Include="Core\BitVector2DSurfaceAdapter.cs" />
+    <Compile Include="Core\Blending\BlendOpsImpl.cs" />
+    <Compile Include="Core\BlockedPluginException.cs" />
+    <Compile Include="Core\ButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\ColorBgra.cs" />
+    <Compile Include="Core\ColorGradientControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\ColorTransferMode.cs" />
+    <Compile Include="Core\CommandButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\ControlShadow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\CursorChanger.cs" />
+    <Compile Include="Core\CurveControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\CurveControlLuminosity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\CurveControlRgb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\EdgeSnapOptions.cs" />
+    <Compile Include="Core\EnumLocalizer.cs" />
+    <Compile Include="Core\EtchedLine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\GradientRenderer.cs" />
+    <Compile Include="Core\GradientRenderers.cs" />
+    <Compile Include="Core\HandledEventArgs`1.cs" />
+    <Compile Include="Core\HandledEventHandler`1.cs" />
+    <Compile Include="Core\HeaderLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Histogram.cs" />
+    <Compile Include="Core\HistogramControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\HistogramLuminosity.cs" />
+    <Compile Include="Core\HistogramRGB.cs" />
+    <Compile Include="Core\HorizontalSnapEdge.cs" />
+    <Compile Include="Core\HsvColor.cs" />
+    <Compile Include="Core\IBitVector2D.cs" />
+    <Compile Include="Core\IFirstSelection.cs" />
+    <Compile Include="Core\IFormAssociate.cs" />
+    <Compile Include="Core\IHotKeyTarget.cs" />
+    <Compile Include="Core\ImageListMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\ImageStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\IndexEventArgs.cs" />
+    <Compile Include="Core\IndexEventHandler.cs" />
+    <Compile Include="Core\IndirectUI\AngleChooserPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\BooleanCheckBoxPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\ControlInfo.cs" />
+    <Compile Include="Core\IndirectUI\ControlInfoPropertyNames.cs" />
+    <Compile Include="Core\IndirectUI\DoubleSliderPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\DoubleVectorPanAndSliderPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\DoubleVectorSliderPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\Int32ColorWheelPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\Int32IncrementButtonPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\Int32SliderPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\PanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\PanelControlInfo.cs" />
+    <Compile Include="Core\IndirectUI\PropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\PropertyControlInfo.cs" />
+    <Compile Include="Core\IndirectUI\PropertyControlInfoAttribute.cs" />
+    <Compile Include="Core\IndirectUI\PropertyControlPropertyAttribute.cs" />
+    <Compile Include="Core\IndirectUI\PropertyControlType.cs" />
+    <Compile Include="Core\IndirectUI\PropertyControlUtil.cs" />
+    <Compile Include="Core\IndirectUI\PropertyControl`1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\SliderPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\StaticListDropDownPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\StaticListRadioButtonPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\StringTextBoxPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IndirectUI\VectorSliderPropertyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\IPaintBackground.cs" />
+    <Compile Include="Core\IPixelOp.cs" />
+    <Compile Include="Core\IPluginSupportInfo.cs" />
+    <Compile Include="Core\IrregularSurface.cs" />
+    <Compile Include="Core\ISnapManagerHost.cs" />
+    <Compile Include="Core\ISnapObstacleHost.cs" />
+    <Compile Include="Core\ISurfaceDraw.cs" />
+    <Compile Include="Core\IThumbnailProvider.cs" />
+    <Compile Include="Core\IUnitsComboBox.cs" />
+    <Compile Include="Core\LayoutUtility.cs" />
+    <Compile Include="Core\List.cs" />
+    <Compile Include="Core\MaskedSurface.cs" />
+    <Compile Include="Core\MeasurementUnit.cs" />
+    <Compile Include="Core\MemoryBlock.cs" />
+    <Compile Include="Core\MovingEventArgs.cs" />
+    <Compile Include="Core\MovingEventHandler.cs" />
+    <Compile Include="Core\ObsoleteClasses.cs" />
+    <Compile Include="Core\PaintEventArgs2.cs" />
+    <Compile Include="Core\PaintEventHandler2.cs" />
+    <Compile Include="Core\PanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\PanelEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\PdnBanner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\PdnBaseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\PdnBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core\PdnException.cs" />
+    <Compile Include="Core\PdnGraphicsPath.cs" />
+    <Compile Include="Core\PdnNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\PdnRegion.cs" />
+    <Compile Include="Core\PersistedObjectLocker.cs" />
+    <Compile Include="Core\PersistedObject`1.cs" />
+    <Compile Include="Core\PixelOp.cs" />
+    <Compile Include="Core\PlacedSurface.cs" />
+    <Compile Include="Core\PluginSupportInfo.cs" />
+    <Compile Include="Core\PluginSupportInfoAttribute.cs" />
+    <Compile Include="Core\ProgressEventArgs.cs" />
+    <Compile Include="Core\ProgressEventHandler.cs" />
+    <Compile Include="Core\PropertyEventArgs.cs" />
+    <Compile Include="Core\PropertyEventHandler.cs" />
+    <Compile Include="Core\RenderArgs.cs" />
+    <Compile Include="Core\RenderedTileEventArgs.cs" />
+    <Compile Include="Core\RenderedTileEventHandler.cs" />
+    <Compile Include="Core\ResamplingAlgorithm.cs" />
+    <Compile Include="Core\RgbColor.cs" />
+    <Compile Include="Core\Ruler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\ScaleFactor.cs" />
+    <Compile Include="Core\Scanline.cs" />
+    <Compile Include="Core\Selection.cs" />
+    <Compile Include="Core\SnapDescription.cs" />
+    <Compile Include="Core\SnapManager.cs" />
+    <Compile Include="Core\SnapObstacle.cs" />
+    <Compile Include="Core\SnapObstacleController.cs" />
+    <Compile Include="Core\SnapRegion.cs" />
+    <Compile Include="Core\SplineInterpolator.cs" />
+    <Compile Include="Core\State.cs" />
+    <Compile Include="Core\StateMachine.cs" />
+    <Compile Include="Core\StateMachineExecutor.cs" />
+    <Compile Include="Core\StylusEventArgs.cs" />
+    <Compile Include="Core\Surface.cs" />
+    <Compile Include="Core\SurfaceBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\SurfaceBoxBaseRenderer.cs" />
+    <Compile Include="Core\SurfaceBoxGraphicsRenderer.cs" />
+    <Compile Include="Core\SurfaceBoxGridRenderer.cs" />
+    <Compile Include="Core\SurfaceBoxRenderer.cs" />
+    <Compile Include="Core\SurfaceBoxRendererList.cs" />
+    <Compile Include="Core\SwatchControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\TaskButton.cs" />
+    <Compile Include="Core\TaskDialog.cs" />
+    <Compile Include="Core\Threading\ThreadPool.cs" />
+    <Compile Include="Core\Threading\WaitableCounter.cs" />
+    <Compile Include="Core\ThumbnailManager.cs" />
+    <Compile Include="Core\UnaryPixelOp.cs" />
+    <Compile Include="Core\UnaryPixelOps.cs" />
+    <Compile Include="Core\UnitsComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\UnitsComboBoxHandler.cs" />
+    <Compile Include="Core\UnitsComboBoxStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\UnitsDisplayType.cs" />
+    <Compile Include="Core\UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Core\Utility.cs" />
+    <Compile Include="Core\VerticalSnapEdge.cs" />
+    <Compile Include="Core\WaitCursorChanger.cs" />
+    <Compile Include="Core\WorkerThreadException.cs" />
+    <Compile Include="Data\BitmapLayer.cs" />
+    <Compile Include="Data\BitmapLayerPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\BmpFileType.cs" />
+    <Compile Include="Data\Document.cs" />
+    <Compile Include="Data\DocumentView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\Exif.cs" />
+    <Compile Include="Data\ExifTagID.cs" />
+    <Compile Include="Data\ExifTagType.cs" />
+    <Compile Include="Data\FileType.cs" />
+    <Compile Include="Data\FileTypeCollection.cs" />
+    <Compile Include="Data\FileTypeFlags.cs" />
+    <Compile Include="Data\FileType`2.cs" />
+    <Compile Include="Data\GdiPlusFileType.cs" />
+    <Compile Include="Data\GifFileType.cs" />
+    <Compile Include="Data\IFileTypeFactory.cs" />
+    <Compile Include="Data\InternalFileType.cs" />
+    <Compile Include="Data\JpegFileType.cs" />
+    <Compile Include="Data\Layer.cs" />
+    <Compile Include="Data\LayerList.cs" />
+    <Compile Include="Data\LayerPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\MetaData.cs" />
+    <Compile Include="Data\NoSaveConfigWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\PdnFileType.cs" />
+    <Compile Include="Data\PdnFileTypes.cs" />
+    <Compile Include="Data\PngFileType.cs" />
+    <Compile Include="Data\PropertyBasedFileType.cs" />
+    <Compile Include="Data\PropertyBasedSaveConfigToken.cs" />
+    <Compile Include="Data\PropertyBasedSaveConfigWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\Quantize\OctreeQuantizer.cs" />
+    <Compile Include="Data\Quantize\PaletteQuantizer.cs" />
+    <Compile Include="Data\Quantize\PaletteTable.cs" />
+    <Compile Include="Data\Quantize\Quantizer.cs" />
+    <Compile Include="Data\SaveConfigToken.cs" />
+    <Compile Include="Data\SaveConfigWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\SaveConfigWidget`2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Data\TgaFileType.cs" />
+    <Compile Include="Data\UserBlendOp.cs" />
+    <Compile Include="Data\UserBlendOps.cs" />
+    <Compile Include="DocumentClickAction.cs" />
+    <Compile Include="DocumentStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DocumentWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DocumentWorkspaceAction.cs" />
+    <Compile Include="Effects\AddNoiseEffect.cs" />
+    <Compile Include="Effects\AmountEffectConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\AmountEffectConfigToken.cs" />
+    <Compile Include="Effects\AutoLevelEffect.cs" />
+    <Compile Include="Effects\BackgroundEffectRenderer.cs" />
+    <Compile Include="Effects\BlurEffect.cs" />
+    <Compile Include="Effects\BrightnessAndContrastAdjustment.cs" />
+    <Compile Include="Effects\BulgeEffect.cs" />
+    <Compile Include="Effects\CloudsEffect.cs" />
+    <Compile Include="Effects\ColorDifferenceEffect.cs" />
+    <Compile Include="Effects\ColorFillEffect.cs" />
+    <Compile Include="Effects\ConvolutionFilterEffect.cs" />
+    <Compile Include="Effects\CurvesEffect.cs" />
+    <Compile Include="Effects\CurvesEffectConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\CurvesEffectConfigToken.cs" />
+    <Compile Include="Effects\DentsEffect.cs" />
+    <Compile Include="Effects\DesaturateEffect.cs" />
+    <Compile Include="Effects\EdgeDetectEffect.cs" />
+    <Compile Include="Effects\Effect.cs" />
+    <Compile Include="Effects\EffectCategory.cs" />
+    <Compile Include="Effects\EffectCategoryAttribute.cs" />
+    <Compile Include="Effects\EffectConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\EffectConfigDialog`2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\EffectConfigToken.cs" />
+    <Compile Include="Effects\EffectDirectives.cs" />
+    <Compile Include="Effects\EffectEnvironmentParameters.cs" />
+    <Compile Include="Effects\EffectFlags.cs" />
+    <Compile Include="Effects\EffectsCollection.cs" />
+    <Compile Include="Effects\EffectTypeHint.cs" />
+    <Compile Include="Effects\EffectTypeHintAttribute.cs" />
+    <Compile Include="Effects\Effect`1.cs" />
+    <Compile Include="Effects\EmbossEffect.cs" />
+    <Compile Include="Effects\FragmentEffect.cs" />
+    <Compile Include="Effects\FrostedGlassEffect.cs" />
+    <Compile Include="Effects\GaussianBlurEffect.cs" />
+    <Compile Include="Effects\GlowEffect.cs" />
+    <Compile Include="Effects\HueAndSaturationAdjustment.cs" />
+    <Compile Include="Effects\InkSketchEffect.cs" />
+    <Compile Include="Effects\InternalPropertyBasedEffect.cs" />
+    <Compile Include="Effects\InvertColorsEffect.cs" />
+    <Compile Include="Effects\JuliaFractalEffect.cs" />
+    <Compile Include="Effects\LevelsEffect.cs" />
+    <Compile Include="Effects\LevelsEffectConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\LevelsEffectConfigToken.cs" />
+    <Compile Include="Effects\LocalHistogramEffect.cs" />
+    <Compile Include="Effects\MandelbrotFractalEffect.cs" />
+    <Compile Include="Effects\MedianEffect.cs" />
+    <Compile Include="Effects\MotionBlurEffect.cs" />
+    <Compile Include="Effects\OilPaintingEffect.cs" />
+    <Compile Include="Effects\OutlineEffect.cs" />
+    <Compile Include="Effects\PanControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Effects\PencilSketchEffect.cs" />
+    <Compile Include="Effects\PerlinNoise2D.cs" />
+    <Compile Include="Effects\PixelateEffect.cs" />
+    <Compile Include="Effects\PolarInversionEffect.cs" />
+    <Compile Include="Effects\PosterizeAdjustment.cs" />
+    <Compile Include="Effects\PropertyBasedEffect.cs" />
+    <Compile Include="Effects\PropertyBasedEffectConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\PropertyBasedEffectConfigToken.cs" />
+    <Compile Include="Effects\RadialBlurEffect.cs" />
+    <Compile Include="Effects\RedEyeRemoveEffect.cs" />
+    <Compile Include="Effects\ReduceNoiseEffect.cs" />
+    <Compile Include="Effects\ReliefEffect.cs" />
+    <Compile Include="Effects\RollControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Effects\RotateZoomEffect.cs" />
+    <Compile Include="Effects\RotateZoomEffectConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\RotateZoomEffectConfigToken.cs" />
+    <Compile Include="Effects\SepiaEffect.cs" />
+    <Compile Include="Effects\SharpenEffect.cs" />
+    <Compile Include="Effects\SoftenPortraitEffect.cs" />
+    <Compile Include="Effects\SrgbUtility.cs" />
+    <Compile Include="Effects\SubmenuNames.cs" />
+    <Compile Include="Effects\SurfaceBlurEffect.cs" />
+    <Compile Include="Effects\ThreeAmountsConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\ThreeAmountsConfigToken.cs" />
+    <Compile Include="Effects\TileEffect.cs" />
+    <Compile Include="Effects\TwistEffect.cs" />
+    <Compile Include="Effects\TwoAmountsConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Effects\TwoAmountsConfigToken.cs" />
+    <Compile Include="Effects\UnfocusEffect.cs" />
+    <Compile Include="Effects\VignetteEffect.cs" />
+    <Compile Include="Effects\WarpEdgeBehavior.cs" />
+    <Compile Include="Effects\WarpEffectBase.cs" />
+    <Compile Include="Effects\ZoomBlurEffect.cs" />
+    <Compile Include="ExecutedHistoryMementoEventArgs.cs" />
+    <Compile Include="ExecutedHistoryMementoEventHandler.cs" />
+    <Compile Include="ExecutingHistoryMementoEventArgs.cs" />
+    <Compile Include="ExecutingHistoryMementoEventHandler.cs" />
+    <Compile Include="FileTypes.cs" />
+    <Compile Include="FlipType.cs" />
+    <Compile Include="FloatingToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloodMode.cs" />
+    <Compile Include="FontInfo.cs" />
+    <Compile Include="GradientInfo.cs" />
+    <Compile Include="GradientType.cs" />
+    <Compile Include="GraphicsPathWrapper.cs" />
+    <Compile Include="HistoryControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryFunction.cs" />
+    <Compile Include="HistoryFunctionNonFatalException.cs" />
+    <Compile Include="HistoryFunctionResult.cs" />
+    <Compile Include="HistoryFunctions\AddNewBlankLayerFunction.cs" />
+    <Compile Include="HistoryFunctions\CropToSelectionFunction.cs" />
+    <Compile Include="HistoryFunctions\DeleteLayerFunction.cs" />
+    <Compile Include="HistoryFunctions\DeselectFunction.cs" />
+    <Compile Include="HistoryFunctions\DuplicateLayerFunction.cs" />
+    <Compile Include="HistoryFunctions\EraseSelectionFunction.cs" />
+    <Compile Include="HistoryFunctions\FillSelectionFunction.cs" />
+    <Compile Include="HistoryFunctions\FlattenFunction.cs" />
+    <Compile Include="HistoryFunctions\FlipDocumentFunction.cs" />
+    <Compile Include="HistoryFunctions\FlipDocumentHorizontalFunction.cs" />
+    <Compile Include="HistoryFunctions\FlipDocumentVerticalFunction.cs" />
+    <Compile Include="HistoryFunctions\FlipLayerFunction.cs" />
+    <Compile Include="HistoryFunctions\InvertSelectionFunction.cs" />
+    <Compile Include="HistoryFunctions\MergeLayerDownFunction.cs" />
+    <Compile Include="HistoryFunctions\RotateDocumentFunction.cs" />
+    <Compile Include="HistoryFunctions\SelectAllFunction.cs" />
+    <Compile Include="HistoryFunctions\SwapLayerFunction.cs" />
+    <Compile Include="HistoryMemento.cs" />
+    <Compile Include="HistoryMementoData.cs" />
+    <Compile Include="HistoryMementos\BitmapHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\CompoundHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\DeleteLayerHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\FlipLayerHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\LayerPropertyHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\MetaDataHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\NewLayerHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\NullHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\ReplaceDocumentHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\SelectionHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\SwapLayerHistoryMemento.cs" />
+    <Compile Include="HistoryMementos\ToolHistoryMemento.cs" />
+    <Compile Include="HistoryStack.cs" />
+    <Compile Include="IAlphaBlendingConfig.cs" />
+    <Compile Include="IAntiAliasingConfig.cs" />
+    <Compile Include="IBrushConfig.cs" />
+    <Compile Include="IColorPickerConfig.cs" />
+    <Compile Include="IconBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IDocumentList.cs" />
+    <Compile Include="IFloodModeConfig.cs" />
+    <Compile Include="IGradientConfig.cs" />
+    <Compile Include="IHistoryWorkspace.cs" />
+    <Compile Include="IPenConfig.cs" />
+    <Compile Include="IResamplingConfig.cs" />
+    <Compile Include="ISelectionCombineModeConfig.cs" />
+    <Compile Include="ISelectionDrawModeConfig.cs" />
+    <Compile Include="IShapeTypeConfig.cs" />
+    <Compile Include="IStatusBarProgress.cs" />
+    <Compile Include="ITextConfig.cs" />
+    <Compile Include="IToleranceConfig.cs" />
+    <Compile Include="IToolChooser.cs" />
+    <Compile Include="LayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayerElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LineCap2.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\AdjustmentsMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\EditMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\EffectMenuBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\EffectsMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\FileMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\HelpMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\ImageMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\LayersMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\PdnMainMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\ToolsMenu.cs" />
+    <Compile Include="Menus\ViewMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menus\WindowMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MostRecentFile.cs" />
+    <Compile Include="MostRecentFiles.cs" />
+    <Compile Include="MoveNubRenderer.cs" />
+    <Compile Include="MoveNubShape.cs" />
+    <Compile Include="NewFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaletteCollection.cs" />
+    <Compile Include="PdnMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PdnStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PdnToolBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PdnVersionInfo.cs" />
+    <Compile Include="PdnVersionManifest.cs" />
+    <Compile Include="PenInfo.cs" />
+    <Compile Include="PhotoShopFileType\ImageDecoderPdn.cs" />
+    <Compile Include="PhotoShopFileType\PhotoshopFileType.cs" />
+    <Compile Include="PhotoShopFileType\PsdLoad.cs" />
+    <Compile Include="PhotoShopFileType\PsdSave.cs" />
+    <Compile Include="PhotoShopFileType\PsdSaveConfigToken.cs" />
+    <Compile Include="PhotoShopFileType\PsdSaveConfigWidget.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PsdFile\Compression\EndianReverser.cs" />
+    <Compile Include="PsdFile\Compression\ImageData.cs" />
+    <Compile Include="PsdFile\Compression\ImageDataFactory.cs" />
+    <Compile Include="PsdFile\Compression\RawImage.cs" />
+    <Compile Include="PsdFile\Compression\RleImage.cs" />
+    <Compile Include="PsdFile\Compression\ZipImage.cs" />
+    <Compile Include="PsdFile\Compression\ZipPredict16Image.cs" />
+    <Compile Include="PsdFile\Compression\ZipPredict32Image.cs" />
+    <Compile Include="PsdFile\Exceptions.cs" />
+    <Compile Include="PsdFile\ImageResource.cs" />
+    <Compile Include="PsdFile\ImageResources\AlphaChannelNames.cs" />
+    <Compile Include="PsdFile\ImageResources\RawImageResource.cs" />
+    <Compile Include="PsdFile\ImageResources\ResolutionInfo.cs" />
+    <Compile Include="PsdFile\ImageResources\Thumbnail.cs" />
+    <Compile Include="PsdFile\ImageResources\UnicodeAlphaNames.cs" />
+    <Compile Include="PsdFile\ImageResources\VersionInfo.cs" />
+    <Compile Include="PsdFile\Layers\BlendingRanges.cs" />
+    <Compile Include="PsdFile\Layers\Channel.cs" />
+    <Compile Include="PsdFile\Layers\Layer.cs" />
+    <Compile Include="PsdFile\Layers\LayerInfo.cs" />
+    <Compile Include="PsdFile\Layers\LayerInfo\InfoLayers.cs" />
+    <Compile Include="PsdFile\Layers\LayerInfo\LayerSectionInfo.cs" />
+    <Compile Include="PsdFile\Layers\LayerInfo\LayerUnicodeName.cs" />
+    <Compile Include="PsdFile\Layers\LayerInfo\RawLayerInfo.cs" />
+    <Compile Include="PsdFile\Layers\Mask.cs" />
+    <Compile Include="PsdFile\LoadContext.cs" />
+    <Compile Include="PsdFile\PsdBinaryReader.cs" />
+    <Compile Include="PsdFile\PsdBinaryWriter.cs" />
+    <Compile Include="PsdFile\PsdBlendMode.cs" />
+    <Compile Include="PsdFile\PsdBlockLengthWriter.cs" />
+    <Compile Include="PsdFile\PsdFile.cs" />
+    <Compile Include="PsdFile\RleReader.cs" />
+    <Compile Include="PsdFile\RleRowLengths.cs" />
+    <Compile Include="PsdFile\RleWriter.cs" />
+    <Compile Include="PsdFile\Util.cs" />
+    <Compile Include="PushNullToolMode.cs" />
+    <Compile Include="ResizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resources\InvariantStrings.cs" />
+    <Compile Include="Resources\PdnInfo.cs" />
+    <Compile Include="Resources\PdnResources.cs" />
+    <Compile Include="Resources\StartupTestType.cs" />
+    <Compile Include="RotateNubRenderer.cs" />
+    <Compile Include="RotateType.cs" />
+    <Compile Include="SaveConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavePaletteDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveProgressDialog.cs" />
+    <Compile Include="SelectionDrawMode.cs" />
+    <Compile Include="SelectionDrawModeInfo.cs" />
+    <Compile Include="SelectionRenderer.cs" />
+    <Compile Include="SettingNames.cs" />
+    <Compile Include="ShapeDrawType.cs" />
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="SurfaceForClipboard.cs" />
+    <Compile Include="SystemLayer\ClassicFileDialog.cs" />
+    <Compile Include="SystemLayer\ClassicFileOpenDialog.cs" />
+    <Compile Include="SystemLayer\ClassicFileSaveDialog.cs" />
+    <Compile Include="SystemLayer\Clipboard.cs" />
+    <Compile Include="SystemLayer\CommonDialogs.cs" />
+    <Compile Include="SystemLayer\ExecutePrivilege.cs" />
+    <Compile Include="SystemLayer\ExecuteWaitType.cs" />
+    <Compile Include="SystemLayer\FileOverwriteAction.cs" />
+    <Compile Include="SystemLayer\FileSystem.cs" />
+    <Compile Include="SystemLayer\Fonts.cs" />
+    <Compile Include="SystemLayer\FontSmoothing.cs" />
+    <Compile Include="SystemLayer\FormEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemLayer\GpcWrapper\NativeConstants.cs" />
+    <Compile Include="SystemLayer\GpcWrapper\NativeMethods.cs" />
+    <Compile Include="SystemLayer\GpcWrapper\NativeStructs.cs" />
+    <Compile Include="SystemLayer\GpcWrapper\Polygon.cs" />
+    <Compile Include="SystemLayer\GpcWrapper\Vertex.cs" />
+    <Compile Include="SystemLayer\GpcWrapper\VertexList.cs" />
+    <Compile Include="SystemLayer\IFileDialog.cs" />
+    <Compile Include="SystemLayer\IFileDialogUICallbacks.cs" />
+    <Compile Include="SystemLayer\IFileOpenDialog.cs" />
+    <Compile Include="SystemLayer\IFileSaveDialog.cs" />
+    <Compile Include="SystemLayer\IFileTransferProgressEvents.cs" />
+    <Compile Include="SystemLayer\Memory.cs" />
+    <Compile Include="SystemLayer\MenuStripEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemLayer\NativeConstants.cs" />
+    <Compile Include="SystemLayer\NativeDelegates.cs" />
+    <Compile Include="SystemLayer\NativeErrors.cs" />
+    <Compile Include="SystemLayer\NativeInterfaces.cs" />
+    <Compile Include="SystemLayer\NativeMethods.cs" />
+    <Compile Include="SystemLayer\NativeStructs.cs" />
+    <Compile Include="SystemLayer\Network.cs" />
+    <Compile Include="SystemLayer\NullGraphics.cs" />
+    <Compile Include="SystemLayer\OS.cs" />
+    <Compile Include="SystemLayer\OSType.cs" />
+    <Compile Include="SystemLayer\PdnGraphics.cs" />
+    <Compile Include="SystemLayer\Processor.cs" />
+    <Compile Include="SystemLayer\ProcessorArchitecture.cs" />
+    <Compile Include="SystemLayer\ProcessorFeature.cs" />
+    <Compile Include="SystemLayer\PropertyItem2.cs" />
+    <Compile Include="SystemLayer\RealParentWndProcDelegate.cs" />
+    <Compile Include="SystemLayer\SafeNativeMethods.cs" />
+    <Compile Include="SystemLayer\ScanResult.cs" />
+    <Compile Include="SystemLayer\ScrollPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemLayer\Security.cs" />
+    <Compile Include="SystemLayer\SerializationFallbackBinder.cs" />
+    <Compile Include="SystemLayer\Settings.cs" />
+    <Compile Include="SystemLayer\Shell.cs" />
+    <Compile Include="SystemLayer\SingleInstaceManager.cs" />
+    <Compile Include="SystemLayer\ThreadBackground.cs" />
+    <Compile Include="SystemLayer\ThreadBackgroundFlags.cs" />
+    <Compile Include="SystemLayer\Timing.cs" />
+    <Compile Include="SystemLayer\ToolStripEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SystemLayer\Tracing.cs" />
+    <Compile Include="SystemLayer\UI.cs" />
+    <Compile Include="SystemLayer\UserSessions.cs" />
+    <Compile Include="SystemLayer\VirtualFolderName.cs" />
+    <Compile Include="SystemLayer\VistaFileDialog.cs" />
+    <Compile Include="SystemLayer\VistaFileOpenDialog.cs" />
+    <Compile Include="SystemLayer\VistaFileSaveDialog.cs" />
+    <Compile Include="SystemLayer\VisualStyleClass.cs" />
+    <Compile Include="SystemLayer\WaitHandleArray.cs" />
+    <Compile Include="TextAlignment.cs" />
+    <Compile Include="ToleranceSliderControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tool.cs" />
+    <Compile Include="ToolBarConfigItems.cs" />
+    <Compile Include="ToolChooserStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolClickedEventArgs.cs" />
+    <Compile Include="ToolClickedEventHandler.cs" />
+    <Compile Include="ToolConfigStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolInfo.cs" />
+    <Compile Include="ToolsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\CloneStampTool.cs" />
+    <Compile Include="Tools\ColorPickerTool.cs" />
+    <Compile Include="Tools\EllipseSelectTool.cs" />
+    <Compile Include="Tools\EllipseTool.cs" />
+    <Compile Include="Tools\EraserTool.cs" />
+    <Compile Include="Tools\FloodToolBase.cs" />
+    <Compile Include="Tools\FreeformShapeTool.cs" />
+    <Compile Include="Tools\GradientTool.cs" />
+    <Compile Include="Tools\LassoSelectTool.cs" />
+    <Compile Include="Tools\LineTool.cs" />
+    <Compile Include="Tools\MagicWandTool.cs" />
+    <Compile Include="Tools\MoveSelectionTool.cs" />
+    <Compile Include="Tools\MoveTool.cs" />
+    <Compile Include="Tools\MoveToolBase.cs" />
+    <Compile Include="Tools\PaintBrushTool.cs" />
+    <Compile Include="Tools\PaintBucketTool.cs" />
+    <Compile Include="Tools\PanTool.cs" />
+    <Compile Include="Tools\PencilTool.cs" />
+    <Compile Include="Tools\RecoloringTool.cs" />
+    <Compile Include="Tools\RectangleSelectTool.cs" />
+    <Compile Include="Tools\RectangleTool.cs" />
+    <Compile Include="Tools\RoundedRectangleTool.cs" />
+    <Compile Include="Tools\SelectionTool.cs" />
+    <Compile Include="Tools\ShapeTool.cs" />
+    <Compile Include="Tools\TextTool.cs" />
+    <Compile Include="Tools\ZoomTool.cs" />
+    <Compile Include="TransferProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnsavedChangesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewConfigStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WhichUserColor.cs" />
+    <Compile Include="WorkspaceWidgets.cs" />
+    <Compile Include="ZoomBasis.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Files\AboutCredits.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\GeneratedCodeWarning.h" />
+    <Content Include="License.txt" />
+    <Content Include="Resources\Cursors\CloneStampToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\CloneStampToolCursorSetSource.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\ColorPickerToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EllipseSelectToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EllipseSelectToolCursorMinus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EllipseSelectToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EllipseSelectToolCursorPlus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EllipseToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EraserToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\EraserToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\FreeformShapeToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\GenericToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\GenericToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\LassoSelectToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\LassoSelectToolCursorMinus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\LassoSelectToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\LassoSelectToolCursorPlus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\LineToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\MagicWandToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\MagicWandToolCursorMinus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\MagicWandToolCursorPlus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\MoveSelectionToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\MoveToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PaintBrushToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PaintBrushToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PaintBucketToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PanToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PanToolCursorInvalid.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PanToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\PencilToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RecoloringToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RecoloringToolCursorAdjustColor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RecoloringToolCursorPickColor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RectangleSelectToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RectangleSelectToolCursorMinus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RectangleSelectToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RectangleSelectToolCursorPlus.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RectangleToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\RoundedRectangleToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\ShapeToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\ShapeToolCursorMouseDown.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\TextToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\ZoomInToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\ZoomOutToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cursors\ZoomToolCursor.cur">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Files\License.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\AddNoiseEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\AllColorChannelsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\AlphaChannelOnlyIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\AntiAliasingDisabledIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\AntiAliasingEnabledIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\AutoLevel.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BlackAndWhiteIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BlendingEnabledIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BlendingOverwriteIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BlurEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BrightnessAndContrastAdjustment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BugWarning.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\BulgeEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\CancelIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\CloneStampToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\CloudsEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ColorAddOverlay.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ColorPalettes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ColorPickerToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ConicalGradientIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\CursorXYIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\CurvesEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\DentsEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\DesaturateEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\DragDrop.OpenOrImport.FormIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\EdgeDetectEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\EllipseSelectToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\EllipseToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\EmbossEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\EraserToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ExpandCanvasQuestion.NoTB.Image.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ExpandCanvasQuestion.YesTB.Image.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\FontBoldIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\FontItalicIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\FontUnderlineIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\FragmentEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\FreeformShapeToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\FrostedGlassEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\GlowEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\GradientToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\HistoryFastForwardIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\HistoryRewindIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\HueAndSaturationAdjustment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ImageFromDiskIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ImageSizeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\InkSketchEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\InvertColorsEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\JuliaFractalEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\LassoSelectToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\LevelsEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\LinearClampedGradientIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\LinearDiamondGradientIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\LinearReflectedGradientIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\LineToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MagicWandToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MandelbrotFractalEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MedianEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditCopyIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditCutIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditDeselectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditEraseSelectionIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditFillSelectionIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditInvertSelectionIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditPasteIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditPasteInToNewImageIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditPasteInToNewLayerIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditRedoIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditSelectAllIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuEditUndoIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileAcquireFromClipboardIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileAcquireFromScannerOrCameraIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileCloseIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileNewIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileOpenIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFilePrintIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileSaveAsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileSaveIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuFileViewPluginLoadErrorsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpAboutIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpCheckForUpdatesIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpDonateIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpForumIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpHelpTopicsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpLanguageIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpPdnSearchIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpPdnWebsiteIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpPluginsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpSendFeedbackIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuHelpTutorialsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageCanvasSizeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageCropIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageFlattenIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageFlipHorizontalIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageFlipVerticalIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageResizeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageRotate180Icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageRotate90CCWIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuImageRotate90CWIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersAddNewLayerIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersDeleteLayerIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersDuplicateLayerIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersFlipHorizontalIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersFlipVerticalIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersImportFromFileIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersLayerPropertiesIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersMergeLayerDownIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersMoveLayerDownIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuLayersMoveLayerUpIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewActualSizeIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewGridIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewRulersIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewZoomInIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewZoomOutIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewZoomToSelectionIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuViewZoomToWindowIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuWindowColorsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuWindowHistoryIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuWindowLayersIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuWindowOpenMdiListIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuWindowResetWindowLocationsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MenuWindowToolsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MinusButtonIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MotionBlurEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MoveSelectionToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\MoveToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\OilPaintingEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\OutlineEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PaintBrushToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PaintBucketIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PaintDotNet.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PanToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PencilSketchEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PencilToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PixelateEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PlusButtonIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PolarInversionEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\PosterizeEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RadialBlurEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RadialGradientIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RecoloringToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RectangleSelectToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RectangleToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RedEyeRemoveEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ReduceNoiseEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ReliefEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ResetIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RightArrowBlue.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RotateZoomIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\RoundedRectangleToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SavePaletteIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SelectionIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SepiaEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SettingsIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ShapeBothIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ShapeInteriorIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ShapeOutlineIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SharpenEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SoftenPortraitEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SurfaceBlurEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SwapIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\SwatchIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\TextAlignCenterIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\TextAlignLeftIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\TextAlignRightIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\TextToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\TileEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.FloodMode.Global.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.FloodMode.Local.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionCombineMode.Exclude.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionCombineMode.Intersect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionCombineMode.Replace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionCombineMode.Union.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionCombineMode.Xor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionDrawModeSplitButton.FixedRatio.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionDrawModeSplitButton.FixedSize.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionDrawModeSplitButton.Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ToolConfigStrip.SelectionDrawModeSwapButton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\TwistEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\UnfocusEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\UnsavedChangesDialog.CancelButton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\UnsavedChangesDialog.SaveButton.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\VignetteEffectIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\WarningIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ZoomBlurEffect.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Icons\ZoomToolIcon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\AnchorChooserControl.AnchorImage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Banner.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DashStyleButton.Dash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DashStyleButton.DashDot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DashStyleButton.DashDotDot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DashStyleButton.Dot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\DashStyleButton.Solid.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Icon50x50.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ImageStrip.CloseButton.Disabled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ImageStrip.CloseButton.Hot.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ImageStrip.CloseButton.Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\ImageStrip.CloseButton.Pressed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.Arrow.End.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.Arrow.Start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.ArrowFilled.End.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.ArrowFilled.Start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.Flat.End.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.Flat.Start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.Rounded.End.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\LineCapButton.Rounded.Start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PayPalDonate.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\PropertyItem.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\RoundedEdgeLL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\RoundedEdgeLR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\RoundedEdgeUL.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\RoundedEdgeUR.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\TransparentLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Strings\EN.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SystemLayer\PropertyItem.png" />
+    <Content Include="SystemLayer\SystemLayer.csproj" />
+    <Content Include="SystemLayer\SystemLayer.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PhotoShopFileType\PsdSaveConfigWidget.resx">
+      <DependentUpon>PsdSaveConfigWidget.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

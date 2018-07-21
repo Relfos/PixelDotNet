@@ -1,0 +1,9 @@
+C:\Code\C#\OpenPDN\src\StylusReader\bin\Debug\PaintDotNet.StylusReader.dll
+C:\Code\C#\OpenPDN\src\StylusReader\bin\Debug\PaintDotNet.StylusReader.pdb
+C:\Code\C#\OpenPDN\src\StylusReader\bin\Debug\Microsoft.Ink.dll
+C:\Code\C#\OpenPDN\src\StylusReader\bin\Debug\Microsoft.Ink.xml
+C:\Code\C#\OpenPDN\src\StylusReader\obj\Debug\StylusReader.csprojAssemblyReference.cache
+C:\Code\C#\OpenPDN\src\StylusReader\obj\Debug\StylusReader.csproj.CoreCompileInputs.cache
+C:\Code\C#\OpenPDN\src\StylusReader\obj\Debug\StylusReader.csproj.CopyComplete
+C:\Code\C#\OpenPDN\src\StylusReader\obj\Debug\PaintDotNet.StylusReader.dll
+C:\Code\C#\OpenPDN\src\StylusReader\obj\Debug\PaintDotNet.StylusReader.pdb
