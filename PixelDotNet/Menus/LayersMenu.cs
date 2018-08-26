@@ -8,10 +8,8 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 using PixelDotNet.Actions;
-using PixelDotNet.Effects;
 using PixelDotNet.HistoryFunctions;
 using System;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace PixelDotNet.Menus
@@ -27,24 +25,12 @@ namespace PixelDotNet.Menus
         private ToolStripSeparator menuLayersSeparator1;
         private PdnMenuItem menuLayersFlipHorizontal;
         private PdnMenuItem menuLayersFlipVertical;
-        private PdnMenuItem menuLayersRotateZoom;
         private ToolStripSeparator menuLayersSeparator2;
         private PdnMenuItem menuLayersLayerProperties;
 
         public LayersMenu()
         {
             InitializeComponent();
-
-            // Fill in Rotate/Zoom menu item
-            string rzName = RotateZoomEffect.StaticName;
-            Keys rzShortcut = RotateZoomEffect.StaticShortcutKeys;
-            ImageResource rzImage = RotateZoomEffect.StaticImage;
-            string rzNameFormatString = PdnResources.GetString("Effects.Name.Format.Configurable");
-            string rzMenuName = string.Format(rzNameFormatString, rzName);
-
-            this.menuLayersRotateZoom.Text = rzMenuName;
-            this.menuLayersRotateZoom.SetIcon(rzImage);
-            this.menuLayersRotateZoom.ShortcutKeys = rzShortcut;
         }
 
         private void InitializeComponent()
@@ -57,7 +43,6 @@ namespace PixelDotNet.Menus
             this.menuLayersSeparator1 = new ToolStripSeparator();
             this.menuLayersFlipHorizontal = new PdnMenuItem();
             this.menuLayersFlipVertical = new PdnMenuItem();
-            this.menuLayersRotateZoom = new PdnMenuItem();
             this.menuLayersSeparator2 = new ToolStripSeparator();
             this.menuLayersLayerProperties = new PdnMenuItem();
             //
@@ -74,7 +59,6 @@ namespace PixelDotNet.Menus
                     this.menuLayersSeparator1,
                     this.menuLayersFlipHorizontal,
                     this.menuLayersFlipVertical,
-                    this.menuLayersRotateZoom,
                     this.menuLayersSeparator2,
                     this.menuLayersLayerProperties
                 });                
@@ -119,11 +103,6 @@ namespace PixelDotNet.Menus
             // 
             this.menuLayersFlipVertical.Name = "FlipVertical";
             this.menuLayersFlipVertical.Click += new System.EventHandler(this.MenuLayersFlipVertical_Click);
-            //
-            // menuLayersRotateZoom
-            //
-            this.menuLayersRotateZoom.Name = "RotateZoom";
-            this.menuLayersRotateZoom.Click += new EventHandler(MenuLayersRotateZoom_Click);
             // 
             // menuLayersLayerProperties
             // 
@@ -159,7 +138,6 @@ namespace PixelDotNet.Menus
             this.menuLayersImportFromFile.Enabled = enabled;
             this.menuLayersFlipHorizontal.Enabled = enabled;
             this.menuLayersFlipVertical.Enabled = enabled;
-            this.menuLayersRotateZoom.Enabled = enabled;
             this.menuLayersLayerProperties.Enabled = enabled;
 
             base.OnDropDownOpening(e);
@@ -232,14 +210,6 @@ namespace PixelDotNet.Menus
             if (AppWorkspace.ActiveDocumentWorkspace != null)
             {
                 AppWorkspace.ActiveDocumentWorkspace.PerformAction(new ImportFromFileAction());
-            }
-        }
-
-        private void MenuLayersRotateZoom_Click(object sender, EventArgs e)
-        {
-            if (AppWorkspace.ActiveDocumentWorkspace != null)
-            {
-                AppWorkspace.RunEffect(typeof(RotateZoomEffect));
             }
         }
     }

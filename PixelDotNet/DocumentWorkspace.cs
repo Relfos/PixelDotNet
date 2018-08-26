@@ -7,8 +7,6 @@
 // .                                                                           //
 /////////////////////////////////////////////////////////////////////////////////
 
-using PixelDotNet.Data;
-using PixelDotNet.Effects;
 using PixelDotNet.HistoryFunctions;
 using PixelDotNet.HistoryMementos;
 using PixelDotNet.SystemLayer;
@@ -24,7 +22,6 @@ using System.IO;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Security;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 

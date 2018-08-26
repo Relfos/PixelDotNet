@@ -480,12 +480,6 @@ namespace PixelDotNet
             return this.effectLoadErrors.ToArray();
         }
 
-        public void RunEffect(Type effectType)
-        {
-            // TODO: this is kind of a hack
-            this.toolBar.MainMenu.RunEffect(effectType);
-        }
-
         public PdnToolBar ToolBar
         {
             get

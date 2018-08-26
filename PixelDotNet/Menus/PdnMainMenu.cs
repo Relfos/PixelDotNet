@@ -21,17 +21,9 @@ namespace PixelDotNet.Menus
         private ViewMenu viewMenu;
         private ImageMenu imageMenu;
         private LayersMenu layersMenu;
-        private AdjustmentsMenu adjustmentsMenu;
-        private EffectsMenu effectsMenu;
         private WindowMenu windowMenu;
         private HelpMenu helpMenu;
         private AppWorkspace appWorkspace;
-
-        public void RunEffect(Type effectType)
-        {
-            // TODO: this is kind of a hack
-            this.adjustmentsMenu.RunEffect(effectType);
-        }
 
         public AppWorkspace AppWorkspace
         {
@@ -48,17 +40,9 @@ namespace PixelDotNet.Menus
                 this.viewMenu.AppWorkspace = value;
                 this.imageMenu.AppWorkspace = value;
                 this.layersMenu.AppWorkspace = value;
-                this.adjustmentsMenu.AppWorkspace = value;
-                this.effectsMenu.AppWorkspace = value;
                 this.windowMenu.AppWorkspace = value;
                 this.helpMenu.AppWorkspace = value;
             }
-        }
-
-        public void PopulateEffects()
-        {
-            this.adjustmentsMenu.PopulateEffects();
-            this.effectsMenu.PopulateEffects();
         }
 
         public PdnMainMenu()
@@ -72,8 +56,6 @@ namespace PixelDotNet.Menus
             this.editMenu = new EditMenu();
             this.viewMenu = new ViewMenu();
             this.imageMenu = new ImageMenu();
-            this.adjustmentsMenu = new AdjustmentsMenu();
-            this.effectsMenu = new EffectsMenu();
             this.layersMenu = new LayersMenu();
             this.windowMenu = new WindowMenu();
             this.helpMenu = new HelpMenu();
@@ -91,8 +73,6 @@ namespace PixelDotNet.Menus
                     this.viewMenu,
                     this.imageMenu,
                     this.layersMenu,
-                    this.adjustmentsMenu,
-                    this.effectsMenu,
                     this.windowMenu,
                     this.helpMenu
                 });

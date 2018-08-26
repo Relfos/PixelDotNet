@@ -463,112 +463,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="DocumentWorkspaceAction.cs" />
-    <Compile Include="Effects\AddNoiseEffect.cs" />
-    <Compile Include="Effects\AmountEffectConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\AmountEffectConfigToken.cs" />
-    <Compile Include="Effects\AutoLevelEffect.cs" />
-    <Compile Include="Effects\BackgroundEffectRenderer.cs" />
-    <Compile Include="Effects\BlurEffect.cs" />
-    <Compile Include="Effects\BrightnessAndContrastAdjustment.cs" />
-    <Compile Include="Effects\BulgeEffect.cs" />
-    <Compile Include="Effects\CloudsEffect.cs" />
-    <Compile Include="Effects\ColorDifferenceEffect.cs" />
-    <Compile Include="Effects\ColorFillEffect.cs" />
-    <Compile Include="Effects\ConvolutionFilterEffect.cs" />
-    <Compile Include="Effects\CurvesEffect.cs" />
-    <Compile Include="Effects\CurvesEffectConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\CurvesEffectConfigToken.cs" />
-    <Compile Include="Effects\DentsEffect.cs" />
-    <Compile Include="Effects\DesaturateEffect.cs" />
-    <Compile Include="Effects\EdgeDetectEffect.cs" />
-    <Compile Include="Effects\Effect.cs" />
-    <Compile Include="Effects\EffectCategory.cs" />
-    <Compile Include="Effects\EffectCategoryAttribute.cs" />
-    <Compile Include="Effects\EffectConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\EffectConfigDialog`2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\EffectConfigToken.cs" />
-    <Compile Include="Effects\EffectDirectives.cs" />
-    <Compile Include="Effects\EffectEnvironmentParameters.cs" />
-    <Compile Include="Effects\EffectFlags.cs" />
-    <Compile Include="Effects\EffectsCollection.cs" />
-    <Compile Include="Effects\EffectTypeHint.cs" />
-    <Compile Include="Effects\EffectTypeHintAttribute.cs" />
-    <Compile Include="Effects\Effect`1.cs" />
-    <Compile Include="Effects\EmbossEffect.cs" />
-    <Compile Include="Effects\FragmentEffect.cs" />
-    <Compile Include="Effects\FrostedGlassEffect.cs" />
-    <Compile Include="Effects\GaussianBlurEffect.cs" />
-    <Compile Include="Effects\GlowEffect.cs" />
-    <Compile Include="Effects\HueAndSaturationAdjustment.cs" />
-    <Compile Include="Effects\InkSketchEffect.cs" />
-    <Compile Include="Effects\InternalPropertyBasedEffect.cs" />
-    <Compile Include="Effects\InvertColorsEffect.cs" />
-    <Compile Include="Effects\JuliaFractalEffect.cs" />
-    <Compile Include="Effects\LevelsEffect.cs" />
-    <Compile Include="Effects\LevelsEffectConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\LevelsEffectConfigToken.cs" />
-    <Compile Include="Effects\LocalHistogramEffect.cs" />
-    <Compile Include="Effects\MandelbrotFractalEffect.cs" />
-    <Compile Include="Effects\MedianEffect.cs" />
-    <Compile Include="Effects\MotionBlurEffect.cs" />
-    <Compile Include="Effects\OilPaintingEffect.cs" />
-    <Compile Include="Effects\OutlineEffect.cs" />
-    <Compile Include="Effects\PanControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Effects\PencilSketchEffect.cs" />
-    <Compile Include="Effects\PerlinNoise2D.cs" />
-    <Compile Include="Effects\PixelateEffect.cs" />
-    <Compile Include="Effects\PolarInversionEffect.cs" />
-    <Compile Include="Effects\PosterizeAdjustment.cs" />
-    <Compile Include="Effects\PropertyBasedEffect.cs" />
-    <Compile Include="Effects\PropertyBasedEffectConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\PropertyBasedEffectConfigToken.cs" />
-    <Compile Include="Effects\RadialBlurEffect.cs" />
-    <Compile Include="Effects\RedEyeRemoveEffect.cs" />
-    <Compile Include="Effects\ReduceNoiseEffect.cs" />
-    <Compile Include="Effects\ReliefEffect.cs" />
-    <Compile Include="Effects\RollControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Effects\RotateZoomEffect.cs" />
-    <Compile Include="Effects\RotateZoomEffectConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\RotateZoomEffectConfigToken.cs" />
-    <Compile Include="Effects\SepiaEffect.cs" />
-    <Compile Include="Effects\SharpenEffect.cs" />
-    <Compile Include="Effects\SoftenPortraitEffect.cs" />
-    <Compile Include="Effects\SrgbUtility.cs" />
-    <Compile Include="Effects\SubmenuNames.cs" />
-    <Compile Include="Effects\SurfaceBlurEffect.cs" />
-    <Compile Include="Effects\ThreeAmountsConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\ThreeAmountsConfigToken.cs" />
-    <Compile Include="Effects\TileEffect.cs" />
-    <Compile Include="Effects\TwistEffect.cs" />
-    <Compile Include="Effects\TwoAmountsConfigDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Effects\TwoAmountsConfigToken.cs" />
-    <Compile Include="Effects\UnfocusEffect.cs" />
-    <Compile Include="Effects\VignetteEffect.cs" />
-    <Compile Include="Effects\WarpEdgeBehavior.cs" />
-    <Compile Include="Effects\WarpEffectBase.cs" />
-    <Compile Include="Effects\ZoomBlurEffect.cs" />
     <Compile Include="ExecutedHistoryMementoEventArgs.cs" />
     <Compile Include="ExecutedHistoryMementoEventHandler.cs" />
     <Compile Include="ExecutingHistoryMementoEventArgs.cs" />
@@ -656,16 +550,7 @@
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menus\AdjustmentsMenu.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Menus\EditMenu.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Menus\EffectMenuBase.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Menus\EffectsMenu.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Menus\FileMenu.cs">

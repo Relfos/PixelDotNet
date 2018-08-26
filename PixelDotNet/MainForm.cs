@@ -8,28 +8,12 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 using PixelDotNet.Actions;
-using PixelDotNet.Effects;
-using PixelDotNet.Menus;
 using PixelDotNet.SystemLayer;
-using PixelDotNet.Tools;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
-using System.Globalization;
 using System.IO;
-using System.Net;
-using System.Reflection;
-using System.Resources;
-using System.Runtime.InteropServices;
-using System.Runtime.Serialization;
-using System.Security;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -1157,9 +1141,6 @@ namespace PixelDotNet
             this.deferredInitializationTimer.Tick -= new EventHandler(DeferredInitialization);
             this.deferredInitializationTimer.Dispose();
             this.deferredInitializationTimer = null;
-
-            // TODO
-            this.appWorkspace.ToolBar.MainMenu.PopulateEffects();
         }
 
         protected override void OnHelpRequested(HelpEventArgs hevent)
