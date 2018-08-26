@@ -202,14 +202,7 @@ namespace PixelDotNet.Tools
                     SaveRegion(null, saveRect);
                     this.savedRects.Add(saveRect);
 
-                    if (AppEnvironment.AntiAliasing)
-                    {
-                        renderArgs.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    }
-                    else
-                    {
-                        renderArgs.Graphics.SmoothingMode = SmoothingMode.None;
-                    }
+                    renderArgs.Graphics.SmoothingMode = SmoothingMode.None;
 
                     new UnaryPixelOps.InvertWithAlpha().Apply(renderArgs.Surface, saveRect);
                     renderArgs.Graphics.CompositingMode = CompositingMode.SourceOver;
@@ -254,7 +247,7 @@ namespace PixelDotNet.Tools
                    PdnResources.GetString("EraserTool.HelpText"), //"Click and drag to erase a portion of the image",
                    'e',
                    false,
-                   ToolBarConfigItems.Pen | ToolBarConfigItems.Antialiasing)
+                   ToolBarConfigItems.Pen)
         {
         }
     }

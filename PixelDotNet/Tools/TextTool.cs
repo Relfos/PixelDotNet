@@ -181,7 +181,6 @@ namespace PixelDotNet.Tools
             AppEnvironment.FontInfoChanged += fontChangedDelegate;
             AppEnvironment.FontSmoothingChanged += fontSmoothingChangedDelegate;
             AppEnvironment.TextAlignmentChanged += alignmentChangedDelegate;
-            AppEnvironment.AntiAliasingChanged += antiAliasChangedDelegate;
             AppEnvironment.PrimaryColorChanged += foreColorChangedDelegate;
             AppEnvironment.SecondaryColorChanged += new EventHandler(BackColorChangedHandler);
             AppEnvironment.AlphaBlendingChanged += new EventHandler(AlphaBlendingChangedHandler);
@@ -234,7 +233,6 @@ namespace PixelDotNet.Tools
             AppEnvironment.FontInfoChanged -= fontChangedDelegate;
             AppEnvironment.FontSmoothingChanged -= fontSmoothingChangedDelegate;
             AppEnvironment.TextAlignmentChanged -= alignmentChangedDelegate;
-            AppEnvironment.AntiAliasingChanged -= antiAliasChangedDelegate;
             AppEnvironment.PrimaryColorChanged -= foreColorChangedDelegate;
             AppEnvironment.SecondaryColorChanged -= new EventHandler(BackColorChangedHandler);
             AppEnvironment.AlphaBlendingChanged -= new EventHandler(AlphaBlendingChangedHandler);
@@ -645,7 +643,7 @@ namespace PixelDotNet.Tools
                         ra2.Graphics, 
                         this.font, 
                         s, 
-                        AppEnvironment.AntiAliasing,
+                        false,
                         AppEnvironment.FontSmoothing);
                 }
             }
@@ -786,7 +784,7 @@ namespace PixelDotNet.Tools
                                 this.font, 
                                 text, 
                                 new Point(dstRect.X - dstRectClipped.X + offset, dstRect.Y - dstRectClipped.Y),
-                                AppEnvironment.AntiAliasing,
+                                false,
                                 AppEnvironment.FontSmoothing);
                         }
                     }
@@ -1027,7 +1025,7 @@ namespace PixelDotNet.Tools
 
             using (Brush brush = AppEnvironment.CreateBrush(false))
             {
-                DrawText(ra.Surface, this.font, (string)this.lines[lineNumber], this.uls[lineNumber], this.sizes[lineNumber], AppEnvironment.AntiAliasing, brush);
+                DrawText(ra.Surface, this.font, (string)this.lines[lineNumber], this.uls[lineNumber], this.sizes[lineNumber], false, brush);
             }
         }
 
@@ -1629,7 +1627,7 @@ namespace PixelDotNet.Tools
                    PdnResources.GetString("TextTool.HelpText"),
                    't',
                    false,
-                   ToolBarConfigItems.Brush | ToolBarConfigItems.Text | ToolBarConfigItems.AlphaBlending | ToolBarConfigItems.Antialiasing)
+                   ToolBarConfigItems.Brush | ToolBarConfigItems.Text | ToolBarConfigItems.AlphaBlending)
         {
         }
     }

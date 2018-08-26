@@ -269,14 +269,7 @@ namespace PixelDotNet.Tools
                         SaveRegion(null, saveRectRounded);
                         this.savedRects.Add(saveRectRounded);
 
-                        if (AppEnvironment.AntiAliasing)
-                        {
-                            renderArgs.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                        }
-                        else
-                        {
-                            renderArgs.Graphics.SmoothingMode = SmoothingMode.None;
-                        }
+                        renderArgs.Graphics.SmoothingMode = SmoothingMode.None;
 
                         renderArgs.Graphics.CompositingMode = AppEnvironment.GetCompositingMode();
 
@@ -340,7 +333,7 @@ namespace PixelDotNet.Tools
                    PdnResources.GetString("PaintBrushTool.HelpText"),
                    'b',
                    false,
-                   ToolBarConfigItems.Brush | ToolBarConfigItems.Pen | ToolBarConfigItems.Antialiasing | ToolBarConfigItems.AlphaBlending)
+                   ToolBarConfigItems.Brush | ToolBarConfigItems.Pen | ToolBarConfigItems.AlphaBlending)
         {
             // initialize any state information you need
             mouseDown = false;

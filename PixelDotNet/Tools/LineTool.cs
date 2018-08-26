@@ -538,7 +538,6 @@ namespace PixelDotNet.Tools
 
             AppEnvironment.PrimaryColorChanged += new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.SecondaryColorChanged += new EventHandler(RenderShapeBecauseOfEvent);
-            AppEnvironment.AntiAliasingChanged += new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.AlphaBlendingChanged += new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.BrushInfoChanged += new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.PenInfoChanged += new EventHandler(RenderShapeBecauseOfEvent);
@@ -561,7 +560,6 @@ namespace PixelDotNet.Tools
 
             AppEnvironment.PrimaryColorChanged -= new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.SecondaryColorChanged -= new EventHandler(RenderShapeBecauseOfEvent);
-            AppEnvironment.AntiAliasingChanged -= new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.AlphaBlendingChanged -= new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.BrushInfoChanged -= new EventHandler(RenderShapeBecauseOfEvent);
             AppEnvironment.PenInfoChanged -= new EventHandler(RenderShapeBecauseOfEvent);

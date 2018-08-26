@@ -45,36 +45,6 @@ namespace PixelDotNet.Tools
         private bool hasDrawn;
         private Keys modifierDown;
 
-        // AA stuff
-        private BitVector2D isPointAlreadyAA;
-        private Surface aaPoints;
-
-        public ColorBgra AAPoints(int x, int y)
-        {
-            return aaPoints[x, y];
-        }
-
-        public void AAPointsAdd(int x, int y, ColorBgra color)
-        {
-            aaPoints[x, y] = color;
-            isPointAlreadyAA[x, y] = true;
-        }
-
-        public void AAPointsRemove(int x, int y)
-        {
-            isPointAlreadyAA[x, y] = false;
-        }
-
-        private bool IsPointAlreadyAntiAliased(int x, int y)
-        {
-            return isPointAlreadyAA[x, y];
-        }
-
-        private bool IsPointAlreadyAntiAliased(Point pt)
-        {
-            return IsPointAlreadyAntiAliased(pt.X, pt.Y);
-        }
-
         // RenderArgs specifically for a brush mask
         private RenderArgs brushRenderArgs;
 
@@ -126,9 +96,6 @@ namespace PixelDotNet.Tools
             // fetch colors from workspace palette
             this.colorToReplace = this.AppEnvironment.PrimaryColor;
             this.colorReplacing = this.AppEnvironment.SecondaryColor;
-
-            this.aaPoints = this.ScratchSurface;
-            this.isPointAlreadyAA = new BitVector2D(aaPoints.Width, aaPoints.Height);
 
             if (savedSurfaces != null)
             {
@@ -182,7 +149,6 @@ namespace PixelDotNet.Tools
             renderArgs.Dispose();;
             renderArgs = null;
 
-            aaPoints = null;
             renderArgs = null;
             bitmapLayer = null;
 
@@ -327,36 +293,15 @@ namespace PixelDotNet.Tools
             brushSurface.Clear((ColorBgra)0);
             RenderArgs brush = new RenderArgs(brushSurface);
 
-            if (AppEnvironment.AntiAliasing)
-            {
-                brush.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            }
-            else
-            {
-                brush.Graphics.SmoothingMode = SmoothingMode.None;
-            }
+            brush.Graphics.SmoothingMode = SmoothingMode.None;
 
-            if (AppEnvironment.AntiAliasing)
+            if (penWidth <= 1.0f)
             {
-                if (penWidth > 2)
-                {
-                    penWidth = penWidth - 1.0f;
-                }
-                else
-                {
-                    penWidth = penWidth / 2;
-                }
+                brush.Surface[1, 1] = ColorBgra.Black;
             }
             else
             {
-                if (penWidth <= 1.0f)
-                {
-                    brush.Surface[1, 1] = ColorBgra.Black;
-                }
-                else
-                {
-                    penWidth = (float)Math.Round(penWidth + 1.0f);
-                }
+                penWidth = (float)Math.Round(penWidth + 1.0f);
             }
 
             using (Brush testBrush = new SolidBrush(System.Drawing.Color.Black))
@@ -370,7 +315,6 @@ namespace PixelDotNet.Tools
         private unsafe void DrawOverPoints(Point start, Point finish, ColorBgra colorToReplaceWith, ColorBgra colorBeingReplaced)
         {
             ColorBgra colorAdjusted = ColorBgra.FromColor(Color.Empty);
-            byte dstAlpha;
             ColorBgra colorLifted;
             Rectangle[] rectSelRegions;
             Rectangle rectBrushArea;
@@ -470,57 +414,16 @@ namespace PixelDotNet.Tools
                                     // that the new color is too dark or too bright to take the whole range 
 
                                     bool boolCIT = this.IsColorInTolerance(colorLifted, colorBeingReplaced);
-                                    bool boolPAAA = false;
 
-                                    if (AppEnvironment.AntiAliasing)
+                                    if (boolCIT)
                                     {
-                                        boolPAAA = this.IsPointAlreadyAntiAliased(x, y);
-                                    }
+                                        colorAdjusted.B = Utility.ClampToByte(colorLifted.B + (colorToReplaceWith.B - colorBeingReplaced.B));
+                                        colorAdjusted.G = Utility.ClampToByte(colorLifted.G + (colorToReplaceWith.G - colorBeingReplaced.G));
+                                        colorAdjusted.R = Utility.ClampToByte(colorLifted.R + (colorToReplaceWith.R - colorBeingReplaced.R));
+                                        colorAdjusted.A = Utility.ClampToByte(colorLifted.A + (colorToReplaceWith.A - colorBeingReplaced.A));
 
-                                    if (boolCIT || boolPAAA)
-                                    {
-                                        if (boolPAAA)
-                                        {
-                                            colorAdjusted = (ColorBgra)AAPoints(x, y);
-
-                                            if (penWidth < 2.0f)
-                                            {
-                                                colorAdjusted.B = Utility.ClampToByte(colorToReplaceWith.B + (colorAdjusted.B - colorBeingReplaced.B));
-                                                colorAdjusted.G = Utility.ClampToByte(colorToReplaceWith.G + (colorAdjusted.G - colorBeingReplaced.G));
-                                                colorAdjusted.R = Utility.ClampToByte(colorToReplaceWith.R + (colorAdjusted.R - colorBeingReplaced.R));
-                                                colorAdjusted.A = Utility.ClampToByte(colorToReplaceWith.A + (colorAdjusted.A - colorBeingReplaced.A));
-                                            }
-                                        }
-                                        else
-                                        {
-                                            colorAdjusted.B = Utility.ClampToByte(colorLifted.B + (colorToReplaceWith.B - colorBeingReplaced.B));
-                                            colorAdjusted.G = Utility.ClampToByte(colorLifted.G + (colorToReplaceWith.G - colorBeingReplaced.G));
-                                            colorAdjusted.R = Utility.ClampToByte(colorLifted.R + (colorToReplaceWith.R - colorBeingReplaced.R));
-                                            colorAdjusted.A = Utility.ClampToByte(colorLifted.A + (colorToReplaceWith.A - colorBeingReplaced.A));
-                                        }
-
-                                        if ((srcBgra->A != 255) && AppEnvironment.AntiAliasing)
-                                        {
-                                            colorAdjusted.A = srcBgra->A;
-                                            dstAlpha = dstBgra->A;
-                                            *dstBgra = blendOp.Apply(*dstBgra, colorAdjusted);
-                                            dstBgra->A = dstAlpha;
-
-                                            if (!this.IsPointAlreadyAntiAliased(x, y))
-                                            {
-                                                AAPointsAdd(x, y, colorAdjusted);
-                                            }
-                                        }
-                                        else
-                                        {
-                                            colorAdjusted.A = (*dstBgra).A;
-                                            *dstBgra = colorAdjusted;
-
-                                            if (boolPAAA)
-                                            {
-                                               AAPointsRemove(x, y);
-                                            }
-                                        }
+                                        colorAdjusted.A = (*dstBgra).A;
+                                        *dstBgra = colorAdjusted;
                                         
                                         hasDrawn = true;
                                     }
@@ -830,7 +733,7 @@ namespace PixelDotNet.Tools
                    PdnResources.GetString("RecolorTool.HelpText"),
                    'r',
                    false,
-                   ToolBarConfigItems.Pen | ToolBarConfigItems.Antialiasing | ToolBarConfigItems.Tolerance)
+                   ToolBarConfigItems.Pen | ToolBarConfigItems.Tolerance)
         {
         }
     }

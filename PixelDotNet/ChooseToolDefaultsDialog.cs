@@ -122,11 +122,6 @@ namespace PixelDotNet
                     newAppEnvironment.AlphaBlending = row.ToolConfigStrip.AlphaBlending;
                 }
 
-                if ((row.ToolBarConfigItems & ToolBarConfigItems.Antialiasing) != 0)
-                {
-                    newAppEnvironment.AntiAliasing = row.ToolConfigStrip.AntiAliasing;
-                }
-
                 if ((row.ToolBarConfigItems & ToolBarConfigItems.Brush) != 0)
                 {
                     newAppEnvironment.BrushInfo = row.ToolConfigStrip.BrushInfo;
@@ -217,7 +212,7 @@ namespace PixelDotNet
             this.toolConfigRows.Add(new ToolConfigRow(ToolBarConfigItems.Tolerance | ToolBarConfigItems.FloodMode));
             this.toolConfigRows.Add(new ToolConfigRow(ToolBarConfigItems.ColorPickerBehavior));
             this.toolConfigRows.Add(new ToolConfigRow(ToolBarConfigItems.Resampling));
-            this.toolConfigRows.Add(new ToolConfigRow(ToolBarConfigItems.AlphaBlending | ToolBarConfigItems.Antialiasing));
+            this.toolConfigRows.Add(new ToolConfigRow(ToolBarConfigItems.AlphaBlending));
 
             for (int i = 0; i < this.toolConfigRows.Count; ++i)
             {

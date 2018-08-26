@@ -97,7 +97,7 @@ namespace PixelDotNet.Tools
                    PdnResources.GetString("PaintBucketTool.HelpText"),
                    'f',
                    false,
-                   ToolBarConfigItems.Brush | ToolBarConfigItems.AlphaBlending)
+                   ToolBarConfigItems.Brush | ToolBarConfigItems.Antialiasing | ToolBarConfigItems.AlphaBlending)
         {
         }
 

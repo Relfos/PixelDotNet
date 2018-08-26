@@ -41,7 +41,6 @@ namespace PixelDotNet
         private ColorBgra secondaryColor;
         private bool alphaBlending;
         private ShapeDrawType shapeDrawType;
-        private bool antiAliasing;
         private ColorPickerClickBehavior colorPickerClickBehavior;
         private ResamplingAlgorithm resamplingAlgorithm;
         private float tolerance;
@@ -119,7 +118,6 @@ namespace PixelDotNet
             this.secondaryColor = appEnvironment.secondaryColor;
             this.alphaBlending = appEnvironment.alphaBlending;
             this.shapeDrawType = appEnvironment.shapeDrawType;
-            this.antiAliasing = appEnvironment.antiAliasing;
             this.colorPickerClickBehavior = appEnvironment.colorPickerClickBehavior;
             this.resamplingAlgorithm = appEnvironment.resamplingAlgorithm;
             this.tolerance = appEnvironment.tolerance;
@@ -568,48 +566,6 @@ namespace PixelDotNet
         }
         #endregion
 
-        #region AntiAliasing
-        [field: NonSerialized]
-        public event EventHandler AntiAliasingChanging;
-
-        private void OnAntiAliasingChanging()
-        {
-            if (AntiAliasingChanging != null)
-            {
-                AntiAliasingChanging(this, EventArgs.Empty);
-            }
-        }
-
-        [field: NonSerialized]
-        public event EventHandler AntiAliasingChanged;
-
-        private void OnAntiAliasingChanged()
-        {
-            if (AntiAliasingChanged != null)
-            {
-                AntiAliasingChanged(this, EventArgs.Empty);
-            }
-        }
-
-        public bool AntiAliasing
-        {
-            get
-            {
-                return this.antiAliasing;
-            }
-
-            set
-            {
-                if (this.antiAliasing != value)
-                {
-                    OnAntiAliasingChanging();
-                    this.antiAliasing = value;
-                    OnAntiAliasingChanged();
-                }
-            }
-        }
-        #endregion
-
         #region Color Picker behavior
         [field: NonSerialized]
         public event EventHandler ColorPickerClickBehaviorChanging;
@@ -836,7 +792,6 @@ namespace PixelDotNet
             OnPrimaryColorChanged();
             OnAlphaBlendingChanged();
             OnShapeDrawTypeChanged();
-            OnAntiAliasingChanged();
             OnTextAlignmentChanged();
             OnToleranceChanged();
             OnColorPickerClickBehaviorChanged();
@@ -848,7 +803,6 @@ namespace PixelDotNet
 
         public void SetToDefaults()
         {
-            this.antiAliasing = true;
             this.fontSmoothing = FontSmoothing.Smooth;
             this.primaryColor = ColorBgra.FromBgra(0, 0, 0, 255);
             this.secondaryColor = ColorBgra.FromBgra(255, 255, 255, 255);

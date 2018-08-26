@@ -342,15 +342,7 @@ namespace PixelDotNet.Tools
                 outlineSaveRegion = null;
             }
 
-            // anti-aliasing? Don't mind if I do
-            if (AppEnvironment.AntiAliasing)
-            {
-                renderArgs.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-            }
-            else
-            {
-                renderArgs.Graphics.SmoothingMode = SmoothingMode.None;
-            }
+            renderArgs.Graphics.SmoothingMode = SmoothingMode.None;
 
             // also set the pixel offset mode
             renderArgs.Graphics.PixelOffsetMode = GetPixelOffsetMode();
@@ -645,7 +637,6 @@ namespace PixelDotNet.Tools
                        (ToolBarConfigItems.Brush | 
                         ToolBarConfigItems.Pen | 
                         ToolBarConfigItems.ShapeType | 
-                        ToolBarConfigItems.Antialiasing | 
                         ToolBarConfigItems.AlphaBlending)) &
                        ~(toolBarConfigItemsExclude))
         {

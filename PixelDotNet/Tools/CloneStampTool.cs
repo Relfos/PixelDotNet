@@ -53,7 +53,6 @@ namespace PixelDotNet.Tools
         private RenderArgs ra;
         private bool mouseUp = true;
         private Vector<Rectangle> historyRects;
-        private bool antialiasing;
         private PdnRegion clipRegion;
 
         private BrushPreviewRenderer rendererDst;
@@ -113,7 +112,7 @@ namespace PixelDotNet.Tools
                    PdnResources.GetString("CloneStampTool.HelpText"),
                    'l',
                    false,
-                   ToolBarConfigItems.Pen | ToolBarConfigItems.Antialiasing)
+                   ToolBarConfigItems.Pen)
         {
         }
 
@@ -313,7 +312,7 @@ namespace PixelDotNet.Tools
 
                     if (distFromRing > 0)
                     {
-                        float alpha = antialiasing ? Utility.Clamp(distFromRing * envAlpha, 0, 1) : 1;
+                        float alpha = 1;
                         alpha *= srcPtr->A / 255.0f;
                         dstPtr->A = (byte)(255 - (255 - dstPtr->A) * (1 - alpha));
 
@@ -576,7 +575,6 @@ namespace PixelDotNet.Tools
                     }
                     else
                     {
-                        this.antialiasing = AppEnvironment.AntiAliasing;
                         this.ra = new RenderArgs(((BitmapLayer)ActiveLayer).Surface);
                         this.ra.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                         OnMouseMove(e);

@@ -625,7 +625,6 @@
     <Compile Include="HistoryMementos\ToolHistoryMemento.cs" />
     <Compile Include="HistoryStack.cs" />
     <Compile Include="IAlphaBlendingConfig.cs" />
-    <Compile Include="IAntiAliasingConfig.cs" />
     <Compile Include="IBrushConfig.cs" />
     <Compile Include="IColorPickerConfig.cs" />
     <Compile Include="IconBox.cs">

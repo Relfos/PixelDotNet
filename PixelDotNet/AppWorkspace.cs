@@ -1005,7 +1005,6 @@ namespace PixelDotNet
             AppEnvironment.AlphaBlendingChanged += AlphaBlendingChangedHandler;
             AppEnvironment.FontInfo = this.toolBar.ToolConfigStrip.FontInfo;
             AppEnvironment.TextAlignment = this.toolBar.ToolConfigStrip.FontAlignment;
-            AppEnvironment.AntiAliasingChanged += Environment_AntiAliasingChanged;
             AppEnvironment.FontInfoChanged += Environment_FontInfoChanged;
             AppEnvironment.FontSmoothingChanged += Environment_FontSmoothingChanged;
             AppEnvironment.TextAlignmentChanged += Environment_TextAlignmentChanged;
@@ -1044,7 +1043,6 @@ namespace PixelDotNet
             this.toolBar.ToolConfigStrip.PenInfoChanged += DrawConfigStrip_PenChanged;
             this.toolBar.ToolConfigStrip.GradientInfoChanged += ToolConfigStrip_GradientInfoChanged;
             this.toolBar.ToolConfigStrip.AlphaBlendingChanged += OnDrawConfigStripAlphaBlendingChanged;
-            this.toolBar.ToolConfigStrip.AntiAliasingChanged += DrawConfigStrip_AntiAliasingChanged;
             this.toolBar.ToolConfigStrip.RelinquishFocus += OnToolStripRelinquishFocus;
             this.toolBar.ToolConfigStrip.ColorPickerClickBehaviorChanged += ToolConfigStrip_ColorPickerClickBehaviorChanged;
             this.toolBar.ToolConfigStrip.ResamplingAlgorithmChanged += ToolConfigStrip_ResamplingAlgorithmChanged;
@@ -1738,11 +1736,6 @@ namespace PixelDotNet
             this.toolBar.Refresh();
         }
 
-        private void DrawConfigStrip_AntiAliasingChanged(object sender, System.EventArgs e)
-        {
-            AppEnvironment.AntiAliasing = ((ToolConfigStrip)sender).AntiAliasing;
-        }
-
         private void DrawConfigStrip_PenChanged(object sender, System.EventArgs e)
         {
             AppEnvironment.PenInfo = this.toolBar.ToolConfigStrip.PenInfo;
@@ -1989,11 +1982,6 @@ namespace PixelDotNet
             ActiveDocumentWorkspace.UpdateRulerSelectionTinting();
 
             Settings.CurrentUser.SetBoolean(SettingNames.Rulers, this.activeDocumentWorkspace.RulersEnabled);
-        }
-
-        private void Environment_AntiAliasingChanged(object sender, EventArgs e)
-        {
-            this.toolBar.ToolConfigStrip.AntiAliasing = AppEnvironment.AntiAliasing;
         }
 
         private void ViewConfigStrip_ZoomIn(object sender, EventArgs e)

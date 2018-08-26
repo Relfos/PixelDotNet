@@ -27,7 +27,6 @@ namespace PixelDotNet
           IBrushConfig,
           IShapeTypeConfig, 
           IPenConfig, 
-          IAntiAliasingConfig, 
           IAlphaBlendingConfig,
           ITextConfig,
           IToleranceConfig,
@@ -71,11 +70,6 @@ namespace PixelDotNet
         private bool alphaBlendingEnabled = true;
         private ImageResource alphaBlendingEnabledImage;
         private ImageResource alphaBlendingOverwriteImage;
-
-        private ToolStripSplitButton antiAliasingSplitButton;
-        private bool antiAliasingEnabled = true;
-        private ImageResource antiAliasingEnabledImage;
-        private ImageResource antiAliasingDisabledImage;
 
         private EnumLocalizer resamplingAlgorithmNames = EnumLocalizer.Create(typeof(ResamplingAlgorithm));
         private ToolStripSeparator resamplingSeparator;
@@ -221,7 +215,6 @@ namespace PixelDotNet
         public void LoadFromAppEnvironment(AppEnvironment appEnvironment)
         {
             AlphaBlending = appEnvironment.AlphaBlending;
-            AntiAliasing = appEnvironment.AntiAliasing;
             BrushInfo = appEnvironment.BrushInfo;
             ColorPickerClickBehavior = appEnvironment.ColorPickerClickBehavior;
             GradientInfo = appEnvironment.GradientInfo;
@@ -477,10 +470,6 @@ namespace PixelDotNet
             this.gradientAlphaChannelOnlyImage = PdnResources.GetImageResource("Icons.AlphaChannelOnlyIcon.png");
             this.gradientChannelsSplitButton.Image = this.gradientAllColorChannelsImage.Reference;
 
-            this.antiAliasingEnabledImage = PdnResources.GetImageResource("Icons.AntiAliasingEnabledIcon.png");
-            this.antiAliasingDisabledImage = PdnResources.GetImageResource("Icons.AntiAliasingDisabledIcon.png");
-            this.antiAliasingSplitButton.Image = this.antiAliasingEnabledImage.Reference;
-
             this.alphaBlendingEnabledImage = PdnResources.GetImageResource("Icons.BlendingEnabledIcon.png");
             this.alphaBlendingOverwriteImage = PdnResources.GetImageResource("Icons.BlendingOverwriteIcon.png");
             this.alphaBlendingSplitButton.Image = this.alphaBlendingEnabledImage.Reference;
@@ -686,7 +675,6 @@ namespace PixelDotNet
             this.penEndCapSplitButton = new ToolStripSplitButton();
 
             this.blendingSeparator = new ToolStripSeparator();
-            this.antiAliasingSplitButton = new ToolStripSplitButton();
             this.alphaBlendingSplitButton = new ToolStripSplitButton();
 
             this.toleranceSeparator = new ToolStripSeparator();
@@ -946,23 +934,6 @@ namespace PixelDotNet
                 {
                     Tracing.LogFeature("ToolConfigStrip(penEndCapSplitButton)");
                     CyclePenEndCap();
-                };
-            //
-            // antiAliasingSplitButton
-            //
-            this.antiAliasingSplitButton.Name = "antiAliasingSplitButton";
-            this.antiAliasingSplitButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            this.antiAliasingSplitButton.DropDownOpening += AntiAliasingSplitButton_DropDownOpening;
-            this.antiAliasingSplitButton.DropDownClosed +=
-                delegate(object sender, EventArgs e)
-                {
-                    this.antiAliasingSplitButton.DropDownItems.Clear();
-                };
-            this.antiAliasingSplitButton.ButtonClick +=
-                delegate(object sender, EventArgs e)
-                {
-                    Tracing.LogFeature("ToolConfigStrip(antiAliasingSplitButton)");
-                    AntiAliasing = !AntiAliasing;
                 };
             //
             // alphaBlendingSplitButton
@@ -1331,7 +1302,6 @@ namespace PixelDotNet
                     this.toleranceSliderStrip,
 
                     this.blendingSeparator,
-                    this.antiAliasingSplitButton,
                     this.alphaBlendingSplitButton
                 });
 
@@ -1829,46 +1799,6 @@ namespace PixelDotNet
             OnAlphaBlendingChanged();
         }
 
-        public event EventHandler AntiAliasingChanged;
-        protected virtual void OnAntiAliasingChanged()
-        {
-            if (AntiAliasingChanged != null)
-            {
-                AntiAliasingChanged(this, EventArgs.Empty);
-            }
-        }
-
-        public void PerformAntiAliasingChanged()
-        {
-            OnAntiAliasingChanged();
-        }
-
-        public bool AntiAliasing
-        {
-            get
-            {
-                return this.antiAliasingEnabled;
-            }
-
-            set
-            {
-                if (this.antiAliasingEnabled != value)
-                {
-                    if (value)
-                    {
-                        this.antiAliasingSplitButton.Image = this.antiAliasingEnabledImage.Reference;
-                    }
-                    else
-                    {
-                        this.antiAliasingSplitButton.Image = this.antiAliasingDisabledImage.Reference;
-                    }
-
-                    this.antiAliasingEnabled = value;
-                    OnAntiAliasingChanged();
-                }
-            }
-        }
-
         private Image GetDashStyleImage(DashStyle dashStyle)
         {
             string nameFormat = "Images.DashStyleButton.{0}.png";
@@ -1990,36 +1920,6 @@ namespace PixelDotNet
 
             splitButton.DropDownItems.Clear();
             splitButton.DropDownItems.AddRange(menuItems.ToArray());
-        }
-
-        private void AntiAliasingSplitButton_DropDownOpening(object sender, EventArgs e)
-        {
-            ToolStripMenuItem aaEnabled = new ToolStripMenuItem(
-                PdnResources.GetString("AntiAliasingSplitButton.Enabled.Text"),
-                this.antiAliasingEnabledImage.Reference,
-                delegate(object sender2, EventArgs e2)
-                {
-                    AntiAliasing = true;
-                });
-
-            ToolStripMenuItem aaDisabled = new ToolStripMenuItem(
-                PdnResources.GetString("AntiAliasingSplitButton.Disabled.Text"),
-                this.antiAliasingDisabledImage.Reference,
-                delegate(object sender3, EventArgs e3)
-                {
-                    AntiAliasing = false;
-                });
-
-            aaEnabled.Checked = AntiAliasing;
-            aaDisabled.Checked = !AntiAliasing;
-
-            this.antiAliasingSplitButton.DropDownItems.Clear();
-            this.antiAliasingSplitButton.DropDownItems.AddRange(
-                new ToolStripItem[]
-                {
-                    aaEnabled,
-                    aaDisabled
-                });            
         }
 
         private void SmoothingComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -2579,13 +2479,10 @@ namespace PixelDotNet
                 this.gradientSeparator2.Visible = showGradient;
                 this.gradientChannelsSplitButton.Visible = showGradient;
 
-                bool showAA = ((value & ToolBarConfigItems.Antialiasing) != ToolBarConfigItems.None);
-                this.antiAliasingSplitButton.Visible = showAA;
-
                 bool showAB = ((value & ToolBarConfigItems.AlphaBlending) != ToolBarConfigItems.None);
                 this.alphaBlendingSplitButton.Visible = showAB;
 
-                bool showBlendingSep = ((value & (ToolBarConfigItems.AlphaBlending | ToolBarConfigItems.Antialiasing)) != ToolBarConfigItems.None);
+                bool showBlendingSep = ((value & (ToolBarConfigItems.AlphaBlending)) != ToolBarConfigItems.None);
                 this.blendingSeparator.Visible = showBlendingSep;
 
                 bool showTolerance = ((value & ToolBarConfigItems.Tolerance) != ToolBarConfigItems.None);
