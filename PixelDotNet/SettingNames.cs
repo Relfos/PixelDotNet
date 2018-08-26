@@ -117,14 +117,6 @@ namespace PixelDotNet
         public const string ColorsFormVisible = "ColorsForm.Visible";
 
         /// <summary>
-        /// The state of whether the History floating form is visible.
-        /// </summary>
-        /// <remarks>
-        /// Written on app close, and read on app startup.
-        /// </remarks>
-        public const string HistoryFormVisible = "HistoryForm.Visible";
-
-        /// <summary>
         /// The state of whether the Layers floating form is visible.
         /// </summary>
         /// <remarks>

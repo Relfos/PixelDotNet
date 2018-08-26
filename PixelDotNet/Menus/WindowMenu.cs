@@ -21,7 +21,6 @@ namespace PixelDotNet.Menus
         private PdnMenuItem menuWindowTranslucent;
         private ToolStripSeparator menuWindowSeperator2;
         private PdnMenuItem menuWindowTools;
-        private PdnMenuItem menuWindowHistory;
         private PdnMenuItem menuWindowLayers;
         private PdnMenuItem menuWindowColors;
         private ToolStripSeparator menuWindowSeparator3;
@@ -41,7 +40,6 @@ namespace PixelDotNet.Menus
             this.menuWindowTranslucent = new PdnMenuItem();
             this.menuWindowSeperator2 = new ToolStripSeparator();
             this.menuWindowTools = new PdnMenuItem();
-            this.menuWindowHistory = new PdnMenuItem();
             this.menuWindowLayers = new PdnMenuItem();
             this.menuWindowColors = new PdnMenuItem();
             this.menuWindowSeparator3 = new ToolStripSeparator();
@@ -59,7 +57,6 @@ namespace PixelDotNet.Menus
                     this.menuWindowTranslucent,
                     this.menuWindowSeperator2,
                     this.menuWindowTools,
-                    this.menuWindowHistory,
                     this.menuWindowLayers,
                     this.menuWindowColors,
                     this.menuWindowSeparator3,
@@ -85,12 +82,6 @@ namespace PixelDotNet.Menus
             this.menuWindowTools.Name = "Tools";
             this.menuWindowTools.ShortcutKeys = Keys.F5;
             this.menuWindowTools.Click += new System.EventHandler(this.MenuWindowTools_Click);
-            // 
-            // menuWindowHistory
-            // 
-            this.menuWindowHistory.Name = "History";
-            this.menuWindowHistory.ShortcutKeys = Keys.F6;
-            this.menuWindowHistory.Click += new System.EventHandler(this.MenuWindowHistory_Click);
             // 
             // menuWindowLayers
             // 
@@ -142,7 +133,6 @@ namespace PixelDotNet.Menus
         {
             this.menuWindowTranslucent.Checked = PdnBaseForm.EnableOpacity;
             this.menuWindowTools.Checked = AppWorkspace.Widgets.ToolsForm.Visible;
-            this.menuWindowHistory.Checked = AppWorkspace.Widgets.HistoryForm.Visible;
             this.menuWindowLayers.Checked = AppWorkspace.Widgets.LayerForm.Visible;
             this.menuWindowColors.Checked = AppWorkspace.Widgets.ColorsForm.Visible;
 
@@ -176,11 +166,6 @@ namespace PixelDotNet.Menus
             ToggleFormVisibility(AppWorkspace.Widgets.ToolsForm);
         }
 
-        private void MenuWindowHistory_Click(object sender, System.EventArgs e)
-        {
-            ToggleFormVisibility(AppWorkspace.Widgets.HistoryForm);
-        }
-
         private void MenuWindowLayers_Click(object sender, System.EventArgs e)
         {
             ToggleFormVisibility(AppWorkspace.Widgets.LayerForm);
@@ -195,7 +180,6 @@ namespace PixelDotNet.Menus
         {
             AppWorkspace.ResetFloatingForms();
             AppWorkspace.Widgets.ToolsForm.Visible = true;
-            AppWorkspace.Widgets.HistoryForm.Visible = true;
             AppWorkspace.Widgets.LayerForm.Visible = true;
             AppWorkspace.Widgets.ColorsForm.Visible = true;
         }

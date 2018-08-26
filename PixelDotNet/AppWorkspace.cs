@@ -50,7 +50,6 @@ namespace PixelDotNet
 
         private ToolsForm mainToolBarForm;
         private LayerForm layerForm;
-        private HistoryForm historyForm;
         private ColorsForm colorsForm;
 
         private MostRecentFiles mostRecentFiles = null;
@@ -321,7 +320,6 @@ namespace PixelDotNet
         public void ResetFloatingForms()
         {
             ResetFloatingForm(Widgets.ToolsForm);
-            ResetFloatingForm(Widgets.HistoryForm);
             ResetFloatingForm(Widgets.LayerForm);
             ResetFloatingForm(Widgets.ColorsForm);
         }
@@ -333,10 +331,6 @@ namespace PixelDotNet
             if (ftf == Widgets.ToolsForm)
             {
                 sm.ParkObstacle(Widgets.ToolsForm, this, HorizontalSnapEdge.Top, VerticalSnapEdge.Left);
-            }
-            else if (ftf == Widgets.HistoryForm)
-            {
-                sm.ParkObstacle(Widgets.HistoryForm, this, HorizontalSnapEdge.Top, VerticalSnapEdge.Right);
             }
             else if (ftf == Widgets.LayerForm)
             {
@@ -793,7 +787,6 @@ namespace PixelDotNet
                 this.activeDocumentWorkspace.ZoomBasisChanged -= DocumentWorkspace_ZoomBasisChanged;
 
                 this.activeDocumentWorkspace.Visible = false;
-                this.historyForm.HistoryControl.HistoryStack = null;
 
                 this.activeDocumentWorkspace.ToolChanging -= this.ToolChangingHandler;
                 this.activeDocumentWorkspace.ToolChanged -= this.ToolChangedHandler;
@@ -875,8 +868,6 @@ namespace PixelDotNet
                 this.activeDocumentWorkspace.ScaleFactorChanged += ZoomChangedHandler;
                 this.activeDocumentWorkspace.ZoomBasisChanged += DocumentWorkspace_ZoomBasisChanged;
 
-                this.historyForm.HistoryControl.HistoryStack = this.ActiveDocumentWorkspace.History;
-
                 this.activeDocumentWorkspace.ToolChanging += this.ToolChangingHandler;
                 this.activeDocumentWorkspace.ToolChanged += this.ToolChangedHandler;
 
@@ -928,7 +919,6 @@ namespace PixelDotNet
             this.widgets.ToolConfigStrip = this.toolBar.ToolConfigStrip;
             this.widgets.ToolsForm = this.mainToolBarForm;
             this.widgets.LayerForm = this.layerForm;
-            this.widgets.HistoryForm = this.historyForm;
             this.widgets.ColorsForm = this.colorsForm;
             this.widgets.StatusBarProgress = this.statusBar;
             this.widgets.DocumentStrip = this.toolBar.DocumentStrip;
@@ -1061,7 +1051,6 @@ namespace PixelDotNet
             bool enableThem = (this.widgets.DocumentStrip.DocumentCount != 0);
 
             this.widgets.ToolsForm.Enabled = enableThem;
-            this.widgets.HistoryForm.Enabled = enableThem;
             this.widgets.LayerForm.Enabled = enableThem;
             this.widgets.ColorsForm.Enabled = enableThem;
             this.widgets.CommonActionsStrip.SetButtonEnabled(CommonAction.Paste, enableThem);
@@ -1524,15 +1513,6 @@ namespace PixelDotNet
             layerForm.RelinquishFocus += RelinquishFocusHandler;
             layerForm.ProcessCmdKeyEvent += OnToolFormProcessCmdKeyEvent;
             
-            // HistoryForm
-            historyForm = new HistoryForm();
-            historyForm.RewindButtonClicked += HistoryForm_RewindButtonClicked;
-            historyForm.UndoButtonClicked += HistoryForm_UndoButtonClicked;
-            historyForm.RedoButtonClicked += HistoryForm_RedoButtonClicked;
-            historyForm.FastForwardButtonClicked += HistoryForm_FastForwardButtonClicked;
-            historyForm.RelinquishFocus += RelinquishFocusHandler;
-            historyForm.ProcessCmdKeyEvent += OnToolFormProcessCmdKeyEvent;
-
             // ColorsForm
             colorsForm = new ColorsForm();
             colorsForm.PaletteCollection = new PaletteCollection();

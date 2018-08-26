@@ -424,7 +424,6 @@ namespace PixelDotNet
             {
                 Settings.CurrentUser.SetBoolean(SettingNames.ToolsFormVisible, this.appWorkspace.Widgets.ToolsForm.Visible);
                 Settings.CurrentUser.SetBoolean(SettingNames.ColorsFormVisible, this.appWorkspace.Widgets.ColorsForm.Visible);
-                Settings.CurrentUser.SetBoolean(SettingNames.HistoryFormVisible, this.appWorkspace.Widgets.HistoryForm.Visible);
                 Settings.CurrentUser.SetBoolean(SettingNames.LayersFormVisible, this.appWorkspace.Widgets.LayerForm.Visible);
             }
 
@@ -690,7 +689,6 @@ namespace PixelDotNet
             this.floaters = new FloatingToolForm[] { 
                                                        appWorkspace.Widgets.ToolsForm,
                                                        appWorkspace.Widgets.ColorsForm,
-                                                       appWorkspace.Widgets.HistoryForm,
                                                        appWorkspace.Widgets.LayerForm
                                                    };
 
@@ -747,12 +745,7 @@ namespace PixelDotNet
             {
                 this.appWorkspace.Widgets.ColorsForm.Show();
             }
-
-            if (Settings.CurrentUser.GetBoolean(SettingNames.HistoryFormVisible, true))
-            {
-                this.appWorkspace.Widgets.HistoryForm.Show();
-            }
-
+            
             if (Settings.CurrentUser.GetBoolean(SettingNames.LayersFormVisible, true))
             {
                 this.appWorkspace.Widgets.LayerForm.Show();

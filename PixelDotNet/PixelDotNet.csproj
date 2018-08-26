@@ -468,9 +468,6 @@
     <Compile Include="HistoryControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HistoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="HistoryFunction.cs" />
     <Compile Include="HistoryFunctionNonFatalException.cs" />
     <Compile Include="HistoryFunctionResult.cs" />

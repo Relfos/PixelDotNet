@@ -123,28 +123,6 @@ namespace PixelDotNet
             }
         }
 
-        private HistoryForm historyForm;
-        public HistoryForm HistoryForm
-        {
-            get
-            {
-                return this.historyForm;
-            }
-
-            set
-            {
-                this.historyForm = value;
-            }
-        }
-
-        public HistoryControl HistoryControl
-        {
-            get
-            {
-                return this.historyForm.HistoryControl;
-            }
-        }
-
         private ColorsForm colorsForm;
         public ColorsForm ColorsForm
         {
