@@ -42,7 +42,6 @@ namespace PixelDotNet.Data.PhotoshopFileType
       psdFile.ChannelCount = 4; 
       psdFile.ColorMode = PsdColorMode.RGB;
       psdFile.BitDepth = 8;
-      psdFile.Resolution = GetResolutionInfo(input);
       psdFile.ImageCompression = psdToken.RleCompress
         ? ImageCompression.Rle
         : ImageCompression.Raw;
@@ -101,35 +100,6 @@ namespace PixelDotNet.Data.PhotoshopFileType
       Parallel.Invoke(storeCompositeAction, storeLayersAction);
 
       psdFile.Save(output, Encoding.Default);
-    }
-
-    private static ResolutionInfo GetResolutionInfo(Document input)
-    {
-      var resInfo = new ResolutionInfo();
-
-      resInfo.HeightDisplayUnit = ResolutionInfo.Unit.Inches;
-      resInfo.WidthDisplayUnit = ResolutionInfo.Unit.Inches;
-
-      if (input.DpuUnit == MeasurementUnit.Inch)
-      {
-        resInfo.HResDisplayUnit = ResolutionInfo.ResUnit.PxPerInch;
-        resInfo.VResDisplayUnit = ResolutionInfo.ResUnit.PxPerInch;
-
-        resInfo.HDpi = new UFixed16_16(input.DpuX);
-        resInfo.VDpi = new UFixed16_16(input.DpuY);
-      }
-      else
-      {
-        resInfo.HResDisplayUnit = ResolutionInfo.ResUnit.PxPerCm;
-        resInfo.VResDisplayUnit = ResolutionInfo.ResUnit.PxPerCm;
-
-        // Always stored as pixels/inch even if the display unit is
-        // pixels/centimeter.
-        resInfo.HDpi = new UFixed16_16(input.DpuX * 2.54);
-        resInfo.VDpi = new UFixed16_16(input.DpuY * 2.54);
-      }
-
-      return resInfo;
     }
 
     /// <summary>

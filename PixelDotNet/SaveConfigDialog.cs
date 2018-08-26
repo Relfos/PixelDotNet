@@ -573,7 +573,6 @@ namespace PixelDotNet
             this.documentView.Document = null;
             this.documentView.Name = "documentView";
             this.documentView.PanelAutoScroll = true;
-            this.documentView.RulersEnabled = false;
             this.documentView.TabIndex = 12;
             this.documentView.TabStop = false;
             this.documentView.DocumentMouseMove += new System.Windows.Forms.MouseEventHandler(this.DocumentView_DocumentMouseMove);

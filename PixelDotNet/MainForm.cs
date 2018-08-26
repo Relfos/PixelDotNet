@@ -310,10 +310,8 @@ namespace PixelDotNet
             // no file specified? create a blank image
             if (fileNames.Count == 0)
             {
-                MeasurementUnit units = Document.DefaultDpuUnit;
-                double dpu = Document.GetDefaultDpu(units);
                 Size newSize = this.appWorkspace.GetNewDocumentSize();
-                this.appWorkspace.CreateBlankDocumentInNewWorkspace(newSize, units, dpu, true);
+                this.appWorkspace.CreateBlankDocumentInNewWorkspace(newSize, true);
                 this.appWorkspace.ActiveDocumentWorkspace.IncrementJustPaintWhite();
                 this.appWorkspace.ActiveDocumentWorkspace.Document.Dirty = false;
             }
@@ -1104,11 +1102,7 @@ namespace PixelDotNet
                     {
                         Size newSize = this.appWorkspace.GetNewDocumentSize();
 
-                        this.appWorkspace.CreateBlankDocumentInNewWorkspace(
-                            newSize,
-                            Document.DefaultDpuUnit,
-                            Document.GetDefaultDpu(Document.DefaultDpuUnit),
-                            false);
+                        this.appWorkspace.CreateBlankDocumentInNewWorkspace(newSize, false);
                     }
 
                     ImportFromFileAction action = new ImportFromFileAction();

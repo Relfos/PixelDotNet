@@ -32,7 +32,6 @@ namespace PixelDotNet
         private Type defaultToolTypeChoice;
 
         private Type globalToolTypeChoice = null;
-        private bool globalRulersChoice = false;
 
         private AppEnvironment appEnvironment;
         private DocumentWorkspace activeDocumentWorkspace;
@@ -128,38 +127,6 @@ namespace PixelDotNet
             }
         }
 
-        public event EventHandler RulersEnabledChanged;
-        protected virtual void OnRulersEnabledChanged()
-        {
-            if (RulersEnabledChanged != null)
-            {
-                RulersEnabledChanged(this, EventArgs.Empty);
-            }
-        }
-
-        public bool RulersEnabled
-        {
-            get
-            {
-                return this.globalRulersChoice;
-            }
-
-            set
-            {
-                if (this.globalRulersChoice != value)
-                {
-                    this.globalRulersChoice = value;
-
-                    if (ActiveDocumentWorkspace != null)
-                    {
-                        ActiveDocumentWorkspace.RulersEnabled = value;
-                    }
-
-                    OnRulersEnabledChanged();
-                }
-            }
-        }
-
         private void DocumentWorkspace_DrawGridChanged(object sender, EventArgs e)
         {
             DrawGrid = this.activeDocumentWorkspace.DrawGrid;
@@ -199,19 +166,6 @@ namespace PixelDotNet
             if (UnitsChanged != null)
             {
                 UnitsChanged(this, EventArgs.Empty);
-            }
-        }
-
-        public MeasurementUnit Units
-        {
-            get
-            {
-                return this.widgets.ViewConfigStrip.Units;
-            }
-
-            set
-            {
-                this.widgets.ViewConfigStrip.Units = value;
             }
         }
 
@@ -530,9 +484,9 @@ namespace PixelDotNet
             Invalidate(true);
         }
 
-        private void CoordinatesToStrings(int x, int y, out string xString, out string yString, out string unitsString)
+        private void CoordinatesToStrings(int x, int y, out string xString, out string yString)
         {
-            this.activeDocumentWorkspace.Document.CoordinatesToStrings(this.Units, x, y, out xString, out yString, out unitsString);
+            this.activeDocumentWorkspace.Document.CoordinatesToStrings(x, y, out xString, out yString);
         }
 
         private void UpdateCursorInfoInStatusBar(int cursorX, int cursorY)
@@ -548,9 +502,9 @@ namespace PixelDotNet
             {
                 string xString;
                 string yString;
-                string units;
+                string units ="";
 
-                CoordinatesToStrings(cursorX, cursorY, out xString, out yString, out units);
+                CoordinatesToStrings(cursorX, cursorY, out xString, out yString);
 
                 string cursorText = string.Format(
                     CultureInfo.InvariantCulture,
@@ -578,22 +532,20 @@ namespace PixelDotNet
             {
                 string widthString;
                 string heightString;
-                string units;
 
                 CoordinatesToStrings(
                     this.activeDocumentWorkspace.Document.Width,
                     this.activeDocumentWorkspace.Document.Height,
                     out widthString,
-                    out heightString,
-                    out units);
+                    out heightString);
 
                 string imageText = string.Format(
                     CultureInfo.InvariantCulture,
                     this.imageInfoStatusBarFormat,
                     widthString,
-                    units,
+                    "",
                     heightString,
-                    units);
+                    "");
 
                 this.statusBar.ImageInfoStatusText = imageText;
             }
@@ -818,7 +770,6 @@ namespace PixelDotNet
                 this.activeDocumentWorkspace.FirstInputAfterGotFocus +=
                     ActiveDocumentWorkspace_FirstInputAfterGotFocus;
 
-                this.activeDocumentWorkspace.RulersEnabledChanged -= this.DocumentWorkspace_RulersEnabledChanged;
                 this.activeDocumentWorkspace.DocumentMouseEnter -= this.DocumentMouseEnterHandler;
                 this.activeDocumentWorkspace.DocumentMouseLeave -= this.DocumentMouseLeaveHandler;
                 this.activeDocumentWorkspace.DocumentMouseMove -= this.DocumentMouseMoveHandler;
@@ -886,10 +837,8 @@ namespace PixelDotNet
                 this.activeDocumentWorkspace.Dock = System.Windows.Forms.DockStyle.Fill;
                 this.activeDocumentWorkspace.DrawGrid = this.DrawGrid;
                 this.activeDocumentWorkspace.PanelAutoScroll = true;
-                this.activeDocumentWorkspace.RulersEnabled = this.globalRulersChoice;
                 this.activeDocumentWorkspace.TabIndex = 0;
                 this.activeDocumentWorkspace.TabStop = false;
-                this.activeDocumentWorkspace.RulersEnabledChanged += this.DocumentWorkspace_RulersEnabledChanged;
                 this.activeDocumentWorkspace.DocumentMouseEnter += this.DocumentMouseEnterHandler;
                 this.activeDocumentWorkspace.DocumentMouseLeave += this.DocumentMouseLeaveHandler;
                 this.activeDocumentWorkspace.DocumentMouseMove += this.DocumentMouseMoveHandler;
@@ -926,14 +875,11 @@ namespace PixelDotNet
                 this.activeDocumentWorkspace.ScaleFactorChanged += ZoomChangedHandler;
                 this.activeDocumentWorkspace.ZoomBasisChanged += DocumentWorkspace_ZoomBasisChanged;
 
-                this.activeDocumentWorkspace.Units = this.widgets.ViewConfigStrip.Units;
-
                 this.historyForm.HistoryControl.HistoryStack = this.ActiveDocumentWorkspace.History;
 
                 this.activeDocumentWorkspace.ToolChanging += this.ToolChangingHandler;
                 this.activeDocumentWorkspace.ToolChanged += this.ToolChangedHandler;
 
-                this.toolBar.ViewConfigStrip.RulersEnabled = this.activeDocumentWorkspace.RulersEnabled;
                 this.toolBar.DocumentStrip.SelectDocumentWorkspace(this.activeDocumentWorkspace);
 
                 this.activeDocumentWorkspace.SetToolFromType(this.globalToolTypeChoice);
@@ -1023,12 +969,10 @@ namespace PixelDotNet
             this.toolBar.CommonActionsStrip.ButtonClick += CommonActionsStrip_ButtonClick;
 
             this.toolBar.ViewConfigStrip.DrawGridChanged += ViewConfigStrip_DrawGridChanged;
-            this.toolBar.ViewConfigStrip.RulersEnabledChanged += ViewConfigStrip_RulersEnabledChanged;
             this.toolBar.ViewConfigStrip.ZoomBasisChanged += ViewConfigStrip_ZoomBasisChanged;
             this.toolBar.ViewConfigStrip.ZoomScaleChanged += ViewConfigStrip_ZoomScaleChanged;
             this.toolBar.ViewConfigStrip.ZoomIn += ViewConfigStrip_ZoomIn;
             this.toolBar.ViewConfigStrip.ZoomOut += ViewConfigStrip_ZoomOut;
-            this.toolBar.ViewConfigStrip.UnitsChanged += ViewConfigStrip_UnitsChanged;
             this.toolBar.ViewConfigStrip.RelinquishFocus += OnToolStripRelinquishFocus;
             this.toolBar.ViewConfigStrip.MouseWheel += OnToolStripMouseWheel;
 
@@ -1043,7 +987,6 @@ namespace PixelDotNet
             this.toolBar.ToolConfigStrip.SelectionCombineModeChanged += ToolConfigStrip_SelectionCombineModeChanged;
             this.toolBar.ToolConfigStrip.FloodModeChanged += ToolConfigStrip_FloodModeChanged;
             this.toolBar.ToolConfigStrip.SelectionDrawModeInfoChanged += ToolConfigStrip_SelectionDrawModeInfoChanged;
-            this.toolBar.ToolConfigStrip.SelectionDrawModeUnitsChanging += ToolConfigStrip_SelectionDrawModeUnitsChanging;
 
             this.toolBar.ToolConfigStrip.MouseWheel += OnToolStripMouseWheel;
 
@@ -1113,62 +1056,6 @@ namespace PixelDotNet
             this.widgets.ToolConfigStrip.SelectionDrawModeInfo = this.appEnvironment.SelectionDrawModeInfo;
         }
 
-        private sealed class ToolConfigStrip_SelectionDrawModeUnitsChangeHandler
-        {
-            private ToolConfigStrip toolConfigStrip;
-            private Document activeDocument;
-            private MeasurementUnit oldUnits;
-
-            public ToolConfigStrip_SelectionDrawModeUnitsChangeHandler(ToolConfigStrip toolConfigStrip, Document activeDocument)
-            {
-                this.toolConfigStrip = toolConfigStrip;
-                this.activeDocument = activeDocument;
-                this.oldUnits = toolConfigStrip.SelectionDrawModeInfo.Units;
-            }
-
-            public void Initialize()
-            {
-                this.toolConfigStrip.SelectionDrawModeUnitsChanged += ToolConfigStrip_SelectionDrawModeUnitsChanged;
-            }
-
-            public void ToolConfigStrip_SelectionDrawModeUnitsChanged(object sender, EventArgs e)
-            {
-                try
-                {
-                    SelectionDrawModeInfo sdmi = this.toolConfigStrip.SelectionDrawModeInfo;
-                    MeasurementUnit newUnits = sdmi.Units;
-
-                    double oldWidth = sdmi.Width;
-                    double oldHeight = sdmi.Height;
-
-                    double newWidth;
-                    double newHeight;
-
-                    newWidth = Document.ConvertMeasurement(oldWidth, this.oldUnits, this.activeDocument.DpuUnit, this.activeDocument.DpuX, newUnits);
-                    newHeight = Document.ConvertMeasurement(oldHeight, this.oldUnits, this.activeDocument.DpuUnit, this.activeDocument.DpuY, newUnits);
-
-                    SelectionDrawModeInfo newSdmi = sdmi.CloneWithNewWidthAndHeight(newWidth, newHeight);
-                    this.toolConfigStrip.SelectionDrawModeInfo = newSdmi;
-                }
-
-                finally
-                {
-                    this.toolConfigStrip.SelectionDrawModeUnitsChanged -= ToolConfigStrip_SelectionDrawModeUnitsChanged;
-                }
-            }
-        }
-
-        private void ToolConfigStrip_SelectionDrawModeUnitsChanging(object sender, EventArgs e)
-        {
-            if (this.ActiveDocumentWorkspace != null && this.ActiveDocumentWorkspace.Document != null)
-            {
-                ToolConfigStrip_SelectionDrawModeUnitsChangeHandler tcsSdmuch = new ToolConfigStrip_SelectionDrawModeUnitsChangeHandler(
-                    this.toolBar.ToolConfigStrip, this.ActiveDocumentWorkspace.Document);
-
-                tcsSdmuch.Initialize();
-            }
-        }
-
         private void DocumentStrip_DocumentListChanged(object sender, EventArgs e)
         {
             bool enableThem = (this.widgets.DocumentStrip.DocumentCount != 0);
@@ -1186,7 +1073,6 @@ namespace PixelDotNet
 
         public void SaveSettings()
         {
-            Settings.CurrentUser.SetBoolean(SettingNames.Rulers, this.globalRulersChoice);
             Settings.CurrentUser.SetBoolean(SettingNames.DrawGrid, this.DrawGrid);
             Settings.CurrentUser.SetString(SettingNames.DefaultToolTypeName, this.defaultToolTypeChoice.Name);
             this.MostRecentFiles.SaveMruList();
@@ -1228,13 +1114,9 @@ namespace PixelDotNet
                 LoadDefaultToolType();
 
                 this.globalToolTypeChoice = this.defaultToolTypeChoice;
-                this.globalRulersChoice = Settings.CurrentUser.GetBoolean(SettingNames.Rulers, false);
                 this.DrawGrid = Settings.CurrentUser.GetBoolean(SettingNames.DrawGrid, false);
 
                 this.appEnvironment = AppEnvironment.GetDefaultAppEnvironment();
-
-                this.widgets.ViewConfigStrip.Units = (MeasurementUnit)Enum.Parse(typeof(MeasurementUnit),
-                    Settings.CurrentUser.GetString(SettingNames.Units, MeasurementUnit.Pixel.ToString()), true);
             }
 
             catch (Exception)
@@ -1247,7 +1129,6 @@ namespace PixelDotNet
                     Settings.CurrentUser.Delete(
                         new string[] 
                         {    
-                            SettingNames.Rulers, 
                             SettingNames.DrawGrid, 
                             SettingNames.Units,
                             SettingNames.DefaultAppEnvironment,
@@ -1837,14 +1718,6 @@ namespace PixelDotNet
                 ActiveDocumentWorkspace.PerformAction(new HistoryRedoAction());
             }
         }
-        
-        private void ViewConfigStrip_RulersEnabledChanged(object sender, System.EventArgs e)
-        {
-            if (ActiveDocumentWorkspace != null)
-            {
-                ActiveDocumentWorkspace.RulersEnabled = this.toolBar.ViewConfigStrip.RulersEnabled;
-            }
-        }
 
         private void HistoryForm_RewindButtonClicked(object sender, EventArgs e)
         {
@@ -1968,16 +1841,6 @@ namespace PixelDotNet
             }
         }
 
-        private void DocumentWorkspace_RulersEnabledChanged(object sender, EventArgs e)
-        {
-            this.toolBar.ViewConfigStrip.RulersEnabled = this.activeDocumentWorkspace.RulersEnabled;
-            this.globalRulersChoice = this.activeDocumentWorkspace.RulersEnabled;
-            PerformLayout();
-            ActiveDocumentWorkspace.UpdateRulerSelectionTinting();
-
-            Settings.CurrentUser.SetBoolean(SettingNames.Rulers, this.activeDocumentWorkspace.RulersEnabled);
-        }
-
         private void ViewConfigStrip_ZoomIn(object sender, EventArgs e)
         {
             if (this.ActiveDocumentWorkspace != null)
@@ -1992,26 +1855,6 @@ namespace PixelDotNet
             {
                 this.ActiveDocumentWorkspace.ZoomOut();
             }
-        }
-
-        private void ViewConfigStrip_UnitsChanged(object sender, EventArgs e)
-        {
-            if (this.toolBar.ViewConfigStrip.Units != MeasurementUnit.Pixel)
-            {
-                Settings.CurrentUser.SetString(SettingNames.LastNonPixelUnits, this.toolBar.ViewConfigStrip.Units.ToString());
-            }
-
-            if (this.activeDocumentWorkspace != null)
-            {
-                this.activeDocumentWorkspace.Units = this.Units;
-            }
-
-            Settings.CurrentUser.SetString(SettingNames.Units, this.toolBar.ViewConfigStrip.Units.ToString());
-
-            UpdateDocInfoInStatusBar();
-            this.statusBar.CursorInfoText = string.Empty;
-
-            OnUnitsChanged();
         }
 
         private void OnDrawConfigStripAlphaBlendingChanged(object sender, EventArgs e)
@@ -2064,7 +1907,7 @@ namespace PixelDotNet
         /// the time the next workspace is added, then it will be removed.
         /// </remarks>
         /// <returns>true if everything was successful, false if there wasn't enough memory</returns>
-        public bool CreateBlankDocumentInNewWorkspace(Size size, MeasurementUnit dpuUnit, double dpu, bool isInitial)
+        public bool CreateBlankDocumentInNewWorkspace(Size size, bool isInitial)
         {
             DocumentWorkspace dw1 = this.activeDocumentWorkspace;
             if (dw1 != null)
@@ -2075,9 +1918,6 @@ namespace PixelDotNet
             try
             {
                 Document untitled = new Document(size.Width, size.Height);
-                untitled.DpuUnit = dpuUnit;
-                untitled.DpuX = dpu;
-                untitled.DpuY = dpu;
 
                 BitmapLayer bitmapLayer;
 

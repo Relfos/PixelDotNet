@@ -292,9 +292,7 @@ namespace PixelDotNet.Actions
         {
             int newWidth;
             int newHeight;
-            double newDpu;
-            MeasurementUnit newDpuUnit;
-
+            
             string resamplingAlgorithm = Settings.CurrentUser.GetString(SettingNames.LastResamplingMethod, 
                 ResamplingAlgorithm.SuperSampling.ToString());
 
@@ -315,15 +313,10 @@ namespace PixelDotNet.Actions
             using (ResizeDialog rd = new ResizeDialog())
             {
                 rd.OriginalSize = documentWorkspace.Document.Size;
-                rd.OriginalDpuUnit = documentWorkspace.Document.DpuUnit;
-                rd.OriginalDpu = documentWorkspace.Document.DpuX;
                 rd.ImageHeight = documentWorkspace.Document.Height;
                 rd.ImageWidth = documentWorkspace.Document.Width;
                 rd.ResamplingAlgorithm = alg;
                 rd.LayerCount = documentWorkspace.Document.Layers.Count;
-                rd.Units = rd.OriginalDpuUnit;
-                rd.Resolution = documentWorkspace.Document.DpuX;
-                rd.Units = SettingNames.GetLastNonPixelUnits();
                 rd.ConstrainToAspect = maintainAspect;
             
                 DialogResult result = rd.ShowDialog(documentWorkspace);
@@ -335,26 +328,12 @@ namespace PixelDotNet.Actions
 
                 Settings.CurrentUser.SetString(SettingNames.LastResamplingMethod, rd.ResamplingAlgorithm.ToString());
                 Settings.CurrentUser.SetBoolean(SettingNames.LastMaintainAspectRatio, rd.ConstrainToAspect);
-                newDpuUnit = rd.Units;
                 newWidth = rd.ImageWidth;
                 newHeight = rd.ImageHeight;
-                newDpu = rd.Resolution;
                 alg = rd.ResamplingAlgorithm;
 
-                if (newDpuUnit != MeasurementUnit.Pixel)
-                {
-                    Settings.CurrentUser.SetString(SettingNames.LastNonPixelUnits, newDpuUnit.ToString());
-
-                    if (documentWorkspace.AppWorkspace.Units != MeasurementUnit.Pixel)
-                    {
-                        documentWorkspace.AppWorkspace.Units = newDpuUnit;
-                    }
-                }
-
                 // if the new size equals the old size, there's really no point in doing anything
-                if (documentWorkspace.Document.Size == new Size(rd.ImageWidth, rd.ImageHeight) &&
-                    documentWorkspace.Document.DpuX == newDpu &&
-                    documentWorkspace.Document.DpuUnit == newDpuUnit)
+                if (documentWorkspace.Document.Size == new Size(rd.ImageWidth, rd.ImageHeight))
                 {
                     return null;
                 }
@@ -367,9 +346,6 @@ namespace PixelDotNet.Actions
             {
                 // Only adjusting Dpu or DpuUnit
                 ha = new MetaDataHistoryMemento(StaticName, StaticImage, documentWorkspace);
-                documentWorkspace.Document.DpuUnit = newDpuUnit;
-                documentWorkspace.Document.DpuX = newDpu;
-                documentWorkspace.Document.DpuY = newDpu;
             }
             else
             {
@@ -382,9 +358,6 @@ namespace PixelDotNet.Actions
 
                     Document newDocument = new Document(newWidth, newHeight);
                     newDocument.ReplaceMetaDataFrom(documentWorkspace.Document);
-                    newDocument.DpuUnit = newDpuUnit;
-                    newDocument.DpuX = newDpu;
-                    newDocument.DpuY = newDpu;
                     ResizeProgressDialog rpd = new ResizeProgressDialog(documentWorkspace, newDocument, documentWorkspace.Document, new Size(newWidth, newHeight), alg);
                     Utility.GCFullCollect();
                     bool result = rpd.DoResize();

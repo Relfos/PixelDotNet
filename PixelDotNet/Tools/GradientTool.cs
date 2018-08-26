@@ -317,27 +317,17 @@ namespace PixelDotNet.Tools
 
             // Set up status bar text
             double angle = -180.0 * Math.Atan2(endPointF.Y - startPointF.Y, endPointF.X - startPointF.X) / Math.PI;
-            MeasurementUnit units = AppWorkspace.Units;
-            double offsetXPhysical = Document.PixelToPhysicalX(endPointF.X - startPointF.X, units);
-            double offsetYPhysical = Document.PixelToPhysicalY(endPointF.Y - startPointF.Y, units);
+            double offsetXPhysical = (endPointF.X - startPointF.X);
+            double offsetYPhysical = (endPointF.Y - startPointF.Y);
             double offsetLengthPhysical = Math.Sqrt(offsetXPhysical * offsetXPhysical + offsetYPhysical * offsetYPhysical);
 
             string numberFormat;
             string unitsAbbreviation;
 
-            if (units != MeasurementUnit.Pixel)
-            {
-                string unitsAbbreviationName = "MeasurementUnit." + units.ToString() + ".Abbreviation";
-                unitsAbbreviation = PdnResources.GetString(unitsAbbreviationName);
-                numberFormat = "F2";
-            }
-            else
-            {
-                unitsAbbreviation = string.Empty;
-                numberFormat = "F0";
-            }
+            unitsAbbreviation = string.Empty;
+            numberFormat = "F0";
 
-            string unitsString = PdnResources.GetString("MeasurementUnit." + units.ToString() + ".Plural");
+            string unitsString = PdnResources.GetString("MeasurementUnit." + "Pixel" + ".Plural");
 
             string statusText = string.Format(
                 this.helpTextWhileAdjustingFormat,

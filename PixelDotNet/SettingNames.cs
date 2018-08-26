@@ -68,14 +68,6 @@ namespace PixelDotNet
         public const string WindowState = "WindowState";
 
         /// <summary>
-        /// The state of whether rulers are enabled in the DocumentWorkspace.
-        /// </summary>
-        /// <remarks>
-        /// Written to whenever the value is changed, and read on app startup.
-        /// </remarks>
-        public const string Rulers = "Rulers";
-
-        /// <summary>
         /// The unit of measurement the user has selected via the WorkspaceOptionsConfigWidget.
         /// </summary>
         /// <remarks>
@@ -90,33 +82,6 @@ namespace PixelDotNet
         /// Written to whenever the value is changed, and read on app startup.
         /// </remarks>
         public const string FontSmoothing = "FontSmoothing";
-
-        /// <summary>
-        /// The last unit of measurement the user selected via the WorkspaceOptionsConfigWidget
-        /// that was NOT pixels.
-        /// </summary>
-        /// <remarks>
-        /// Written whenever the user changes the setting, and read on app startup.
-        /// </remarks>
-        public const string LastNonPixelUnits = "LastNonPixelUnits";
-
-        public static MeasurementUnit GetLastNonPixelUnits()
-        {
-            string stringValue = Settings.CurrentUser.GetString(LastNonPixelUnits, MeasurementUnit.Inch.ToString());
-            MeasurementUnit units;
-
-            try
-            {
-                units = (MeasurementUnit)Enum.Parse(typeof(MeasurementUnit), stringValue, true);
-            }
-
-            catch
-            {
-                units = MeasurementUnit.Inch;
-            }
-
-            return units;
-        }
 
         /// <summary>
         /// The state of whether the grid is enabled in the DocumentWorkspace.

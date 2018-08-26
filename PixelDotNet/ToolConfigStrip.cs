@@ -192,7 +192,6 @@ namespace PixelDotNet
         private ToolStripButton selectionDrawModeSwapButton;
         private ToolStripLabel selectionDrawModeHeightLabel;
         private ToolStripTextBox selectionDrawModeHeightTextBox;
-        private UnitsComboBoxStrip selectionDrawModeUnits;
 
         public event EventHandler SelectionDrawModeUnitsChanging;
         protected void OnSelectionDrawModeUnitsChanging()
@@ -612,8 +611,7 @@ namespace PixelDotNet
 
             this.selectionDrawModeWidthTextBox.Size = new Size(UI.ScaleWidth(this.selectionDrawModeWidthTextBox.Width), this.selectionDrawModeWidthTextBox.Height);
             this.selectionDrawModeHeightTextBox.Size = new Size(UI.ScaleWidth(this.selectionDrawModeHeightTextBox.Width), this.selectionDrawModeHeightTextBox.Height);
-            this.selectionDrawModeUnits.Size = new Size(UI.ScaleWidth(this.selectionDrawModeUnits.Width), this.selectionDrawModeUnits.Height);
-
+            
             ToolBarConfigItems = ToolBarConfigItems.None;
             ResumeLayout(false);
         }
@@ -720,7 +718,6 @@ namespace PixelDotNet
             this.selectionDrawModeSwapButton = new ToolStripButton();
             this.selectionDrawModeHeightLabel = new ToolStripLabel();
             this.selectionDrawModeHeightTextBox = new ToolStripTextBox();
-            this.selectionDrawModeUnits = new UnitsComboBoxStrip();
 
             this.SuspendLayout();
             //
@@ -1183,7 +1180,7 @@ namespace PixelDotNet
                     Tracing.LogFeature("ToolConfigStrip(selectionDrawModeSwapButton)");
 
                     SelectionDrawModeInfo oldSDMI = this.SelectionDrawModeInfo;
-                    SelectionDrawModeInfo newSDMI = new SelectionDrawModeInfo(oldSDMI.DrawMode, oldSDMI.Height, oldSDMI.Width, oldSDMI.Units);
+                    SelectionDrawModeInfo newSDMI = new SelectionDrawModeInfo(oldSDMI.DrawMode, oldSDMI.Height, oldSDMI.Width);
                     this.SelectionDrawModeInfo = newSDMI;
                 };
             //
@@ -1217,13 +1214,6 @@ namespace PixelDotNet
                     }
                 };
             //
-            // selectionDrawModeUnits
-            //
-            this.selectionDrawModeUnits.Name = "selectionDrawModeUnits";
-            this.selectionDrawModeUnits.UnitsDisplayType = UnitsDisplayType.Plural;
-            this.selectionDrawModeUnits.LowercaseStrings = true;
-            this.selectionDrawModeUnits.Size = new Size(90, this.selectionDrawModeUnits.Height);
-            //
             // DrawConfigStrip
             //
             this.AutoSize = true;
@@ -1243,7 +1233,6 @@ namespace PixelDotNet
                     this.selectionDrawModeSwapButton,
                     this.selectionDrawModeHeightLabel,
                     this.selectionDrawModeHeightTextBox,
-                    this.selectionDrawModeUnits,
 
                     this.floodModeSeparator,
                     this.floodModeLabel,
@@ -2891,11 +2880,6 @@ namespace PixelDotNet
             this.selectionDrawModeWidthTextBox.Text = this.selectionDrawModeInfo.Width.ToString();
 
             this.selectionDrawModeHeightTextBox.Text = this.selectionDrawModeInfo.Height.ToString();
-
-            this.selectionDrawModeUnits.UnitsChanged -= SelectionDrawModeUnits_UnitsChanged;
-            this.selectionDrawModeUnits.Units = this.selectionDrawModeInfo.Units;
-            this.selectionDrawModeUnits.UnitsChanged += SelectionDrawModeUnits_UnitsChanged;
-
             RefreshSelectionDrawModeInfoVisibilities();
         }
 
@@ -2916,8 +2900,6 @@ namespace PixelDotNet
                 this.selectionDrawModeWidthLabel.Visible = showWidthHeight;
                 this.selectionDrawModeHeightLabel.Visible = showWidthHeight;
                 this.selectionDrawModeSwapButton.Visible = showWidthHeight;
-
-                this.selectionDrawModeUnits.Visible = anyVisible & (this.selectionDrawModeInfo.DrawMode == SelectionDrawMode.FixedSize);
 
                 ResumeLayout(false);
                 PerformLayout();
@@ -3009,13 +2991,6 @@ namespace PixelDotNet
             }
 
             return newSDM;
-        }
-
-        private void SelectionDrawModeUnits_UnitsChanged(object sender, EventArgs e)
-        {
-            OnSelectionDrawModeUnitsChanging();
-            this.SelectionDrawModeInfo = this.selectionDrawModeInfo.CloneWithNewUnits(this.selectionDrawModeUnits.Units);
-            OnSelectionDrawModeUnitsChanged();
         }
     }
 }

@@ -189,9 +189,6 @@ namespace PhotoshopFile
       var resourceId = (ResourceID)resourceIdInt;
       switch (resourceId)
       {
-        case ResourceID.ResolutionInfo:
-          resource = new ResolutionInfo(reader, name);
-          break;
         case ResourceID.ThumbnailRgb:
         case ResourceID.ThumbnailBgr:
           resource = new Thumbnail(reader, resourceId, name, dataLength);

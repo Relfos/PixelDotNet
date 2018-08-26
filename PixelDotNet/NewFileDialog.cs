@@ -55,11 +55,8 @@ namespace PixelDotNet
         private void InitializeComponent()
         {
             ((System.ComponentModel.ISupportInitialize)(this.percentUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resolutionUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelWidthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelHeightUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printWidthUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printHeightUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // constrainCheckBox
@@ -123,26 +120,6 @@ namespace PixelDotNet
             this.resizedImageHeader.Name = "resizedImageHeader";
             this.resizedImageHeader.Size = new System.Drawing.Size(274, 16);
             // 
-            // resolutionLabel
-            // 
-            this.resolutionLabel.Location = new System.Drawing.Point(16, 118);
-            this.resolutionLabel.Name = "resolutionLabel";
-            // 
-            // unitsComboBox2
-            // 
-            this.unitsComboBox2.Location = new System.Drawing.Point(184, 117);
-            this.unitsComboBox2.Name = "unitsComboBox2";
-            // 
-            // unitsComboBox1
-            // 
-            this.unitsComboBox1.Location = new System.Drawing.Point(184, 160);
-            this.unitsComboBox1.Name = "unitsComboBox1";
-            // 
-            // resolutionUpDown
-            // 
-            this.resolutionUpDown.Location = new System.Drawing.Point(104, 117);
-            this.resolutionUpDown.Name = "resolutionUpDown";
-            // 
             // newWidthLabel1
             // 
             this.newWidthLabel1.Location = new System.Drawing.Point(16, 70);
@@ -172,12 +149,6 @@ namespace PixelDotNet
             // 
             this.pixelsLabel2.Location = new System.Drawing.Point(184, 94);
             this.pixelsLabel2.Name = "pixelsLabel2";
-            // 
-            // unitsLabel1
-            // 
-            this.unitsLabel1.Location = new System.Drawing.Point(184, 186);
-            this.unitsLabel1.Name = "unitsLabel1";
-            // 
             // pixelWidthUpDown
             // 
             this.pixelWidthUpDown.Location = new System.Drawing.Point(104, 69);
@@ -187,16 +158,6 @@ namespace PixelDotNet
             // 
             this.pixelHeightUpDown.Location = new System.Drawing.Point(104, 93);
             this.pixelHeightUpDown.Name = "pixelHeightUpDown";
-            // 
-            // printWidthUpDown
-            // 
-            this.printWidthUpDown.Location = new System.Drawing.Point(104, 160);
-            this.printWidthUpDown.Name = "printWidthUpDown";
-            // 
-            // printHeightUpDown
-            // 
-            this.printHeightUpDown.Location = new System.Drawing.Point(104, 184);
-            this.printHeightUpDown.Name = "printHeightUpDown";
             // 
             // pixelSizeHeader
             // 
@@ -229,14 +190,9 @@ namespace PixelDotNet
             this.ClientSize = new System.Drawing.Size(279, 246);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "NewFileDialog";
-            this.Controls.SetChildIndex(this.printWidthUpDown, 0);
-            this.Controls.SetChildIndex(this.printHeightUpDown, 0);
             ((System.ComponentModel.ISupportInitialize)(this.percentUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resolutionUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelWidthUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelHeightUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printWidthUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printHeightUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }

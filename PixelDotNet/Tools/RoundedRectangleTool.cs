@@ -73,35 +73,23 @@ namespace PixelDotNet.Tools
                 path.CloseFigure();
             }
 
-            MeasurementUnit units = AppWorkspace.Units;
-            double widthPhysical = Math.Abs(Document.PixelToPhysicalX(rect.Width, units));
-            double heightPhysical = Math.Abs(Document.PixelToPhysicalY(rect.Height, units));
-            double areaPhysical = widthPhysical * heightPhysical;
-
             string numberFormat;
             string unitsAbbreviation;
 
-            if (units != MeasurementUnit.Pixel)
-            {
-                string unitsAbbreviationName = "MeasurementUnit." + units.ToString() + ".Abbreviation";
-                unitsAbbreviation = PdnResources.GetString(unitsAbbreviationName);
-                numberFormat = "F2";
-            }
-            else
             {
                 unitsAbbreviation = string.Empty;
                 numberFormat = "F0";
             }
 
-            string unitsString = PdnResources.GetString("MeasurementUnit." + units.ToString() + ".Plural");
+            string unitsString = PdnResources.GetString("MeasurementUnit." + "Pixels" + ".Plural");
 
             string statusText = string.Format(
                 this.statusTextFormat,
-                widthPhysical.ToString(numberFormat),
+                rect.Width,
                 unitsAbbreviation,
-                heightPhysical.ToString(numberFormat),
+                rect.Height,
                 unitsAbbreviation,
-                areaPhysical.ToString(numberFormat),
+                "0",
                 unitsString);
 
             this.SetStatus(this.roundedRectangleToolIcon, statusText);

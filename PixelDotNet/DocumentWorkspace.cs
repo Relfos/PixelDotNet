@@ -246,32 +246,21 @@ namespace PixelDotNet
                     area = tempSelection.GetArea();
                 }
 
-                string unitsAbbreviationXY;
                 string xString;
                 string yString;
-                string unitsAbbreviationWH;
                 string widthString;
                 string heightString;
 
-                Document.CoordinatesToStrings(Units, bounds.X, bounds.Y, out xString, out yString, out unitsAbbreviationXY);
-                Document.CoordinatesToStrings(Units, bounds.Width, bounds.Height, out widthString, out heightString, out unitsAbbreviationWH);
+                Document.CoordinatesToStrings(bounds.X, bounds.Y, out xString, out yString);
+                Document.CoordinatesToStrings(bounds.Width, bounds.Height, out widthString, out heightString);
 
                 NumberFormatInfo nfi = (NumberFormatInfo)CultureInfo.CurrentCulture.NumberFormat.Clone();
 
                 string areaString;
-                if (this.Units == MeasurementUnit.Pixel)
-                {
-                    nfi.NumberDecimalDigits = 0;
-                    areaString = area.ToString("N", nfi);
-                }
-                else
-                {
-                    nfi.NumberDecimalDigits = 2;
-                    double areaD = Document.PixelAreaToPhysicalArea(area, this.Units);
-                    areaString = areaD.ToString("N", nfi);
-                }
+                nfi.NumberDecimalDigits = 0;
+                areaString = area.ToString("N", nfi);
 
-                string pluralUnits = PdnResources.GetString("MeasurementUnit." + this.Units.ToString() + ".Plural");
+                string pluralUnits = "pixels";
                 MoveToolBase moveTool = Tool as MoveToolBase;
 
                 if (moveTool != null && moveTool.HostShouldShowAngle)
@@ -293,13 +282,13 @@ namespace PixelDotNet
                     newStatusText = string.Format(
                         contextStatusBarWithAngleFormat,
                         xString,
-                        unitsAbbreviationXY,
+                        "",
                         yString,
-                        unitsAbbreviationXY,
+                        "",
                         widthString,
-                        unitsAbbreviationWH,
+                        "",
                         heightString,
-                        unitsAbbreviationWH,
+                        "",
                         areaString,
                         pluralUnits.ToLower(),
                         moveTool.HostAngle.ToString("N", nfi2));
@@ -309,13 +298,13 @@ namespace PixelDotNet
                     newStatusText = string.Format(
                         contextStatusBarFormat,
                         xString,
-                        unitsAbbreviationXY,
+                        "",
                         yString,
-                        unitsAbbreviationXY,
+                        "",
                         widthString,
-                        unitsAbbreviationWH,
+                        "",
                         heightString,
-                        unitsAbbreviationWH,
+                        "",
                         areaString,
                         pluralUnits.ToLower());
                 }
@@ -326,7 +315,6 @@ namespace PixelDotNet
 
         private void Selection_Changed(object sender, EventArgs e)
         {
-            UpdateRulerSelectionTinting();
             UpdateSelectionInfoInStatusBar();
         }
 
@@ -792,15 +780,6 @@ namespace PixelDotNet
             if (newLayerIndex != oldLayerIndex)
             {
                 this.ActiveLayer = (Layer)Document.Layers[newLayerIndex];
-            }
-        }
-
-        public void UpdateRulerSelectionTinting()
-        {
-            if (this.RulersEnabled)
-            {
-                Rectangle bounds = this.Selection.GetBounds();
-                this.SetHighlightRectangle(bounds);
             }
         }
 

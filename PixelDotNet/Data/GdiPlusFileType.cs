@@ -57,45 +57,6 @@ namespace PixelDotNet
 
         public static void LoadProperties(Image dstImage, Document srcDoc)
         {
-            Bitmap asBitmap = dstImage as Bitmap;
-
-            if (asBitmap != null)
-            {
-                // Sometimes GDI+ does not honor the resolution tags that we
-                // put in manually via the EXIF properties.
-                float dpiX;
-                float dpiY;
-
-                switch (srcDoc.DpuUnit)
-                {
-                    case MeasurementUnit.Centimeter:
-                        dpiX = (float)Document.DotsPerCmToDotsPerInch(srcDoc.DpuX);
-                        dpiY = (float)Document.DotsPerCmToDotsPerInch(srcDoc.DpuY);
-                        break;
-
-                    case MeasurementUnit.Inch:
-                        dpiX = (float)srcDoc.DpuX;
-                        dpiY = (float)srcDoc.DpuY;
-                        break;
-
-                    default:
-                    case MeasurementUnit.Pixel:
-                        dpiX = 1.0f;
-                        dpiY = 1.0f;
-                        break;
-                }
-
-                try
-                {
-                    asBitmap.SetResolution(dpiX, dpiY);
-                }
-
-                catch (Exception)
-                {
-                    // Ignore error
-                }
-            }
-
             Metadata metaData = srcDoc.Metadata;
 
             foreach (string key in metaData.GetKeys(Metadata.ExifSectionName))

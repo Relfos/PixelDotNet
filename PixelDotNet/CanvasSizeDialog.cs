@@ -93,11 +93,8 @@ namespace PixelDotNet
             this.anchorHeader = new PixelDotNet.HeaderLabel();
             this.anchorEdgeCB = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.percentUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resolutionUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelWidthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelHeightUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printWidthUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printHeightUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // constrainCheckBox
@@ -161,26 +158,6 @@ namespace PixelDotNet
             this.resizedImageHeader.Name = "resizedImageHeader";
             this.resizedImageHeader.TabIndex = 20;
             // 
-            // resolutionLabel
-            // 
-            this.resolutionLabel.Location = new System.Drawing.Point(32, 166);
-            this.resolutionLabel.Name = "resolutionLabel";
-            // 
-            // unitsComboBox2
-            // 
-            this.unitsComboBox2.Location = new System.Drawing.Point(200, 165);
-            this.unitsComboBox2.Name = "unitsComboBox2";
-            // 
-            // unitsComboBox1
-            // 
-            this.unitsComboBox1.Location = new System.Drawing.Point(200, 208);
-            this.unitsComboBox1.Name = "unitsComboBox1";
-            // 
-            // resolutionUpDown
-            // 
-            this.resolutionUpDown.Location = new System.Drawing.Point(120, 165);
-            this.resolutionUpDown.Name = "resolutionUpDown";
-            // 
             // newWidthLabel1
             // 
             this.newWidthLabel1.Location = new System.Drawing.Point(32, 118);
@@ -211,11 +188,6 @@ namespace PixelDotNet
             this.pixelsLabel2.Location = new System.Drawing.Point(200, 142);
             this.pixelsLabel2.Name = "pixelsLabel2";
             // 
-            // unitsLabel1
-            // 
-            this.unitsLabel1.Location = new System.Drawing.Point(200, 234);
-            this.unitsLabel1.Name = "unitsLabel1";
-            // 
             // pixelWidthUpDown
             // 
             this.pixelWidthUpDown.Location = new System.Drawing.Point(120, 117);
@@ -225,16 +197,6 @@ namespace PixelDotNet
             // 
             this.pixelHeightUpDown.Location = new System.Drawing.Point(120, 141);
             this.pixelHeightUpDown.Name = "pixelHeightUpDown";
-            // 
-            // printWidthUpDown
-            // 
-            this.printWidthUpDown.Location = new System.Drawing.Point(120, 208);
-            this.printWidthUpDown.Name = "printWidthUpDown";
-            // 
-            // printHeightUpDown
-            // 
-            this.printHeightUpDown.Location = new System.Drawing.Point(120, 232);
-            this.printHeightUpDown.Name = "printHeightUpDown";
             // 
             // pixelSizeHeader
             // 
@@ -305,10 +267,8 @@ namespace PixelDotNet
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "CanvasSizeDialog";
             this.Controls.SetChildIndex(this.pixelsLabel1, 0);
-            this.Controls.SetChildIndex(this.unitsLabel1, 0);
             this.Controls.SetChildIndex(this.newWidthLabel1, 0);
             this.Controls.SetChildIndex(this.resamplingLabel, 0);
-            this.Controls.SetChildIndex(this.resolutionLabel, 0);
             this.Controls.SetChildIndex(this.asteriskTextLabel, 0);
             this.Controls.SetChildIndex(this.asteriskLabel, 0);
             this.Controls.SetChildIndex(this.pixelsLabel2, 0);
@@ -318,11 +278,6 @@ namespace PixelDotNet
             this.Controls.SetChildIndex(this.newWidthLabel2, 0);
             this.Controls.SetChildIndex(this.newHeightLabel2, 0);
             this.Controls.SetChildIndex(this.resizedImageHeader, 0);
-            this.Controls.SetChildIndex(this.resolutionUpDown, 0);
-            this.Controls.SetChildIndex(this.unitsComboBox2, 0);
-            this.Controls.SetChildIndex(this.unitsComboBox1, 0);
-            this.Controls.SetChildIndex(this.printWidthUpDown, 0);
-            this.Controls.SetChildIndex(this.printHeightUpDown, 0);
             this.Controls.SetChildIndex(this.pixelSizeHeader, 0);
             this.Controls.SetChildIndex(this.printSizeHeader, 0);
             this.Controls.SetChildIndex(this.pixelHeightUpDown, 0);
@@ -338,11 +293,8 @@ namespace PixelDotNet
             this.Controls.SetChildIndex(this.okButton, 0);
             this.Controls.SetChildIndex(this.cancelButton, 0);
             ((System.ComponentModel.ISupportInitialize)(this.percentUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.resolutionUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelWidthUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pixelHeightUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printWidthUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.printHeightUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }

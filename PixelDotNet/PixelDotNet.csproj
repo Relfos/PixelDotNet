@@ -306,11 +306,9 @@
     <Compile Include="Core\ISnapObstacleHost.cs" />
     <Compile Include="Core\ISurfaceDraw.cs" />
     <Compile Include="Core\IThumbnailProvider.cs" />
-    <Compile Include="Core\IUnitsComboBox.cs" />
     <Compile Include="Core\LayoutUtility.cs" />
     <Compile Include="Core\List.cs" />
     <Compile Include="Core\MaskedSurface.cs" />
-    <Compile Include="Core\MeasurementUnit.cs" />
     <Compile Include="Core\MemoryBlock.cs" />
     <Compile Include="Core\MovingEventArgs.cs" />
     <Compile Include="Core\MovingEventHandler.cs" />
@@ -353,9 +351,6 @@
     <Compile Include="Core\RenderedTileEventHandler.cs" />
     <Compile Include="Core\ResamplingAlgorithm.cs" />
     <Compile Include="Core\RgbColor.cs" />
-    <Compile Include="Core\Ruler.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Core\ScaleFactor.cs" />
     <Compile Include="Core\Scanline.cs" />
     <Compile Include="Core\Selection.cs" />
@@ -388,13 +383,6 @@
     <Compile Include="Core\ThumbnailManager.cs" />
     <Compile Include="Core\UnaryPixelOp.cs" />
     <Compile Include="Core\UnaryPixelOps.cs" />
-    <Compile Include="Core\UnitsComboBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Core\UnitsComboBoxHandler.cs" />
-    <Compile Include="Core\UnitsComboBoxStrip.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Core\UnitsDisplayType.cs" />
     <Compile Include="Core\UserControl2.cs">
       <SubType>UserControl</SubType>
@@ -618,7 +606,6 @@
     <Compile Include="PsdFile\ImageResource.cs" />
     <Compile Include="PsdFile\ImageResources\AlphaChannelNames.cs" />
     <Compile Include="PsdFile\ImageResources\RawImageResource.cs" />
-    <Compile Include="PsdFile\ImageResources\ResolutionInfo.cs" />
     <Compile Include="PsdFile\ImageResources\Thumbnail.cs" />
     <Compile Include="PsdFile\ImageResources\UnicodeAlphaNames.cs" />
     <Compile Include="PsdFile\ImageResources\VersionInfo.cs" />

@@ -177,22 +177,15 @@ namespace PixelDotNet.Actions
                 }
 
                 csd.OriginalSize = document.Size;
-                csd.OriginalDpuUnit = document.DpuUnit;
-                csd.OriginalDpu = document.DpuX;
                 csd.ImageWidth = initialNewSize.Width;
                 csd.ImageHeight = initialNewSize.Height;
                 csd.LayerCount = document.Layers.Count;
                 csd.AnchorEdge = initialAnchor;
-                csd.Units = csd.OriginalDpuUnit;
-                csd.Resolution = document.DpuX;
-                csd.Units = SettingNames.GetLastNonPixelUnits();
                 csd.ConstrainToAspect = maintainAspect;
 
                 DialogResult result = csd.ShowDialog(parent);
                 Size newSize = new Size(csd.ImageWidth, csd.ImageHeight);
-                MeasurementUnit newDpuUnit = csd.Units;
-                double newDpu = csd.Resolution;
-
+                
                 // If they cancelled, get out
                 if (result == DialogResult.Cancel)
                 {
@@ -210,18 +203,10 @@ namespace PixelDotNet.Actions
                     Settings.CurrentUser.SetString(SettingNames.LastCanvasSizeAnchorEdge, csd.AnchorEdge.ToString());
                 }
 
-                if (newSize == document.Size && newDpuUnit == document.DpuUnit && newDpu == document.DpuX)
-                {
-                    return null;
-                }
-
                 try
                 {
                     Utility.GCFullCollect();
                     Document newDoc = ResizeDocument(document, newSize, csd.AnchorEdge, background);
-                    newDoc.DpuUnit = newDpuUnit;
-                    newDoc.DpuX = newDpu;
-                    newDoc.DpuY = newDpu;
                     return newDoc;
                 }
 
@@ -255,16 +240,6 @@ namespace PixelDotNet.Actions
             {
                 using (new PushNullToolMode(documentWorkspace))
                 {
-                    if (newDoc.DpuUnit != MeasurementUnit.Pixel)
-                    {
-                        Settings.CurrentUser.SetString(SettingNames.LastNonPixelUnits, newDoc.DpuUnit.ToString());
-
-                        if (documentWorkspace.AppWorkspace.Units != MeasurementUnit.Pixel)
-                        {
-                            documentWorkspace.AppWorkspace.Units = newDoc.DpuUnit;
-                        }
-                    }
-
                     ReplaceDocumentHistoryMemento rdha = new ReplaceDocumentHistoryMemento(StaticName, StaticImage, documentWorkspace);
                     documentWorkspace.Document = newDoc;
                     return rdha;

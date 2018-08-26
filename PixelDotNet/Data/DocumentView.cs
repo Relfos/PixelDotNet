@@ -38,9 +38,7 @@ namespace PixelDotNet
 
         private Document document;
         private Surface compositionSurface;
-        private Ruler leftRuler;
         private PanelEx panel;
-        private Ruler topRuler;
         private SurfaceBox surfaceBox;
         private SurfaceBoxGridRenderer gridRenderer;
         private IContainer components = null;
@@ -98,23 +96,6 @@ namespace PixelDotNet
             }
         }
 
-        public MeasurementUnit Units
-        {
-            get
-            {
-                return this.leftRuler.MeasurementUnit;
-            }
-
-            set
-            {
-                OnUnitsChanging();
-                this.leftRuler.MeasurementUnit = value;
-                this.topRuler.MeasurementUnit = value;
-                DocumentMetaDataChangedHandler(this, EventArgs.Empty);
-                OnUnitsChanged();
-            }
-        }
-
         protected virtual void OnUnitsChanging()
         {
         }
@@ -153,7 +134,7 @@ namespace PixelDotNet
         {
             get
             {
-                return base.Focused || panel.Focused || surfaceBox.Focused || controlShadow.Focused || leftRuler.Focused || topRuler.Focused;
+                return base.Focused || panel.Focused || surfaceBox.Focused || controlShadow.Focused;
             }
         }
 
@@ -292,13 +273,12 @@ namespace PixelDotNet
             if (newX != oldX || newY != oldY)
             {
                 this.DocumentScrollPositionF = new PointF((float)newX, (float)newY);
-                UpdateRulerOffsets();
             }
         }
 
         public override bool IsMouseCaptured()
         {
-            return this.Capture || panel.Capture || surfaceBox.Capture || controlShadow.Capture || leftRuler.Capture || topRuler.Capture;
+            return this.Capture || panel.Capture || surfaceBox.Capture || controlShadow.Capture;
         }
 
         /// <summary>
@@ -332,9 +312,6 @@ namespace PixelDotNet
                 if (this.panel.AutoScrollPosition != new Point(-sbClient.X, -sbClient.Y))
                 {
                     this.panel.AutoScrollPosition = sbClient;
-                    UpdateRulerOffsets();
-                    this.topRuler.Invalidate();
-                    this.leftRuler.Invalidate();
                 }
             }
         }
@@ -617,16 +594,6 @@ namespace PixelDotNet
                     {
                         surfaceBox.Size = Size.Truncate((SizeF)scaleFactor.ScaleSize(compositionSurface.Bounds.Size));
                         scaleFactor = surfaceBox.ScaleFactor;
-
-                        if (leftRuler != null)
-                        {
-                            this.leftRuler.ScaleFactor = scaleFactor;
-                        }
-
-                        if (topRuler != null)
-                        {
-                            this.topRuler.ScaleFactor = scaleFactor;
-                        }
                     }
 
                     // re center ourself
@@ -717,31 +684,6 @@ namespace PixelDotNet
             }
         }
 
-        public void SetHighlightRectangle(RectangleF rectF)
-        {
-            if (rectF.Width == 0 || rectF.Height == 0)
-            {
-                this.leftRuler.HighlightEnabled = false;
-                this.topRuler.HighlightEnabled = false;
-            }
-            else
-            {
-                if (this.topRuler != null)
-                {
-                    this.topRuler.HighlightEnabled = true;
-                    this.topRuler.HighlightStart = rectF.Left;
-                    this.topRuler.HighlightLength = rectF.Width;
-                }
-
-                if (this.leftRuler != null)
-                {
-                    this.leftRuler.HighlightEnabled = true;
-                    this.leftRuler.HighlightStart = rectF.Top;
-                    this.leftRuler.HighlightLength = rectF.Height;
-                }
-            }
-        }
-
         public event EventHandler<EventArgs<Document>> DocumentChanging;
         protected virtual void OnDocumentChanging(Document newDocument)
         {
@@ -801,7 +743,6 @@ namespace PixelDotNet
                 if (this.document != null)
                 {
                     this.document.Invalidated -= Document_Invalidated;
-                    this.document.Metadata.Changed -= DocumentMetaDataChangedHandler;
                 }
 
                 this.document = value;
@@ -833,11 +774,9 @@ namespace PixelDotNet
                     }
 
                     this.document.Invalidated += Document_Invalidated;
-                    this.document.Metadata.Changed += DocumentMetaDataChangedHandler;
                 }
 
                 Invalidate(true);
-                DocumentMetaDataChangedHandler(this, EventArgs.Empty);
                 this.OnResize(EventArgs.Empty);
                 OnDocumentChanged();
             }
@@ -857,32 +796,10 @@ namespace PixelDotNet
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.topRuler = new PixelDotNet.Ruler();
-            this.leftRuler = new PixelDotNet.Ruler();
             this.panel = new PixelDotNet.PanelEx();
             this.surfaceBox = new PixelDotNet.SurfaceBox();
             this.panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // topRuler
-            // 
-            this.topRuler.BackColor = System.Drawing.Color.White;
-            this.topRuler.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topRuler.Location = new System.Drawing.Point(0, 0);
-            this.topRuler.Name = "topRuler";
-            this.topRuler.Offset = -16;
-            this.topRuler.Size = UI.ScaleSize(new Size(384, 16));
-            this.topRuler.TabIndex = 3;
-            // 
-            // leftRuler
-            // 
-            this.leftRuler.BackColor = System.Drawing.Color.White;
-            this.leftRuler.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftRuler.Location = new System.Drawing.Point(0, 16);
-            this.leftRuler.Name = "leftRuler";
-            this.leftRuler.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.leftRuler.Size = UI.ScaleSize(new Size(16, 304));
-            this.leftRuler.TabIndex = 4;
             // 
             // panel
             // 
@@ -912,8 +829,6 @@ namespace PixelDotNet
             // DocumentView
             // 
             this.Controls.Add(this.panel);
-            this.Controls.Add(this.leftRuler);
-            this.Controls.Add(this.topRuler);
             this.Name = "DocumentView";
             this.Size = new System.Drawing.Size(384, 320);
             this.panel.ResumeLayout(false);
@@ -929,49 +844,6 @@ namespace PixelDotNet
         private void Panel_GotFocus(object sender, EventArgs e)
         {
             this.raiseFirstInputAfterGotFocus = true;
-        }
-
-        /// <summary>
-        /// Used to enable or disable the rulers.
-        /// </summary>
-        public bool RulersEnabled
-        {
-            get
-            {
-                return rulersEnabled;
-            }
-
-            set
-            {
-                if (rulersEnabled != value) 
-                {
-                    rulersEnabled = value;
-
-                    if (topRuler != null)
-                    {
-                        topRuler.Enabled = value;
-                        topRuler.Visible = value;
-                    }
-
-                    if (leftRuler != null)
-                    {
-                        leftRuler.Enabled = value;
-                        leftRuler.Visible = value;
-                    }
-
-                    this.OnResize(EventArgs.Empty);
-                    OnRulersEnabledChanged();
-                }
-            }
-        }
-
-        public event EventHandler RulersEnabledChanged;
-        protected void OnRulersEnabledChanged() 
-        {
-            if (RulersEnabledChanged != null) 
-            {
-                RulersEnabledChanged(this, EventArgs.Empty);
-            }
         }
 
         public bool PanelAutoScroll
@@ -1381,15 +1253,6 @@ namespace PixelDotNet
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void UpdateRulerOffsets()
-        {
-            // TODO: cleanse magic numbers
-            this.topRuler.Offset = ScaleFactor.UnscaleScalar(UI.ScaleWidth(-16.0f) - surfaceBox.Location.X);
-            this.topRuler.Update();
-            this.leftRuler.Offset = ScaleFactor.UnscaleScalar(0.0f - surfaceBox.Location.Y);
-            this.leftRuler.Update();
-        }
-
         public void InvalidateSurface(Rectangle rect)
         {
             this.surfaceBox.Invalidate(rect);
@@ -1476,8 +1339,6 @@ namespace PixelDotNet
                     surfaceBox.Location = newPoint;
                 }
             }
-
-            this.UpdateRulerOffsets();
         }
 
         private FormWindowState oldWindowState = FormWindowState.Minimized;
@@ -1537,54 +1398,11 @@ namespace PixelDotNet
             Point docPoint = MouseToDocument((Control)sender, new Point(e.X, e.Y));
             PointF docPointF = MouseToDocumentF((Control)sender, new Point(e.X, e.Y));
 
-            if (RulersEnabled)
-            {
-                int x;
-
-                if (docPointF.X > 0)
-                {
-                    x = (int)Math.Truncate(docPointF.X);
-                }
-                else if (docPointF.X < 0)
-                {
-                    x = (int)Math.Truncate(docPointF.X - 1);
-                }
-                else // if (docPointF.X == 0)
-                {
-                    x = 0;
-                }
-
-                int y;
-
-                if (docPointF.Y > 0)
-                {
-                    y = (int)Math.Truncate(docPointF.Y);
-                }
-                else if (docPointF.Y < 0)
-                {
-                    y = (int)Math.Truncate(docPointF.Y - 1);
-                }
-                else // if (docPointF.Y == 0)
-                {
-                    y = 0;
-                }
-
-                topRuler.Value = x;
-                leftRuler.Value = y;
-
-                UpdateRulerOffsets();
-            }
-
             OnDocumentMouseMove(new MouseEventArgs(e.Button, e.Clicks, docPoint.X, docPoint.Y, e.Delta));
         }
 
         private void MouseUpHandler(object sender, MouseEventArgs e)
         {
-            if (sender is Ruler)
-            {
-                return;
-            }
-
             Point docPoint = MouseToDocument((Control)sender, new Point(e.X, e.Y));
             Point pt = panel.AutoScrollPosition;
             panel.Focus();
@@ -1594,11 +1412,6 @@ namespace PixelDotNet
 
         private void MouseDownHandler(object sender, MouseEventArgs e)
         {
-            if (sender is Ruler)
-            {
-                return;
-            }
-
             Point docPoint = MouseToDocument((Control)sender, new Point(e.X, e.Y));
             Point pt = panel.AutoScrollPosition;
             panel.Focus();
@@ -1654,7 +1467,6 @@ namespace PixelDotNet
         private void Panel_Scroll(object sender, System.Windows.Forms.ScrollEventArgs e)
         {
             OnScroll(e);
-            UpdateRulerOffsets();
         }
 
         /// <summary>
@@ -1740,15 +1552,6 @@ namespace PixelDotNet
         public new void Focus()
         {
             this.panel.Focus();
-        }
-
-        private void DocumentMetaDataChangedHandler(object sender, EventArgs e)
-        {
-            if (this.document != null)
-            {
-                this.leftRuler.Dpu = 1 / document.PixelToPhysicalY(1, this.leftRuler.MeasurementUnit);
-                this.topRuler.Dpu = 1 / document.PixelToPhysicalY(1, this.topRuler.MeasurementUnit);
-            }
         }
     }
 }

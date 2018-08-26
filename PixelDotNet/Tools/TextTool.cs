@@ -992,11 +992,11 @@ namespace PixelDotNet.Tools
 
         private string GetStatusBarXYText()
         {
-            string unitsAbbreviationXY;
+            string unitsAbbreviationXY = "";
             string xString;
             string yString;
 
-            Document.CoordinatesToStrings(AppWorkspace.Units, this.uls[0].X, this.uls[0].Y, out xString, out yString, out unitsAbbreviationXY);
+            Document.CoordinatesToStrings(this.uls[0].X, this.uls[0].Y, out xString, out yString);
 
             string statusBarText = string.Format(
                 this.statusBarTextFormat,

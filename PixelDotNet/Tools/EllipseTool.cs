@@ -81,28 +81,17 @@ namespace PixelDotNet.Tools
             path.AddEllipse(rect);
             path.Flatten(Utility.IdentityMatrix, 0.10f);
 
-            MeasurementUnit units = AppWorkspace.Units;
-
-            double widthPhysical = Math.Abs(Document.PixelToPhysicalX(rect.Width, units));
-            double heightPhysical = Math.Abs(Document.PixelToPhysicalY(rect.Height, units));
+            double widthPhysical = Math.Abs(rect.Width);
+            double heightPhysical = Math.Abs(rect.Height);
             double areaPhysical = Math.PI * (widthPhysical / 2.0) * (heightPhysical / 2.0);
             
             string numberFormat;
             string unitsAbbreviation;
 
-            if (units != MeasurementUnit.Pixel)
-            {
-                string unitsAbbreviationName = "MeasurementUnit." + units.ToString() + ".Abbreviation";
-                unitsAbbreviation = PdnResources.GetString(unitsAbbreviationName);
-                numberFormat = "F2";
-            }
-            else
-            {
-                unitsAbbreviation = string.Empty;
-                numberFormat = "F0";
-            }
+            unitsAbbreviation = string.Empty;
+            numberFormat = "F0";
 
-            string unitsString = PdnResources.GetString("MeasurementUnit." + units.ToString() + ".Plural");
+            string unitsString = PdnResources.GetString("MeasurementUnit." + "Pixel" + ".Plural");
 
             string statusText = string.Format(
                 this.statusTextFormat,

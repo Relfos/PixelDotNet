@@ -121,27 +121,19 @@ namespace PixelDotNet.Tools
                 }
 
                 double angle = -180.0 * Math.Atan2(b.Y - a.Y, b.X - a.X) / Math.PI;
-                MeasurementUnit units = AppWorkspace.Units;
-                double offsetXPhysical = Document.PixelToPhysicalX(b.X - a.X, units);
-                double offsetYPhysical = Document.PixelToPhysicalY(b.Y - a.Y, units);
+                double offsetXPhysical = (b.X - a.X);
+                double offsetYPhysical = (b.Y - a.Y);
                 double offsetLengthPhysical = Math.Sqrt(offsetXPhysical * offsetXPhysical + offsetYPhysical * offsetYPhysical);
 
                 string numberFormat;
                 string unitsAbbreviation;
 
-                if (units != MeasurementUnit.Pixel)
-                {
-                    string unitsAbbreviationName = "MeasurementUnit." + units.ToString() + ".Abbreviation";
-                    unitsAbbreviation = PdnResources.GetString(unitsAbbreviationName);
-                    numberFormat = "F2";
-                }
-                else
                 {
                     unitsAbbreviation = string.Empty;
                     numberFormat = "F0";
                 }
 
-                string unitsString = PdnResources.GetString("MeasurementUnit." + units.ToString() + ".Plural");
+                string unitsString = PdnResources.GetString("MeasurementUnit." + "Pixel" + ".Plural");
 
                 string statusText = string.Format(
                     this.statusTextFormat,

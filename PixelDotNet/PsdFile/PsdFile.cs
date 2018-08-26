@@ -311,13 +311,6 @@ namespace PhotoshopFile
     /// </summary>
     public ImageResources ImageResources { get; set; }
 
-    public ResolutionInfo Resolution
-    {
-      get => (ResolutionInfo)ImageResources.Get(ResourceID.ResolutionInfo);
-      set => ImageResources.Set(value);
-    }
-
-
     ///////////////////////////////////////////////////////////////////////////
 
     private void LoadImageResources(PsdBinaryReader reader)

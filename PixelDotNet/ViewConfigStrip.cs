@@ -28,9 +28,7 @@ namespace PixelDotNet
         private ToolStripComboBox zoomComboBox;
         private ToolStripSeparator separator1;
         private ToolStripButton gridButton;
-        private ToolStripButton rulersButton;
         private ToolStripLabel unitsLabel;
-        private UnitsComboBoxStrip unitsComboBox;
 
         private int scaleFactorRecursionDepth = 0;
         private int suspendEvents = 0;
@@ -88,36 +86,6 @@ namespace PixelDotNet
                     gridButton.Checked = value;
                     this.OnDrawGridChanged();
                 }
-            }
-        }
-
-        public bool RulersEnabled
-        {
-            get
-            {
-                return rulersButton.Checked;
-            }
-
-            set
-            {
-                if (rulersButton.Checked != value)
-                {
-                    rulersButton.Checked = value;
-                    this.OnRulersEnabledChanged();
-                }
-            }
-        }
-
-        public MeasurementUnit Units
-        {
-            get
-            {
-                return this.unitsComboBox.Units;
-            }
-
-            set
-            {
-                this.unitsComboBox.Units = value;
             }
         }
 
@@ -187,15 +155,11 @@ namespace PixelDotNet
             this.zoomOutButton.Image = PdnResources.GetImageResource("Icons.MenuViewZoomOutIcon.png").Reference;
             this.zoomInButton.Image = PdnResources.GetImageResource("Icons.MenuViewZoomInIcon.png").Reference;
             this.gridButton.Image = PdnResources.GetImageResource("Icons.MenuViewGridIcon.png").Reference;
-            this.rulersButton.Image = PdnResources.GetImageResource("Icons.MenuViewRulersIcon.png").Reference;
-
+            
             this.zoomOutButton.ToolTipText = PdnResources.GetString("ZoomConfigWidget.ZoomOutButton.ToolTipText");
             this.zoomInButton.ToolTipText = PdnResources.GetString("ZoomConfigWidget.ZoomInButton.ToolTipText");
             this.gridButton.ToolTipText = PdnResources.GetString("WorkspaceOptionsConfigWidget.DrawGridToggleButton.ToolTipText");
-            this.rulersButton.ToolTipText = PdnResources.GetString("WorkspaceOptionsConfigWidget.RulersToggleButton.ToolTipText");
-
-            this.unitsComboBox.Size = new Size(UI.ScaleWidth(this.unitsComboBox.Width), unitsComboBox.Height);
-
+            
             this.zoomBasis = ZoomBasis.ScaleFactor;
             ScaleFactor = ScaleFactor.OneToOne;
 
@@ -210,9 +174,7 @@ namespace PixelDotNet
             this.zoomInButton = new ToolStripButton();
             this.separator1 = new ToolStripSeparator();
             this.gridButton = new ToolStripButton();
-            this.rulersButton = new ToolStripButton();
             this.unitsLabel = new ToolStripLabel();
-            this.unitsComboBox = new UnitsComboBoxStrip();
             this.SuspendLayout();
             //
             // separator0
@@ -227,14 +189,6 @@ namespace PixelDotNet
             this.zoomComboBox.Size = new Size(75, this.zoomComboBox.Height);
             this.zoomComboBox.MaxDropDownItems = 99;
             //
-            // unitsComboBox
-            //
-            this.unitsComboBox.UnitsChanged += new EventHandler(UnitsComboBox_UnitsChanged);
-            this.unitsComboBox.LowercaseStrings = false;
-            this.unitsComboBox.UnitsDisplayType = UnitsDisplayType.Plural;
-            this.unitsComboBox.Units = MeasurementUnit.Pixel;
-            this.unitsComboBox.Size = new Size(90, this.unitsComboBox.Height);
-            //
             // ViewConfigStrip
             //
             this.Items.Add(this.separator0);
@@ -243,15 +197,8 @@ namespace PixelDotNet
             this.Items.Add(this.zoomInButton);
             this.Items.Add(this.separator1);
             this.Items.Add(this.gridButton);
-            this.Items.Add(this.rulersButton);
             this.Items.Add(this.unitsLabel);
-            this.Items.Add(this.unitsComboBox);
             this.ResumeLayout(false);
-        }
-
-        private void UnitsComboBox_UnitsChanged(object sender, EventArgs e)
-        {
-            this.OnUnitsChanged();
         }
 
         private void SetZoomText()
@@ -286,24 +233,6 @@ namespace PixelDotNet
             if (DrawGridChanged != null)
             {
                 DrawGridChanged(this, EventArgs.Empty);
-            }
-        }
-
-        public event EventHandler RulersEnabledChanged;
-        private void OnRulersEnabledChanged()
-        {
-            if (RulersEnabledChanged != null)
-            {
-                RulersEnabledChanged(this, EventArgs.Empty);
-            }
-        }
-
-        public event EventHandler UnitsChanged;
-        private void OnUnitsChanged()
-        {
-            if (UnitsChanged != null)
-            {
-                UnitsChanged(this, EventArgs.Empty);
             }
         }
         
@@ -475,12 +404,6 @@ namespace PixelDotNet
             {
                 Tracing.LogFeature("ViewConfigStrip(ZoomOut)");
                 OnZoomOut();
-            }
-            else if (e.ClickedItem == this.rulersButton)
-            {
-                Tracing.LogFeature("ViewConfigStrip(Rulers)");
-                this.rulersButton.Checked = !this.rulersButton.Checked;
-                OnRulersEnabledChanged();
             }
             else if (e.ClickedItem == this.gridButton)
             {

@@ -93,11 +93,8 @@ namespace PixelDotNet.Tools
 
                     break;
 
-                case SelectionDrawMode.FixedSize:
-                    double pxWidth = Document.ConvertMeasurement(sdmInfo.Width, sdmInfo.Units, this.Document.DpuUnit, this.Document.DpuX, MeasurementUnit.Pixel);
-                    double pxHeight = Document.ConvertMeasurement(sdmInfo.Height, sdmInfo.Units, this.Document.DpuUnit, this.Document.DpuY, MeasurementUnit.Pixel);
-
-                    rect = new Rectangle(b.X, b.Y, (int)pxWidth, (int)pxHeight);
+                case SelectionDrawMode.FixedSize:                   
+                    rect = new Rectangle(b.X, b.Y, (int)sdmInfo.Width, (int)sdmInfo.Height);
 
                     break;
 
