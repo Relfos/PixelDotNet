@@ -2156,24 +2156,9 @@ namespace PixelDotNet
             }
         }
 
-        /// <summary>
-        /// Computes what the size of a new document should be. If the screen is in a normal,
-        /// wider-than-tall (landscape) mode then it returns 800x600. If the screen is in a
-        /// taller-than-wide (portrait) mode then it retusn 600x800. If the screen is square
-        /// then it returns 800x600.
-        /// </summary>
         public Size GetNewDocumentSize()
         {
-            PdnBaseForm findForm = this.FindForm() as PdnBaseForm;
-
-            if (findForm != null && findForm.ScreenAspect < 1.0)
-            {
-                return new Size(600, 800);
-            }
-            else
-            {
-                return new Size(800, 600);
-            }
+            return new Size(64, 64);
         }
 
         private void CommonActionsStrip_ButtonClick(object sender, EventArgs<CommonAction> e)

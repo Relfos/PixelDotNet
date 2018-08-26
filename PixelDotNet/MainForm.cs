@@ -314,6 +314,7 @@ namespace PixelDotNet
                 this.appWorkspace.CreateBlankDocumentInNewWorkspace(newSize, true);
                 this.appWorkspace.ActiveDocumentWorkspace.IncrementJustPaintWhite();
                 this.appWorkspace.ActiveDocumentWorkspace.Document.Dirty = false;
+                this.appWorkspace.ActiveDocumentWorkspace.ZoomIn(8);
             }
 
             LoadWindowState();
