@@ -25,9 +25,6 @@ namespace PixelDotNet
     public class DocumentView
         : UserControl2          
     {
-        // rulers really are on by default, so 'true' was set to show this.
-        private bool rulersEnabled = true;
-
         private bool raiseFirstInputAfterGotFocus = false;
         private int refreshSuspended = 0;
         private bool hookedMouseEvents = false;

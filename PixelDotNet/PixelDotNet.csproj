@@ -638,9 +638,6 @@
     <Compile Include="SaveConfigDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SavePaletteDialog.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SaveProgressDialog.cs" />
     <Compile Include="SelectionDrawMode.cs" />
     <Compile Include="SelectionDrawModeInfo.cs" />
