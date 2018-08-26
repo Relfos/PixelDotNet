@@ -963,7 +963,6 @@ namespace PixelDotNet
         private const char incPenSizeShortcut = ']';
         private const char incPenSizeBy5Shortcut = (char)29; // Ctrl ] but must also test that Ctrl is down
         private const char swapColorsShortcut = 'x';
-        private const char swapPrimarySecondaryChoice = 'c';
         private char[] wildShortcuts = new char[] { ',', '.', '/' };
 
         // Return true if the key is handled, false if not.
@@ -989,11 +988,6 @@ namespace PixelDotNet
                 else if (e.KeyChar == swapColorsShortcut)
                 {
                     AppWorkspace.Widgets.ColorsForm.SwapUserColors();
-                    e.Handled = true;
-                }
-                else if (e.KeyChar == swapPrimarySecondaryChoice)
-                {
-                    AppWorkspace.Widgets.ColorsForm.ToggleWhichUserColor();
                     e.Handled = true;
                 }
                 else if (e.KeyChar == decPenSizeShortcut)

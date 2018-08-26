@@ -139,14 +139,12 @@ namespace PixelDotNet
                 return -1;
             }
 
-            int scaledSwatchSize = UI.ScaleWidth(this.unscaledSwatchSize);
-            int swatchColumns = this.ClientSize.Width / scaledSwatchSize;
             int row = y / scaledSwatchSize;
             int col = x / scaledSwatchSize;
             int index = col + (row * swatchColumns);
 
             // Make sure they aren't on the last item of a row that actually got clipped off
-            if (col == swatchColumns)
+            if (col >= swatchColumns)
             {
                 index = -1;
             }
@@ -191,11 +189,13 @@ namespace PixelDotNet
             base.OnMouseMove(e);
         }
 
+        public const int swatchColumns = 7;
+
+        public int scaledSwatchSize => this.ClientSize.Width / UI.ScaleWidth(this.unscaledSwatchSize);
+
         protected override void OnPaint(PaintEventArgs e)
         {
             e.Graphics.CompositingMode = CompositingMode.SourceOver;
-            int scaledSwatchSize = UI.ScaleWidth(this.unscaledSwatchSize);
-            int swatchColumns = this.ClientSize.Width / scaledSwatchSize;
 
             Point mousePt = Control.MousePosition;
             mousePt = PointToClient(mousePt);

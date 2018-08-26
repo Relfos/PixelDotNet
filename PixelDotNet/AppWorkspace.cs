@@ -1198,28 +1198,6 @@ namespace PixelDotNet
                 widgets.ToolConfigStrip.AlphaBlending = AppEnvironment.AlphaBlending;
             }
         }
-
-        private void ColorDisplay_UserPrimaryAndSecondaryColorsChanged(object sender, EventArgs e)
-        {
-            // We need to make sure that we don't change which user color is selected (primary vs. secondary)
-            // To do this we choose the ordering based on which one is currently active (primary vs. secondary)
-            if (widgets.ColorsForm.WhichUserColor == WhichUserColor.Primary)
-            {
-                widgets.ColorsForm.SetColorControlsRedraw(false);
-                SecondaryColorChangedHandler(sender, e);
-                PrimaryColorChangedHandler(sender, e);
-                widgets.ColorsForm.SetColorControlsRedraw(true);
-                widgets.ColorsForm.WhichUserColor = WhichUserColor.Primary;
-            }
-            else //if (widgets.ColorsForm.WhichUserColor == WhichUserColor.Background)
-            {
-                widgets.ColorsForm.SetColorControlsRedraw(false);
-                PrimaryColorChangedHandler(sender, e);
-                SecondaryColorChangedHandler(sender, e);
-                widgets.ColorsForm.SetColorControlsRedraw(true);
-                widgets.ColorsForm.WhichUserColor = WhichUserColor.Secondary;
-            }
-        }
  
         private void PrimaryColorChangedHandler(object sender, EventArgs e)
         {
@@ -1516,7 +1494,6 @@ namespace PixelDotNet
             // ColorsForm
             colorsForm = new ColorsForm();
             colorsForm.PaletteCollection = new PaletteCollection();
-            colorsForm.WhichUserColor = WhichUserColor.Primary;
             colorsForm.UserPrimaryColorChanged += ColorsForm_UserPrimaryColorChanged;
             colorsForm.UserSecondaryColorChanged += ColorsForm_UserSecondaryColorChanged;
             colorsForm.RelinquishFocus += RelinquishFocusHandler;
