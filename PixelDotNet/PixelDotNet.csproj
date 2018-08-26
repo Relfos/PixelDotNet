@@ -222,12 +222,6 @@
     <Compile Include="Core\HeaderLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Histogram.cs" />
-    <Compile Include="Core\HistogramControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Core\HistogramLuminosity.cs" />
-    <Compile Include="Core\HistogramRGB.cs" />
     <Compile Include="Core\HorizontalSnapEdge.cs" />
     <Compile Include="Core\HsvColor.cs" />
     <Compile Include="Core\IBitVector2D.cs" />
