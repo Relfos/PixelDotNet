@@ -8,26 +8,16 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 using PixelDotNet.Actions;
-using PixelDotNet.Effects;
 using PixelDotNet.HistoryFunctions;
 using PixelDotNet.HistoryMementos;
 using PixelDotNet.SystemLayer;
 using PixelDotNet.Tools;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
 using System.Globalization;
-using System.IO;
 using System.Reflection;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Security;
-using System.Text;
 using System.Windows.Forms;
 
 namespace PixelDotNet
@@ -1600,8 +1590,22 @@ namespace PixelDotNet
             }
         }
 
+        private Tool previousTool = null;
+
         private void DocumentKeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.ControlKey)
+            {
+                var pickerType = typeof(ColorPickerTool);
+                if (ActiveDocumentWorkspace.Tool.GetType() != pickerType)
+                {
+                    previousTool = ActiveDocumentWorkspace.Tool;
+                    ActiveDocumentWorkspace.SetToolFromType(pickerType);
+                    return;
+
+                }
+            }
+
             if (ActiveDocumentWorkspace.Tool != null)
             {
                 ActiveDocumentWorkspace.Tool.PerformKeyDown(e);
@@ -1610,6 +1614,16 @@ namespace PixelDotNet
 
         private void DocumenKeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.ControlKey)
+            {
+                if (previousTool != null)
+                {
+                    ActiveDocumentWorkspace.SetTool(previousTool);
+                    previousTool = null;
+                    return;
+                }
+            }
+
             if (ActiveDocumentWorkspace.Tool != null)
             {
                 ActiveDocumentWorkspace.Tool.PerformKeyUp(e);
