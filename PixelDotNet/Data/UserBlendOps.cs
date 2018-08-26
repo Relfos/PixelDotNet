@@ -72,5 +72,7 @@ namespace PixelDotNet
         {
             return typeof(NormalBlendOp);
         }
+
+
     }
 }

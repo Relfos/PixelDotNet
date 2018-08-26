@@ -184,7 +184,7 @@
     <Compile Include="Core\BinaryPixelOps.cs" />
     <Compile Include="Core\BitVector2D.cs" />
     <Compile Include="Core\BitVector2DSurfaceAdapter.cs" />
-    <Compile Include="Core\Blending\BlendOpsImpl.cs" />
+    <Compile Include="Core\BlendOpsImpl.cs" />
     <Compile Include="Core\BlockedPluginException.cs" />
     <Compile Include="Core\ButtonBase.cs">
       <SubType>Component</SubType>
